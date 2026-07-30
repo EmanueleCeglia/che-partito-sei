@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.py
+*.pyc
+
+# Excel source
+*.xlsx
+
+# Temp files
+raw_data.txt
+*.log
+.DS_Store
+Thumbs.db

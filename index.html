@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Che Partito Sei? | Quiz Politico Italiano</title>
+  <meta name="description" content="Scopri quale partito politico italiano è più vicino alle tue idee. Rispondi a 297 domande su 27 temi politici e 7 macro-aree.">
+  <meta name="theme-color" content="#070b1e">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Loading Overlay -->
+  <div id="loading-overlay" class="loading-overlay">
+    <div class="loading-spinner"></div>
+    <p class="loading-text">Caricamento quiz…</p>
+  </div>
+
+  <!-- ════════════════════════════════════════
+       LANDING SCREEN
+       ════════════════════════════════════════ -->
+  <div id="screen-landing" class="screen landing">
+
+    <div class="landing__icon" aria-hidden="true">🏛️</div>
+
+    <h1 class="landing__title">Che Partito Sei?</h1>
+
+    <p class="landing__subtitle">
+      Scopri quale partito politico italiano rispecchia di più le tue idee.
+      Rispondi alle affermazioni e ottieni la tua classifica personalizzata.
+    </p>
+
+    <div class="landing__stats">
+      <div class="stat-badge">
+        <span class="stat-badge__value">297</span>
+        <span class="stat-badge__label">Domande</span>
+      </div>
+      <div class="stat-badge">
+        <span class="stat-badge__value">27</span>
+        <span class="stat-badge__label">Temi</span>
+      </div>
+      <div class="stat-badge">
+        <span class="stat-badge__value">11</span>
+        <span class="stat-badge__label">Partiti</span>
+      </div>
+    </div>
+
+    <div class="landing__steps">
+      <div class="step-card">
+        <div class="step-card__number">1</div>
+        <p class="step-card__text">
+          <strong>Leggi l'affermazione</strong> — ogni tema presenta diverse posizioni politiche anonime.
+        </p>
+      </div>
+      <div class="step-card">
+        <div class="step-card__number">2</div>
+        <p class="step-card__text">
+          <strong>Vota da 1 a 7</strong> — quanto sei d'accordo? Da totale disaccordo a piena condivisione.
+        </p>
+      </div>
+      <div class="step-card">
+        <div class="step-card__number">3</div>
+        <p class="step-card__text">
+          <strong>Scopri i risultati</strong> — classifica generale e dettaglio per ogni macro-tema.
+        </p>
+      </div>
+    </div>
+
+    <div class="landing__actions">
+      <button id="btn-start" class="btn btn--primary">
+        Inizia il Quiz 🚀
+      </button>
+      <button id="btn-continue" class="btn btn--secondary hidden">
+        Continua da dove eri rimasto ▶
+      </button>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════
+       CATEGORY TRANSITION OVERLAY
+       ════════════════════════════════════════ -->
+  <div id="category-transition" class="category-transition">
+    <div id="cat-trans-icon" class="category-transition__icon"></div>
+    <p class="category-transition__label">Prossima categoria</p>
+    <h2 id="cat-trans-name" class="category-transition__name"></h2>
+    <p id="cat-trans-info" class="category-transition__info"></p>
+    <div id="cat-trans-dots" class="category-transition__progress-dots"></div>
+    <button id="btn-cat-continue" class="btn btn--primary">
+      Continua →
+    </button>
+  </div>
+
+  <!-- ════════════════════════════════════════
+       QUIZ SCREEN
+       ════════════════════════════════════════ -->
+  <div id="screen-quiz" class="screen quiz">
+
+    <!-- Progress bar at very top -->
+    <div class="quiz__progress-bar">
+      <div id="quiz-progress-fill" class="quiz__progress-fill" style="width: 0%"></div>
+    </div>
+
+    <!-- Header -->
+    <div class="quiz__header">
+      <div class="quiz__header-top">
+        <button id="btn-quiz-back" class="quiz__back-btn" title="Indietro" aria-label="Domanda precedente">←</button>
+        <div class="quiz__counter">
+          <span id="quiz-current-num">1</span> / <span id="quiz-total-num">297</span>
+        </div>
+      </div>
+      <div id="quiz-category-badge" class="quiz__category-badge"></div>
+      <p id="quiz-theme-name" class="quiz__theme-name"></p>
+    </div>
+
+    <!-- Body with statement -->
+    <div class="quiz__body">
+      <div class="quiz__statement-wrapper">
+        <div id="quiz-statement" class="quiz__statement">
+          <p id="quiz-statement-text" class="quiz__statement-text"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Rating section fixed at bottom -->
+    <div class="quiz__rating-section">
+      <p class="quiz__rating-label">Quanto sei d'accordo?</p>
+      <div class="quiz__rating-buttons" id="rating-buttons">
+        <button class="rating-btn" data-value="1">1</button>
+        <button class="rating-btn" data-value="2">2</button>
+        <button class="rating-btn" data-value="3">3</button>
+        <button class="rating-btn" data-value="4">4</button>
+        <button class="rating-btn" data-value="5">5</button>
+        <button class="rating-btn" data-value="6">6</button>
+        <button class="rating-btn" data-value="7">7</button>
+      </div>
+      <div class="quiz__rating-legend">
+        <span>Disaccordo</span>
+        <span>Neutrale</span>
+        <span>Accordo</span>
+      </div>
+      <div class="quiz__nav">
+        <button id="btn-prev" class="quiz__nav-btn" disabled>← Precedente</button>
+        <button id="btn-next" class="quiz__nav-btn quiz__nav-btn--next">Successiva →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════
+       RESULTS SCREEN
+       ════════════════════════════════════════ -->
+  <div id="screen-results" class="screen results">
+
+    <div class="results__header">
+      <span class="results__trophy">🏆</span>
+      <h1 class="results__title">I Tuoi Risultati</h1>
+      <p class="results__subtitle">Ecco i partiti più vicini alle tue idee</p>
+    </div>
+
+    <!-- Winner card -->
+    <div id="results-winner" class="results__winner-card">
+      <p class="results__winner-label">🥇 Partito più vicino a te</p>
+      <h2 id="winner-name" class="results__winner-name"></h2>
+      <p id="winner-score" class="results__winner-score"></p>
+      <p class="results__winner-score-label">su 7.0</p>
+    </div>
+
+    <!-- Overall ranking -->
+    <div class="results__section">
+      <h3 class="results__section-title">
+        <span class="icon">📊</span> Classifica Generale
+      </h3>
+      <div id="overall-ranking" class="ranking-list"></div>
+    </div>
+
+    <!-- Per-category breakdown -->
+    <div class="results__section">
+      <h3 class="results__section-title">
+        <span class="icon">📋</span> Dettaglio per Macro-Tema
+      </h3>
+      <div id="category-breakdown" class="category-breakdown"></div>
+    </div>
+
+    <!-- Footer actions -->
+    <div class="results__footer">
+      <button id="btn-restart" class="btn btn--primary">
+        🔄 Ricomincia il Quiz
+      </button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
