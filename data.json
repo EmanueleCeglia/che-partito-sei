@@ -15,1359 +15,500 @@
   "categories": [
     {
       "name": "Economia, Fisco e Lavoro",
-      "themes": [
+      "icon": "💰",
+      "color": "#10b981",
+      "questions": [
         {
-          "name": "Pressione fiscale e aliquote",
-          "statements": [
-            {
-              "party": "AVS",
-              "text": "Fiscalità più progressiva; maggiore prelievo su grandi patrimoni, extraprofitti e rendite."
-            },
-            {
-              "party": "M5S",
-              "text": "Riduzione del carico sui redditi medio-bassi; maggiori imposte su extraprofitti, rendite e grandi ricchezze."
-            },
-            {
-              "party": "PD",
-              "text": "Fisco più progressivo, alleggerimento di lavoro e ceti medio-bassi, contrasto a evasione e concorrenza fiscale."
-            },
-            {
-              "party": "Piueuropa",
-              "text": "Riduzione e razionalizzazione delle imposte, contrasto all’evasione e armonizzazione fiscale europea."
-            },
-            {
-              "party": "italia Viva",
-              "text": "Riduzione della pressione fiscale, niente patrimoniale, semplificazione e incentivi a crescita e investimenti."
-            },
-            {
-              "party": "Azione",
-              "text": "Riduzione del cuneo e semplificazione; fiscalità favorevole a investimenti, senza promesse di tagli non coperti."
-            },
-            {
-              "party": "Liberaldemocratico",
-              "text": "Riduzione dell’IRPEF finanziata da spending review, meno spesa improduttiva e calendario fiscale semplice."
-            },
-            {
-              "party": "Forza italia",
-              "text": "Riduzione delle tasse, flat tax graduale, tutela di casa e impresa e contrasto all’evasione senza patrimoniali."
-            },
-            {
-              "party": "Fratelli d'italia",
-              "text": "Riduzione della pressione fiscale, estensione della flat tax, detrazioni per famiglie e incentivi a chi assume."
-            },
-            {
-              "party": "Lega",
-              "text": "Flat tax più ampia, pace fiscale, riduzione del cuneo e forte tutela di autonomi e piccole imprese."
-            },
-            {
-              "party": "Futuro nazionale",
-              "text": "Tasse più basse, Stato meno invasivo e priorità a famiglie, lavoro e imprese italiane; dettagli ancora limitati."
-            }
-          ]
+          "id": "q1",
+          "theme": "Progressività fiscale",
+          "text": "Il sistema fiscale dovrebbe essere più progressivo, con maggiore prelievo su grandi patrimoni, extraprofitti e rendite, anche a costo di tasse più alte per i redditi alti.",
+          "scores": {
+            "AVS": 7,
+            "M5S": 7,
+            "PD": 6,
+            "Piueuropa": 4,
+            "italia Viva": 3,
+            "Azione": 4,
+            "Liberaldemocratico": 3,
+            "Forza italia": 2,
+            "Fratelli d'italia": 2,
+            "Lega": 1,
+            "Futuro nazionale": 2
+          }
         },
         {
-          "name": "Politiche sul lavoro",
-          "statements": [
-            {
-              "party": "AVS",
-              "text": "Salario minimo, contrattazione forte, riduzione dell’orario e più tutele contro la precarietà."
-            },
-            {
-              "party": "M5S",
-              "text": "Salario minimo legale, contrasto al precariato, tutela del lavoro digitale e riduzione dell’orario."
-            },
-            {
-              "party": "PD",
-              "text": "Salario minimo, contrattazione collettiva, lotta alla precarietà e nuovi diritti per piattaforme e stage."
-            },
-            {
-              "party": "Piueuropa",
-              "text": "Mercato del lavoro dinamico con tutele universali, salario minimo, formazione e maggiore occupazione femminile."
-            },
-            {
-              "party": "italia Viva",
-              "text": "Mercato del lavoro flessibile ma inclusivo, formazione, occupazione femminile e continuità con il Jobs Act."
-            },
-            {
-              "party": "Azione",
-              "text": "Salario minimo legato ai contratti, formazione, produttività e politiche attive; approccio riformista."
-            },
-            {
-              "party": "Liberaldemocratico",
-              "text": "Mercato aperto con tutele portabili, formazione continua, merito e contrasto agli stage abusivi."
-            },
-            {
-              "party": "Forza italia",
-              "text": "Incentivi alle assunzioni, formazione e flessibilità contrattata; contraria al salario minimo fissato senza parti sociali."
-            },
-            {
-              "party": "Fratelli d'italia",
-              "text": "Detassazione delle assunzioni, tutela del lavoro nazionale, contrattazione e contrasto alla precarietà senza salario minimo legale."
-            },
-            {
-              "party": "Lega",
-              "text": "Incentivi alle assunzioni e tutela dei lavoratori italiani; contraria al salario minimo uniforme per legge."
-            },
-            {
-              "party": "Futuro nazionale",
-              "text": "Tutela del lavoro nazionale, merito, disciplina e ingresso precoce alla formazione-lavoro; programma in definizione."
-            }
-          ]
+          "id": "q2",
+          "theme": "Salario minimo e tutele sul lavoro",
+          "text": "Lo Stato dovrebbe introdurre un salario minimo legale e regolamentare in modo più rigido il mercato del lavoro per ridurre la precarietà.",
+          "scores": {
+            "AVS": 7,
+            "M5S": 7,
+            "PD": 6,
+            "Piueuropa": 5,
+            "italia Viva": 3,
+            "Azione": 5,
+            "Liberaldemocratico": 3,
+            "Forza italia": 2,
+            "Fratelli d'italia": 2,
+            "Lega": 2,
+            "Futuro nazionale": 2
+          }
         },
         {
-          "name": "Politica industriale",
-          "statements": [
-            {
-              "party": "AVS",
-              "text": "Politica industriale pubblica orientata a riconversione ecologica, innovazione e occupazione di qualità."
-            },
-            {
-              "party": "M5S",
-              "text": "Intervento pubblico nei settori strategici, sostegno a PMI, innovazione e riconversione sostenibile."
-            },
-            {
-              "party": "PD",
-              "text": "Politica industriale europea, investimenti comuni, innovazione e transizione ecologica con tutela occupazionale."
-            },
-            {
-              "party": "Piueuropa",
-              "text": "Concorrenza, innovazione, ricerca e politica industriale europea nei settori strategici."
-            },
-            {
-              "party": "italia Viva",
-              "text": "Industria 4.0, innovazione, attrazione di capitali e partenariato pubblico-privato."
-            },
-            {
-              "party": "Azione",
-              "text": "Forte politica industriale europea, sostegno a imprese strategiche, innovazione e autonomia tecnologica."
-            },
-            {
-              "party": "Liberaldemocratico",
-              "text": "Concorrenza, innovazione, ricerca e attrazione di investimenti; Stato regolatore più che gestore."
-            },
-            {
-              "party": "Forza italia",
-              "text": "Politica industriale europea, Made in Europe, sostegno a PMI, innovazione e difesa dalla concorrenza sleale."
-            },
-            {
-              "party": "Fratelli d'italia",
-              "text": "Sovranità industriale, tutela delle filiere italiane, imprese strategiche e intervento pubblico selettivo."
-            },
-            {
-              "party": "Lega",
-              "text": "Protezione delle filiere, sostegno pubblico a manifattura e agricoltura, difesa da delocalizzazioni e concorrenza estera."
-            },
-            {
-              "party": "Futuro nazionale",
-              "text": "Protezione dell’industria italiana, settori strategici e preferenza nazionale nelle politiche economiche."
-            }
-          ]
+          "id": "q3",
+          "theme": "Ruolo dello Stato nell'economia",
+          "text": "Lo Stato dovrebbe intervenire direttamente nell'economia con politica industriale pubblica, investimenti in settori strategici e riconversione ecologica.",
+          "scores": {
+            "AVS": 7,
+            "M5S": 6,
+            "PD": 6,
+            "Piueuropa": 4,
+            "italia Viva": 3,
+            "Azione": 5,
+            "Liberaldemocratico": 2,
+            "Forza italia": 4,
+            "Fratelli d'italia": 5,
+            "Lega": 5,
+            "Futuro nazionale": 5
+          }
         },
         {
-          "name": "Debito pubblico e vincoli",
-          "statements": [
-            {
-              "party": "AVS",
-              "text": "Contraria all’austerità; favorevole a investimenti pubblici e debito comune europeo per obiettivi sociali e verdi."
-            },
-            {
-              "party": "M5S",
-              "text": "Contrario all’austerità; chiede flessibilità, investimenti esclusi dai vincoli e strumenti europei comuni."
-            },
-            {
-              "party": "PD",
-              "text": "Rispetto sostenibile dei conti, ma superamento dell’austerità tramite investimenti e debito comune europeo."
-            },
-            {
-              "party": "Piueuropa",
-              "text": "Rigore credibile e riduzione del debito, salvaguardando investimenti; favorevole a capacità fiscale e debito comune UE."
-            },
-            {
-              "party": "italia Viva",
-              "text": "Riduzione graduale del debito tramite crescita, riforme e disciplina di bilancio; favorevole a strumenti comuni UE."
-            },
-            {
-              "party": "Azione",
-              "text": "Responsabilità fiscale e riduzione del debito, con investimenti europei comuni per difesa, energia e industria."
-            },
-            {
-              "party": "Liberaldemocratico",
-              "text": "Priorità alla riduzione del debito con avanzi primari e revisione della spesa, proteggendo investimenti produttivi."
-            },
-            {
-              "party": "Forza italia",
-              "text": "Conti responsabili ma più flessibilità per investimenti; apertura a strumenti comuni europei nelle crisi."
-            },
-            {
-              "party": "Fratelli d'italia",
-              "text": "Più flessibilità europea per investimenti e crescita; rifiuto dell’austerità, ma impegno alla sostenibilità del debito."
-            },
-            {
-              "party": "Lega",
-              "text": "Fine dell’austerità e più investimenti; posizione molto critica verso vincoli europei ritenuti restrittivi."
-            },
-            {
-              "party": "Futuro nazionale",
-              "text": "Sovranità di bilancio e critica ai vincoli esterni; mancano ancora proposte quantitative organiche sul debito."
-            }
-          ]
+          "id": "q4",
+          "theme": "Austerità vs. spesa pubblica",
+          "text": "L'Italia dovrebbe avere più flessibilità sui vincoli di bilancio europei per aumentare la spesa pubblica e gli investimenti, anche a costo di più debito.",
+          "scores": {
+            "AVS": 7,
+            "M5S": 7,
+            "PD": 5,
+            "Piueuropa": 3,
+            "italia Viva": 3,
+            "Azione": 3,
+            "Liberaldemocratico": 2,
+            "Forza italia": 4,
+            "Fratelli d'italia": 5,
+            "Lega": 6,
+            "Futuro nazionale": 6
+          }
         },
         {
-          "name": "Pensioni",
-          "statements": [
-            {
-              "party": "AVS",
-              "text": "Difesa del sistema pubblico e delle pensioni basse; contraria a ulteriori irrigidimenti dell’età pensionabile."
-            },
-            {
-              "party": "M5S",
-              "text": "Tutela delle pensioni basse e maggiore flessibilità in uscita; attenzione ai lavori gravosi."
-            },
-            {
-              "party": "PD",
-              "text": "Tutela della previdenza pubblica, pensioni dignitose e flessibilità mirata per lavori gravosi e carriere discontinue."
-            },
-            {
-              "party": "Piueuropa",
-              "text": "Equità tra generazioni, previdenza sostenibile e superamento dei privilegi; flessibilità solo se finanziata."
-            },
-            {
-              "party": "italia Viva",
-              "text": "Sistema sostenibile e flessibilità compatibile con i conti; attenzione all’equità generazionale."
-            },
-            {
-              "party": "Azione",
-              "text": "Previdenza sostenibile, contrasto ai privilegi e flessibilità mirata; forte attenzione ai giovani."
-            },
-            {
-              "party": "Liberaldemocratico",
-              "text": "Equità generazionale e sostenibilità attuariale; contrario a espansioni pensionistiche non finanziate."
-            },
-            {
-              "party": "Forza italia",
-              "text": "Aumento delle pensioni minime e flessibilità prudente, mantenendo sostenibilità finanziaria."
-            },
-            {
-              "party": "Fratelli d'italia",
-              "text": "Flessibilità selettiva, tutela delle pensioni minime e superamento graduale della legge Fornero senza rotture finanziarie."
-            },
-            {
-              "party": "Lega",
-              "text": "Superamento della legge Fornero, pensionamento anticipato e proroga di quote flessibili."
-            },
-            {
-              "party": "Futuro nazionale",
-              "text": "Welfare prioritariamente rivolto a cittadini e contributori italiani; posizione pensionistica non ancora dettagliata."
-            }
-          ]
+          "id": "q5",
+          "theme": "Pensioni e legge Fornero",
+          "text": "L'Italia dovrebbe superare la legge Fornero, permettendo il pensionamento anticipato e aumentando le pensioni minime, anche se questo comporta maggiore spesa pubblica.",
+          "scores": {
+            "AVS": 6,
+            "M5S": 6,
+            "PD": 5,
+            "Piueuropa": 2,
+            "italia Viva": 3,
+            "Azione": 3,
+            "Liberaldemocratico": 2,
+            "Forza italia": 5,
+            "Fratelli d'italia": 5,
+            "Lega": 7,
+            "Futuro nazionale": 5
+          }
         }
       ]
     },
     {
       "name": "Welfare, Salute e Istruzione",
-      "themes": [
+      "icon": "🏥",
+      "color": "#f59e0b",
+      "questions": [
         {
-          "name": "Sanità",
-          "statements": [
-            {
-              "party": "AVS",
-              "text": "Rafforzamento deciso del SSN pubblico, territoriale e universale; contrasto a privatizzazioni e liste d’attesa."
-            },
-            {
-              "party": "M5S",
-              "text": "Più finanziamento al SSN pubblico e territoriale, personale stabile e riduzione delle liste d’attesa."
-            },
-            {
-              "party": "PD",
-              "text": "Più risorse al SSN pubblico, medicina territoriale, personale e accesso universale alle cure."
-            },
-            {
-              "party": "Piueuropa",
-              "text": "SSN universale più efficiente, con investimenti, prevenzione e integrazione pubblico-privato regolata."
-            },
-            {
-              "party": "italia Viva",
-              "text": "Più investimenti e gestione efficiente del SSN, riduzione delle liste d’attesa e valorizzazione del personale."
-            },
-            {
-              "party": "Azione",
-              "text": "Difesa del SSN pubblico con più risorse, gestione competente, medicina territoriale e tempi certi."
-            },
-            {
-              "party": "Liberaldemocratico",
-              "text": "SSN universale ma riorganizzato per efficienza, medicina generale e misurazione degli esiti."
-            },
-            {
-              "party": "Forza italia",
-              "text": "Rafforzamento del SSN, riduzione delle liste d’attesa e collaborazione regolata con il privato accreditato."
-            },
-            {
-              "party": "Fratelli d'italia",
-              "text": "Più fondi, riduzione delle liste d’attesa e valorizzazione del personale, con ricorso al privato convenzionato."
-            },
-            {
-              "party": "Lega",
-              "text": "Più personale e presidi territoriali, riduzione delle liste d’attesa e autonomia regionale nella gestione."
-            },
-            {
-              "party": "Futuro nazionale",
-              "text": "Difesa dichiarata della sanità pubblica, con priorità nazionale nell’accesso; misure operative ancora poco definite."
-            }
-          ]
+          "id": "q5",
+          "theme": "Sanità pubblica vs. ruolo del privato",
+          "text": "La sanità dovrebbe essere gestita esclusivamente dal sistema pubblico, con più risorse al SSN e limitazione del ruolo del privato accreditato.",
+          "scores": {
+            "AVS": 7,
+            "M5S": 6,
+            "PD": 6,
+            "Piueuropa": 4,
+            "italia Viva": 4,
+            "Azione": 5,
+            "Liberaldemocratico": 3,
+            "Forza italia": 3,
+            "Fratelli d'italia": 3,
+            "Lega": 3,
+            "Futuro nazionale": 4
+          }
         },
         {
-          "name": "Istruzione",
-          "statements": [
-            {
-              "party": "AVS",
-              "text": "Più risorse alla scuola pubblica, classi meno numerose, diritto allo studio e contrasto alla precarietà docente."
-            },
-            {
-              "party": "M5S",
-              "text": "Scuola pubblica, diritto allo studio, edilizia scolastica e stabilizzazione del personale precario."
-            },
-            {
-              "party": "PD",
-              "text": "Investimenti in scuola, università e ricerca; diritto allo studio e contrasto ai divari territoriali."
-            },
-            {
-              "party": "Piueuropa",
-              "text": "Istruzione, università e ricerca al centro; autonomia, valutazione, diritto allo studio e attrazione dei talenti."
-            },
-            {
-              "party": "italia Viva",
-              "text": "Merito, autonomia, valutazione, formazione tecnica, università e ricerca."
-            },
-            {
-              "party": "Azione",
-              "text": "Scuola esigente e inclusiva, formazione tecnica, valutazione, università e ricerca."
-            },
-            {
-              "party": "Liberaldemocratico",
-              "text": "Riforma profonda basata su qualità, merito, autonomia, valutazione, università e ricerca."
-            },
-            {
-              "party": "Forza italia",
-              "text": "Merito, libertà educativa, formazione tecnica, università e collegamento con le imprese."
-            },
-            {
-              "party": "Fratelli d'italia",
-              "text": "Merito, disciplina, istruzione tecnica, valorizzazione dei docenti e libertà educativa."
-            },
-            {
-              "party": "Lega",
-              "text": "Merito, istruzione tecnica, autonomia scolastica regionale e valorizzazione delle tradizioni."
-            },
-            {
-              "party": "Futuro nazionale",
-              "text": "Scuola selettiva, meritocratica e disciplinata, con storia nazionale, identità e cultura civica tradizionale."
-            }
-          ]
+          "id": "q6",
+          "theme": "Welfare universale vs. mirato",
+          "text": "Il welfare dovrebbe essere universale e garantire sostegni economici a tutti i cittadini in difficoltà (come il reddito minimo), piuttosto che limitarsi a incentivi alla natalità e bonus mirati.",
+          "scores": {
+            "AVS": 7,
+            "M5S": 7,
+            "PD": 5,
+            "Piueuropa": 4,
+            "italia Viva": 3,
+            "Azione": 3,
+            "Liberaldemocratico": 2,
+            "Forza italia": 3,
+            "Fratelli d'italia": 2,
+            "Lega": 2,
+            "Futuro nazionale": 1
+          }
         },
         {
-          "name": "Aiuti alle famiglie",
-          "statements": [
-            {
-              "party": "AVS",
-              "text": "Welfare universale, servizi per l’infanzia e sostegni economici contro povertà e disuguaglianze."
-            },
-            {
-              "party": "M5S",
-              "text": "Misure universali contro la povertà, sostegno ai figli e difesa di strumenti di reddito minimo."
-            },
-            {
-              "party": "PD",
-              "text": "Asili nido, congedi, assegni e servizi per conciliazione, natalità e contrasto alla povertà."
-            },
-            {
-              "party": "Piueuropa",
-              "text": "Servizi per l’infanzia, congedi paritari e sostegni mirati, più che bonus temporanei."
-            },
-            {
-              "party": "italia Viva",
-              "text": "Asili nido, congedi, assegni e incentivi alla natalità e al lavoro femminile."
-            },
-            {
-              "party": "Azione",
-              "text": "Servizi per infanzia, conciliazione e sostegni mirati, evitando bonus frammentari."
-            },
-            {
-              "party": "Liberaldemocratico",
-              "text": "Servizi e pari opportunità, come asili nido aziendali; sostegni mirati anziché bonus generalizzati."
-            },
-            {
-              "party": "Forza italia",
-              "text": "Sostegni alla natalità, famiglia, disabilità e anziani, con attenzione al ceto medio."
-            },
-            {
-              "party": "Fratelli d'italia",
-              "text": "Politiche nataliste, assegni e detrazioni per figli, sostegno alla famiglia fondata su padre e madre."
-            },
-            {
-              "party": "Lega",
-              "text": "Sostegni alla natalità e priorità alle famiglie italiane, con bonus e detrazioni."
-            },
-            {
-              "party": "Futuro nazionale",
-              "text": "Forte natalismo e sostegno alla famiglia naturale, con priorità alla crescita demografica degli italiani."
-            }
-          ]
-        },
-        {
-          "name": "Casa",
-          "statements": [
-            {
-              "party": "AVS",
-              "text": "Piano pubblico per affitti accessibili, edilizia sociale e riuso del patrimonio vuoto."
-            },
-            {
-              "party": "M5S",
-              "text": "Edilizia pubblica, riqualificazione energetica e sostegni ad affitti e prima casa."
-            },
-            {
-              "party": "PD",
-              "text": "Piano per edilizia sociale, affitti sostenibili, studenti e rigenerazione urbana."
-            },
-            {
-              "party": "Piueuropa",
-              "text": "Più offerta abitativa, edilizia sociale, liberalizzazione regolata degli affitti e tutela di studenti e giovani."
-            },
-            {
-              "party": "italia Viva",
-              "text": "Aumento dell’offerta, rigenerazione urbana, sostegni a giovani e famiglie e collaborazione pubblico-privato."
-            },
-            {
-              "party": "Azione",
-              "text": "Più offerta e rigenerazione urbana, edilizia sociale e regole che rendano fluido il mercato degli affitti."
-            },
-            {
-              "party": "Liberaldemocratico",
-              "text": "Riforma degli affitti per aumentare l’offerta, certezza dei contratti e sostegni selettivi ai fragili."
-            },
-            {
-              "party": "Forza italia",
-              "text": "Tutela della proprietà e prima casa, incentivi all’acquisto e sostegni mirati agli affitti."
-            },
-            {
-              "party": "Fratelli d'italia",
-              "text": "Tutela della proprietà e prima casa, edilizia sociale per aventi diritto e contrasto alle occupazioni abusive."
-            },
-            {
-              "party": "Lega",
-              "text": "Piano casa, tutela della proprietà, edilizia popolare e contrasto alle occupazioni abusive."
-            },
-            {
-              "party": "Futuro nazionale",
-              "text": "Difesa dell’edilizia pubblica per cittadini aventi diritto e tutela della proprietà; impostazione nazional-preferenziale."
-            }
-          ]
+          "id": "q7",
+          "theme": "Istruzione pubblica vs. merito",
+          "text": "La scuola pubblica dovrebbe ricevere molte più risorse, con classi più piccole, stabilizzazione dei precari e forte diritto allo studio, piuttosto che puntare su merito, valutazione e formazione tecnica.",
+          "scores": {
+            "AVS": 7,
+            "M5S": 6,
+            "PD": 6,
+            "Piueuropa": 3,
+            "italia Viva": 2,
+            "Azione": 3,
+            "Liberaldemocratico": 2,
+            "Forza italia": 3,
+            "Fratelli d'italia": 3,
+            "Lega": 3,
+            "Futuro nazionale": 2
+          }
         }
       ]
     },
     {
       "name": "Diritti Civili, Etica e Società",
-      "themes": [
+      "icon": "⚖️",
+      "color": "#ec4899",
+      "questions": [
         {
-          "name": "LGBTQIA",
-          "statements": [
-            {
-              "party": "AVS",
-              "text": "Piena uguaglianza, matrimonio egualitario, adozioni e norme efficaci contro omotransfobia."
-            },
-            {
-              "party": "M5S",
-              "text": "Favorevole all’estensione dei diritti e al contrasto delle discriminazioni, con sensibilità interne non sempre uniformi."
-            },
-            {
-              "party": "PD",
-              "text": "Matrimonio egualitario, riconoscimento delle famiglie omogenitoriali e contrasto alle discriminazioni."
-            },
-            {
-              "party": "Piueuropa",
-              "text": "Piena uguaglianza, matrimonio egualitario, famiglie omogenitoriali e norme contro l’omotransfobia."
-            },
-            {
-              "party": "italia Viva",
-              "text": "Posizione liberal-progressista: uguaglianza, famiglie omogenitoriali e contrasto alle discriminazioni."
-            },
-            {
-              "party": "Azione",
-              "text": "Favorevole alla piena uguaglianza e al contrasto delle discriminazioni, in chiave liberal-progressista."
-            },
-            {
-              "party": "Liberaldemocratico",
-              "text": "Impostazione liberale sui diritti individuali e contrasto delle discriminazioni."
-            },
-            {
-              "party": "Forza italia",
-              "text": "Linea moderata: tutela contro discriminazioni, ma prudenza su matrimonio egualitario e genitorialità."
-            },
-            {
-              "party": "Fratelli d'italia",
-              "text": "Contraria a matrimonio egualitario e adozioni omogenitoriali; sostiene tutele individuali senza nuove categorie di reato."
-            },
-            {
-              "party": "Lega",
-              "text": "Linea conservatrice: contraria a matrimonio egualitario, adozioni omogenitoriali e legge specifica sull’omotransfobia."
-            },
-            {
-              "party": "Futuro nazionale",
-              "text": "Nettamente contrario all’estensione dei modelli familiari e alle politiche di identità di genere."
-            }
-          ]
+          "id": "q8",
+          "theme": "Diritti LGBTQIA+",
+          "text": "Le coppie dello stesso sesso dovrebbero poter sposarsi e adottare figli, e dovrebbe esistere una legge specifica contro l'omotransfobia.",
+          "scores": {
+            "AVS": 7,
+            "M5S": 5,
+            "PD": 7,
+            "Piueuropa": 7,
+            "italia Viva": 6,
+            "Azione": 6,
+            "Liberaldemocratico": 5,
+            "Forza italia": 3,
+            "Fratelli d'italia": 1,
+            "Lega": 1,
+            "Futuro nazionale": 1
+          }
         },
         {
-          "name": "Biodiritto e etica",
-          "statements": [
-            {
-              "party": "AVS",
-              "text": "Favorevole ad autodeterminazione, aborto sicuro, fine vita e laicità delle istituzioni."
-            },
-            {
-              "party": "M5S",
-              "text": "Tendenzialmente favorevole ad autodeterminazione e fine vita regolato; approccio laico ma prudente."
-            },
-            {
-              "party": "PD",
-              "text": "Difende aborto e autodeterminazione; generalmente favorevole a una legge sul fine vita con garanzie."
-            },
-            {
-              "party": "Piueuropa",
-              "text": "Fortemente laica: favorevole ad aborto, eutanasia e suicidio assistito regolati, ricerca scientifica e autodeterminazione."
-            },
-            {
-              "party": "italia Viva",
-              "text": "Approccio laico e riformista; favorevole ad autodeterminazione e fine vita regolato con garanzie."
-            },
-            {
-              "party": "Azione",
-              "text": "Approccio laico e pragmatico; apertura a fine vita regolato e tutela dell’autodeterminazione."
-            },
-            {
-              "party": "Liberaldemocratico",
-              "text": "Centralità della libertà personale e della laicità, con regole chiare e garanzie nei temi bioetici."
-            },
-            {
-              "party": "Forza italia",
-              "text": "Valori cattolico-liberali; cauta o contraria su eutanasia, favorevole alla tutela della legge sull’aborto senza ampliamenti."
-            },
-            {
-              "party": "Fratelli d'italia",
-              "text": "Posizione conservatrice: tutela della vita, contraria a eutanasia e GPA; non propone l’abolizione della legge 194."
-            },
-            {
-              "party": "Lega",
-              "text": "Contraria a eutanasia e GPA; difesa della famiglia tradizionale e posizione restrittiva sui temi bioetici."
-            },
-            {
-              "party": "Futuro nazionale",
-              "text": "Molto conservatore: contrario ad aborto ampliato, eutanasia, suicidio assistito e gestazione per altri."
-            }
-          ]
+          "id": "q9",
+          "theme": "Biodiritto e autodeterminazione",
+          "text": "Ogni individuo dovrebbe avere il diritto all'eutanasia e al suicidio assistito regolati per legge, e l'accesso all'aborto dovrebbe essere pienamente garantito.",
+          "scores": {
+            "AVS": 7,
+            "M5S": 5,
+            "PD": 6,
+            "Piueuropa": 7,
+            "italia Viva": 6,
+            "Azione": 5,
+            "Liberaldemocratico": 6,
+            "Forza italia": 2,
+            "Fratelli d'italia": 1,
+            "Lega": 1,
+            "Futuro nazionale": 1
+          }
         },
         {
-          "name": "Cittadinanza e integrazione",
-          "statements": [
-            {
-              "party": "AVS",
-              "text": "Riforma inclusiva della cittadinanza, ius scholae e piena integrazione sociale."
-            },
-            {
-              "party": "M5S",
-              "text": "Favorevole allo ius scholae e a percorsi più inclusivi per chi cresce e studia in Italia."
-            },
-            {
-              "party": "PD",
-              "text": "Favorevole allo ius scholae e a percorsi di cittadinanza più rapidi e inclusivi."
-            },
-            {
-              "party": "Piueuropa",
-              "text": "Ius scholae, cittadinanza inclusiva, canali regolari e piena integrazione civica."
-            },
-            {
-              "party": "italia Viva",
-              "text": "Favorevole allo ius scholae e a integrazione basata su scuola, lingua e partecipazione."
-            },
-            {
-              "party": "Azione",
-              "text": "Favorevole allo ius scholae e a integrazione esigente basata su lingua, scuola e lavoro."
-            },
-            {
-              "party": "Liberaldemocratico",
-              "text": "Integrazione regolata, cittadinanza legata a percorso civico e scolastico e immigrazione legale."
-            },
-            {
-              "party": "Forza italia",
-              "text": "Favorevole allo ius scholae con requisiti di integrazione, tema su cui è più aperta degli alleati."
-            },
-            {
-              "party": "Fratelli d'italia",
-              "text": "Cittadinanza restrittiva basata su integrazione compiuta; contraria a ius soli e generalmente allo ius scholae."
-            },
-            {
-              "party": "Lega",
-              "text": "Contraria a ius soli e ius scholae; cittadinanza dopo percorso lungo e integrazione verificata."
-            },
-            {
-              "party": "Futuro nazionale",
-              "text": "Cittadinanza fortemente restrittiva, assimilazione culturale e possibile revoca per gravi reati."
-            }
-          ]
+          "id": "q10",
+          "theme": "Cittadinanza e integrazione",
+          "text": "L'Italia dovrebbe adottare lo ius scholae, concedendo la cittadinanza ai figli di immigrati che hanno completato un ciclo scolastico in Italia.",
+          "scores": {
+            "AVS": 7,
+            "M5S": 6,
+            "PD": 6,
+            "Piueuropa": 7,
+            "italia Viva": 6,
+            "Azione": 5,
+            "Liberaldemocratico": 5,
+            "Forza italia": 4,
+            "Fratelli d'italia": 1,
+            "Lega": 1,
+            "Futuro nazionale": 1
+          }
         },
         {
-          "name": "Legalizzazione sostanze",
-          "statements": [
-            {
-              "party": "AVS",
-              "text": "Favorevole alla legalizzazione della cannabis e a politiche di riduzione del danno."
-            },
-            {
-              "party": "M5S",
-              "text": "Apertura alla regolamentazione della cannabis e alla riduzione del danno, con enfasi sulla depenalizzazione."
-            },
-            {
-              "party": "PD",
-              "text": "Apertura alla legalizzazione della cannabis, pur con posizioni interne differenziate."
-            },
-            {
-              "party": "Piueuropa",
-              "text": "Favorevole alla legalizzazione e regolamentazione della cannabis e alla riduzione del danno."
-            },
-            {
-              "party": "italia Viva",
-              "text": "Apertura alla regolamentazione della cannabis, con attenzione a controlli e prevenzione."
-            },
-            {
-              "party": "Azione",
-              "text": "Possibile regolamentazione della cannabis, con controlli sanitari e contrasto al mercato criminale."
-            },
-            {
-              "party": "Liberaldemocratico",
-              "text": "Tendenziale apertura alla regolamentazione, privilegiando salute pubblica e libertà responsabile."
-            },
-            {
-              "party": "Forza italia",
-              "text": "Contraria alla legalizzazione generalizzata; favorevole all’uso terapeutico e alla prevenzione."
-            },
-            {
-              "party": "Fratelli d'italia",
-              "text": "Contraria alla legalizzazione; linea repressiva sullo spaccio e preventiva sulle dipendenze."
-            },
-            {
-              "party": "Lega",
-              "text": "Contraria alla legalizzazione, favorevole a pene più dure per spaccio e consumo."
-            },
-            {
-              "party": "Futuro nazionale",
-              "text": "Linea proibizionista e repressiva, coerente con l’enfasi su disciplina e sicurezza."
-            }
-          ]
+          "id": "q11",
+          "theme": "Legalizzazione cannabis",
+          "text": "La cannabis dovrebbe essere legalizzata e regolamentata dallo Stato, togliendo il mercato alla criminalità organizzata.",
+          "scores": {
+            "AVS": 7,
+            "M5S": 6,
+            "PD": 5,
+            "Piueuropa": 7,
+            "italia Viva": 5,
+            "Azione": 4,
+            "Liberaldemocratico": 5,
+            "Forza italia": 2,
+            "Fratelli d'italia": 1,
+            "Lega": 1,
+            "Futuro nazionale": 1
+          }
         }
       ]
     },
     {
       "name": "Esteri",
-      "themes": [
+      "icon": "🌍",
+      "color": "#3b82f6",
+      "questions": [
         {
-          "name": "Israele",
-          "statements": [
-            {
-              "party": "AVS",
-              "text": "Cessate il fuoco, riconoscimento della Palestina e forte critica alle operazioni israeliane a Gaza."
-            },
-            {
-              "party": "M5S",
-              "text": "Condanna Hamas, chiede cessate il fuoco, riconoscimento palestinese e rispetto del diritto internazionale."
-            },
-            {
-              "party": "PD",
-              "text": "Sostegno alla sicurezza di Israele, cessate il fuoco, aiuti a Gaza e soluzione dei due Stati."
-            },
-            {
-              "party": "Piueuropa",
-              "text": "Difesa di Israele e condanna di Hamas, insieme a cessate il fuoco, tutela dei civili e due Stati."
-            },
-            {
-              "party": "italia Viva",
-              "text": "Sostegno a Israele contro il terrorismo, tutela dei civili e soluzione politica dei due Stati."
-            },
-            {
-              "party": "Azione",
-              "text": "Condanna Hamas, sostegno alla sicurezza di Israele e soluzione dei due Stati con tutela dei civili."
-            },
-            {
-              "party": "Liberaldemocratico",
-              "text": "Linea atlantista, difesa di Israele e soluzione politica che garantisca sicurezza e diritti."
-            },
-            {
-              "party": "Forza italia",
-              "text": "Fortemente vicina a Israele, condanna Hamas e sostiene una pace negoziata con i palestinesi."
-            },
-            {
-              "party": "Fratelli d'italia",
-              "text": "Forte sostegno a Israele e condanna di Hamas, con richiamo alla soluzione dei due Stati."
-            },
-            {
-              "party": "Lega",
-              "text": "Sostegno alla sicurezza di Israele e condanna del terrorismo, con accenti interni talvolta diversi."
-            },
-            {
-              "party": "Futuro nazionale",
-              "text": "Orientamento sovranista e identitario; posizione dettagliata sul conflitto non ancora formalizzata nel programma."
-            }
-          ]
+          "id": "q11",
+          "theme": "Israele e Palestina",
+          "text": "La priorità nella questione israelo-palestinese dovrebbe essere il cessate il fuoco immediato, il riconoscimento dello Stato di Palestina e la critica alle operazioni militari di Israele.",
+          "scores": {
+            "AVS": 7,
+            "M5S": 6,
+            "PD": 4,
+            "Piueuropa": 3,
+            "italia Viva": 3,
+            "Azione": 3,
+            "Liberaldemocratico": 3,
+            "Forza italia": 2,
+            "Fratelli d'italia": 2,
+            "Lega": 3,
+            "Futuro nazionale": 4
+          }
         },
         {
-          "name": "Ucraina/NATO",
-          "statements": [
-            {
-              "party": "AVS",
-              "text": "Condanna l’invasione russa, ma chiede stop all’invio di armi e un negoziato multilaterale."
-            },
-            {
-              "party": "M5S",
-              "text": "Condanna l’invasione, ma è contrario a nuovi invii di armi; priorità a diplomazia e conferenza di pace."
-            },
-            {
-              "party": "PD",
-              "text": "Pieno sostegno all’Ucraina, anche militare, insieme a iniziativa diplomatica e prospettiva europea."
-            },
-            {
-              "party": "Piueuropa",
-              "text": "Sostegno politico e militare all’Ucraina, NATO solida e difesa comune europea."
-            },
-            {
-              "party": "italia Viva",
-              "text": "Nettamente atlantista: sostegno anche militare all’Ucraina e rafforzamento della difesa europea."
-            },
-            {
-              "party": "Azione",
-              "text": "Sostegno militare pieno all’Ucraina, NATO centrale e costruzione di una difesa comune europea."
-            },
-            {
-              "party": "Liberaldemocratico",
-              "text": "Forte sostegno all’Ucraina, alla NATO e a una capacità di difesa europea integrata."
-            },
-            {
-              "party": "Forza italia",
-              "text": "Pieno sostegno all’Ucraina, NATO e difesa comune europea."
-            },
-            {
-              "party": "Fratelli d'italia",
-              "text": "Sostegno militare e politico all’Ucraina, atlantismo e rafforzamento della difesa europea."
-            },
-            {
-              "party": "Lega",
-              "text": "Riconosce il diritto di difesa ucraino, ma insiste su negoziato, stop all’escalation e limiti agli invii di armi."
-            },
-            {
-              "party": "Futuro nazionale",
-              "text": "Approccio nazionalista e critico verso escalation e vincoli esterni; collocazione euroatlantica non pienamente definita."
-            }
-          ]
+          "id": "q12",
+          "theme": "Ucraina e sostegno militare",
+          "text": "L'Italia e l'Europa dovrebbero continuare a sostenere militarmente l'Ucraina, anche con l'invio di armi, e rafforzare la NATO.",
+          "scores": {
+            "AVS": 1,
+            "M5S": 2,
+            "PD": 7,
+            "Piueuropa": 7,
+            "italia Viva": 7,
+            "Azione": 7,
+            "Liberaldemocratico": 7,
+            "Forza italia": 7,
+            "Fratelli d'italia": 6,
+            "Lega": 3,
+            "Futuro nazionale": 2
+          }
         },
         {
-          "name": "Europa",
-          "statements": [
-            {
-              "party": "AVS",
-              "text": "Europeista e federalista in chiave sociale, ecologica e democratica; critica l’austerità."
-            },
-            {
-              "party": "M5S",
-              "text": "Europeista critico: vuole più democrazia, politiche sociali e superamento dell’austerità."
-            },
-            {
-              "party": "PD",
-              "text": "Fortemente europeista e federalista; vuole più poteri comuni, voto a maggioranza e Parlamento rafforzato."
-            },
-            {
-              "party": "Piueuropa",
-              "text": "Federalismo europeo, superamento dell’unanimità, bilancio comune e Stati Uniti d’Europa."
-            },
-            {
-              "party": "italia Viva",
-              "text": "Forte europeismo e prospettiva federale, con politica estera, fiscale e di difesa comuni."
-            },
-            {
-              "party": "Azione",
-              "text": "Fortemente europeista: abolizione dell’unanimità, più poteri comuni e prospettiva federale."
-            },
-            {
-              "party": "Liberaldemocratico",
-              "text": "Integrazione europea più efficace, mercato unico, Stato di diritto e cooperazione in difesa e politica estera."
-            },
-            {
-              "party": "Forza italia",
-              "text": "Europeista nel PPE: più integrazione su difesa, mercato e politica estera, con sussidiarietà."
-            },
-            {
-              "party": "Fratelli d'italia",
-              "text": "Europa confederale di nazioni sovrane; cooperazione sui grandi temi, no a un superstato centralizzato."
-            },
-            {
-              "party": "Lega",
-              "text": "Sovranista: meno competenze a Bruxelles, difesa del veto nazionale e cooperazione tra Stati."
-            },
-            {
-              "party": "Futuro nazionale",
-              "text": "Europa delle nazioni sovrane, forte recupero di competenze nazionali e opposizione al federalismo."
-            }
-          ]
+          "id": "q13",
+          "theme": "Integrazione europea",
+          "text": "L'Europa dovrebbe evolvere verso una federazione con poteri comuni su difesa, fisco e politica estera, superando il principio dell'unanimità.",
+          "scores": {
+            "AVS": 6,
+            "M5S": 4,
+            "PD": 7,
+            "Piueuropa": 7,
+            "italia Viva": 7,
+            "Azione": 7,
+            "Liberaldemocratico": 5,
+            "Forza italia": 5,
+            "Fratelli d'italia": 2,
+            "Lega": 1,
+            "Futuro nazionale": 1
+          }
         },
         {
-          "name": "globalizzazione",
-          "statements": [
-            {
-              "party": "AVS",
-              "text": "Critica la globalizzazione neoliberale; propone regole sociali, fiscali e ambientali vincolanti."
-            },
-            {
-              "party": "M5S",
-              "text": "Vuole governare la globalizzazione con tutela del lavoro, ambiente e sovranità economica europea."
-            },
-            {
-              "party": "PD",
-              "text": "Apertura commerciale accompagnata da diritti del lavoro, autonomia strategica e regole contro il dumping."
-            },
-            {
-              "party": "Piueuropa",
-              "text": "Fortemente favorevole a libero scambio e apertura, con regole comuni, diritti e cooperazione multilaterale."
-            },
-            {
-              "party": "italia Viva",
-              "text": "Favorevole a commercio, investimenti e apertura internazionale, con regole contro concorrenza sleale."
-            },
-            {
-              "party": "Azione",
-              "text": "Apertura ai mercati con difesa europea da dumping, dipendenze strategiche e concorrenza sleale."
-            },
-            {
-              "party": "Liberaldemocratico",
-              "text": "Favorevole a libero commercio e concorrenza, con diversificazione delle dipendenze strategiche."
-            },
-            {
-              "party": "Forza italia",
-              "text": "Favorevole a commercio e imprese aperte ai mercati, proteggendo settori strategici dalla concorrenza sleale."
-            },
-            {
-              "party": "Fratelli d'italia",
-              "text": "Difesa dell’interesse nazionale e delle filiere, reciprocità commerciale e contrasto alle dipendenze strategiche."
-            },
-            {
-              "party": "Lega",
-              "text": "Protezione delle produzioni nazionali, critica alla globalizzazione senza reciprocità e alle importazioni sleali."
-            },
-            {
-              "party": "Futuro nazionale",
-              "text": "Critica all’omologazione globale; protezione dell’identità, del lavoro e delle produzioni italiane."
-            }
-          ]
+          "id": "q14",
+          "theme": "Globalizzazione e commercio",
+          "text": "Il libero scambio e l'apertura ai mercati globali sono positivi per l'Italia, purché ci siano regole comuni contro il dumping e la concorrenza sleale.",
+          "scores": {
+            "AVS": 2,
+            "M5S": 4,
+            "PD": 5,
+            "Piueuropa": 7,
+            "italia Viva": 6,
+            "Azione": 6,
+            "Liberaldemocratico": 7,
+            "Forza italia": 6,
+            "Fratelli d'italia": 3,
+            "Lega": 2,
+            "Futuro nazionale": 1
+          }
         }
       ]
     },
     {
       "name": "Trans.Ecologica ed Energia",
-      "themes": [
+      "icon": "🌱",
+      "color": "#22c55e",
+      "questions": [
         {
-          "name": "Strategia energetica",
-          "statements": [
-            {
-              "party": "AVS",
-              "text": "Rinnovabili, efficienza e comunità energetiche; contraria al nucleare e alle nuove dipendenze fossili."
-            },
-            {
-              "party": "M5S",
-              "text": "Rinnovabili, efficienza, comunità energetiche e riduzione delle fonti fossili; contrario al nucleare tradizionale."
-            },
-            {
-              "party": "PD",
-              "text": "Rinnovabili, reti e accumuli; apertura pragmatica alla ricerca, ma non centralità del nuovo nucleare."
-            },
-            {
-              "party": "Piueuropa",
-              "text": "Rinnovabili, reti, accumuli e apertura al nucleare di nuova generazione su base scientifica."
-            },
-            {
-              "party": "italia Viva",
-              "text": "Mix pragmatico con rinnovabili, reti, gas di transizione e apertura al nucleare avanzato."
-            },
-            {
-              "party": "Azione",
-              "text": "Rinnovabili e reti, ma anche forte sostegno al nucleare di nuova generazione."
-            },
-            {
-              "party": "Liberaldemocratico",
-              "text": "Neutralità tecnologica, rinnovabili e nucleare; prezzi competitivi e sicurezza degli approvvigionamenti."
-            },
-            {
-              "party": "Forza italia",
-              "text": "Mix energetico con gas, rinnovabili e ritorno al nucleare di nuova generazione."
-            },
-            {
-              "party": "Fratelli d'italia",
-              "text": "Sicurezza energetica tramite gas, rinnovabili e apertura al nucleare avanzato."
-            },
-            {
-              "party": "Lega",
-              "text": "Nucleare, gas e rinnovabili in un mix diversificato; forte enfasi su autonomia energetica."
-            },
-            {
-              "party": "Futuro nazionale",
-              "text": "Autonomia energetica e neutralità tecnologica; probabile apertura al nucleare, ma programma dettagliato non pubblicato."
-            }
-          ]
+          "id": "q15",
+          "theme": "Nucleare",
+          "text": "L'Italia dovrebbe investire nel nucleare di nuova generazione come parte del mix energetico per raggiungere l'autonomia e ridurre le emissioni.",
+          "scores": {
+            "AVS": 1,
+            "M5S": 1,
+            "PD": 3,
+            "Piueuropa": 6,
+            "italia Viva": 6,
+            "Azione": 7,
+            "Liberaldemocratico": 6,
+            "Forza italia": 6,
+            "Fratelli d'italia": 5,
+            "Lega": 6,
+            "Futuro nazionale": 5
+          }
         },
         {
-          "name": "Green deal",
-          "statements": [
-            {
-              "party": "AVS",
-              "text": "Difesa e rafforzamento del Green Deal, con neutralità climatica accelerata e transizione socialmente giusta."
-            },
-            {
-              "party": "M5S",
-              "text": "Sostiene la transizione verde, chiedendo compensazioni sociali e tutela di famiglie e PMI."
-            },
-            {
-              "party": "PD",
-              "text": "Sostiene il Green Deal con strumenti sociali e industriali che evitino costi regressivi."
-            },
-            {
-              "party": "Piueuropa",
-              "text": "Sostiene gli obiettivi climatici europei con neutralità tecnologica, carbon pricing e compensazioni sociali."
-            },
-            {
-              "party": "italia Viva",
-              "text": "Sostiene la decarbonizzazione, ma con gradualità, neutralità tecnologica e protezione della competitività."
-            },
-            {
-              "party": "Azione",
-              "text": "Riformare il Green Deal per renderlo industrialmente realistico, tecnologicamente neutro e socialmente sostenibile."
-            },
-            {
-              "party": "Liberaldemocratico",
-              "text": "Obiettivi climatici perseguiti con scienza, prezzi del carbonio e tecnologie, evitando divieti inefficienti."
-            },
-            {
-              "party": "Forza italia",
-              "text": "Ambientalismo pragmatico: rivedere norme troppo onerose, mantenendo gli obiettivi climatici."
-            },
-            {
-              "party": "Fratelli d'italia",
-              "text": "Vuole modificare profondamente il Green Deal, cancellando divieti rigidi su auto e case e applicando neutralità tecnologica."
-            },
-            {
-              "party": "Lega",
-              "text": "Vuole superare o riscrivere il Green Deal, cancellando stop alle auto termiche e direttiva case green."
-            },
-            {
-              "party": "Futuro nazionale",
-              "text": "Contrario all’ambientalismo percepito come ideologico e ai vincoli che penalizzano industria, auto e famiglie."
-            }
-          ]
+          "id": "q16",
+          "theme": "Green Deal",
+          "text": "Il Green Deal europeo dovrebbe essere mantenuto e rafforzato, anche se impone vincoli severi su auto, case e industria, per accelerare la transizione climatica.",
+          "scores": {
+            "AVS": 7,
+            "M5S": 6,
+            "PD": 6,
+            "Piueuropa": 5,
+            "italia Viva": 4,
+            "Azione": 3,
+            "Liberaldemocratico": 3,
+            "Forza italia": 3,
+            "Fratelli d'italia": 1,
+            "Lega": 1,
+            "Futuro nazionale": 1
+          }
         },
         {
-          "name": "infrastrutture",
-          "statements": [
-            {
-              "party": "AVS",
-              "text": "Priorità a ferro, trasporto pubblico e mobilità sostenibile; contraria alle grandi opere ritenute inutili."
-            },
-            {
-              "party": "M5S",
-              "text": "Investimenti in trasporto pubblico, ferrovie e manutenzione; selettivo sulle grandi opere."
-            },
-            {
-              "party": "PD",
-              "text": "Priorità a ferrovie, trasporto pubblico, manutenzione e infrastrutture strategiche valutate ambientalmente."
-            },
-            {
-              "party": "Piueuropa",
-              "text": "Infrastrutture europee, alta velocità, mobilità sostenibile, reti digitali ed energetiche transfrontaliere."
-            },
-            {
-              "party": "italia Viva",
-              "text": "Favorevole a grandi opere, alta velocità, porti, reti energetiche e digitali."
-            },
-            {
-              "party": "Azione",
-              "text": "Favorevole a infrastrutture strategiche, alta velocità, porti, reti energetiche e digitali."
-            },
-            {
-              "party": "Liberaldemocratico",
-              "text": "Infrastrutture valutate con analisi costi-benefici; priorità a reti energetiche, digitali e trasporti efficienti."
-            },
-            {
-              "party": "Forza italia",
-              "text": "Favorevole a grandi opere, porti, alta velocità, Ponte sullo Stretto e reti europee."
-            },
-            {
-              "party": "Fratelli d'italia",
-              "text": "Favorevole a grandi opere, Ponte sullo Stretto, porti, strade e reti energetiche strategiche."
-            },
-            {
-              "party": "Lega",
-              "text": "Fortemente favorevole a Ponte sullo Stretto, strade, autostrade, TAV e grandi opere."
-            },
-            {
-              "party": "Futuro nazionale",
-              "text": "Investimenti in infrastrutture e sviluppo territoriale, con priorità all’interesse nazionale."
-            }
-          ]
+          "id": "q17",
+          "theme": "Grandi opere vs. mobilità sostenibile",
+          "text": "L'Italia dovrebbe dare priorità a grandi opere come il Ponte sullo Stretto, alta velocità e porti, piuttosto che concentrarsi su trasporto pubblico locale e mobilità sostenibile.",
+          "scores": {
+            "AVS": 1,
+            "M5S": 2,
+            "PD": 3,
+            "Piueuropa": 5,
+            "italia Viva": 6,
+            "Azione": 6,
+            "Liberaldemocratico": 5,
+            "Forza italia": 7,
+            "Fratelli d'italia": 7,
+            "Lega": 7,
+            "Futuro nazionale": 6
+          }
         }
       ]
     },
     {
       "name": "Sicurezza",
-      "themes": [
+      "icon": "🛡️",
+      "color": "#ef4444",
+      "questions": [
         {
-          "name": "Migrazione",
-          "statements": [
-            {
-              "party": "AVS",
-              "text": "Accoglienza, canali legali, soccorso in mare e redistribuzione europea; no all’esternalizzazione repressiva."
-            },
-            {
-              "party": "M5S",
-              "text": "Canali legali, redistribuzione europea e contrasto ai trafficanti; critica accordi che comprimono i diritti."
-            },
-            {
-              "party": "PD",
-              "text": "Accoglienza ordinata, canali legali, redistribuzione europea e cooperazione con i Paesi d’origine nel rispetto dei diritti."
-            },
-            {
-              "party": "Piueuropa",
-              "text": "Canali legali, politica comune europea, integrazione e gestione ordinata delle frontiere nel rispetto dei diritti."
-            },
-            {
-              "party": "italia Viva",
-              "text": "Gestione europea, canali legali e accordi con Paesi terzi; integrazione per chi rispetta le regole."
-            },
-            {
-              "party": "Azione",
-              "text": "Competenza europea, accordi con Paesi terzi, canali regolari e rimpatri efficaci nel rispetto del diritto."
-            },
-            {
-              "party": "Liberaldemocratico",
-              "text": "Ingressi legali selettivi, integrazione e rimpatri per irregolari; gestione europea dei confini."
-            },
-            {
-              "party": "Forza italia",
-              "text": "Controllo dei confini, ricollocamenti UE, accordi con Paesi terzi e canali legali per lavoro."
-            },
-            {
-              "party": "Fratelli d'italia",
-              "text": "Frontiere esterne forti, accordi con Paesi d’origine e transito, rimpatri e canali regolari controllati."
-            },
-            {
-              "party": "Lega",
-              "text": "Linea molto restrittiva: controllo dei confini, rimpatri, accordi esterni e forte riduzione degli arrivi."
-            },
-            {
-              "party": "Futuro nazionale",
-              "text": "Tema centrale: drastica riduzione degli ingressi, rimpatrio degli irregolari e “remigrazione” per chi non si assimila."
-            }
-          ]
+          "id": "q18",
+          "theme": "Migrazione",
+          "text": "L'Italia dovrebbe adottare una politica migratoria più restrittiva, con controllo rigoroso dei confini, rimpatri rapidi e riduzione degli arrivi.",
+          "scores": {
+            "AVS": 1,
+            "M5S": 2,
+            "PD": 2,
+            "Piueuropa": 3,
+            "italia Viva": 4,
+            "Azione": 5,
+            "Liberaldemocratico": 5,
+            "Forza italia": 5,
+            "Fratelli d'italia": 6,
+            "Lega": 7,
+            "Futuro nazionale": 7
+          }
         },
         {
-          "name": "Ordine pubblico",
-          "statements": [
-            {
-              "party": "AVS",
-              "text": "Prevenzione sociale, diritti e controllo democratico delle forze dell’ordine; contraria a svolte securitarie."
-            },
-            {
-              "party": "M5S",
-              "text": "Linea severa su mafie e corruzione, ma con attenzione alla prevenzione e alle garanzie individuali."
-            },
-            {
-              "party": "PD",
-              "text": "Sicurezza urbana integrata con prevenzione sociale, più personale e rispetto delle garanzie democratiche."
-            },
-            {
-              "party": "Piueuropa",
-              "text": "Sicurezza basata su legalità, prevenzione e libertà individuali; contraria a misure puramente simboliche."
-            },
-            {
-              "party": "italia Viva",
-              "text": "Più forze dell’ordine e tecnologie, insieme a prevenzione e tutela delle libertà."
-            },
-            {
-              "party": "Azione",
-              "text": "Più capacità operativa e coordinamento, con prevenzione, legalità e approccio non propagandistico."
-            },
-            {
-              "party": "Liberaldemocratico",
-              "text": "Sicurezza professionale e basata sui dati, con tutela delle libertà e responsabilità individuale."
-            },
-            {
-              "party": "Forza italia",
-              "text": "Più forze dell’ordine e pene efficaci, con cultura garantista e tutela delle libertà."
-            },
-            {
-              "party": "Fratelli d'italia",
-              "text": "Linea securitaria: più poteri e tutele alle forze dell’ordine, pene più severe e contrasto alle occupazioni."
-            },
-            {
-              "party": "Lega",
-              "text": "Pene più severe, più poteri alle forze dell’ordine, legittima difesa e contrasto a degrado e occupazioni."
-            },
-            {
-              "party": "Futuro nazionale",
-              "text": "Linea fortemente securitaria, pene severe, sostegno alle forze dell’ordine e Stato autorevole."
-            }
-          ]
+          "id": "q19",
+          "theme": "Ordine pubblico",
+          "text": "La sicurezza si ottiene con pene più severe, più poteri alle forze dell'ordine e tolleranza zero, piuttosto che con prevenzione sociale e garanzie individuali.",
+          "scores": {
+            "AVS": 1,
+            "M5S": 2,
+            "PD": 2,
+            "Piueuropa": 2,
+            "italia Viva": 4,
+            "Azione": 3,
+            "Liberaldemocratico": 3,
+            "Forza italia": 4,
+            "Fratelli d'italia": 6,
+            "Lega": 7,
+            "Futuro nazionale": 7
+          }
         },
         {
-          "name": "Giustizia",
-          "statements": [
-            {
-              "party": "AVS",
-              "text": "Giustizia garantista sui diritti, lotta a mafie e corruzione, attenzione alle condizioni carcerarie."
-            },
-            {
-              "party": "M5S",
-              "text": "Forte impostazione anticorruzione; difende indipendenza della magistratura e misure contro i reati dei colletti bianchi."
-            },
-            {
-              "party": "PD",
-              "text": "Efficienza dei processi, lotta a mafie e corruzione, indipendenza della magistratura e riforme garantiste."
-            },
-            {
-              "party": "Piueuropa",
-              "text": "Garantismo, separazione delle carriere, carceri dignitose, tempi certi e tutela dello Stato di diritto."
-            },
-            {
-              "party": "italia Viva",
-              "text": "Garantismo, separazione delle carriere, tempi rapidi e limitazione dell’abuso della custodia cautelare."
-            },
-            {
-              "party": "Azione",
-              "text": "Garantismo, separazione delle carriere, efficienza dei processi e carceri orientate al reinserimento."
-            },
-            {
-              "party": "Liberaldemocratico",
-              "text": "Fortemente garantista: separazione delle carriere, tempi certi, responsabilità e tutela dell’imputato."
-            },
-            {
-              "party": "Forza italia",
-              "text": "Garantismo, separazione delle carriere, limiti alla custodia cautelare e responsabilità dei magistrati."
-            },
-            {
-              "party": "Fratelli d'italia",
-              "text": "Separazione delle carriere, riforma del CSM, maggiore responsabilità e tutela delle vittime."
-            },
-            {
-              "party": "Lega",
-              "text": "Separazione delle carriere e responsabilità dei magistrati; impostazione garantista per gli imputati ma punitiva sull’ordine pubblico."
-            },
-            {
-              "party": "Futuro nazionale",
-              "text": "Impostazione punitiva sui reati e favorevole a ordine e responsabilità; assetto della magistratura non ancora dettagliato."
-            }
-          ]
+          "id": "q20",
+          "theme": "Giustizia",
+          "text": "La magistratura dovrebbe essere riformata con la separazione delle carriere tra giudici e PM, e i tempi dei processi dovrebbero essere ridotti drasticamente.",
+          "scores": {
+            "AVS": 2,
+            "M5S": 3,
+            "PD": 4,
+            "Piueuropa": 7,
+            "italia Viva": 7,
+            "Azione": 7,
+            "Liberaldemocratico": 7,
+            "Forza italia": 7,
+            "Fratelli d'italia": 6,
+            "Lega": 6,
+            "Futuro nazionale": 4
+          }
         }
       ]
     },
     {
       "name": "Istituzioni, Democrazia e PA",
-      "themes": [
+      "icon": "🏛️",
+      "color": "#8b5cf6",
+      "questions": [
         {
-          "name": "Riforme costituzionali",
-          "statements": [
-            {
-              "party": "AVS",
-              "text": "Rafforzamento del Parlamento e della partecipazione; contraria al premierato e alla concentrazione dei poteri."
-            },
-            {
-              "party": "M5S",
-              "text": "Favorevole a partecipazione diretta e referendum; contrario al premierato e a eccessiva concentrazione del potere."
-            },
-            {
-              "party": "PD",
-              "text": "Contrario al premierato governativo; favorevole a rafforzare Parlamento, partecipazione e istituzioni europee."
-            },
-            {
-              "party": "Piueuropa",
-              "text": "Riforme liberaldemocratiche, più poteri europei e istituzioni efficienti; contraria a derive plebiscitarie."
-            },
-            {
-              "party": "italia Viva",
-              "text": "Favorevole a riforme per stabilità e decisione, incluso il sindaco d’Italia o modelli simili."
-            },
-            {
-              "party": "Azione",
-              "text": "Riforme per stabilità e capacità decisionale, senza indebolire contrappesi e Stato di diritto."
-            },
-            {
-              "party": "Liberaldemocratico",
-              "text": "Propone monocameralismo e processo legislativo più trasparente e responsabile."
-            },
-            {
-              "party": "Forza italia",
-              "text": "Favorevole al premierato e a riforme che rafforzino stabilità e scelta degli elettori."
-            },
-            {
-              "party": "Fratelli d'italia",
-              "text": "Favorevole al premierato per elezione diretta e stabilità dell’esecutivo."
-            },
-            {
-              "party": "Lega",
-              "text": "Favorevole al premierato e a maggiore stabilità dell’esecutivo; tutela anche il peso delle autonomie."
-            },
-            {
-              "party": "Futuro nazionale",
-              "text": "Stato autorevole, leadership forte e primato dell’interesse nazionale; riforme precise ancora da definire."
-            }
-          ]
+          "id": "q21",
+          "theme": "Premierato",
+          "text": "Il Presidente del Consiglio dovrebbe essere eletto direttamente dai cittadini per garantire stabilità e decisione al governo.",
+          "scores": {
+            "AVS": 1,
+            "M5S": 2,
+            "PD": 1,
+            "Piueuropa": 2,
+            "italia Viva": 6,
+            "Azione": 5,
+            "Liberaldemocratico": 4,
+            "Forza italia": 6,
+            "Fratelli d'italia": 7,
+            "Lega": 6,
+            "Futuro nazionale": 6
+          }
         },
         {
-          "name": "Autonomia differenziata",
-          "statements": [
-            {
-              "party": "AVS",
-              "text": "Nettamente contraria: teme aumento dei divari territoriali e indebolimento dei servizi universali."
-            },
-            {
-              "party": "M5S",
-              "text": "Contrario, perché rischia di ampliare i divari e frammentare sanità, scuola e diritti sociali."
-            },
-            {
-              "party": "PD",
-              "text": "Contrario alla riforma Calderoli; ammette autonomia solo con LEP finanziati e salvaguardia dell’unità nazionale."
-            },
-            {
-              "party": "Piueuropa",
-              "text": "Scettica verso autonomia che aumenti i divari; favorevole a responsabilità locale entro diritti nazionali uniformi."
-            },
-            {
-              "party": "italia Viva",
-              "text": "Favorevole solo con LEP e perequazione; posizione più aperta alla responsabilità territoriale rispetto alla sinistra."
-            },
-            {
-              "party": "Azione",
-              "text": "Critica la riforma vigente se priva di LEP e risorse; favorevole a responsabilità locale ben ordinata."
-            },
-            {
-              "party": "Liberaldemocratico",
-              "text": "Contrario a frammentazioni che mettano a rischio diritti uniformi; responsabilità locale entro standard nazionali."
-            },
-            {
-              "party": "Forza italia",
-              "text": "Favorevole con garanzia dei LEP, perequazione e tutela dell’unità nazionale."
-            },
-            {
-              "party": "Fratelli d'italia",
-              "text": "Favorevole, con LEP e maggiore responsabilità regionale; sostiene l’attuazione della riforma."
-            },
-            {
-              "party": "Lega",
-              "text": "Fortemente favorevole: è una riforma identitaria per trasferire competenze e responsabilità alle regioni."
-            },
-            {
-              "party": "Futuro nazionale",
-              "text": "Valorizza le “piccole patrie” e le identità locali, ma entro una forte coesione nazionale."
-            }
-          ]
+          "id": "q22",
+          "theme": "Autonomia differenziata",
+          "text": "Le regioni dovrebbero avere più competenze e autonomia nella gestione di sanità, scuola e servizi, anche se questo potrebbe creare differenze territoriali.",
+          "scores": {
+            "AVS": 1,
+            "M5S": 1,
+            "PD": 2,
+            "Piueuropa": 3,
+            "italia Viva": 4,
+            "Azione": 3,
+            "Liberaldemocratico": 2,
+            "Forza italia": 5,
+            "Fratelli d'italia": 6,
+            "Lega": 7,
+            "Futuro nazionale": 4
+          }
         },
         {
-          "name": "Legge elettorale",
-          "statements": [
-            {
-              "party": "AVS",
-              "text": "Tendenzialmente favorevole a un sistema proporzionale che garantisca rappresentanza e pluralismo."
-            },
-            {
-              "party": "M5S",
-              "text": "Preferenza per un sistema proporzionale e strumenti di partecipazione diretta dei cittadini."
-            },
-            {
-              "party": "PD",
-              "text": "Favorevole a una legge proporzionale o con forte rappresentatività e correttivi di governabilità."
-            },
-            {
-              "party": "Piueuropa",
-              "text": "Preferenza per un sistema proporzionale con soglia e strumenti di governabilità trasparenti."
-            },
-            {
-              "party": "italia Viva",
-              "text": "Favorevole a un sistema maggioritario o a doppio turno che favorisca stabilità e scelta dell’esecutivo."
-            },
-            {
-              "party": "Azione",
-              "text": "Favorevole a sistemi che combinino rappresentanza, scelta degli eletti e stabilità governativa."
-            },
-            {
-              "party": "Liberaldemocratico",
-              "text": "Sistema semplice e rappresentativo, con soglie ragionevoli e responsabilità chiara degli eletti."
-            },
-            {
-              "party": "Forza italia",
-              "text": "Preferenza per maggioritario o proporzionale con premio, per stabilità della coalizione."
-            },
-            {
-              "party": "Fratelli d'italia",
-              "text": "Favorevole a un sistema che garantisca maggioranze stabili e coerenza con il premierato."
-            },
-            {
-              "party": "Lega",
-              "text": "Favorevole a un sistema maggioritario o con premio che assicuri vittoria chiara alla coalizione."
-            },
-            {
-              "party": "Futuro nazionale",
-              "text": "Preferenza presumibile per sistemi che producano maggioranze nette; proposta ufficiale non ancora definita."
-            }
-          ]
-        },
-        {
-          "name": "PA e burocrazia",
-          "statements": [
-            {
-              "party": "AVS",
-              "text": "PA più forte, digitalizzata e competente, con assunzioni e capacità pubblica per servizi e transizione."
-            },
-            {
-              "party": "M5S",
-              "text": "Digitalizzazione, trasparenza, semplificazione e lotta a corruzione e conflitti di interesse."
-            },
-            {
-              "party": "PD",
-              "text": "Digitalizzazione, assunzioni qualificate, semplificazione e rafforzamento della capacità amministrativa."
-            },
-            {
-              "party": "Piueuropa",
-              "text": "Semplificazione radicale, digitalizzazione, concorrenza, valutazione e servizi centrati sul cittadino."
-            },
-            {
-              "party": "italia Viva",
-              "text": "Semplificazione, digitalizzazione, valutazione dei risultati e riduzione degli oneri per cittadini e imprese."
-            },
-            {
-              "party": "Azione",
-              "text": "Semplificazione, digitalizzazione, competenze manageriali, valutazione e responsabilità dei dirigenti."
-            },
-            {
-              "party": "Liberaldemocratico",
-              "text": "Spending review, digitalizzazione, semplificazione, valutazione e riduzione delle autorizzazioni inutili."
-            },
-            {
-              "party": "Forza italia",
-              "text": "Semplificazione, digitalizzazione e riduzione dei vincoli burocratici per cittadini e imprese."
-            },
-            {
-              "party": "Fratelli d'italia",
-              "text": "Semplificazione, digitalizzazione, riduzione dei vincoli UE e maggiore responsabilità dei funzionari."
-            },
-            {
-              "party": "Lega",
-              "text": "Federalismo amministrativo, semplificazione, digitalizzazione e riduzione della burocrazia centrale."
-            },
-            {
-              "party": "Futuro nazionale",
-              "text": "Meno burocrazia e Stato al servizio dei cittadini, ma più autorevole su sicurezza, confini e identità."
-            }
-          ]
+          "id": "q23",
+          "theme": "Legge elettorale",
+          "text": "L'Italia dovrebbe adottare un sistema elettorale proporzionale che garantisca massima rappresentanza, anche a costo di governi di coalizione meno stabili.",
+          "scores": {
+            "AVS": 6,
+            "M5S": 7,
+            "PD": 5,
+            "Piueuropa": 5,
+            "italia Viva": 2,
+            "Azione": 4,
+            "Liberaldemocratico": 5,
+            "Forza italia": 3,
+            "Fratelli d'italia": 2,
+            "Lega": 2,
+            "Futuro nazionale": 2
+          }
         }
       ]
     }

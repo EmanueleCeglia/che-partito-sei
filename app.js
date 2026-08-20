@@ -1,18 +1,7 @@
 /* ============================================
-   CHE PARTITO SEI? — App Logic
-   Quiz engine, scoring & results
+   CHE PARTITO SEI? — App Logic (v2 Optimized)
+   Distance-based scoring with neutral questions
    ============================================ */
-
-// ── Category metadata ──
-const CATEGORY_META = {
-  'Economia, Fisco e Lavoro':       { icon: '💰', color: '#10b981' },
-  'Welfare, Salute e Istruzione':   { icon: '🏥', color: '#f59e0b' },
-  'Diritti Civili, Etica e Società': { icon: '⚖️', color: '#ec4899' },
-  'Esteri':                          { icon: '🌍', color: '#3b82f6' },
-  'Trans.Ecologica ed Energia':     { icon: '🌱', color: '#22c55e' },
-  'Sicurezza':                       { icon: '🛡️', color: '#ef4444' },
-  'Istituzioni, Democrazia e PA':   { icon: '🏛️', color: '#8b5cf6' },
-};
 
 // ── Party colors ──
 const PARTY_COLORS = {
@@ -73,20 +62,12 @@ const dom = {
 
 // ── Utility functions ──
 
-/** Fisher-Yates shuffle (returns a new array) */
-function shuffle(arr) {
-  const a = [...arr];
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
-  }
-  return a;
-}
-
 /** Show a screen by id */
 function showScreen(screenId) {
   $$('.screen').forEach(s => s.classList.remove('active'));
   $(`#${screenId}`).classList.add('active');
+  // Scroll to top when changing screens
+  window.scrollTo(0, 0);
 }
 
 /** Save progress to localStorage */
@@ -95,21 +76,19 @@ function saveProgress() {
     answers,
     currentIndex,
     timestamp: Date.now(),
-    // Save the question order so resume uses same shuffle
-    questionOrder: questions.map(q => `${q.categoryIndex}-${q.themeIndex}-${q.originalStatementIndex}`),
   };
-  localStorage.setItem('chePartito_progress', JSON.stringify(data));
+  localStorage.setItem('chePartito_progress_v2', JSON.stringify(data));
 }
 
 /** Load progress from localStorage */
 function loadProgress() {
   try {
-    const raw = localStorage.getItem('chePartito_progress');
+    const raw = localStorage.getItem('chePartito_progress_v2');
     if (!raw) return null;
     const data = JSON.parse(raw);
     // Only allow resume if less than 7 days old
     if (Date.now() - data.timestamp > 7 * 24 * 60 * 60 * 1000) {
-      localStorage.removeItem('chePartito_progress');
+      localStorage.removeItem('chePartito_progress_v2');
       return null;
     }
     return data;
@@ -120,6 +99,8 @@ function loadProgress() {
 
 /** Clear saved progress */
 function clearProgress() {
+  localStorage.removeItem('chePartito_progress_v2');
+  // Also clear old v1 progress
   localStorage.removeItem('chePartito_progress');
 }
 
@@ -145,50 +126,27 @@ async function loadData() {
 
 // ── Build Questions Array ──
 
-function buildQuestions(savedOrder = null) {
+function buildQuestions() {
   questions = [];
 
   quizData.categories.forEach((cat, ci) => {
-    cat.themes.forEach((theme, ti) => {
-      let statementsWithIdx = theme.statements.map((s, si) => ({
-        ...s,
-        originalStatementIndex: si,
-      }));
-
-      if (savedOrder) {
-        // Restore the exact order from saved progress
-        const relevantOrder = savedOrder
-          .filter(key => key.startsWith(`${ci}-${ti}-`))
-          .map(key => parseInt(key.split('-')[2]));
-
-        if (relevantOrder.length === statementsWithIdx.length) {
-          statementsWithIdx = relevantOrder.map(idx =>
-            statementsWithIdx.find(s => s.originalStatementIndex === idx)
-          );
-        } else {
-          statementsWithIdx = shuffle(statementsWithIdx);
-        }
-      } else {
-        // Shuffle statements within each theme for anonymity
-        statementsWithIdx = shuffle(statementsWithIdx);
-      }
-
-      statementsWithIdx.forEach(stmt => {
-        questions.push({
-          categoryIndex: ci,
-          categoryName: cat.name,
-          themeIndex: ti,
-          themeName: theme.name,
-          party: stmt.party,
-          text: stmt.text,
-          originalStatementIndex: stmt.originalStatementIndex,
-        });
+    cat.questions.forEach((q, qi) => {
+      questions.push({
+        categoryIndex: ci,
+        categoryName: cat.name,
+        categoryIcon: cat.icon,
+        categoryColor: cat.color,
+        questionIndex: qi,
+        id: q.id,
+        themeName: q.theme,
+        text: q.text,
+        scores: q.scores, // pre-assigned party scores
       });
     });
   });
 
-  // Initialize answers array
-  if (!savedOrder) {
+  // Initialize answers array if not resuming
+  if (answers.length !== questions.length) {
     answers = new Array(questions.length).fill(null);
   }
 }
@@ -196,14 +154,16 @@ function buildQuestions(savedOrder = null) {
 // ── Quiz Flow ──
 
 function startQuiz(resumeFrom = null) {
+  buildQuestions();
+
   if (resumeFrom) {
-    buildQuestions(resumeFrom.questionOrder);
     answers = resumeFrom.answers;
-    // Pad answers if needed
+    // Pad/trim answers if data changed
     while (answers.length < questions.length) answers.push(null);
-    currentIndex = resumeFrom.currentIndex;
+    answers = answers.slice(0, questions.length);
+    currentIndex = Math.min(resumeFrom.currentIndex, questions.length - 1);
   } else {
-    buildQuestions();
+    answers = new Array(questions.length).fill(null);
     currentIndex = 0;
     clearProgress();
   }
@@ -223,14 +183,10 @@ function showCategoryTransition(categoryIndex) {
   const cat = quizData.categories[categoryIndex];
   if (!cat) return;
 
-  const meta = CATEGORY_META[cat.name] || { icon: '📌', color: '#6366f1' };
-  const themeCount = cat.themes.length;
-  const questionCount = themeCount * quizData.parties.length;
-
-  dom.catTransIcon.textContent = meta.icon;
-  dom.catTransIcon.style.background = meta.color;
+  dom.catTransIcon.textContent = cat.icon;
+  dom.catTransIcon.style.background = cat.color;
   dom.catTransName.textContent = cat.name;
-  dom.catTransInfo.textContent = `${themeCount} temi · ${questionCount} domande`;
+  dom.catTransInfo.textContent = `${cat.questions.length} domande`;
 
   // Build category progress dots
   dom.catTransDots.innerHTML = '';
@@ -256,12 +212,10 @@ function renderQuestion() {
   }
 
   const q = questions[currentIndex];
-  const meta = CATEGORY_META[q.categoryName] || { icon: '📌', color: '#6366f1' };
 
   // Update header
-  dom.quizCategoryBadge.textContent = `${meta.icon} ${q.categoryName}`;
-  dom.quizCategoryBadge.style.setProperty('--cat-color', meta.color);
-  dom.quizCategoryBadge.style.background = meta.color;
+  dom.quizCategoryBadge.textContent = `${q.categoryIcon} ${q.categoryName}`;
+  dom.quizCategoryBadge.style.background = q.categoryColor;
   dom.quizThemeName.textContent = q.themeName;
 
   // Update counter & progress
@@ -355,40 +309,54 @@ function selectRating(value) {
   }, 350);
 }
 
-// ── Scoring ──
+// ── Scoring (Distance-based) ──
 
 function calculateScores() {
-  // Overall per-party scores
-  const partyScores = {};
+  // For each party, calculate alignment on each question:
+  // alignment = 7 - |user_answer - party_score|
+  // Then average all alignments per party.
+
+  const partyAlignments = {};
   quizData.parties.forEach(p => {
-    partyScores[p] = { total: 0, count: 0 };
+    partyAlignments[p] = { total: 0, count: 0 };
   });
 
-  // Per-category per-party scores
-  const categoryScores = {};
+  // Per-category per-party
+  const categoryAlignments = {};
   quizData.categories.forEach(cat => {
-    categoryScores[cat.name] = {};
+    categoryAlignments[cat.name] = {};
     quizData.parties.forEach(p => {
-      categoryScores[cat.name][p] = { total: 0, count: 0 };
+      categoryAlignments[cat.name][p] = { total: 0, count: 0 };
     });
   });
 
-  // Aggregate scores
+  // Calculate alignments
   questions.forEach((q, i) => {
-    const score = answers[i];
-    if (score === null) return;
+    const userAnswer = answers[i];
+    if (userAnswer === null) return;
 
-    partyScores[q.party].total += score;
-    partyScores[q.party].count += 1;
+    quizData.parties.forEach(party => {
+      const partyScore = q.scores[party];
+      if (partyScore === undefined) return;
 
-    categoryScores[q.categoryName][q.party].total += score;
-    categoryScores[q.categoryName][q.party].count += 1;
+      // Alignment: 7 when perfect match, 1 when max distance (6)
+      const distance = Math.abs(userAnswer - partyScore);
+      const alignment = 7 - distance;
+
+      partyAlignments[party].total += alignment;
+      partyAlignments[party].count += 1;
+
+      categoryAlignments[q.categoryName][party].total += alignment;
+      categoryAlignments[q.categoryName][party].count += 1;
+    });
   });
 
-  // Calculate averages
+  // Calculate averages and sort
   const overallRanking = quizData.parties.map(p => ({
     party: p,
-    avg: partyScores[p].count > 0 ? partyScores[p].total / partyScores[p].count : 0,
+    avg: partyAlignments[p].count > 0
+      ? partyAlignments[p].total / partyAlignments[p].count
+      : 0,
     color: PARTY_COLORS[p] || '#6366f1',
   })).sort((a, b) => b.avg - a.avg);
 
@@ -396,8 +364,8 @@ function calculateScores() {
   quizData.categories.forEach(cat => {
     categoryRankings[cat.name] = quizData.parties.map(p => ({
       party: p,
-      avg: categoryScores[cat.name][p].count > 0
-        ? categoryScores[cat.name][p].total / categoryScores[cat.name][p].count
+      avg: categoryAlignments[cat.name][p].count > 0
+        ? categoryAlignments[cat.name][p].total / categoryAlignments[cat.name][p].count
         : 0,
       color: PARTY_COLORS[p] || '#6366f1',
     })).sort((a, b) => b.avg - a.avg);
@@ -453,7 +421,6 @@ function showResults() {
   // Category breakdown
   dom.categoryBreakdown.innerHTML = '';
   quizData.categories.forEach((cat, catIdx) => {
-    const meta = CATEGORY_META[cat.name] || { icon: '📌', color: '#6366f1' };
     const ranking = categoryRankings[cat.name];
 
     const block = document.createElement('div');
@@ -481,7 +448,7 @@ function showResults() {
 
     block.innerHTML = `
       <div class="category-block__header" data-cat-idx="${catIdx}">
-        <div class="category-block__icon" style="background: ${meta.color};">${meta.icon}</div>
+        <div class="category-block__icon" style="background: ${cat.color};">${cat.icon}</div>
         <div class="category-block__name">${cat.name}</div>
         <div class="category-block__chevron">▼</div>
       </div>
