@@ -8,7 +8,7 @@
   <meta name="theme-color" content="#070b1e">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=2.1">
 </head>
 <body>
 
@@ -121,6 +121,9 @@
     <div class="quiz__progress-bar">
       <div id="quiz-progress-fill" class="quiz__progress-fill" style="width: 0%"></div>
     </div>
+
+    <!-- Transient message, e.g. a question left unanswered -->
+    <div id="quiz-notice" class="quiz__notice" role="status" aria-live="polite"></div>
 
     <!-- Header -->
     <div class="quiz__header">
@@ -341,6 +344,6 @@
     </div>
   </div>
 
-  <script src="app.js"></script>
+  <script src="app.js?v=2.1"></script>
 </body>
 </html>

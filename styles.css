@@ -1475,6 +1475,34 @@ body::before {
   color: var(--text-primary);
 }
 
+/* Transient toast over the quiz */
+.quiz__notice {
+  position: fixed;
+  top: 16px;
+  left: 50%;
+  transform: translate(-50%, -16px);
+  z-index: 400;
+  max-width: min(90vw, 420px);
+  padding: 12px 18px;
+  border-radius: 12px;
+  background: rgba(244, 63, 94, 0.18);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--accent-rose);
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.quiz__notice.active {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
 .demo-form__input::placeholder {
   color: var(--text-muted);
 }

@@ -19,11 +19,15 @@ const PARTY_COLORS = {
 };
 
 // ── State ──
+const QUIZ_VERSION = 'v2.1'; // bump on every data/logic change: also busts caches
+
 let quizData = null;       // raw JSON data
 let questions = [];        // flat array of all questions in order
 let answers = [];          // user answers (1-7), indexed same as questions
 let currentIndex = 0;      // current question index
 let isTransitioning = false;
+let autoAdvanceTimer = null;
+let noticeTimer = null;
 
 // ── DOM References ──
 const $ = (sel) => document.querySelector(sel);
@@ -53,6 +57,7 @@ const dom = {
   quizThemeName: $('#quiz-theme-name'),
   quizStatement: $('#quiz-statement'),
   quizStatementText: $('#quiz-statement-text'),
+  quizNotice: $('#quiz-notice'),
   ratingButtons: $('#rating-buttons'),
   
   // Banner
@@ -135,8 +140,8 @@ function clearProgress() {
 async function loadData() {
   try {
     const [quizRes, comuniRes] = await Promise.all([
-      fetch('data.json'),
-      fetch('comuni.json')
+      fetch(`data.json?v=${QUIZ_VERSION}`),
+      fetch(`comuni.json?v=${QUIZ_VERSION}`)
     ]);
     
     if (!quizRes.ok) throw new Error(`HTTP ${quizRes.status} on data.json`);
@@ -243,9 +248,31 @@ function hideCategoryTransition() {
   dom.catTransition.classList.remove('active');
 }
 
+/** Flash a short message over the quiz */
+function showQuizNotice(message) {
+  dom.quizNotice.textContent = message;
+  dom.quizNotice.classList.add('active');
+  clearTimeout(noticeTimer);
+  noticeTimer = setTimeout(() => dom.quizNotice.classList.remove('active'), 2800);
+}
+
+/**
+ * End of the quiz. A skipped question used to leave the last "Vedi Risultati"
+ * doing nothing at all, so send the user back to the gap instead.
+ */
+function finishQuiz() {
+  const missing = answers.findIndex(a => a === null);
+  if (missing !== -1) {
+    showQuizNotice(`Manca la risposta alla domanda ${missing + 1} di ${questions.length}`);
+    goToQuestion(missing, missing < currentIndex ? 'backward' : 'forward');
+    return;
+  }
+  showFormScreen();
+}
+
 function renderQuestion() {
   if (currentIndex >= questions.length) {
-    showFormScreen();
+    finishQuiz();
     return;
   }
 
@@ -258,7 +285,8 @@ function renderQuestion() {
 
   // Update counter & progress
   dom.quizCurrentNum.textContent = currentIndex + 1;
-  const progress = ((currentIndex) / questions.length) * 100;
+  const answered = answers.filter(a => a !== null).length;
+  const progress = (answered / questions.length) * 100;
   dom.progressFill.style.width = `${progress}%`;
 
   // Update statement text
@@ -286,9 +314,12 @@ function goToQuestion(index, direction = 'forward') {
   if (index < 0 || index > questions.length || isTransitioning) return;
 
   if (index >= questions.length) {
-    showFormScreen();
+    finishQuiz();
     return;
   }
+
+  // A deliberate move cancels the auto-advance still pending from a rating
+  clearTimeout(autoAdvanceTimer);
 
   // Check if we're entering a new category
   const prevCatIndex = currentIndex < questions.length ? questions[currentIndex].categoryIndex : -1;
@@ -325,6 +356,9 @@ function goToQuestion(index, direction = 'forward') {
 }
 
 function selectRating(value) {
+  // Mid-slide the index is about to change: the click would land on the wrong one
+  if (isTransitioning) return;
+
   answers[currentIndex] = value;
 
   // Visual feedback
@@ -335,14 +369,12 @@ function selectRating(value) {
   // Auto-advance after brief delay
   saveProgress();
 
-  setTimeout(() => {
+  clearTimeout(autoAdvanceTimer);
+  autoAdvanceTimer = setTimeout(() => {
     if (currentIndex < questions.length - 1) {
       goToQuestion(currentIndex + 1, 'forward');
     } else {
-      // Last question — check if all answered
-      if (answers.every(a => a !== null)) {
-        showFormScreen();
-      }
+      finishQuiz();
     }
   }, 350);
 }
@@ -527,7 +559,7 @@ function handleFormSubmit(e) {
       ranking: overallRanking.map(r => ({ party: r.party, score: parseFloat(r.avg.toFixed(1)) }))
     },
     timestamp: new Date().toISOString(),
-    quizVersion: "v2.1"
+    quizVersion: QUIZ_VERSION
   };
 
   // Save to localStorage for now (Supabase integration pending)
@@ -695,8 +727,8 @@ function initEventHandlers() {
 
     if (currentIndex < questions.length - 1) {
       goToQuestion(currentIndex + 1, 'forward');
-    } else if (answers.every(a => a !== null)) {
-      showFormScreen();
+    } else {
+      finishQuiz();
     }
   });
 
