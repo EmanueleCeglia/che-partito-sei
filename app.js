@@ -21,6 +21,14 @@ const PARTY_COLORS = {
 // ── State ──
 const QUIZ_VERSION = 'v2.1'; // bump on every data/logic change: also busts caches
 
+// ── Supabase ──
+const SUPABASE_URL = 'https://cqeugyowkbaghccpgvna.supabase.co';
+const SUPABASE_TABLE = 'quiz_responses';
+// Safe to ship in a public repo: the anon key is meant to live in browsers. What
+// guards the data are the RLS policies in supabase_schema.sql (insert, no read).
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNxZXVneW93a2JhZ2hjY3Bndm5hIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODczMTQ2MTksImV4cCI6MjEwMjg5MDYxOX0.TDmCPDGf-aFa06QU6V7Dpd_a3MGMpGCFWDeC8SPsxa8';
+const PENDING_KEY = 'chePartito_pending';
+
 let quizData = null;       // raw JSON data
 let questions = [];        // flat array of all questions in order
 let answers = [];          // user answers (1-7), indexed same as questions
@@ -520,6 +528,83 @@ function resetDemographicForm() {
   dom.demographicForm.querySelectorAll('.invalid').forEach(el => el.classList.remove('invalid'));
 }
 
+/** Shape a submission the way the quiz_responses table expects it */
+function buildResponseRow(demographics, results) {
+  return {
+    quiz_version: QUIZ_VERSION,
+    eta: demographics.eta,
+    sesso: demographics.sesso,
+    regione: demographics.regione,
+    provincia: demographics.provincia,
+    comune: demographics.comune,
+    istruzione: demographics.istruzione,
+    occupazione: demographics.occupazione,
+    reddito: demographics.reddito,
+    cittadinanza: demographics.cittadinanza,
+    answers,
+    results,
+    client_timestamp: new Date().toISOString(),
+  };
+}
+
+/** POST one row to Supabase; throws unless it was accepted */
+async function postRow(row) {
+  const res = await fetch(`${SUPABASE_URL}/rest/v1/${SUPABASE_TABLE}`, {
+    method: 'POST',
+    headers: {
+      apikey: SUPABASE_ANON_KEY,
+      Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
+      'Content-Type': 'application/json',
+      Prefer: 'return=minimal',
+    },
+    body: JSON.stringify(row),
+  });
+  if (!res.ok) throw new Error(`Supabase ${res.status}: ${await res.text()}`);
+}
+
+/** Submissions that have not gone through yet, kept until they do */
+function readPending() {
+  try {
+    const raw = localStorage.getItem(PENDING_KEY);
+    return raw ? JSON.parse(raw) : [];
+  } catch {
+    return [];
+  }
+}
+
+function writePending(rows) {
+  if (rows.length) localStorage.setItem(PENDING_KEY, JSON.stringify(rows));
+  else localStorage.removeItem(PENDING_KEY);
+}
+
+/** Send one submission, parking it locally if network or Supabase fails */
+async function sendResponse(row) {
+  try {
+    await postRow(row);
+  } catch (err) {
+    console.warn('Invio a Supabase fallito, riprovo al prossimo avvio:', err);
+    const pending = readPending();
+    pending.push(row);
+    writePending(pending.slice(-20)); // bounded: never fill up localStorage
+  }
+}
+
+/** Retry what is parked; whatever still fails stays queued for next time */
+async function flushPending() {
+  const pending = readPending();
+  if (!pending.length) return;
+
+  const stillPending = [];
+  for (const row of pending) {
+    try {
+      await postRow(row);
+    } catch {
+      stillPending.push(row);
+    }
+  }
+  writePending(stillPending);
+}
+
 function handleFormSubmit(e) {
   e.preventDefault();
   
@@ -562,11 +647,13 @@ function handleFormSubmit(e) {
     quizVersion: QUIZ_VERSION
   };
 
-  // Save to localStorage for now (Supabase integration pending)
+  // Keep the last submission at hand for debugging
   localStorage.setItem('chePartito_lastSubmission', JSON.stringify(fullData));
 
-  // Proceed to results
+  // Results first: the upload must never keep the user waiting, and a failed
+  // one is queued rather than lost
   showResults(overallRanking, categoryRankings);
+  sendResponse(buildResponseRow(demographics, fullData.results));
 }
 
 // ── Results Rendering ──
@@ -875,6 +962,9 @@ async function init() {
 
   // Init event handlers
   initEventHandlers();
+
+  // Deliver anything an earlier session could not send
+  flushPending();
 }
 
 // Add shake animation dynamically (for prompting rating selection)
