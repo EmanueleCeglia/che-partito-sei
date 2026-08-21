@@ -1,6 +1,6 @@
-# Python
+# Python (the generator scripts stay: they document how data.json and
+# comuni.json were built)
 __pycache__/
-*.py
 *.pyc
 
 # Excel source

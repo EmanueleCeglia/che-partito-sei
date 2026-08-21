@@ -8,14 +8,14 @@ const PARTY_COLORS = {
   'AVS': '#E8452C',
   'M5S': '#F5C518',
   'PD': '#E2001A',
-  'Piueuropa': '#0047AB',
-  'italia Viva': '#EB5D80',
+  '+Europa': '#0047AB',
+  'Italia Viva': '#EB5D80',
   'Azione': '#1C4DA1',
   'Liberaldemocratico': '#7C3AED',
-  'Forza italia': '#0077CC',
-  "Fratelli d'italia": '#003D7A',
+  'Forza Italia': '#0077CC',
+  "Fratelli d'Italia": '#003D7A',
   'Lega': '#008C45',
-  'Futuro nazionale': '#64748b',
+  'Futuro Nazionale': '#64748b',
 };
 
 // ── State ──
@@ -54,11 +54,37 @@ const dom = {
   quizStatement: $('#quiz-statement'),
   quizStatementText: $('#quiz-statement-text'),
   ratingButtons: $('#rating-buttons'),
+  
+  // Banner
+  infoBanner: $('#info-banner'),
+  btnBannerDismiss: $('#btn-banner-dismiss'),
+
+  // Form Screen
+  screenForm: $('#screen-form'),
+  demographicForm: $('#demographic-form'),
+  fieldEta: $('#field-eta'),
+  fieldSesso: $('#field-sesso'),
+  fieldRegione: $('#field-regione'),
+  fieldProvincia: $('#field-provincia'),
+  fieldComune: $('#field-comune'),
+  filterRegione: $('#filter-regione'),
+  filterProvincia: $('#filter-provincia'),
+  filterComune: $('#filter-comune'),
+  fieldIstruzione: $('#field-istruzione'),
+  fieldOccupazione: $('#field-occupazione'),
+  fieldReddito: $('#field-reddito'),
+  fieldCittadinanza: $('#field-cittadinanza'),
+  formError: $('#form-error'),
+
+  // Results Screen
   winnerName: $('#winner-name'),
   winnerScore: $('#winner-score'),
   overallRanking: $('#overall-ranking'),
   categoryBreakdown: $('#category-breakdown'),
 };
+
+// ── Comuni Data ──
+let comuniData = null;
 
 // ── Utility functions ──
 
@@ -108,11 +134,18 @@ function clearProgress() {
 
 async function loadData() {
   try {
-    const response = await fetch('data.json');
-    if (!response.ok) throw new Error(`HTTP ${response.status}`);
-    quizData = await response.json();
+    const [quizRes, comuniRes] = await Promise.all([
+      fetch('data.json'),
+      fetch('comuni.json')
+    ]);
+    
+    if (!quizRes.ok) throw new Error(`HTTP ${quizRes.status} on data.json`);
+    if (!comuniRes.ok) throw new Error(`HTTP ${comuniRes.status} on comuni.json`);
+    
+    quizData = await quizRes.json();
+    comuniData = await comuniRes.json();
   } catch (err) {
-    console.error('Failed to load data.json:', err);
+    console.error('Failed to load data:', err);
     dom.loadingOverlay.innerHTML = `
       <p style="color: var(--accent-rose); text-align: center; padding: 24px;">
         Errore nel caricamento dei dati.<br>
@@ -171,6 +204,11 @@ function startQuiz(resumeFrom = null) {
   dom.quizTotalNum.textContent = questions.length;
   showScreen('screen-quiz');
 
+  // Show banner the first time the user ever sees the quiz (resume included)
+  if (!localStorage.getItem('chePartito_banner_seen')) {
+    dom.infoBanner.classList.add('active');
+  }
+
   // Show category transition for first category
   if (!resumeFrom) {
     showCategoryTransition(0);
@@ -207,7 +245,7 @@ function hideCategoryTransition() {
 
 function renderQuestion() {
   if (currentIndex >= questions.length) {
-    showResults();
+    showFormScreen();
     return;
   }
 
@@ -248,7 +286,7 @@ function goToQuestion(index, direction = 'forward') {
   if (index < 0 || index > questions.length || isTransitioning) return;
 
   if (index >= questions.length) {
-    showResults();
+    showFormScreen();
     return;
   }
 
@@ -303,7 +341,7 @@ function selectRating(value) {
     } else {
       // Last question — check if all answered
       if (answers.every(a => a !== null)) {
-        showResults();
+        showFormScreen();
       }
     }
   }, 350);
@@ -374,15 +412,143 @@ function calculateScores() {
   return { overallRanking, categoryRankings };
 }
 
+// ── Form Screen & Supabase Prep ──
+
+function showFormScreen() {
+  clearProgress();
+  
+  // Populate regions if not done yet
+  if (dom.fieldRegione.options.length <= 1 && comuniData) {
+    const regioni = Object.keys(comuniData).sort();
+    regioni.forEach(reg => {
+      const opt = document.createElement('option');
+      opt.value = reg;
+      opt.textContent = reg;
+      dom.fieldRegione.appendChild(opt);
+    });
+  }
+
+  showScreen('screen-form');
+}
+
+/** Fold case and strip accents, so a typed "forli" still matches "Forli" */
+function normalizeForSearch(str) {
+  return str.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+}
+
+/** Empty a search box and bring back every option it had hidden */
+function clearSelectFilter(input, select) {
+  input.value = '';
+  input.classList.remove('no-results');
+  [...select.options].forEach(opt => { opt.hidden = false; });
+}
+
+/** Let a search box narrow down the options of the select below it */
+function attachSelectFilter(input, select) {
+  // Enter inside a form submits it; here it should just do nothing
+  input.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') e.preventDefault();
+  });
+
+  input.addEventListener('input', () => {
+    const query = normalizeForSearch(input.value.trim());
+    let visible = 0;
+
+    [...select.options].forEach(opt => {
+      if (!opt.value) return; // the "Seleziona..." placeholder always stays
+      const match = !query || normalizeForSearch(opt.textContent).includes(query);
+      opt.hidden = !match;
+      if (match) visible++;
+    });
+
+    // Drop a choice the filter just hid, so it can't be submitted unseen
+    const chosen = select.selectedOptions[0];
+    if (chosen && chosen.hidden) {
+      select.selectedIndex = 0;
+      select.dispatchEvent(new Event('change'));
+    }
+
+    input.classList.toggle('no-results', visible === 0);
+  });
+}
+
+/** Clear the demographic form so a replay starts from a blank sheet */
+function resetDemographicForm() {
+  dom.demographicForm.reset();
+  dom.fieldProvincia.innerHTML = '<option value="" disabled selected>Prima seleziona la regione</option>';
+  dom.fieldProvincia.disabled = true;
+  dom.fieldComune.innerHTML = '<option value="" disabled selected>Prima seleziona la provincia</option>';
+  dom.fieldComune.disabled = true;
+  clearSelectFilter(dom.filterRegione, dom.fieldRegione);
+  clearSelectFilter(dom.filterProvincia, dom.fieldProvincia);
+  clearSelectFilter(dom.filterComune, dom.fieldComune);
+  dom.filterProvincia.disabled = true;
+  dom.filterComune.disabled = true;
+  dom.formError.classList.add('hidden');
+  dom.demographicForm.querySelectorAll('.invalid').forEach(el => el.classList.remove('invalid'));
+}
+
+function handleFormSubmit(e) {
+  e.preventDefault();
+  
+  if (!dom.demographicForm.checkValidity()) {
+    dom.formError.classList.remove('hidden');
+    // Add invalid class to inputs that are empty
+    dom.demographicForm.querySelectorAll('input, select').forEach(el => {
+      if (!el.validity.valid) el.classList.add('invalid');
+      else el.classList.remove('invalid');
+    });
+    return;
+  }
+
+  dom.formError.classList.add('hidden');
+
+  // Collect data
+  const demographics = {
+    eta: parseInt(dom.fieldEta.value, 10),
+    sesso: dom.fieldSesso.value,
+    regione: dom.fieldRegione.value,
+    provincia: dom.fieldProvincia.value,
+    comune: dom.fieldComune.value,
+    istruzione: dom.fieldIstruzione.value,
+    occupazione: dom.fieldOccupazione.value,
+    reddito: dom.fieldReddito.value,
+    cittadinanza: dom.fieldCittadinanza.value === 'si'
+  };
+
+  const { overallRanking, categoryRankings } = calculateScores();
+
+  // Prepare full data object for Supabase
+  const fullData = {
+    demographics,
+    answers,
+    results: {
+      winner: overallRanking[0].party,
+      ranking: overallRanking.map(r => ({ party: r.party, score: parseFloat(r.avg.toFixed(1)) }))
+    },
+    timestamp: new Date().toISOString(),
+    quizVersion: "v2.1"
+  };
+
+  // Save to localStorage for now (Supabase integration pending)
+  localStorage.setItem('chePartito_lastSubmission', JSON.stringify(fullData));
+
+  // Proceed to results
+  showResults(overallRanking, categoryRankings);
+}
+
 // ── Results Rendering ──
 
-function showResults() {
-  clearProgress();
-
+function showResults(overallRanking, categoryRankings) {
   // Set progress bar to 100%
   dom.progressFill.style.width = '100%';
 
-  const { overallRanking, categoryRankings } = calculateScores();
+  // If we came directly here (e.g. testing), calculate scores if missing
+  if (!overallRanking || !categoryRankings) {
+    const scores = calculateScores();
+    overallRanking = scores.overallRanking;
+    categoryRankings = scores.categoryRankings;
+  }
 
   // Winner card
   const winner = overallRanking[0];
@@ -530,13 +696,84 @@ function initEventHandlers() {
     if (currentIndex < questions.length - 1) {
       goToQuestion(currentIndex + 1, 'forward');
     } else if (answers.every(a => a !== null)) {
-      showResults();
+      showFormScreen();
     }
   });
+
+  // Banner dismiss
+  dom.btnBannerDismiss.addEventListener('click', () => {
+    dom.infoBanner.classList.remove('active');
+    localStorage.setItem('chePartito_banner_seen', 'true');
+  });
+
+  // Search boxes over the residence selects
+  attachSelectFilter(dom.filterRegione, dom.fieldRegione);
+  attachSelectFilter(dom.filterProvincia, dom.fieldProvincia);
+  attachSelectFilter(dom.filterComune, dom.fieldComune);
+
+  // Form cascading selects
+  dom.fieldRegione.addEventListener('change', () => {
+    const reg = dom.fieldRegione.value;
+    dom.fieldProvincia.innerHTML = '<option value="" disabled selected>Seleziona provincia...</option>';
+    dom.fieldComune.innerHTML = '<option value="" disabled selected>Prima seleziona la provincia</option>';
+    dom.fieldComune.disabled = true;
+    clearSelectFilter(dom.filterProvincia, dom.fieldProvincia);
+    clearSelectFilter(dom.filterComune, dom.fieldComune);
+    // Locked again until a region is picked; the branch below reopens them
+    dom.fieldProvincia.disabled = true;
+    dom.filterProvincia.disabled = true;
+    dom.filterComune.disabled = true;
+
+    if (reg && comuniData[reg]) {
+      const province = Object.keys(comuniData[reg]).sort();
+      province.forEach(prov => {
+        const opt = document.createElement('option');
+        opt.value = prov;
+        opt.textContent = prov;
+        dom.fieldProvincia.appendChild(opt);
+      });
+      dom.fieldProvincia.disabled = false;
+      dom.filterProvincia.disabled = false;
+    }
+    dom.fieldRegione.classList.remove('invalid');
+  });
+
+  dom.fieldProvincia.addEventListener('change', () => {
+    const reg = dom.fieldRegione.value;
+    const prov = dom.fieldProvincia.value;
+    dom.fieldComune.innerHTML = '<option value="" disabled selected>Seleziona comune...</option>';
+    clearSelectFilter(dom.filterComune, dom.fieldComune);
+    dom.fieldComune.disabled = true;
+    dom.filterComune.disabled = true;
+
+    if (reg && prov && comuniData[reg][prov]) {
+      const comuni = comuniData[reg][prov].sort();
+      comuni.forEach(com => {
+        const opt = document.createElement('option');
+        opt.value = com;
+        opt.textContent = com;
+        dom.fieldComune.appendChild(opt);
+      });
+      dom.fieldComune.disabled = false;
+      dom.filterComune.disabled = false;
+    }
+    dom.fieldProvincia.classList.remove('invalid');
+  });
+
+  // Remove invalid class on input for other form fields
+  dom.demographicForm.addEventListener('input', (e) => {
+    if (e.target.validity.valid) {
+      e.target.classList.remove('invalid');
+    }
+  });
+
+  // Form submit
+  dom.demographicForm.addEventListener('submit', handleFormSubmit);
 
   // Restart
   dom.btnRestart.addEventListener('click', () => {
     clearProgress();
+    resetDemographicForm();
     showScreen('screen-landing');
     // Reset continue button visibility
     dom.btnContinue.classList.add('hidden');
@@ -553,6 +790,14 @@ function initEventHandlers() {
   // Keyboard support
   document.addEventListener('keydown', (e) => {
     if (!dom.screenQuiz.classList.contains('active')) return;
+    // Banner overlays everything: swallow keys while it is up
+    if (dom.infoBanner.classList.contains('active')) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        dom.btnBannerDismiss.click();
+      }
+      return;
+    }
     if (dom.catTransition.classList.contains('active')) {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();

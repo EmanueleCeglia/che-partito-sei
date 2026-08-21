@@ -1293,3 +1293,280 @@ body::before {
   color: var(--text-secondary);
   font-weight: 500;
 }
+
+/* ── INFO BANNER OVERLAY ── */
+
+.info-banner {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 1000;
+  background: rgba(7, 11, 30, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.info-banner.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.info-banner__card {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.12), rgba(59, 130, 246, 0.08));
+  border: 1px solid rgba(99, 102, 241, 0.25);
+  border-radius: 20px;
+  padding: 32px 24px;
+  max-width: 420px;
+  text-align: center;
+  animation: banner-slide-in 0.5s ease 0.2s both;
+}
+
+@keyframes banner-slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.info-banner__icon {
+  font-size: 2.4rem;
+  margin-bottom: 12px;
+}
+
+.info-banner__title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.info-banner__text {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+}
+
+.info-banner__text:last-of-type {
+  margin-bottom: 24px;
+}
+
+.info-banner__text strong {
+  color: var(--accent-blue);
+}
+
+/* ── DEMOGRAPHIC FORM SCREEN ── */
+
+.form-screen {
+  padding: var(--space-md) var(--space-sm);
+  padding-bottom: 48px;
+  overflow-y: auto;
+}
+
+.form-screen__header {
+  text-align: center;
+  margin-bottom: 20px;
+  padding-top: 16px;
+}
+
+.form-screen__title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.form-screen__subtitle {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+/* Privacy notice */
+.form-screen__privacy {
+  display: flex;
+  gap: 12px;
+  background: rgba(59, 130, 246, 0.08);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: 14px;
+  padding: 16px;
+  margin-bottom: 24px;
+  align-items: flex-start;
+}
+
+.form-screen__privacy-icon {
+  font-size: 1.3rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.form-screen__privacy p {
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.form-screen__privacy strong {
+  color: var(--accent-blue);
+}
+
+/* Form styles */
+.demo-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.demo-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.demo-form__label {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.demo-form__label .required {
+  color: var(--accent-rose);
+  font-weight: 700;
+}
+
+.demo-form__input,
+.demo-form__select {
+  background: var(--surface);
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  padding: 14px 16px;
+  /* Stay at 16px: anything smaller makes iOS Safari zoom in on focus */
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  color: var(--text-primary);
+  transition: border-color 0.2s ease, background 0.2s ease;
+  width: 100%;
+  box-sizing: border-box;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.demo-form__select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='rgba(255,255,255,0.5)' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 40px;
+  cursor: pointer;
+}
+
+.demo-form__select option {
+  background: #1a1f3d;
+  color: var(--text-primary);
+}
+
+.demo-form__input::placeholder {
+  color: var(--text-muted);
+}
+
+/* Search box that narrows down the select right below it */
+.demo-form__filter {
+  background: var(--surface);
+  border: 1px solid var(--border-light);
+  border-radius: 10px;
+  padding: 9px 12px;
+  /* 16px again: anything smaller makes iOS Safari zoom in on focus */
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  color: var(--text-primary);
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.demo-form__filter::placeholder {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.demo-form__filter:focus {
+  outline: none;
+  border-color: var(--accent-indigo);
+  background: rgba(99, 102, 241, 0.06);
+}
+
+.demo-form__filter:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.demo-form__filter.no-results {
+  border-color: var(--accent-rose);
+  background: rgba(244, 63, 94, 0.06);
+}
+
+/* Engines that ignore [hidden] on <option> */
+.demo-form__select option[hidden] {
+  display: none;
+}
+
+.demo-form__input:focus,
+.demo-form__select:focus {
+  outline: none;
+  border-color: var(--accent-indigo);
+  background: rgba(99, 102, 241, 0.06);
+}
+
+.demo-form__input:disabled,
+.demo-form__select:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Validation states */
+.demo-form__input.invalid,
+.demo-form__select.invalid {
+  border-color: var(--accent-rose);
+  background: rgba(244, 63, 94, 0.06);
+}
+
+.demo-form__error {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--accent-rose);
+  font-weight: 500;
+  padding: 8px;
+  animation: shake-error 0.4s ease;
+}
+
+@keyframes shake-error {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-6px); }
+  40% { transform: translateX(6px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(4px); }
+}
+
+.demo-form__submit {
+  margin-top: 8px;
+  width: 100%;
+}
+
+/* Responsive adjustments */
+@media (min-width: 480px) {
+  .form-screen {
+    padding: var(--space-lg) var(--space-md);
+    max-width: 520px;
+    margin: 0 auto;
+  }
+}

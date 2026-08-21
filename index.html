@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
   <title>Che Partito Sei? | Quiz Politico Italiano</title>
-  <meta name="description" content="Scopri quale partito politico italiano è più vicino alle tue idee. Rispondi a 297 domande su 27 temi politici e 7 macro-aree.">
+  <meta name="description" content="Scopri quale partito politico italiano è più vicino alle tue idee. Rispondi a 25 domande su 7 temi politici e ottieni la tua classifica personalizzata.">
   <meta name="theme-color" content="#070b1e">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -93,6 +93,26 @@
   </div>
 
   <!-- ════════════════════════════════════════
+       INFO BANNER OVERLAY
+       ════════════════════════════════════════ -->
+  <div id="info-banner" class="info-banner">
+    <div class="info-banner__card">
+      <div class="info-banner__icon">ℹ️</div>
+      <h3 class="info-banner__title">Nota importante</h3>
+      <p class="info-banner__text">
+        Le affermazioni di questo quiz riflettono le <strong>posizioni reali dei partiti politici italiani</strong>.
+        Alcune domande possono sembrare polarizzanti, ma questo deriva dalla natura stessa delle posizioni
+        dei partiti, non dall'intento dell'app.
+      </p>
+      <p class="info-banner__text">
+        Il tuo compito è semplicemente indicare quanto sei d'accordo con ciascuna affermazione,
+        senza preoccuparti di quale partito la sostenga.
+      </p>
+      <button id="btn-banner-dismiss" class="btn btn--primary">Ho capito ✓</button>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════
        QUIZ SCREEN
        ════════════════════════════════════════ -->
   <div id="screen-quiz" class="screen quiz">
@@ -145,6 +165,137 @@
         <button id="btn-next" class="quiz__nav-btn quiz__nav-btn--next">Successiva →</button>
       </div>
     </div>
+  </div>
+
+  <!-- ════════════════════════════════════════
+       DEMOGRAPHIC FORM SCREEN
+       ════════════════════════════════════════ -->
+  <div id="screen-form" class="screen form-screen">
+
+    <div class="form-screen__header">
+      <h2 class="form-screen__title">📋 Un ultimo passo</h2>
+      <p class="form-screen__subtitle">Compila questo breve questionario per vedere i tuoi risultati</p>
+    </div>
+
+    <!-- Privacy notice -->
+    <div class="form-screen__privacy">
+      <span class="form-screen__privacy-icon">🔒</span>
+      <p>
+        <strong>Privacy</strong> — I dati raccolti saranno utilizzati in forma anonima e aggregata
+        per analisi statistica. Non sarà possibile risalire all'identità dei singoli partecipanti.
+        Nessun dato personale identificativo viene memorizzato.
+      </p>
+    </div>
+
+    <form id="demographic-form" class="demo-form" novalidate>
+
+      <!-- Età -->
+      <div class="demo-form__field">
+        <label for="field-eta" class="demo-form__label">Età <span class="required">*</span></label>
+        <input type="number" id="field-eta" class="demo-form__input" min="14" max="100" placeholder="Es. 25" required>
+      </div>
+
+      <!-- Sesso -->
+      <div class="demo-form__field">
+        <label for="field-sesso" class="demo-form__label">Sesso <span class="required">*</span></label>
+        <select id="field-sesso" class="demo-form__select" required>
+          <option value="" disabled selected>Seleziona...</option>
+          <option value="maschio">Maschio</option>
+          <option value="femmina">Femmina</option>
+          <option value="non_binario">Non binario</option>
+          <option value="non_indicare">Preferisco non indicare</option>
+        </select>
+      </div>
+
+      <!-- Residenza: Regione -->
+      <div class="demo-form__field">
+        <label for="field-regione" class="demo-form__label">Regione di residenza <span class="required">*</span></label>
+        <input type="text" id="filter-regione" class="demo-form__filter" placeholder="🔍 Cerca regione..." autocomplete="off" aria-label="Cerca regione...">
+        <select id="field-regione" class="demo-form__select" required>
+          <option value="" disabled selected>Seleziona regione...</option>
+        </select>
+      </div>
+
+      <!-- Residenza: Provincia -->
+      <div class="demo-form__field">
+        <label for="field-provincia" class="demo-form__label">Provincia <span class="required">*</span></label>
+        <input type="text" id="filter-provincia" class="demo-form__filter" placeholder="🔍 Cerca provincia..." autocomplete="off" aria-label="Cerca provincia..." disabled>
+        <select id="field-provincia" class="demo-form__select" required disabled>
+          <option value="" disabled selected>Prima seleziona la regione</option>
+        </select>
+      </div>
+
+      <!-- Residenza: Comune -->
+      <div class="demo-form__field">
+        <label for="field-comune" class="demo-form__label">Comune <span class="required">*</span></label>
+        <input type="text" id="filter-comune" class="demo-form__filter" placeholder="🔍 Cerca comune..." autocomplete="off" aria-label="Cerca comune..." disabled>
+        <select id="field-comune" class="demo-form__select" required disabled>
+          <option value="" disabled selected>Prima seleziona la provincia</option>
+        </select>
+      </div>
+
+      <!-- Livello di istruzione -->
+      <div class="demo-form__field">
+        <label for="field-istruzione" class="demo-form__label">Livello di istruzione massimo <span class="required">*</span></label>
+        <select id="field-istruzione" class="demo-form__select" required>
+          <option value="" disabled selected>Seleziona...</option>
+          <option value="elementari">Licenza elementare</option>
+          <option value="media">Licenza media</option>
+          <option value="superiori">Diploma superiore</option>
+          <option value="triennale">Laurea triennale</option>
+          <option value="magistrale">Laurea magistrale</option>
+          <option value="dottorato">Dottorato</option>
+        </select>
+      </div>
+
+      <!-- Situazione occupazionale -->
+      <div class="demo-form__field">
+        <label for="field-occupazione" class="demo-form__label">Situazione occupazionale <span class="required">*</span></label>
+        <select id="field-occupazione" class="demo-form__select" required>
+          <option value="" disabled selected>Seleziona...</option>
+          <option value="studente">Studente</option>
+          <option value="disoccupato">Disoccupato/a</option>
+          <option value="tirocinante">Tirocinante</option>
+          <option value="pubblico">Impiegato/a settore pubblico</option>
+          <option value="privato">Impiegato/a settore privato</option>
+          <option value="indipendente">Lavoratore/trice indipendente</option>
+          <option value="pensionato">Pensionato/a</option>
+        </select>
+      </div>
+
+      <!-- Reddito annuo lordo -->
+      <div class="demo-form__field">
+        <label for="field-reddito" class="demo-form__label">Reddito annuo lordo <span class="required">*</span></label>
+        <select id="field-reddito" class="demo-form__select" required>
+          <option value="" disabled selected>Seleziona...</option>
+          <option value="0-15000">Fino a 15.000€</option>
+          <option value="15001-28000">15.001 – 28.000€</option>
+          <option value="28001-50000">28.001 – 50.000€</option>
+          <option value="50001-75000">50.001 – 75.000€</option>
+          <option value="75001+">Oltre 75.000€</option>
+          <option value="non_indicare">Preferisco non indicare</option>
+        </select>
+      </div>
+
+      <!-- Cittadinanza -->
+      <div class="demo-form__field">
+        <label for="field-cittadinanza" class="demo-form__label">Hai la cittadinanza italiana e il diritto di voto? <span class="required">*</span></label>
+        <select id="field-cittadinanza" class="demo-form__select" required>
+          <option value="" disabled selected>Seleziona...</option>
+          <option value="si">Sì, ho cittadinanza e diritto di voto</option>
+          <option value="no">No, non ho cittadinanza italiana</option>
+        </select>
+      </div>
+
+      <!-- Form error -->
+      <p id="form-error" class="demo-form__error hidden">Per favore compila tutti i campi obbligatori.</p>
+
+      <!-- Submit -->
+      <button type="submit" id="btn-form-submit" class="btn btn--primary demo-form__submit">
+        Vedi i Risultati 🏆
+      </button>
+
+    </form>
   </div>
 
   <!-- ════════════════════════════════════════
