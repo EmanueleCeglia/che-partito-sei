@@ -31,6 +31,14 @@ create table if not exists public.quiz_responses (
   -- { winner, ranking: [{ party, score }] } calcolato dal client
   results           jsonb       not null,
 
+  -- Classifica soggettiva dei partiti, dal piu' vicino al piu' lontano secondo
+  -- l'utente, raccolta PRIMA di mostrargli i risultati. Nullable: le risposte
+  -- della v2.1 non ce l'hanno. Vedi supabase_migration_v2.2.sql.
+  self_ranking            jsonb,   -- solo i partiti che ha voluto ordinare
+  self_ranking_unknown    jsonb,   -- quelli dichiarati sconosciuti
+  self_ranking_presented  jsonb,   -- ordine in cui gli sono stati mostrati
+  self_ranking_ms         integer, -- tempo impiegato, per riconoscere le risposte a caso
+
   -- Orologio del browser: utile solo per diagnosticare, non fidarsene.
   -- Per l'analisi usare created_at, che e' del server.
   client_timestamp  timestamptz

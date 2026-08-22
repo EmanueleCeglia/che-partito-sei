@@ -19,7 +19,7 @@ const PARTY_COLORS = {
 };
 
 // ── State ──
-const QUIZ_VERSION = 'v2.1'; // bump on every data/logic change: also busts caches
+const QUIZ_VERSION = 'v2.2'; // bump on every data/logic change: also busts caches
 
 // ── Supabase ──
 const SUPABASE_URL = 'https://cqeugyowkbaghccpgvna.supabase.co';
@@ -35,6 +35,14 @@ let answers = [];          // user answers (1-7), indexed same as questions
 let currentIndex = 0;      // current question index
 let isTransitioning = false;
 let autoAdvanceTimer = null;
+let pendingDemographics = null; // filled by the form, used after the ranking
+
+// Self-ranking state
+let rankPool = [];       // still to place
+let rankOrder = [];      // placed, closest first
+let rankUnknown = [];    // declared unknown
+let rankPresented = [];  // the shuffled order actually shown, kept for the analysis
+let rankStartedAt = 0;
 let noticeTimer = null;
 
 // ── DOM References ──
@@ -88,6 +96,20 @@ const dom = {
   fieldReddito: $('#field-reddito'),
   fieldCittadinanza: $('#field-cittadinanza'),
   formError: $('#form-error'),
+
+  // Self-ranking Screen
+  screenRanking: $('#screen-ranking'),
+  rankingOrder: $('#ranking-order'),
+  rankingPool: $('#ranking-pool'),
+  rankingPoolLabel: $('#ranking-pool-label'),
+  rankingUnknown: $('#ranking-unknown'),
+  rankingUnknownWrap: $('#ranking-unknown-wrap'),
+  rankingHint: $('#ranking-hint'),
+  rankingCount: $('#ranking-count'),
+  rankingTotal: $('#ranking-total'),
+  rankingProgressFill: $('#ranking-progress-fill'),
+  rankingError: $('#ranking-error'),
+  btnRankingSubmit: $('#btn-ranking-submit'),
 
   // Results Screen
   winnerName: $('#winner-name'),
@@ -529,7 +551,7 @@ function resetDemographicForm() {
 }
 
 /** Shape a submission the way the quiz_responses table expects it */
-function buildResponseRow(demographics, results) {
+function buildResponseRow(demographics, results, selfRanking) {
   return {
     quiz_version: QUIZ_VERSION,
     eta: demographics.eta,
@@ -543,6 +565,10 @@ function buildResponseRow(demographics, results) {
     cittadinanza: demographics.cittadinanza,
     answers,
     results,
+    self_ranking: selfRanking.order,
+    self_ranking_unknown: selfRanking.unknown,
+    self_ranking_presented: selfRanking.presented,
+    self_ranking_ms: selfRanking.ms,
     client_timestamp: new Date().toISOString(),
   };
 }
@@ -605,6 +631,144 @@ async function flushPending() {
   writePending(stillPending);
 }
 
+// ── Self-ranking ──
+
+/** Fisher-Yates: every presentation order has to be equally likely */
+function shuffle(items) {
+  const out = [...items];
+  for (let i = out.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [out[i], out[j]] = [out[j], out[i]];
+  }
+  return out;
+}
+
+/** One party as a tappable chip; `variant` decides which actions it carries */
+function buildPartyChip(party, variant, position) {
+  const chip = document.createElement('li');
+  chip.className = `party-chip party-chip--${variant}`;
+
+  if (variant === 'ranked') {
+    const rank = document.createElement('span');
+    rank.className = 'party-chip__rank';
+    rank.textContent = position;
+    chip.appendChild(rank);
+  }
+
+  const dot = document.createElement('span');
+  dot.className = 'party-chip__dot';
+  dot.style.background = PARTY_COLORS[party] || 'var(--accent-indigo)';
+  chip.appendChild(dot);
+
+  const name = document.createElement('span');
+  name.className = 'party-chip__name';
+  name.textContent = party;   // textContent, so apostrophes need no escaping
+  chip.appendChild(name);
+
+  if (variant === 'pool') {
+    // The whole chip picks the party; the small button parks it as unknown
+    chip.classList.add('party-chip--tappable');
+    chip.dataset.pick = party;
+    chip.setAttribute('role', 'button');
+    chip.setAttribute('tabindex', '0');
+
+    const unknown = document.createElement('button');
+    unknown.type = 'button';
+    unknown.className = 'party-chip__action';
+    unknown.dataset.unknown = party;
+    unknown.textContent = 'non lo conosco';
+    chip.appendChild(unknown);
+  } else {
+    const undo = document.createElement('button');
+    undo.type = 'button';
+    undo.className = 'party-chip__action';
+    undo.dataset.undo = party;
+    undo.setAttribute('aria-label', `Rimetti ${party} tra i partiti da collocare`);
+    undo.textContent = 'annulla';
+    chip.appendChild(undo);
+  }
+
+  return chip;
+}
+
+function renderRanking() {
+  const total = rankPresented.length;
+  const placed = rankOrder.length + rankUnknown.length;
+
+  dom.rankingOrder.innerHTML = '';
+  rankOrder.forEach((party, i) => {
+    dom.rankingOrder.appendChild(buildPartyChip(party, 'ranked', i + 1));
+  });
+
+  dom.rankingPool.innerHTML = '';
+  rankPool.forEach(party => {
+    dom.rankingPool.appendChild(buildPartyChip(party, 'pool'));
+  });
+
+  dom.rankingUnknown.innerHTML = '';
+  rankUnknown.forEach(party => {
+    dom.rankingUnknown.appendChild(buildPartyChip(party, 'unknown'));
+  });
+
+  dom.rankingUnknownWrap.classList.toggle('hidden', rankUnknown.length === 0);
+  dom.rankingPoolLabel.classList.toggle('hidden', rankPool.length === 0);
+  dom.rankingHint.classList.toggle('hidden', rankOrder.length > 0);
+
+  dom.rankingCount.textContent = placed;
+  dom.rankingProgressFill.style.width = `${(placed / total) * 100}%`;
+
+  // Every party has to be either ranked or declared unknown, and a ranking made
+  // only of "non lo conosco" would carry no information at all
+  dom.btnRankingSubmit.disabled = rankPool.length > 0 || rankOrder.length === 0;
+  if (!dom.btnRankingSubmit.disabled) dom.rankingError.classList.add('hidden');
+}
+
+/** Put a party back among the ones to place, in the order it was shown in */
+function returnToPool(party) {
+  rankOrder = rankOrder.filter(p => p !== party);
+  rankUnknown = rankUnknown.filter(p => p !== party);
+  rankPool.push(party);
+  rankPool.sort((a, b) => rankPresented.indexOf(a) - rankPresented.indexOf(b));
+  renderRanking();
+}
+
+function showRankingScreen() {
+  // Reshuffled per visit: the order shown must not favour any party, and it is
+  // saved with the answer so the effect can be checked in the analysis
+  rankPresented = shuffle(quizData.parties);
+  rankPool = [...rankPresented];
+  rankOrder = [];
+  rankUnknown = [];
+  rankStartedAt = Date.now();
+
+  dom.rankingTotal.textContent = rankPresented.length;
+  dom.rankingError.classList.add('hidden');
+  renderRanking();
+  showScreen('screen-ranking');
+}
+
+function handleRankingSubmit() {
+  if (rankPool.length > 0) {
+    dom.rankingError.textContent = 'Colloca tutti i partiti: ordina quelli che conosci e segna gli altri come "non lo conosco".';
+    dom.rankingError.classList.remove('hidden');
+    return;
+  }
+  if (rankOrder.length === 0) {
+    dom.rankingError.textContent = 'Ordina almeno un partito prima di continuare.';
+    dom.rankingError.classList.remove('hidden');
+    return;
+  }
+
+  const selfRanking = {
+    order: [...rankOrder],         // closest first
+    unknown: [...rankUnknown],
+    presented: [...rankPresented], // to control for presentation-order effects
+    ms: Date.now() - rankStartedAt // a few seconds for 11 parties means noise
+  };
+
+  finishSubmission(pendingDemographics, selfRanking);
+}
+
 function handleFormSubmit(e) {
   e.preventDefault();
   
@@ -633,12 +797,20 @@ function handleFormSubmit(e) {
     cittadinanza: dom.fieldCittadinanza.value === 'si'
   };
 
+  // The self-ranking comes next, and it has to be asked before the results are
+  // shown: afterwards it would measure what the quiz said, not what the user thinks
+  pendingDemographics = demographics;
+  showRankingScreen();
+}
+
+/** Last step: score, show, and ship the whole submission */
+function finishSubmission(demographics, selfRanking) {
   const { overallRanking, categoryRankings } = calculateScores();
 
-  // Prepare full data object for Supabase
   const fullData = {
     demographics,
     answers,
+    selfRanking,
     results: {
       winner: overallRanking[0].party,
       ranking: overallRanking.map(r => ({ party: r.party, score: parseFloat(r.avg.toFixed(1)) }))
@@ -653,7 +825,7 @@ function handleFormSubmit(e) {
   // Results first: the upload must never keep the user waiting, and a failed
   // one is queued rather than lost
   showResults(overallRanking, categoryRankings);
-  sendResponse(buildResponseRow(demographics, fullData.results));
+  sendResponse(buildResponseRow(demographics, fullData.results, selfRanking));
 }
 
 // ── Results Rendering ──
@@ -888,6 +1060,39 @@ function initEventHandlers() {
 
   // Form submit
   dom.demographicForm.addEventListener('submit', handleFormSubmit);
+
+  // Self-ranking: one delegated handler for pick / unknown / undo
+  dom.screenRanking.addEventListener('click', (e) => {
+    const undo = e.target.closest('[data-undo]');
+    if (undo) return returnToPool(undo.dataset.undo);
+
+    const unknown = e.target.closest('[data-unknown]');
+    if (unknown) {
+      rankPool = rankPool.filter(p => p !== unknown.dataset.unknown);
+      rankUnknown.push(unknown.dataset.unknown);
+      return renderRanking();
+    }
+
+    const pick = e.target.closest('[data-pick]');
+    if (pick) {
+      rankPool = rankPool.filter(p => p !== pick.dataset.pick);
+      rankOrder.push(pick.dataset.pick);
+      renderRanking();
+    }
+  });
+
+  // Same, from the keyboard
+  dom.screenRanking.addEventListener('keydown', (e) => {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    const pick = e.target.closest('[data-pick]');
+    if (!pick) return;
+    e.preventDefault();
+    rankPool = rankPool.filter(p => p !== pick.dataset.pick);
+    rankOrder.push(pick.dataset.pick);
+    renderRanking();
+  });
+
+  dom.btnRankingSubmit.addEventListener('click', handleRankingSubmit);
 
   // Restart
   dom.btnRestart.addEventListener('click', () => {

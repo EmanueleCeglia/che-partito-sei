@@ -1475,6 +1475,207 @@ body::before {
   color: var(--text-primary);
 }
 
+/* ═══════════════════════════════════════
+   SELF-RANKING SCREEN
+   ═══════════════════════════════════════ */
+
+.ranking-screen {
+  padding: var(--space-md) var(--space-sm);
+  padding-bottom: 48px;
+  overflow-y: auto;
+}
+
+.ranking-screen__header {
+  text-align: center;
+  margin-bottom: var(--space-lg);
+}
+
+.ranking-screen__title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.ranking-screen__subtitle {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.ranking-screen__progress {
+  margin-bottom: var(--space-lg);
+}
+
+.ranking-screen__progress-bar {
+  height: 6px;
+  border-radius: var(--radius-full);
+  background: var(--surface);
+  overflow: hidden;
+}
+
+.ranking-screen__progress-fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  background: var(--gradient-primary);
+  transition: width var(--transition-base);
+}
+
+.ranking-screen__progress-text {
+  margin-top: 8px;
+  font-size: 0.82rem;
+  color: var(--text-tertiary);
+  text-align: center;
+}
+
+.ranking-screen__section {
+  margin-top: var(--space-lg);
+}
+
+.ranking-screen__section-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-tertiary);
+  margin-bottom: 10px;
+}
+
+.ranking-screen__hint {
+  font-size: 0.88rem;
+  color: var(--text-tertiary);
+  text-align: center;
+  padding: var(--space-md);
+  border: 1px dashed var(--border-light);
+  border-radius: var(--radius-lg);
+}
+
+.ranking-screen__hint strong {
+  color: var(--text-secondary);
+}
+
+.ranking-screen__error {
+  margin-top: var(--space-md);
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--accent-rose);
+  font-weight: 500;
+  animation: shake-error 0.4s ease;
+}
+
+.ranking-screen__submit {
+  width: 100%;
+  margin-top: var(--space-lg);
+}
+
+.ranking-screen__submit:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* The ranking the user is building */
+.ranking-order,
+.ranking-pool {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+}
+
+/* One party */
+.party-chip {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  border: 1px solid var(--border-light);
+  transition: background var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.party-chip--tappable {
+  cursor: pointer;
+}
+
+.party-chip--tappable:hover,
+.party-chip--tappable:focus-visible {
+  background: var(--surface-hover);
+  border-color: var(--accent-indigo);
+  outline: none;
+}
+
+.party-chip--tappable:active {
+  transform: scale(0.98);
+}
+
+.party-chip--ranked {
+  background: rgba(99, 102, 241, 0.10);
+  border-color: rgba(99, 102, 241, 0.35);
+}
+
+.party-chip--unknown {
+  opacity: 0.55;
+}
+
+.party-chip__rank {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius-full);
+  background: var(--gradient-primary);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.party-chip__dot {
+  flex-shrink: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: var(--radius-full);
+}
+
+.party-chip__name {
+  flex: 1;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.party-chip__action {
+  flex-shrink: 0;
+  /* Generous, because it sits inside a chip that is itself tappable: a missed
+     tap here would silently rank a party the user meant to skip */
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-light);
+  background: transparent;
+  color: var(--text-tertiary);
+  font-family: var(--font-family);
+  font-size: 0.72rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.party-chip__action:hover {
+  color: var(--text-primary);
+  border-color: var(--text-tertiary);
+}
+
+@media (min-width: 480px) {
+  .ranking-screen {
+    padding: var(--space-lg);
+    max-width: 640px;
+    margin: 0 auto;
+  }
+}
+
 /* Transient toast over the quiz */
 .quiz__notice {
   position: fixed;
