@@ -1,0 +1,1830 @@
+{
+  "_meta": {
+    "versione": "v3-bozza",
+    "data_codifica": "2026-08-23",
+    "codificatore": "prima passata da fonti pubbliche; da confrontare con la codifica indipendente di Leo",
+    "avvertenza": "Il punteggio e' l'interpretazione del codificatore, la fonte e' verificabile. Le celle marcate RICOSTRUZIONE DA VERIFICARE poggiano su evidenza indiretta.",
+    "scala": {
+      "7": "posizione netta a favore, sostenuta attivamente (voto favorevole o proposta propria)",
+      "4": "posizione intermedia DOCUMENTATA (es. astensione motivata). Mai per 'non si sa'",
+      "1": "contrario in modo netto ed esplicito",
+      "null": "NESSUNA POSIZIONE DOCUMENTATA: escludere la cella dal calcolo, non trattarla come un 4"
+    },
+    "livelli": {
+      "A": "voto parlamentare registrato sul tema specifico",
+      "B": "programma o manifesto ufficiale del partito",
+      "C": "dichiarazione ufficiale datata della leadership da fonte verificabile",
+      "D": "ricostruzione da evidenza indiretta: da rafforzare"
+    },
+    "regola_voti_di_fiducia": "I voti posti con la questione di fiducia sono ESCLUSI dalla codifica: misurano la lealta' alla maggioranza, non la posizione sul merito."
+  },
+  "fonti": {
+    "manovra2026": {
+      "descrizione": "Legge di bilancio 2026, approvazione definitiva alla Camera il 30 dicembre 2025 (216 si', 126 no). Taglio Irpef del secondo scaglione dal 35 al 33%, fondo sanitario +2,4 mld, eta' pensionabile in aumento di un mese dal 2027 e di altri due dal 2028.",
+      "url": "https://www.quotidiano.net/economia/manovra-camera-ncpdmpej",
+      "livello": "A"
+    },
+    "giustizia_carriere": {
+      "descrizione": "Riforma costituzionale sulla separazione delle carriere: Camera 16 gennaio 2025 in prima lettura (174 si', 92 no, 5 ast.), Senato 30 ottobre 2025 in via definitiva. Oltre alla maggioranza votano a favore Azione e +Europa; Italia Viva si astiene. Bocciata dal referendum del 23 marzo 2026 (No 53,6%, affluenza 58,9%).",
+      "url": "https://www.youtrend.it/2026/03/23/referendum-giustizia-2026-risultati/",
+      "livello": "A"
+    },
+    "premierato": {
+      "descrizione": "Ddl costituzionale sull'elezione diretta del Presidente del Consiglio: Senato, 18 giugno 2024, prima deliberazione (109 si', 77 no, 1 ast.). Favorevoli i partiti di maggioranza, contrarie tutte le opposizioni.",
+      "url": "https://www.ansa.it/amp/sito/notizie/politica/2024/06/12/premierato-il-senato-approva-lart.-5-con-lelezione-diretta-del-presidente-del_5e380035-6c81-471f-a4dd-b71adca22a4d.html",
+      "livello": "A"
+    },
+    "ucraina_gen2025": {
+      "descrizione": "Camera, gennaio 2025: conversione del decreto che proroga la cessione di mezzi ed equipaggiamenti all'Ucraina (192 si', 41 no). Le opposizioni si dividono: PD, Italia Viva e Azione votano a favore, M5S e AVS contro.",
+      "url": "https://www.ilfattoquotidiano.it/2025/01/22/invio-armi-ucraina-voto-pd-decreto-centrodestra-risoluzione-dem/7847380/",
+      "livello": "A"
+    },
+    "ucraina_fn": {
+      "descrizione": "Camera: i deputati di area Vannacci votano contro l'invio di armi insieme a M5S e AVS.",
+      "url": "https://en.ilsole24ore.com/art/ukraine-decree-passes-chamber-chamber-axis-vannacciani-m5s-and-avs-no-weapons-AIMAfzKB",
+      "livello": "A"
+    },
+    "palestina_feb2025": {
+      "descrizione": "Senato, 19-20 febbraio 2025: respinta la mozione per il riconoscimento dello Stato di Palestina nei confini del 1967 (80 no, 45 si'). Contrari maggioranza, Italia Viva e Azione; favorevoli PD, AVS e M5S proponente. FdI motiva l'astensione su parti del testo con la mancanza di 'equilibrio'. A maggio 2025 la Camera respinge la mozione unitaria di PD, M5S e AVS.",
+      "url": "https://www.lindipendente.online/2025/02/20/il-senato-italiano-ha-respinto-il-riconoscimento-dello-stato-di-palestina/",
+      "livello": "A"
+    },
+    "auto2035": {
+      "descrizione": "Parlamento europeo, pacchetto Fit for 55: la delegazione di FdI, Lega e Forza Italia vota contro lo stop alla vendita di auto a benzina e diesel dal 2035; votano a favore gli eurodeputati di PD, M5S, Verdi (AVS) e Italia Viva.",
+      "url": "https://www.liberta.it/news/green-future/2023/02/15/stop-auto-benzina-e-diesel-dal-2035-ok-del-parlamento-ue-centrodestra-contrario/",
+      "livello": "A"
+    },
+    "dl_sicurezza2025": {
+      "descrizione": "Decreto sicurezza: approvato dalla Camera il 29 maggio 2025 e dal Senato il 4 giugno 2025 (109 si', 69 no, 1 ast.), diventa legge n. 80 del 9 giugno 2025. PD, M5S e AVS conducono l'ostruzionismo e votano contro.",
+      "url": "https://tg24.sky.it/politica/2025/06/04/decreto-sicurezza-senato-proteste-aula-sospesa",
+      "livello": "A"
+    },
+    "autonomia": {
+      "descrizione": "Legge Calderoli sull'autonomia differenziata, approvata il 26 giugno 2024 con i voti della maggioranza e il voto contrario delle opposizioni. Nel 2024 la Corte costituzionale ne dichiara illegittime diverse parti; con la sentenza n. 10 del 2025 dichiara inammissibile il referendum abrogativo totale promosso da cinque consigli regionali di centrosinistra.",
+      "url": "https://pagellapolitica.it/articoli/corte-costituzionale-sentenza-autonomia-differenziata",
+      "livello": "A"
+    },
+    "legge_elettorale2026": {
+      "descrizione": "Nuova legge elettorale ('Stabilicum'): approvata dalla Camera nel luglio 2026 (217 si', 152 no, 2 ast.) e trasmessa al Senato. Sistema proporzionale con premio di maggioranza di 70 seggi alla Camera alla coalizione che superi il 42%, liste bloccate e obbligo di indicare il candidato premier.",
+      "url": "https://www.agi.it/politica/news/2026-07-16/legge-elettorale-cosa-prevede-38066645/",
+      "livello": "A"
+    },
+    "ponte": {
+      "descrizione": "Ponte sullo Stretto: la Corte dei conti nega il visto alla delibera CIPESS n. 41/2025 il 27 novembre e il 16 dicembre 2025. Il governo risponde con il decreto legge dell'11 marzo 2026, convertito nella legge n. 71 dell'8 maggio 2026. AVS e M5S contestano la tenuta finanziaria dell'opera.",
+      "url": "https://www.today.it/attualita/ponte-stretto-messina-cosa-succede.html",
+      "livello": "A"
+    },
+    "fine_vita": {
+      "descrizione": "Fine vita: discussione parlamentare avviata il 3 giugno 2026. Il testo della maggioranza esclude il Servizio sanitario nazionale dalla procedura, impostazione sostenuta da FdI; Forza Italia si mostra aperta al compromesso con il centrosinistra. PD, M5S, AVS, Italia Viva, Azione e +Europa giudicano il testo piu' restrittivo delle sentenze della Consulta del 2019 e del 2024.",
+      "url": "https://www.ilpost.it/2026/06/05/fine-vita-inerzia-immobilismo-parlamento/",
+      "livello": "C"
+    },
+    "diritti_civili": {
+      "descrizione": "Ricostruzione delle posizioni dei partiti su matrimonio egualitario e omogenitorialita': Lega e FdI contrarie ('la famiglia e' quella composta da una mamma e un papa''); PD con Schlein, M5S e AVS favorevoli, con proposte di legge depositate. Sulla cannabis M5S favorevole; Calenda (Azione) favorevole con politiche di disincentivazione.",
+      "url": "https://www.editorialedomani.it/politica/italia/cosa-pensano-i-partiti-su-matrimonio-egualitario-e-omogenitorialita-m7gz1hfl",
+      "livello": "C"
+    },
+    "migrazione_albania": {
+      "descrizione": "Politica migratoria: il centrodestra rilancia i centri in Albania e l'attuazione immediata del Patto UE su migrazione e asilo; le opposizioni ne denunciano il fallimento e il costo. Nel 2026 Tirana annuncia che l'accordo non sara' prorogato oltre il 2028.",
+      "url": "https://pagellapolitica.it/articoli/meloni-centri-albania-funzioneranno-2026",
+      "livello": "C"
+    },
+    "dazi2025": {
+      "descrizione": "Accordo commerciale UE-USA del luglio 2025: dazio al 15% sulla maggior parte dei beni europei. Il governo lo giudica 'positivo e sostenibile'; tutte le opposizioni, da Renzi al PD a +Europa, lo criticano come una resa. ATTENZIONE: questa fonte documenta il giudizio su UNO SPECIFICO accordo, non la posizione di principio sul libero scambio. +Europa e Azione sono storicamente liberoscambiste pur avendo criticato l'intesa. NON usare questa fonte per codificare la domanda: serve una fonte dedicata sui programmi.",
+      "url": "https://pagellapolitica.it/articoli/dazi-von-der-leyen-trump-governo-opposizioni",
+      "livello": "C"
+    },
+    "manifesto_pld": {
+      "descrizione": "Manifesto e proposte del Partito Liberaldemocratico: 'ruolo strategico del nucleare'; spending review e 'avanzi primari piu' consistenti per la riduzione del debito'; Europa che deve 'cambiare o perire'. Non trattati salario minimo, pensioni, diritti civili, giustizia, riforme istituzionali.",
+      "url": "https://partitoliberaldemocratico.com/proposte/",
+      "livello": "B"
+    },
+    "programma_fn": {
+      "descrizione": "Programma di Futuro Nazionale, pubblicato l'11 agosto 2026: cittadinanza dopo almeno 20 anni di dimora regolare e livello C1, rifiuto 'categorico e senza possibilita' negoziale' di ius soli e ius scholae; abbassamento della pressione fiscale; sgravi per l'assunzione di manodopera italiana; contro il federalismo europeo, per 'un'Europa di Stati nazionali cooperanti'; l'immigrazione di massa 'sgretola la compattezza di una civilta''.",
+      "url": "https://tg24.sky.it/politica/2026/08/11/vannacci-futuro-nazionale-programma-manifesto",
+      "livello": "B"
+    }
+  },
+  "domande": [
+    {
+      "id": "fisco_progressivita",
+      "tema": "Progressivita' fiscale",
+      "testo_proposto": "Chi ha redditi alti dovrebbe pagare piu' tasse di quante ne paghi oggi.",
+      "nota_formulazione": "Tolto l'inciso 'anche a costo di tasse piu' alte per i redditi alti', che incorporava l'obiezione nella domanda.",
+      "direzione_accordo": "accordo = sinistra",
+      "fonti": [
+        "manovra2026",
+        "manifesto_pld",
+        "programma_fn"
+      ],
+      "posizioni": {
+        "Fratelli d'Italia": {
+          "punteggio": 2,
+          "livello": "A",
+          "fonte": "manovra2026",
+          "evidenza": "Vota la manovra che riduce l'Irpef del secondo scaglione dal 35 al 33%: alleggerimento sui redditi medio-alti."
+        },
+        "Lega": {
+          "punteggio": 2,
+          "livello": "A",
+          "fonte": "manovra2026",
+          "evidenza": "Come sopra."
+        },
+        "Forza Italia": {
+          "punteggio": 2,
+          "livello": "A",
+          "fonte": "manovra2026",
+          "evidenza": "Come sopra; storicamente favorevole alla riduzione della pressione fiscale."
+        },
+        "Liberaldemocratico": {
+          "punteggio": 2,
+          "livello": "B",
+          "fonte": "manifesto_pld",
+          "evidenza": "Le proposte puntano su spending review e avanzi primari per ridurre il debito, non su nuove imposte."
+        },
+        "Futuro Nazionale": {
+          "punteggio": 2,
+          "livello": "B",
+          "fonte": "programma_fn",
+          "evidenza": "Il pilastro 'Eccellenza' prevede l'abbassamento della pressione fiscale."
+        },
+        "PD": {
+          "punteggio": 6,
+          "livello": "D",
+          "fonte": "manovra2026",
+          "evidenza": "RICOSTRUZIONE DA VERIFICARE: voto contrario alla manovra e critica al disegno fiscale, ma senza una fonte diretta sulla progressivita'."
+        },
+        "M5S": {
+          "punteggio": 7,
+          "livello": "D",
+          "fonte": "manovra2026",
+          "evidenza": "RICOSTRUZIONE DA VERIFICARE: voto contrario alla manovra, denuncia sull'assenza di misure su salari e poverta'."
+        },
+        "AVS": {
+          "punteggio": 7,
+          "livello": "D",
+          "fonte": "manovra2026",
+          "evidenza": "RICOSTRUZIONE DA VERIFICARE: voto contrario alla manovra."
+        },
+        "+Europa": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Italia Viva": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Azione": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        }
+      }
+    },
+    {
+      "id": "ruolo_stato_economia",
+      "tema": "Ruolo dello Stato nell'economia",
+      "testo_proposto": "Lo Stato dovrebbe intervenire direttamente nell'economia con investimenti pubblici nei settori strategici.",
+      "nota_formulazione": "Tolto il riferimento alla 'riconversione ecologica', che legava la domanda a un secondo tema e la spostava a sinistra.",
+      "direzione_accordo": "accordo = sinistra",
+      "fonti": [],
+      "posizioni": {
+        "AVS": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "M5S": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "PD": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "+Europa": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Italia Viva": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Azione": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Liberaldemocratico": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Forza Italia": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Fratelli d'Italia": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Lega": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Futuro Nazionale": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        }
+      }
+    },
+    {
+      "id": "vincoli_bilancio",
+      "tema": "Vincoli di bilancio europei",
+      "testo_proposto": "L'Italia dovrebbe aumentare la spesa pubblica in deficit anche superando i vincoli europei.",
+      "nota_formulazione": "Tolto 'anche a costo di piu' debito', che incorporava l'obiezione.",
+      "direzione_accordo": "accordo = sinistra",
+      "fonti": [
+        "manifesto_pld"
+      ],
+      "posizioni": {
+        "Liberaldemocratico": {
+          "punteggio": 2,
+          "livello": "B",
+          "fonte": "manifesto_pld",
+          "evidenza": "Chiede 'avanzi primari piu' consistenti per la riduzione del debito': posizione opposta alla spesa in deficit."
+        },
+        "AVS": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "M5S": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "PD": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "+Europa": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Italia Viva": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Azione": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Forza Italia": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Fratelli d'Italia": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Lega": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Futuro Nazionale": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        }
+      }
+    },
+    {
+      "id": "pensioni",
+      "tema": "Eta' pensionabile",
+      "testo_proposto": "Si dovrebbe poter andare in pensione prima di quanto consenta la legge attuale.",
+      "nota_formulazione": "Tolto il riferimento alla 'legge Fornero', che e' lessico connotato, e separata la questione dalle pensioni minime.",
+      "direzione_accordo": "accordo = ambigua",
+      "fonti": [
+        "manovra2026"
+      ],
+      "posizioni": {
+        "Fratelli d'Italia": {
+          "punteggio": 3,
+          "livello": "A",
+          "fonte": "manovra2026",
+          "evidenza": "ATTENZIONE, DIVERGENZA: la manovra votata AUMENTA l'eta' pensionabile di un mese dal 2027 e di due dal 2028. Il voto dice il contrario della retorica."
+        },
+        "Lega": {
+          "punteggio": 3,
+          "livello": "A",
+          "fonte": "manovra2026",
+          "evidenza": "ATTENZIONE, DIVERGENZA: vota la manovra che alza l'eta' pensionabile pur continuando a proporre pubblicamente il superamento della Fornero. Nel data.json attuale ha 7: il punteggio piu' discutibile dell'intero questionario."
+        },
+        "Forza Italia": {
+          "punteggio": 3,
+          "livello": "A",
+          "fonte": "manovra2026",
+          "evidenza": "Vota la manovra che alza l'eta' pensionabile."
+        },
+        "PD": {
+          "punteggio": 6,
+          "livello": "D",
+          "fonte": "manovra2026",
+          "evidenza": "RICOSTRUZIONE DA VERIFICARE: critica l'aumento delle pensioni minime di 'tre euro al mese'."
+        },
+        "M5S": {
+          "punteggio": 6,
+          "livello": "D",
+          "fonte": "manovra2026",
+          "evidenza": "RICOSTRUZIONE DA VERIFICARE: voto contrario alla manovra."
+        },
+        "AVS": {
+          "punteggio": 6,
+          "livello": "D",
+          "fonte": "manovra2026",
+          "evidenza": "RICOSTRUZIONE DA VERIFICARE: voto contrario alla manovra."
+        },
+        "+Europa": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Italia Viva": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Azione": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Liberaldemocratico": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Futuro Nazionale": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        }
+      }
+    },
+    {
+      "id": "sanita",
+      "tema": "Sanita' pubblica",
+      "testo_proposto": "Il finanziamento del Servizio sanitario nazionale dovrebbe aumentare in modo consistente.",
+      "nota_formulazione": "Separata dalla questione del privato accreditato, che era accorpata nella stessa affermazione.",
+      "direzione_accordo": "accordo = sinistra",
+      "fonti": [
+        "manovra2026",
+        "manifesto_pld"
+      ],
+      "posizioni": {
+        "Fratelli d'Italia": {
+          "punteggio": 4,
+          "livello": "A",
+          "fonte": "manovra2026",
+          "evidenza": "Vota la manovra che porta il fondo sanitario a 143,1 mld, +2,4 mld: aumento reale ma contestato come insufficiente."
+        },
+        "Lega": {
+          "punteggio": 4,
+          "livello": "A",
+          "fonte": "manovra2026",
+          "evidenza": "Come sopra."
+        },
+        "Forza Italia": {
+          "punteggio": 4,
+          "livello": "A",
+          "fonte": "manovra2026",
+          "evidenza": "Come sopra."
+        },
+        "Liberaldemocratico": {
+          "punteggio": 5,
+          "livello": "B",
+          "fonte": "manifesto_pld",
+          "evidenza": "'Servizi sanitari adeguati a prescindere dalle condizioni economiche' definiti 'baluardo del welfare'."
+        },
+        "PD": {
+          "punteggio": 7,
+          "livello": "D",
+          "fonte": "manovra2026",
+          "evidenza": "RICOSTRUZIONE DA VERIFICARE: voto contrario, aumento giudicato insufficiente."
+        },
+        "M5S": {
+          "punteggio": 7,
+          "livello": "D",
+          "fonte": "manovra2026",
+          "evidenza": "RICOSTRUZIONE DA VERIFICARE: voto contrario."
+        },
+        "AVS": {
+          "punteggio": 7,
+          "livello": "D",
+          "fonte": "manovra2026",
+          "evidenza": "RICOSTRUZIONE DA VERIFICARE: voto contrario."
+        },
+        "+Europa": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Italia Viva": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Azione": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Futuro Nazionale": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        }
+      }
+    },
+    {
+      "id": "welfare",
+      "tema": "Sostegni al reddito",
+      "testo_proposto": "Lo Stato dovrebbe garantire un sostegno economico a chiunque si trovi in difficolta' economica.",
+      "nota_formulazione": "Eliminato il confronto forzato con 'incentivi alla natalita' e bonus mirati': erano due dimensioni distinte compresse in una scala sola.",
+      "direzione_accordo": "accordo = sinistra",
+      "fonti": [
+        "programma_fn"
+      ],
+      "posizioni": {
+        "Futuro Nazionale": {
+          "punteggio": 2,
+          "livello": "B",
+          "fonte": "programma_fn",
+          "evidenza": "Propone di vincolare i sussidi alla disponibilita' ad accettare 'qualsivoglia lavoro compatibile' e di escludere i non cittadini dai benefici straordinari."
+        },
+        "AVS": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "M5S": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "PD": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "+Europa": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Italia Viva": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Azione": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Liberaldemocratico": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Forza Italia": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Fratelli d'Italia": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Lega": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        }
+      }
+    },
+    {
+      "id": "istruzione",
+      "tema": "Risorse alla scuola pubblica",
+      "testo_proposto": "La scuola pubblica dovrebbe ricevere piu' risorse di quante ne riceva oggi.",
+      "nota_formulazione": "Eliminato il confronto forzato con 'merito, valutazione e formazione tecnica': si possono volere entrambe le cose.",
+      "direzione_accordo": "accordo = sinistra",
+      "fonti": [
+        "manifesto_pld"
+      ],
+      "posizioni": {
+        "Liberaldemocratico": {
+          "punteggio": 5,
+          "livello": "B",
+          "fonte": "manifesto_pld",
+          "evidenza": "'La riforma del sistema educativo e' la madre di tutte le riforme'. Favorevole all'investimento, con accento sul merito."
+        },
+        "AVS": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "M5S": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "PD": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "+Europa": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Italia Viva": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Azione": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Forza Italia": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Fratelli d'Italia": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Lega": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Futuro Nazionale": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        }
+      }
+    },
+    {
+      "id": "lgbt",
+      "tema": "Matrimonio e adozioni per coppie dello stesso sesso",
+      "testo_proposto": "Le coppie dello stesso sesso dovrebbero poter accedere al matrimonio e all'adozione.",
+      "nota_formulazione": "Separata dalla legge contro l'omotransfobia: l'affermazione originale ne accorpava tre.",
+      "direzione_accordo": "accordo = sinistra",
+      "fonti": [
+        "diritti_civili"
+      ],
+      "posizioni": {
+        "AVS": {
+          "punteggio": 7,
+          "livello": "C",
+          "fonte": "diritti_civili",
+          "evidenza": "Disegni di legge depositati per matrimonio egualitario e adozioni per single e coppie gay."
+        },
+        "M5S": {
+          "punteggio": 7,
+          "livello": "C",
+          "fonte": "diritti_civili",
+          "evidenza": "Favorevole al matrimonio egualitario."
+        },
+        "PD": {
+          "punteggio": 7,
+          "livello": "C",
+          "fonte": "diritti_civili",
+          "evidenza": "Schlein annuncia un intervento su adozioni e matrimonio egualitario."
+        },
+        "Lega": {
+          "punteggio": 1,
+          "livello": "C",
+          "fonte": "diritti_civili",
+          "evidenza": "'La famiglia e' quella composta da una mamma e un papa''."
+        },
+        "Fratelli d'Italia": {
+          "punteggio": 1,
+          "livello": "C",
+          "fonte": "diritti_civili",
+          "evidenza": "Contraria alle adozioni omogenitoriali."
+        },
+        "+Europa": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Italia Viva": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Azione": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Liberaldemocratico": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Forza Italia": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Futuro Nazionale": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        }
+      }
+    },
+    {
+      "id": "fine_vita",
+      "tema": "Fine vita",
+      "testo_proposto": "Dovrebbe esistere una legge che consenta il suicidio medicalmente assistito.",
+      "nota_formulazione": "Separata dall'aborto, che nell'affermazione originale era accorpato nella stessa domanda.",
+      "direzione_accordo": "accordo = sinistra",
+      "fonti": [
+        "fine_vita"
+      ],
+      "posizioni": {
+        "PD": {
+          "punteggio": 7,
+          "livello": "C",
+          "fonte": "fine_vita",
+          "evidenza": "Ddl Bazoli; giudica il testo della maggioranza piu' restrittivo delle sentenze della Consulta."
+        },
+        "M5S": {
+          "punteggio": 7,
+          "livello": "C",
+          "fonte": "fine_vita",
+          "evidenza": "Come sopra."
+        },
+        "AVS": {
+          "punteggio": 7,
+          "livello": "C",
+          "fonte": "fine_vita",
+          "evidenza": "Come sopra."
+        },
+        "Italia Viva": {
+          "punteggio": 7,
+          "livello": "C",
+          "fonte": "fine_vita",
+          "evidenza": "Fra i critici del testo della maggioranza perche' troppo restrittivo."
+        },
+        "Azione": {
+          "punteggio": 7,
+          "livello": "C",
+          "fonte": "fine_vita",
+          "evidenza": "Come sopra."
+        },
+        "+Europa": {
+          "punteggio": 7,
+          "livello": "C",
+          "fonte": "fine_vita",
+          "evidenza": "Come sopra; Magi critica il testo del governo."
+        },
+        "Forza Italia": {
+          "punteggio": 5,
+          "livello": "C",
+          "fonte": "fine_vita",
+          "evidenza": "Posizione piu' aperta nel centrodestra: il capogruppo Costa cerca un'intesa con il centrosinistra per approvare la legge."
+        },
+        "Fratelli d'Italia": {
+          "punteggio": 2,
+          "livello": "C",
+          "fonte": "fine_vita",
+          "evidenza": "Sostiene l'esclusione del Servizio sanitario nazionale dalla procedura."
+        },
+        "Lega": {
+          "punteggio": 2,
+          "livello": "C",
+          "fonte": "fine_vita",
+          "evidenza": "Allineata all'impostazione restrittiva della maggioranza."
+        },
+        "Liberaldemocratico": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Futuro Nazionale": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        }
+      }
+    },
+    {
+      "id": "cannabis",
+      "tema": "Cannabis",
+      "testo_proposto": "La produzione e la vendita di cannabis dovrebbero essere legali e regolate dallo Stato.",
+      "nota_formulazione": "Tolto 'togliendo il mercato alla criminalita' organizzata', che era l'argomento a favore incorporato nella domanda.",
+      "direzione_accordo": "accordo = sinistra",
+      "fonti": [
+        "diritti_civili"
+      ],
+      "posizioni": {
+        "M5S": {
+          "punteggio": 7,
+          "livello": "C",
+          "fonte": "diritti_civili",
+          "evidenza": "Favorevole alla legalizzazione."
+        },
+        "Azione": {
+          "punteggio": 5,
+          "livello": "C",
+          "fonte": "diritti_civili",
+          "evidenza": "Calenda favorevole, ma con politiche di disincentivazione dell'uso."
+        },
+        "AVS": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "PD": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "+Europa": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Italia Viva": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Liberaldemocratico": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Forza Italia": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Fratelli d'Italia": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Lega": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Futuro Nazionale": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        }
+      }
+    },
+    {
+      "id": "palestina",
+      "tema": "Riconoscimento dello Stato di Palestina",
+      "testo_proposto": "L'Italia dovrebbe riconoscere formalmente lo Stato di Palestina.",
+      "nota_formulazione": "Separata dalla valutazione delle operazioni militari israeliane, che era accorpata nella stessa affermazione.",
+      "direzione_accordo": "accordo = sinistra",
+      "fonti": [
+        "palestina_feb2025"
+      ],
+      "posizioni": {
+        "M5S": {
+          "punteggio": 7,
+          "livello": "A",
+          "fonte": "palestina_feb2025",
+          "evidenza": "Proponente della mozione al Senato del gennaio 2025 per il riconoscimento nei confini del 1967."
+        },
+        "AVS": {
+          "punteggio": 7,
+          "livello": "A",
+          "fonte": "palestina_feb2025",
+          "evidenza": "Voto favorevole alla mozione."
+        },
+        "PD": {
+          "punteggio": 7,
+          "livello": "A",
+          "fonte": "palestina_feb2025",
+          "evidenza": "Voto favorevole alla mozione e, a maggio 2025, firmatario della mozione unitaria alla Camera."
+        },
+        "Italia Viva": {
+          "punteggio": 2,
+          "livello": "A",
+          "fonte": "palestina_feb2025",
+          "evidenza": "VOTA CONTRO insieme alla maggioranza."
+        },
+        "Azione": {
+          "punteggio": 2,
+          "livello": "A",
+          "fonte": "palestina_feb2025",
+          "evidenza": "VOTA CONTRO insieme alla maggioranza."
+        },
+        "Fratelli d'Italia": {
+          "punteggio": 2,
+          "livello": "A",
+          "fonte": "palestina_feb2025",
+          "evidenza": "Contraria; motiva su parti del testo la mancanza di 'equilibrio'."
+        },
+        "Forza Italia": {
+          "punteggio": 2,
+          "livello": "A",
+          "fonte": "palestina_feb2025",
+          "evidenza": "Voto contrario con la maggioranza."
+        },
+        "Lega": {
+          "punteggio": 2,
+          "livello": "A",
+          "fonte": "palestina_feb2025",
+          "evidenza": "Voto contrario con la maggioranza."
+        },
+        "+Europa": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Liberaldemocratico": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Futuro Nazionale": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        }
+      }
+    },
+    {
+      "id": "ucraina",
+      "tema": "Sostegno militare all'Ucraina",
+      "testo_proposto": "L'Italia dovrebbe continuare a fornire armi all'Ucraina.",
+      "nota_formulazione": "Separata dal rafforzamento della NATO, che era accorpato. ESCLUSO dalla codifica il voto del 25 febbraio 2026 al Senato perche' posto con la fiducia: misura la lealta' al governo, non la posizione sul merito.",
+      "direzione_accordo": "accordo = destra",
+      "fonti": [
+        "ucraina_gen2025",
+        "ucraina_fn"
+      ],
+      "posizioni": {
+        "Italia Viva": {
+          "punteggio": 7,
+          "livello": "A",
+          "fonte": "ucraina_gen2025",
+          "evidenza": "Voto favorevole al decreto pur essendo all'opposizione."
+        },
+        "Azione": {
+          "punteggio": 7,
+          "livello": "A",
+          "fonte": "ucraina_gen2025",
+          "evidenza": "Voto favorevole al decreto pur essendo all'opposizione."
+        },
+        "PD": {
+          "punteggio": 6,
+          "livello": "A",
+          "fonte": "ucraina_gen2025",
+          "evidenza": "Voto favorevole nel gennaio 2025. Nell'agosto 2026 la posizione e' in discussione dentro la coalizione: da riverificare."
+        },
+        "Fratelli d'Italia": {
+          "punteggio": 7,
+          "livello": "A",
+          "fonte": "ucraina_gen2025",
+          "evidenza": "Politica di governo."
+        },
+        "Forza Italia": {
+          "punteggio": 7,
+          "livello": "A",
+          "fonte": "ucraina_gen2025",
+          "evidenza": "Politica di governo."
+        },
+        "Lega": {
+          "punteggio": 5,
+          "livello": "A",
+          "fonte": "ucraina_gen2025",
+          "evidenza": "ATTENZIONE, DIVERGENZA: vota con la maggioranza, ma la linea pubblica del leader e' critica sull'invio di armi."
+        },
+        "M5S": {
+          "punteggio": 1,
+          "livello": "A",
+          "fonte": "ucraina_gen2025",
+          "evidenza": "Voto contrario, confermato da Conte nell'agosto 2026."
+        },
+        "AVS": {
+          "punteggio": 1,
+          "livello": "A",
+          "fonte": "ucraina_gen2025",
+          "evidenza": "Voto contrario."
+        },
+        "Futuro Nazionale": {
+          "punteggio": 1,
+          "livello": "A",
+          "fonte": "ucraina_fn",
+          "evidenza": "I deputati di area Vannacci votano contro l'invio di armi insieme a M5S e AVS."
+        },
+        "+Europa": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Liberaldemocratico": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        }
+      }
+    },
+    {
+      "id": "europa",
+      "tema": "Integrazione europea",
+      "testo_proposto": "L'Unione europea dovrebbe avere poteri comuni su difesa, fisco e politica estera.",
+      "nota_formulazione": "Tolto il riferimento tecnico al 'superamento dell'unanimita'', poco comprensibile a chi non segue il dossier.",
+      "direzione_accordo": "accordo = sinistra",
+      "fonti": [
+        "manifesto_pld",
+        "programma_fn"
+      ],
+      "posizioni": {
+        "Liberaldemocratico": {
+          "punteggio": 6,
+          "livello": "B",
+          "fonte": "manifesto_pld",
+          "evidenza": "'L'Europa e' a un bivio: cambiare o perire'; integrazione europea fra i principi fondativi del partito."
+        },
+        "Futuro Nazionale": {
+          "punteggio": 1,
+          "livello": "B",
+          "fonte": "programma_fn",
+          "evidenza": "Contro il 'federalismo europeo', a favore di 'un'Europa di Stati nazionali cooperanti'."
+        },
+        "AVS": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "M5S": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "PD": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "+Europa": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Italia Viva": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Azione": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Forza Italia": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Fratelli d'Italia": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Lega": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        }
+      }
+    },
+    {
+      "id": "commercio",
+      "tema": "Libero scambio",
+      "testo_proposto": "L'apertura ai mercati internazionali conviene all'Italia.",
+      "nota_formulazione": "Tolta la clausola 'purche' ci siano regole comuni contro il dumping', che rendeva l'affermazione condivisibile da chiunque.",
+      "direzione_accordo": "accordo = destra",
+      "fonti": [
+        "dazi2025"
+      ],
+      "posizioni": {
+        "AVS": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "M5S": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "PD": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "+Europa": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Italia Viva": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Azione": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Liberaldemocratico": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Forza Italia": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Fratelli d'Italia": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Lega": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Futuro Nazionale": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        }
+      }
+    },
+    {
+      "id": "green_deal",
+      "tema": "Obiettivi climatici europei",
+      "testo_proposto": "L'Unione europea dovrebbe mantenere il divieto di vendita di nuove auto a benzina e diesel dal 2035.",
+      "nota_formulazione": "Sostituito il termine 'Green Deal', che e' un'etichetta politicamente connotata, con la misura concreta su cui i partiti hanno votato.",
+      "direzione_accordo": "accordo = sinistra",
+      "fonti": [
+        "auto2035"
+      ],
+      "posizioni": {
+        "PD": {
+          "punteggio": 7,
+          "livello": "A",
+          "fonte": "auto2035",
+          "evidenza": "Gli eurodeputati votano a favore."
+        },
+        "M5S": {
+          "punteggio": 7,
+          "livello": "A",
+          "fonte": "auto2035",
+          "evidenza": "Gli eurodeputati votano a favore."
+        },
+        "AVS": {
+          "punteggio": 7,
+          "livello": "A",
+          "fonte": "auto2035",
+          "evidenza": "I Verdi votano a favore."
+        },
+        "Italia Viva": {
+          "punteggio": 7,
+          "livello": "A",
+          "fonte": "auto2035",
+          "evidenza": "Gli eurodeputati votano a favore."
+        },
+        "Fratelli d'Italia": {
+          "punteggio": 1,
+          "livello": "A",
+          "fonte": "auto2035",
+          "evidenza": "La delegazione vota contro."
+        },
+        "Lega": {
+          "punteggio": 1,
+          "livello": "A",
+          "fonte": "auto2035",
+          "evidenza": "La delegazione vota contro."
+        },
+        "Forza Italia": {
+          "punteggio": 1,
+          "livello": "A",
+          "fonte": "auto2035",
+          "evidenza": "La delegazione vota contro."
+        },
+        "+Europa": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Azione": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Liberaldemocratico": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Futuro Nazionale": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        }
+      }
+    },
+    {
+      "id": "grandi_opere",
+      "tema": "Grandi opere",
+      "testo_proposto": "L'Italia dovrebbe realizzare il Ponte sullo Stretto di Messina.",
+      "nota_formulazione": "Eliminato il confronto forzato con la mobilita' sostenibile e sostituito il generico 'grandi opere' con l'opera su cui i partiti si sono effettivamente divisi.",
+      "direzione_accordo": "accordo = destra",
+      "fonti": [
+        "ponte"
+      ],
+      "posizioni": {
+        "Fratelli d'Italia": {
+          "punteggio": 7,
+          "livello": "A",
+          "fonte": "ponte",
+          "evidenza": "Opera di bandiera del governo, riaffermata con il decreto legge dell'11 marzo 2026 dopo i rilievi della Corte dei conti."
+        },
+        "Lega": {
+          "punteggio": 7,
+          "livello": "A",
+          "fonte": "ponte",
+          "evidenza": "Progetto del ministro proponente."
+        },
+        "Forza Italia": {
+          "punteggio": 7,
+          "livello": "A",
+          "fonte": "ponte",
+          "evidenza": "Vota la conversione in legge."
+        },
+        "AVS": {
+          "punteggio": 1,
+          "livello": "A",
+          "fonte": "ponte",
+          "evidenza": "Bonelli: con lo spostamento delle risorse 'l'architettura finanziaria del Ponte cade'."
+        },
+        "M5S": {
+          "punteggio": 1,
+          "livello": "A",
+          "fonte": "ponte",
+          "evidenza": "Costa: il progetto e' 'fattualmente irrealizzabile'."
+        },
+        "PD": {
+          "punteggio": 2,
+          "livello": "C",
+          "fonte": "ponte",
+          "evidenza": "Contrario, insieme al resto dell'opposizione."
+        },
+        "+Europa": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Italia Viva": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Azione": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Liberaldemocratico": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Futuro Nazionale": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        }
+      }
+    },
+    {
+      "id": "migrazione",
+      "tema": "Politica migratoria",
+      "testo_proposto": "L'Italia dovrebbe rendere piu' difficile l'ingresso di nuovi immigrati.",
+      "nota_formulazione": "Tolta l'accumulazione di 'controllo rigoroso dei confini, rimpatri rapidi e riduzione degli arrivi', che sommava tre misure diverse.",
+      "direzione_accordo": "accordo = destra",
+      "fonti": [
+        "migrazione_albania",
+        "programma_fn"
+      ],
+      "posizioni": {
+        "Fratelli d'Italia": {
+          "punteggio": 7,
+          "livello": "C",
+          "fonte": "migrazione_albania",
+          "evidenza": "Rilancio dei centri in Albania e attuazione immediata del Patto UE."
+        },
+        "Lega": {
+          "punteggio": 7,
+          "livello": "C",
+          "fonte": "migrazione_albania",
+          "evidenza": "Allineata alla linea di governo, su posizioni fra le piu' restrittive."
+        },
+        "Forza Italia": {
+          "punteggio": 6,
+          "livello": "C",
+          "fonte": "migrazione_albania",
+          "evidenza": "Sostiene la linea di governo, con aperture su cittadinanza e ingressi regolari per le imprese."
+        },
+        "Futuro Nazionale": {
+          "punteggio": 7,
+          "livello": "B",
+          "fonte": "programma_fn",
+          "evidenza": "L'immigrazione di massa 'sgretola la compattezza di una civilta''; esclusione dei non cittadini dai benefici sociali straordinari."
+        },
+        "PD": {
+          "punteggio": 2,
+          "livello": "C",
+          "fonte": "migrazione_albania",
+          "evidenza": "Denuncia il fallimento e il costo dei centri in Albania."
+        },
+        "M5S": {
+          "punteggio": 2,
+          "livello": "C",
+          "fonte": "migrazione_albania",
+          "evidenza": "Come sopra."
+        },
+        "AVS": {
+          "punteggio": 1,
+          "livello": "C",
+          "fonte": "migrazione_albania",
+          "evidenza": "Come sopra, su posizioni fra le piu' critiche."
+        },
+        "+Europa": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Italia Viva": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Azione": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Liberaldemocratico": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        }
+      }
+    },
+    {
+      "id": "ordine_pubblico",
+      "tema": "Sicurezza e ordine pubblico",
+      "testo_proposto": "Servono pene piu' severe e piu' poteri alle forze dell'ordine.",
+      "nota_formulazione": "Eliminato il confronto forzato con 'prevenzione sociale e garanzie individuali'.",
+      "direzione_accordo": "accordo = destra",
+      "fonti": [
+        "dl_sicurezza2025"
+      ],
+      "posizioni": {
+        "Fratelli d'Italia": {
+          "punteggio": 7,
+          "livello": "A",
+          "fonte": "dl_sicurezza2025",
+          "evidenza": "Vota il decreto sicurezza, che introduce nuove fattispecie di reato e amplia i poteri di polizia."
+        },
+        "Lega": {
+          "punteggio": 7,
+          "livello": "A",
+          "fonte": "dl_sicurezza2025",
+          "evidenza": "Vota il decreto sicurezza."
+        },
+        "Forza Italia": {
+          "punteggio": 6,
+          "livello": "A",
+          "fonte": "dl_sicurezza2025",
+          "evidenza": "Vota il decreto sicurezza."
+        },
+        "PD": {
+          "punteggio": 1,
+          "livello": "A",
+          "fonte": "dl_sicurezza2025",
+          "evidenza": "Voto contrario, con ostruzionismo in aula."
+        },
+        "M5S": {
+          "punteggio": 1,
+          "livello": "A",
+          "fonte": "dl_sicurezza2025",
+          "evidenza": "Voto contrario, con ostruzionismo in aula."
+        },
+        "AVS": {
+          "punteggio": 1,
+          "livello": "A",
+          "fonte": "dl_sicurezza2025",
+          "evidenza": "Voto contrario, con ostruzionismo in aula."
+        },
+        "+Europa": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Italia Viva": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Azione": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Liberaldemocratico": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Futuro Nazionale": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        }
+      }
+    },
+    {
+      "id": "giustizia",
+      "tema": "Separazione delle carriere dei magistrati",
+      "testo_proposto": "Le carriere dei giudici e dei pubblici ministeri dovrebbero essere separate.",
+      "nota_formulazione": "Separata dalla durata dei processi, che era accorpata nella stessa affermazione e su cui sono tutti d'accordo.",
+      "direzione_accordo": "accordo = destra",
+      "fonti": [
+        "giustizia_carriere"
+      ],
+      "posizioni": {
+        "Fratelli d'Italia": {
+          "punteggio": 7,
+          "livello": "A",
+          "fonte": "giustizia_carriere",
+          "evidenza": "Riforma costituzionale di iniziativa governativa."
+        },
+        "Lega": {
+          "punteggio": 7,
+          "livello": "A",
+          "fonte": "giustizia_carriere",
+          "evidenza": "Voto favorevole."
+        },
+        "Forza Italia": {
+          "punteggio": 7,
+          "livello": "A",
+          "fonte": "giustizia_carriere",
+          "evidenza": "Battaglia storica del partito."
+        },
+        "Azione": {
+          "punteggio": 7,
+          "livello": "A",
+          "fonte": "giustizia_carriere",
+          "evidenza": "VOTA A FAVORE pur essendo all'opposizione."
+        },
+        "+Europa": {
+          "punteggio": 7,
+          "livello": "A",
+          "fonte": "giustizia_carriere",
+          "evidenza": "VOTA A FAVORE pur essendo all'opposizione."
+        },
+        "Italia Viva": {
+          "punteggio": 4,
+          "livello": "A",
+          "fonte": "giustizia_carriere",
+          "evidenza": "SI ASTIENE: posizione intermedia documentata, non un'incognita."
+        },
+        "PD": {
+          "punteggio": 2,
+          "livello": "A",
+          "fonte": "giustizia_carriere",
+          "evidenza": "Voto contrario e campagna per il No al referendum."
+        },
+        "M5S": {
+          "punteggio": 1,
+          "livello": "A",
+          "fonte": "giustizia_carriere",
+          "evidenza": "Voto contrario e campagna per il No."
+        },
+        "AVS": {
+          "punteggio": 1,
+          "livello": "A",
+          "fonte": "giustizia_carriere",
+          "evidenza": "Voto contrario e campagna per il No."
+        },
+        "Liberaldemocratico": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Futuro Nazionale": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        }
+      }
+    },
+    {
+      "id": "premierato",
+      "tema": "Elezione diretta del capo del governo",
+      "testo_proposto": "Il Presidente del Consiglio dovrebbe essere eletto direttamente dai cittadini.",
+      "nota_formulazione": "Tolto 'per garantire stabilita' e decisione al governo', che era l'argomento a favore incorporato nella domanda.",
+      "direzione_accordo": "accordo = destra",
+      "fonti": [
+        "premierato"
+      ],
+      "posizioni": {
+        "Fratelli d'Italia": {
+          "punteggio": 7,
+          "livello": "A",
+          "fonte": "premierato",
+          "evidenza": "Riforma costituzionale di iniziativa governativa."
+        },
+        "Lega": {
+          "punteggio": 7,
+          "livello": "A",
+          "fonte": "premierato",
+          "evidenza": "Voto favorevole."
+        },
+        "Forza Italia": {
+          "punteggio": 7,
+          "livello": "A",
+          "fonte": "premierato",
+          "evidenza": "Voto favorevole."
+        },
+        "PD": {
+          "punteggio": 1,
+          "livello": "A",
+          "fonte": "premierato",
+          "evidenza": "Voto contrario."
+        },
+        "M5S": {
+          "punteggio": 1,
+          "livello": "A",
+          "fonte": "premierato",
+          "evidenza": "Voto contrario."
+        },
+        "AVS": {
+          "punteggio": 1,
+          "livello": "A",
+          "fonte": "premierato",
+          "evidenza": "Voto contrario."
+        },
+        "Italia Viva": {
+          "punteggio": 2,
+          "livello": "A",
+          "fonte": "premierato",
+          "evidenza": "VOTA CONTRO. Nel data.json attuale ha 6, probabilmente per la vicinanza al 'sindaco d'Italia' di Renzi: la retorica e il voto divergono, e il voto e' su questo testo."
+        },
+        "Azione": {
+          "punteggio": 2,
+          "livello": "A",
+          "fonte": "premierato",
+          "evidenza": "VOTA CONTRO. Nel data.json attuale ha 5."
+        },
+        "+Europa": {
+          "punteggio": 2,
+          "livello": "A",
+          "fonte": "premierato",
+          "evidenza": "Voto contrario con le altre opposizioni."
+        },
+        "Liberaldemocratico": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Futuro Nazionale": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        }
+      }
+    },
+    {
+      "id": "autonomia",
+      "tema": "Autonomia delle regioni",
+      "testo_proposto": "Le regioni dovrebbero gestire autonomamente materie oggi statali come sanita' e scuola.",
+      "nota_formulazione": "Tolto 'anche se questo potrebbe creare differenze territoriali', che incorporava l'obiezione.",
+      "direzione_accordo": "accordo = destra",
+      "fonti": [
+        "autonomia"
+      ],
+      "posizioni": {
+        "Lega": {
+          "punteggio": 7,
+          "livello": "A",
+          "fonte": "autonomia",
+          "evidenza": "Legge di iniziativa del ministro Calderoli."
+        },
+        "Fratelli d'Italia": {
+          "punteggio": 6,
+          "livello": "A",
+          "fonte": "autonomia",
+          "evidenza": "Voto favorevole come parte dell'accordo di maggioranza."
+        },
+        "Forza Italia": {
+          "punteggio": 6,
+          "livello": "A",
+          "fonte": "autonomia",
+          "evidenza": "Voto favorevole."
+        },
+        "PD": {
+          "punteggio": 1,
+          "livello": "A",
+          "fonte": "autonomia",
+          "evidenza": "Voto contrario; promotore del referendum abrogativo tramite i consigli regionali."
+        },
+        "M5S": {
+          "punteggio": 1,
+          "livello": "A",
+          "fonte": "autonomia",
+          "evidenza": "Voto contrario; promotore del referendum abrogativo."
+        },
+        "AVS": {
+          "punteggio": 1,
+          "livello": "A",
+          "fonte": "autonomia",
+          "evidenza": "Voto contrario; promotore del referendum abrogativo."
+        },
+        "+Europa": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Italia Viva": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Azione": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Liberaldemocratico": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Futuro Nazionale": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        }
+      }
+    },
+    {
+      "id": "legge_elettorale",
+      "tema": "Sistema elettorale",
+      "testo_proposto": "Chi vince le elezioni dovrebbe ricevere un premio in seggi che gli garantisca la maggioranza.",
+      "nota_formulazione": "RISCRITTA SUL TEMA VIVO: la formulazione attuale sul proporzionale e' superata dalla riforma del 2026, su cui i partiti si sono effettivamente divisi. E' anche il tema su cui avevo segnalato che l'ampiezza dei punteggi andava verificata.",
+      "direzione_accordo": "accordo = destra",
+      "fonti": [
+        "legge_elettorale2026"
+      ],
+      "posizioni": {
+        "Fratelli d'Italia": {
+          "punteggio": 7,
+          "livello": "A",
+          "fonte": "legge_elettorale2026",
+          "evidenza": "Riforma sostenuta dal governo: premio di 70 seggi alla coalizione sopra il 42%."
+        },
+        "Lega": {
+          "punteggio": 7,
+          "livello": "A",
+          "fonte": "legge_elettorale2026",
+          "evidenza": "Voto favorevole."
+        },
+        "Forza Italia": {
+          "punteggio": 7,
+          "livello": "A",
+          "fonte": "legge_elettorale2026",
+          "evidenza": "Voto favorevole."
+        },
+        "PD": {
+          "punteggio": 2,
+          "livello": "A",
+          "fonte": "legge_elettorale2026",
+          "evidenza": "Voto contrario."
+        },
+        "M5S": {
+          "punteggio": 2,
+          "livello": "A",
+          "fonte": "legge_elettorale2026",
+          "evidenza": "Voto contrario."
+        },
+        "AVS": {
+          "punteggio": 2,
+          "livello": "A",
+          "fonte": "legge_elettorale2026",
+          "evidenza": "Voto contrario."
+        },
+        "+Europa": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Italia Viva": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Azione": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Liberaldemocratico": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        },
+        "Futuro Nazionale": {
+          "punteggio": null,
+          "livello": null,
+          "fonte": null,
+          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+        }
+      }
+    }
+  ]
+}

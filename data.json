@@ -1,4 +1,18 @@
 {
+  "_meta": {
+    "versione": "v2.3",
+    "aggiornato": "2026-08-23",
+    "nota": "Punteggi corretti sulle celle con evidenza di livello A (voto parlamentare registrato) o B (programma ufficiale), e domande riformulate per togliere argomenti incorporati e affermazioni doppie. Fonti e motivazioni in fonti_quiz.json e POSIZIONI_E_FONTI.md. Le restanti domande e celle sono ancora quelle della v2.1 e attendono documentazione.",
+    "celle_corrette": 15,
+    "domande_riformulate": 12,
+    "domande_invertite": [
+      "Salario minimo",
+      "Requisiti per la cittadinanza",
+      "Cannabis",
+      "Auto e obiettivi climatici"
+    ],
+    "nota_inversione": "In queste domande la formulazione e' girata rispetto a POSIZIONI_E_FONTI.md, dove compaiono in forma affermativa: qui essere d'accordo corrisponde alla posizione opposta e i punteggi sono specchiati (8 meno il valore documentato). Serve a bilanciare il numero di domande in cui rispondere \"sono d'accordo\" coincide con la posizione di sinistra, perche' le persone tendono ad acconsentire piu' che a dissentire."
+  },
   "parties": [
     "AVS",
     "M5S",
@@ -38,21 +52,22 @@
         },
         {
           "id": "q2",
-          "theme": "Salario minimo e tutele sul lavoro",
-          "text": "Lo Stato dovrebbe introdurre un salario minimo legale e regolamentare in modo più rigido il mercato del lavoro per ridurre la precarietà.",
+          "theme": "Salario minimo",
+          "text": "Il livello dei salari dovrebbe essere lasciato alla contrattazione tra sindacati e imprese, senza un minimo fissato per legge.",
           "scores": {
-            "AVS": 7,
-            "M5S": 7,
-            "PD": 6,
-            "+Europa": 5,
+            "AVS": 1,
+            "M5S": 1,
+            "PD": 2,
+            "+Europa": 3,
             "Italia Viva": 3,
-            "Azione": 5,
-            "Liberaldemocratico": 3,
-            "Forza Italia": 2,
-            "Fratelli d'Italia": 2,
-            "Lega": 2,
-            "Futuro Nazionale": 2
-          }
+            "Azione": 3,
+            "Liberaldemocratico": 5,
+            "Forza Italia": 6,
+            "Fratelli d'Italia": 6,
+            "Lega": 6,
+            "Futuro Nazionale": 6
+          },
+          "invertita": true
         },
         {
           "id": "q3",
@@ -92,8 +107,8 @@
         },
         {
           "id": "q5",
-          "theme": "Pensioni e legge Fornero",
-          "text": "L'Italia dovrebbe superare la legge Fornero, permettendo il pensionamento anticipato e aumentando le pensioni minime, anche se questo comporta maggiore spesa pubblica.",
+          "theme": "Età pensionabile",
+          "text": "Si dovrebbe poter andare in pensione prima di quanto consenta la legge attuale.",
           "scores": {
             "AVS": 6,
             "M5S": 6,
@@ -102,9 +117,9 @@
             "Italia Viva": 3,
             "Azione": 3,
             "Liberaldemocratico": 2,
-            "Forza Italia": 5,
-            "Fratelli d'Italia": 5,
-            "Lega": 7,
+            "Forza Italia": 3,
+            "Fratelli d'Italia": 3,
+            "Lega": 3,
             "Futuro Nazionale": 5
           }
         }
@@ -214,39 +229,41 @@
         },
         {
           "id": "q10",
-          "theme": "Cittadinanza e integrazione",
-          "text": "L'Italia dovrebbe adottare lo ius scholae, concedendo la cittadinanza ai figli di immigrati che hanno completato un ciclo scolastico in Italia.",
+          "theme": "Requisiti per la cittadinanza",
+          "text": "Per ottenere la cittadinanza italiana dovrebbero contare gli anni di residenza, non il percorso scolastico svolto in Italia.",
           "scores": {
-            "AVS": 7,
-            "M5S": 6,
-            "PD": 6,
-            "+Europa": 7,
-            "Italia Viva": 6,
-            "Azione": 5,
-            "Liberaldemocratico": 5,
+            "AVS": 1,
+            "M5S": 2,
+            "PD": 2,
+            "+Europa": 1,
+            "Italia Viva": 2,
+            "Azione": 3,
+            "Liberaldemocratico": 3,
             "Forza Italia": 4,
-            "Fratelli d'Italia": 1,
-            "Lega": 1,
-            "Futuro Nazionale": 1
-          }
+            "Fratelli d'Italia": 7,
+            "Lega": 7,
+            "Futuro Nazionale": 7
+          },
+          "invertita": true
         },
         {
           "id": "q11",
-          "theme": "Legalizzazione cannabis",
-          "text": "La cannabis dovrebbe essere legalizzata e regolamentata dallo Stato, togliendo il mercato alla criminalità organizzata.",
+          "theme": "Cannabis",
+          "text": "La produzione e la vendita di cannabis dovrebbero restare vietate.",
           "scores": {
-            "AVS": 7,
-            "M5S": 6,
-            "PD": 5,
-            "+Europa": 7,
-            "Italia Viva": 5,
+            "AVS": 1,
+            "M5S": 2,
+            "PD": 3,
+            "+Europa": 1,
+            "Italia Viva": 3,
             "Azione": 4,
-            "Liberaldemocratico": 5,
-            "Forza Italia": 2,
-            "Fratelli d'Italia": 1,
-            "Lega": 1,
-            "Futuro Nazionale": 1
-          }
+            "Liberaldemocratico": 3,
+            "Forza Italia": 6,
+            "Fratelli d'Italia": 7,
+            "Lega": 7,
+            "Futuro Nazionale": 7
+          },
+          "invertita": true
         }
       ]
     },
@@ -257,12 +274,12 @@
       "questions": [
         {
           "id": "q11",
-          "theme": "Israele e Palestina",
-          "text": "La priorità nella questione israelo-palestinese dovrebbe essere il cessate il fuoco immediato, il riconoscimento dello Stato di Palestina e la critica alle operazioni militari di Israele.",
+          "theme": "Riconoscimento della Palestina",
+          "text": "L'Italia dovrebbe riconoscere formalmente lo Stato di Palestina.",
           "scores": {
             "AVS": 7,
             "M5S": 6,
-            "PD": 4,
+            "PD": 7,
             "+Europa": 3,
             "Italia Viva": 3,
             "Azione": 3,
@@ -275,8 +292,8 @@
         },
         {
           "id": "q12",
-          "theme": "Ucraina e sostegno militare",
-          "text": "L'Italia e l'Europa dovrebbero continuare a sostenere militarmente l'Ucraina, anche con l'invio di armi, e rafforzare la NATO.",
+          "theme": "Sostegno militare all'Ucraina",
+          "text": "L'Italia dovrebbe continuare a fornire armi all'Ucraina.",
           "scores": {
             "AVS": 1,
             "M5S": 2,
@@ -287,7 +304,7 @@
             "Liberaldemocratico": 7,
             "Forza Italia": 7,
             "Fratelli d'Italia": 6,
-            "Lega": 3,
+            "Lega": 5,
             "Futuro Nazionale": 2
           }
         },
@@ -337,13 +354,13 @@
         {
           "id": "q15",
           "theme": "Nucleare",
-          "text": "L'Italia dovrebbe investire nel nucleare di nuova generazione come parte del mix energetico per raggiungere l'autonomia e ridurre le emissioni.",
+          "text": "L'Italia dovrebbe reintrodurre la produzione di energia nucleare.",
           "scores": {
             "AVS": 1,
             "M5S": 1,
             "PD": 3,
             "+Europa": 6,
-            "Italia Viva": 6,
+            "Italia Viva": 4,
             "Azione": 7,
             "Liberaldemocratico": 6,
             "Forza Italia": 6,
@@ -354,21 +371,22 @@
         },
         {
           "id": "q16",
-          "theme": "Green Deal",
-          "text": "Il Green Deal europeo dovrebbe essere mantenuto e rafforzato, anche se impone vincoli severi su auto, case e industria, per accelerare la transizione climatica.",
+          "theme": "Auto e obiettivi climatici",
+          "text": "L'Unione europea dovrebbe cancellare il divieto di vendita di nuove auto a benzina e diesel dal 2035.",
           "scores": {
-            "AVS": 7,
-            "M5S": 6,
-            "PD": 6,
-            "+Europa": 5,
-            "Italia Viva": 4,
-            "Azione": 3,
-            "Liberaldemocratico": 3,
-            "Forza Italia": 3,
-            "Fratelli d'Italia": 1,
-            "Lega": 1,
-            "Futuro Nazionale": 1
-          }
+            "AVS": 1,
+            "M5S": 2,
+            "PD": 2,
+            "+Europa": 3,
+            "Italia Viva": 1,
+            "Azione": 5,
+            "Liberaldemocratico": 5,
+            "Forza Italia": 7,
+            "Fratelli d'Italia": 7,
+            "Lega": 7,
+            "Futuro Nazionale": 7
+          },
+          "invertita": true
         },
         {
           "id": "q17",
@@ -415,8 +433,8 @@
         },
         {
           "id": "q19",
-          "theme": "Ordine pubblico",
-          "text": "La sicurezza si ottiene con pene più severe, più poteri alle forze dell'ordine e tolleranza zero, piuttosto che con prevenzione sociale e garanzie individuali.",
+          "theme": "Sicurezza e ordine pubblico",
+          "text": "Servono pene più severe e più poteri alle forze dell'ordine.",
           "scores": {
             "AVS": 1,
             "M5S": 2,
@@ -425,7 +443,7 @@
             "Italia Viva": 4,
             "Azione": 3,
             "Liberaldemocratico": 3,
-            "Forza Italia": 4,
+            "Forza Italia": 6,
             "Fratelli d'Italia": 6,
             "Lega": 7,
             "Futuro Nazionale": 7
@@ -433,14 +451,14 @@
         },
         {
           "id": "q20",
-          "theme": "Giustizia",
-          "text": "La magistratura dovrebbe essere riformata con la separazione delle carriere tra giudici e PM, e i tempi dei processi dovrebbero essere ridotti drasticamente.",
+          "theme": "Separazione delle carriere",
+          "text": "Le carriere dei giudici e dei pubblici ministeri dovrebbero essere separate.",
           "scores": {
             "AVS": 2,
-            "M5S": 3,
-            "PD": 4,
+            "M5S": 1,
+            "PD": 2,
             "+Europa": 7,
-            "Italia Viva": 7,
+            "Italia Viva": 4,
             "Azione": 7,
             "Liberaldemocratico": 7,
             "Forza Italia": 7,
@@ -458,15 +476,15 @@
       "questions": [
         {
           "id": "q21",
-          "theme": "Premierato",
-          "text": "Il Presidente del Consiglio dovrebbe essere eletto direttamente dai cittadini per garantire stabilità e decisione al governo.",
+          "theme": "Elezione diretta del premier",
+          "text": "Il Presidente del Consiglio dovrebbe essere eletto direttamente dai cittadini.",
           "scores": {
             "AVS": 1,
             "M5S": 2,
             "PD": 1,
             "+Europa": 2,
-            "Italia Viva": 6,
-            "Azione": 5,
+            "Italia Viva": 2,
+            "Azione": 2,
             "Liberaldemocratico": 4,
             "Forza Italia": 6,
             "Fratelli d'Italia": 7,
@@ -476,8 +494,8 @@
         },
         {
           "id": "q22",
-          "theme": "Autonomia differenziata",
-          "text": "Le regioni dovrebbero avere più competenze e autonomia nella gestione di sanità, scuola e servizi, anche se questo potrebbe creare differenze territoriali.",
+          "theme": "Autonomia delle regioni",
+          "text": "Le regioni dovrebbero gestire autonomamente materie oggi statali come sanità e scuola.",
           "scores": {
             "AVS": 1,
             "M5S": 1,

@@ -1,0 +1,136 @@
+{
+  "_meta": {
+    "scopo": "Pilota metodologico: 3 domande x 11 partiti, ogni punteggio con la sua fonte.",
+    "data_codifica": "2026-08-23",
+    "codificatore": "prima passata, da validare con un secondo codificatore indipendente",
+    "avvertenza": "I punteggi sono l'interpretazione del codificatore a partire dalle fonti citate. La fonte e' verificabile, il numero e' un giudizio: per questo serve una seconda codifica cieca e il calcolo dell'accordo fra codificatori.",
+
+    "scala": {
+      "7": "posizione ufficiale netta a favore, sostenuta attivamente (voto favorevole o proposta propria)",
+      "6": "favorevole con riserve o in versione attenuata",
+      "5": "favorevole in linea di principio ma con condizioni rilevanti",
+      "4": "posizione intermedia DOCUMENTATA, oppure astensione motivata. NON usare per 'non si sa'",
+      "3": "contrario con aperture parziali",
+      "2": "contrario, senza sostenere il divieto assoluto",
+      "1": "contrario in modo netto ed esplicito",
+      "null": "NESSUNA POSIZIONE DOCUMENTATA: la cella va esclusa dal calcolo, non trattata come un 4"
+    },
+
+    "livelli_di_evidenza": {
+      "A": "voto parlamentare registrato su quel tema specifico (data e atto)",
+      "B": "programma o manifesto ufficiale del partito (documento pubblico)",
+      "C": "dichiarazione ufficiale e datata della leadership, riportata da fonte giornalistica verificabile",
+      "D": "expert survey o ricostruzione giornalistica di posizione, senza atto o documento diretto"
+    }
+  },
+
+  "domande": [
+    {
+      "id": "pilota_salario_minimo",
+      "tema": "Salario minimo legale",
+      "testo_provvisorio": "La legge dovrebbe fissare una retribuzione oraria minima valida per tutti i settori.",
+      "nota_formulazione": "Riscritta rispetto alla D2 attuale, che accorpava salario minimo E regolamentazione del mercato del lavoro in un'unica affermazione: chi era d'accordo con una e contrario all'altra non poteva rispondere.",
+      "fonti_principali": [
+        {
+          "id": "camera_mozioni_2022",
+          "descrizione": "Camera, 30 novembre 2022: voto su 5 mozioni distinte sul salario minimo. Approvata solo quella di maggioranza (163 si, 121 no, 19 astenuti), contraria all'introduzione di un minimo legale.",
+          "url": "https://pagellapolitica.it/articoli/salario-minimo-mozioni-camera-opposizione",
+          "livello": "A"
+        },
+        {
+          "id": "senato_delega_2025",
+          "descrizione": "Senato, settembre 2025: approvazione definitiva della legge delega che supera la proposta delle opposizioni sui 9 euro/ora. Favorevoli i partiti di maggioranza, contrarie tutte le opposizioni compresa Italia Viva.",
+          "url": "https://www.ilfattoquotidiano.it/2025/09/23/salario-minimo-legge-delega-approvazione-senato-news/8136618/",
+          "livello": "A"
+        }
+      ],
+      "posizioni": {
+        "AVS": { "punteggio": 7, "livello": "A", "fonte": "camera_mozioni_2022", "evidenza": "Mozione propria: 10 euro/ora con rivalutazione annuale, il valore piu' alto proposto in aula." },
+        "M5S": { "punteggio": 7, "livello": "A", "fonte": "camera_mozioni_2022", "evidenza": "Mozione propria a 9 euro/ora; voto contrario alla mozione di Azione-IV." },
+        "PD": { "punteggio": 7, "livello": "A", "fonte": "camera_mozioni_2022", "evidenza": "Mozione propria a 9,50 euro/ora e voto favorevole a tutte e quattro le mozioni delle opposizioni." },
+        "+Europa": { "punteggio": null, "livello": null, "fonte": null, "evidenza": "NON DOCUMENTATA dalle fonti consultate: nel 2022 non aveva gruppo autonomo alla Camera e non compare nell'elenco delle mozioni. Richiede una ricerca dedicata." },
+        "Italia Viva": { "punteggio": 5, "livello": "A", "fonte": "camera_mozioni_2022", "evidenza": "Firmataria con Azione della mozione a 9 euro/ora LIMITATA ai settori non coperti da contrattazione collettiva: sostegno condizionato, non pieno. Nel 2025 vota contro la legge delega della maggioranza." },
+        "Azione": { "punteggio": 5, "livello": "A", "fonte": "camera_mozioni_2022", "evidenza": "Stessa mozione di Italia Viva: minimo legale solo dove manca la contrattazione collettiva." },
+        "Liberaldemocratico": { "punteggio": null, "livello": null, "fonte": "manifesto_pld", "evidenza": "NESSUNA POSIZIONE DOCUMENTATA: il manifesto ufficiale non menziona il salario minimo legale. Tratta il lavoro in termini di merito e opportunita'." },
+        "Forza Italia": { "punteggio": 2, "livello": "A", "fonte": "camera_mozioni_2022", "evidenza": "Vota la mozione di maggioranza che respinge il minimo legale e punta sull'estensione dei contratti collettivi; nel 2025 vota la legge delega." },
+        "Fratelli d'Italia": { "punteggio": 2, "livello": "A", "fonte": "camera_mozioni_2022", "evidenza": "Come sopra: mozione di maggioranza contraria al minimo legale." },
+        "Lega": { "punteggio": 2, "livello": "A", "fonte": "camera_mozioni_2022", "evidenza": "Come sopra: mozione di maggioranza contraria al minimo legale." },
+        "Futuro Nazionale": { "punteggio": null, "livello": null, "fonte": "programma_fn", "evidenza": "NESSUNA POSIZIONE DOCUMENTATA sul minimo legale. Il programma parla di sgravi per l'assunzione di manodopera italiana e di riduzione del cuneo fiscale per innalzare i salari: strumenti diversi, non una posizione sul salario minimo." }
+      }
+    },
+
+    {
+      "id": "pilota_nucleare",
+      "tema": "Energia nucleare",
+      "testo_provvisorio": "L'Italia dovrebbe reintrodurre la produzione di energia nucleare.",
+      "nota_formulazione": "Rispetto alla D17 attuale sono state tolte le motivazioni incorporate ('per raggiungere l'autonomia e ridurre le emissioni'), che spingevano verso il si'.",
+      "fonti_principali": [
+        {
+          "id": "camera_ddl_nucleare_2026",
+          "descrizione": "Camera, 4 giugno 2026: approvazione del ddl delega sul nucleare sostenibile con 155 si', 86 no, 8 astenuti. Favorevoli i partiti di maggioranza piu' Azione e Marattin (PLD); contrari PD, M5S e AVS; astenuta Italia Viva.",
+          "url": "https://www.ansa.it/sito/notizie/politica/2026/06/04/la-camera-approva-la-legge-delega-sul-nucleare-155-i-si_b9268928-3217-48a8-b1ca-f9871ff12f22.html",
+          "livello": "A"
+        },
+        {
+          "id": "manifesto_pld",
+          "descrizione": "Manifesto ufficiale del Partito Liberaldemocratico: riconosce il 'ruolo strategico del nucleare' per 'sicurezza energetica e sostenibilita' ambientale'.",
+          "url": "https://partitoliberaldemocratico.com/manifesto/",
+          "livello": "B"
+        }
+      ],
+      "posizioni": {
+        "AVS": { "punteggio": 1, "livello": "A", "fonte": "camera_ddl_nucleare_2026", "evidenza": "Voto contrario in aula." },
+        "M5S": { "punteggio": 1, "livello": "A", "fonte": "camera_ddl_nucleare_2026", "evidenza": "Voto contrario in aula." },
+        "PD": { "punteggio": 2, "livello": "A", "fonte": "camera_ddl_nucleare_2026", "evidenza": "Voto contrario in aula." },
+        "+Europa": { "punteggio": null, "livello": null, "fonte": null, "evidenza": "NON DOCUMENTATA dalle fonti consultate: non compare nelle cronache del voto del 4 giugno 2026. Richiede una ricerca dedicata." },
+        "Italia Viva": { "punteggio": 4, "livello": "A", "fonte": "camera_ddl_nucleare_2026", "evidenza": "ASTENUTA sul ddl delega: posizione intermedia effettivamente documentata, non un'incognita." },
+        "Azione": { "punteggio": 7, "livello": "A", "fonte": "camera_ddl_nucleare_2026", "evidenza": "Voto favorevole pur essendo all'opposizione: sostegno che attraversa lo schieramento." },
+        "Liberaldemocratico": { "punteggio": 6, "livello": "A", "fonte": "camera_ddl_nucleare_2026", "evidenza": "Marattin vota a favore; il manifesto ufficiale conferma il 'ruolo strategico del nucleare'. Doppia evidenza, A e B." },
+        "Forza Italia": { "punteggio": 6, "livello": "A", "fonte": "camera_ddl_nucleare_2026", "evidenza": "Voto favorevole con la maggioranza." },
+        "Fratelli d'Italia": { "punteggio": 6, "livello": "A", "fonte": "camera_ddl_nucleare_2026", "evidenza": "Voto favorevole con la maggioranza; il provvedimento e' di iniziativa governativa." },
+        "Lega": { "punteggio": 6, "livello": "A", "fonte": "camera_ddl_nucleare_2026", "evidenza": "Voto favorevole con la maggioranza." },
+        "Futuro Nazionale": { "punteggio": null, "livello": null, "fonte": "programma_fn", "evidenza": "NESSUNA POSIZIONE DOCUMENTATA: il programma dell'11 agosto 2026 non affronta il nucleare. Il partito non era in Parlamento al momento del voto." }
+      }
+    },
+
+    {
+      "id": "pilota_cittadinanza",
+      "tema": "Cittadinanza a chi cresce in Italia",
+      "testo_provvisorio": "Chi nasce o cresce in Italia da genitori stranieri e completa un ciclo di studi nel Paese dovrebbe ottenere la cittadinanza italiana.",
+      "nota_formulazione": "Evitata l'espressione 'ius scholae', che e' terminologia di parte: descritta invece la misura. La D11 attuale la nominava esplicitamente.",
+      "fonti_principali": [
+        {
+          "id": "pagella_cittadinanza_2024",
+          "descrizione": "Ricostruzione delle posizioni dei partiti sulla riforma della cittadinanza, 19 agosto 2024, con dichiarazioni datate dei leader.",
+          "url": "https://pagellapolitica.it/articoli/posizioni-partiti-riforma-cittadinanza-ius-scholae",
+          "livello": "C"
+        },
+        {
+          "id": "tajani_ius_italiae",
+          "descrizione": "Tajani rilancia la proposta in versione 'Ius Italiae' (cittadinanza dopo dieci anni di scuola con profitto), spaccando la maggioranza: Lega e FdI la respingono.",
+          "url": "https://www.italiaoggi.it/economia-e-politica/attualita/ius-scholae-cose-e-come-funziona-le-posizioni-dei-partiti-tajani-spacca-la-maggioranza-vv9qgtmq",
+          "livello": "C"
+        },
+        {
+          "id": "programma_fn",
+          "descrizione": "Programma ufficiale di Futuro Nazionale, pubblicato l'11 agosto 2026: cittadinanza subordinata ad almeno 20 anni di dimora regolare e livello linguistico C1; rifiuto esplicito di ius soli e ius scholae.",
+          "url": "https://futuronazionale.it/programma/",
+          "livello": "B"
+        }
+      ],
+      "posizioni": {
+        "AVS": { "punteggio": 7, "livello": "C", "fonte": "pagella_cittadinanza_2024", "evidenza": "Favorevole alla riforma, su posizioni fra ius soli e ius scholae." },
+        "M5S": { "punteggio": 6, "livello": "C", "fonte": "pagella_cittadinanza_2024", "evidenza": "Conte, 18 agosto 2024: cittadinanza dopo un intero ciclo di studi per i minori fino a 12 anni. Favorevole ma con soglia d'eta'." },
+        "PD": { "punteggio": 7, "livello": "B", "fonte": "pagella_cittadinanza_2024", "evidenza": "Programma per le europee 2024: riforma che 'garantisca lo ius soli', quindi posizione piu' estesa dello ius scholae." },
+        "+Europa": { "punteggio": 7, "livello": "C", "fonte": "pagella_cittadinanza_2024", "evidenza": "Favorevole alla riforma della legge sulla cittadinanza. Da rafforzare con fonte diretta di partito." },
+        "Italia Viva": { "punteggio": 6, "livello": "C", "fonte": "pagella_cittadinanza_2024", "evidenza": "Favorevole alla riforma, con formulazioni variabili. Da rafforzare con fonte diretta." },
+        "Azione": { "punteggio": 5, "livello": "C", "fonte": "pagella_cittadinanza_2024", "evidenza": "Favorevole a modificare la legge, con riserve sulla formulazione. Da rafforzare con fonte diretta." },
+        "Liberaldemocratico": { "punteggio": null, "livello": null, "fonte": "manifesto_pld", "evidenza": "NESSUNA POSIZIONE DOCUMENTATA sulla cittadinanza. Il manifesto cita solo il contrasto all'immigrazione 'non controllata', che riguarda gli ingressi, non l'accesso alla cittadinanza di chi e' gia' qui." },
+        "Forza Italia": { "punteggio": 6, "livello": "C", "fonte": "tajani_ius_italiae", "evidenza": "Favorevole per bocca del leader, che ha rilanciato la proposta piu' volte fra il 2024 e il 2026 arrivando a scontrarsi con gli alleati. Versione attenuata: dieci anni di scuola con profitto." },
+        "Fratelli d'Italia": { "punteggio": 2, "livello": "C", "fonte": "pagella_cittadinanza_2024", "evidenza": "Contraria: il capogruppo Foti dichiara che non e' 'nella nostra agenda'. Contrarieta' politica piu' che divieto di principio." },
+        "Lega": { "punteggio": 1, "livello": "C", "fonte": "pagella_cittadinanza_2024", "evidenza": "Contraria in modo netto: 'La legge sulla cittadinanza va benissimo cosi'' (14 agosto 2024)." },
+        "Futuro Nazionale": { "punteggio": 1, "livello": "B", "fonte": "programma_fn", "evidenza": "Rifiuto 'categoricamente e senza possibilita' negoziale' di ius soli e ius scholae; chiede 20 anni di residenza e C1. La codifica piu' solida delle tre per questo partito." }
+      }
+    }
+  ]
+}
