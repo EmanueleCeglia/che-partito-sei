@@ -14,7 +14,8 @@
       "A": "voto parlamentare registrato sul tema specifico",
       "B": "programma o manifesto ufficiale del partito",
       "C": "dichiarazione ufficiale datata della leadership da fonte verificabile",
-      "D": "ricostruzione da evidenza indiretta: da rafforzare"
+      "D": "ricostruzione da evidenza indiretta: da rafforzare",
+      "E": "dichiarazione riportata dalla stampa o ricostruzione giornalistica, senza atto ne' documento di partito: la piu' debole, da confermare"
     },
     "regola_voti_di_fiducia": "I voti posti con la questione di fiducia sono ESCLUSI dalla codifica: misurano la lealta' alla maggioranza, non la posizione sul merito."
   },
@@ -50,7 +51,7 @@
       "livello": "A"
     },
     "auto2035": {
-      "descrizione": "Parlamento europeo, pacchetto Fit for 55: la delegazione di FdI, Lega e Forza Italia vota contro lo stop alla vendita di auto a benzina e diesel dal 2035; votano a favore gli eurodeputati di PD, M5S, Verdi (AVS) e Italia Viva.",
+      "descrizione": "AGGIORNAMENTO DICEMBRE 2025: la Commissione ha rivisto il divieto, che diventa una riduzione delle emissioni del 90% invece del 100%, con apertura a ibridi plug-in, biocarburanti avanzati ed e-fuels. La domanda cosi' com'e' formulata rischia di essere superata dai fatti e va riscritta. Voto originario: Parlamento europeo, pacchetto Fit for 55: la delegazione di FdI, Lega e Forza Italia vota contro lo stop alla vendita di auto a benzina e diesel dal 2035; votano a favore gli eurodeputati di PD, M5S, Verdi (AVS) e Italia Viva.",
       "url": "https://www.liberta.it/news/green-future/2023/02/15/stop-auto-benzina-e-diesel-dal-2035-ok-del-parlamento-ue-centrodestra-contrario/",
       "livello": "A"
     },
@@ -65,7 +66,7 @@
       "livello": "A"
     },
     "legge_elettorale2026": {
-      "descrizione": "Nuova legge elettorale ('Stabilicum'): approvata dalla Camera nel luglio 2026 (217 si', 152 no, 2 ast.) e trasmessa al Senato. Sistema proporzionale con premio di maggioranza di 70 seggi alla Camera alla coalizione che superi il 42%, liste bloccate e obbligo di indicare il candidato premier.",
+      "descrizione": "Nuova legge elettorale ('Stabilicum'): approvata dalla Camera nel luglio 2026 (217 si', 152 no, 2 ast.) e trasmessa al Senato. ATTENZIONE: il voto e' avvenuto a SCRUTINIO SEGRETO, con 114 votazioni segrete sugli emendamenti: per i partiti non citati esplicitamente nelle cronache l'attribuzione del voto e' impossibile, e le celle restano vuote. Sistema proporzionale con premio di maggioranza di 70 seggi alla Camera alla coalizione che superi il 42%, liste bloccate e obbligo di indicare il candidato premier.",
       "url": "https://www.agi.it/politica/news/2026-07-16/legge-elettorale-cosa-prevede-38066645/",
       "livello": "A"
     },
@@ -94,6 +95,281 @@
       "url": "https://pagellapolitica.it/articoli/dazi-von-der-leyen-trump-governo-opposizioni",
       "livello": "C"
     },
+    "prog_azione_iv_2022": {
+      "descrizione": "Programma elettorale congiunto Azione - Italia Viva, politiche 2022, 56 pagine. Politica industriale: 'concentrare le risorse su strumenti fiscali semplici ed automatici a supporto degli investimenti'. Fisco: 'Non serve inventare nuove tasse, sognare la patrimoniale'. Concorrenza: 'approvare ogni anno leggi sulla concorrenza che rendano la nostra economia piu' libera e meno gravata da barriere all'ingresso'. Reddito di cittadinanza: 'Eliminare il Reddito di Cittadinanza dopo il primo rifiuto e ridurlo dopo 2 anni'. Europa: 'Con una svolta in senso federale delle sue Istituzioni... riaprire il cantiere delle riforme dei Trattati'. Trasporti: completamento di Torino-Lione, Terzo Valico e altre tratte ad alta velocita'. Istituzioni: modello del 'sindaco d'Italia' con riforma del sistema elettorale. Cannabis e matrimonio egualitario NON compaiono nel documento.",
+      "url": "https://www.welforum.it/wp-content/uploads/2022/09/Programma-Azione-Italia-Viva.pdf",
+      "livello": "B"
+    },
+    "piueuropa_2024": {
+      "descrizione": "Documento programmatico di +Europa per le europee 2024, 'Stati Uniti d'Europa': 'Verso la federazione continentale con passaggi anche di integrazione differenziata'.",
+      "url": "https://www.piueuropa.eu/programma_europee_2024",
+      "livello": "B"
+    },
+    "fn_salario_minimo": {
+      "descrizione": "Il deputato di Futuro Nazionale Gianangelo Bof, in aula alla Camera il 10 giugno 2026: 'Manca, ahime', un importo minimo orario in questo provvedimento' e 'il lavoro di una persona debba avere un valore minimo sotto il quale non si puo' andare'. Posizione opposta a quella degli altri partiti di centrodestra; gli stessi deputati, quando erano nella Lega, nel dicembre 2023 avevano votato contro.",
+      "url": "https://pagellapolitica.it/articoli/futuro-nazionale-vannacci-salario-minimo",
+      "livello": "C"
+    },
+    "fn_dichiarazioni": {
+      "descrizione": "Ricostruzioni giornalistiche delle posizioni di Futuro Nazionale: intenzione di anticipare gradualmente l'accesso alla pensione per alcune categorie; richiesta all'UE di un'esenzione strutturale dal Patto di stabilita' motivata dalla crisi demografica; lo statuto cita la 'difesa non negoziabile della sanita'' fra i valori, senza pero' proposte tecniche su liste d'attesa, personale o finanziamento.",
+      "url": "https://www.money.it/pensioni-anche-vannacci-vuole-superare-fornero-ecco-riforma",
+      "livello": "E"
+    },
+    "pld_dichiarazioni": {
+      "descrizione": "Dichiarazioni e ricostruzioni sulle posizioni del Partito Liberaldemocratico: Marattin sulla riforma della giustizia, 27 giugno 2025, 'I pm? La riforma e' ok'; sull'immigrazione un 'patto di integrazione' lingua-lavoro-legalita' legato alla programmazione dei flussi; in economia riduzione della spesa pubblica dell'1% l'anno per cinque anni per abolire l'IRAP e azzerare l'IRES, con l'obiettivo di 'ridurre la presenza dello Stato e favorire concorrenza e mercato'.",
+      "url": "https://www.luigimarattin.it/2025/06/27/marattin-libdem-alternativi-a-destra-e-sinistra-i-pm-la-riforma-e-ok/",
+      "livello": "E"
+    },
+    "piueuropa_diritti": {
+      "descrizione": "Ricostruzione giornalistica del programma di +Europa sui diritti civili: matrimonio egualitario, adozione per coppie non sposate e dello stesso sesso, stepchild adoption, riforma della legge 164, eutanasia e legalizzazione della cannabis.",
+      "url": "https://www.gay.it/europa-programma-lgbtqia-donne-disabilita-e-immigrazione",
+      "livello": "E"
+    },
+    "magi_autonomia": {
+      "descrizione": "Riccardo Magi, segretario di +Europa, in videointervista: premierato e autonomia differenziata sono 'una svolta plebiscitaria e secessionista'; non si tratta di aumentare l'autonomia regionale ma di una tendenza secessionista.",
+      "url": "https://www.ilgiornale.it/video/interni/magi-europa-premierato-e-autonomia-differenziata-svolta-2336393.html",
+      "livello": "C"
+    },
+    "magi_ucraina": {
+      "descrizione": "Riccardo Magi, 30 marzo 2026: 'Per noi e' imprescindibile il sostegno militare a Kyiv'. PD e +Europa hanno sempre votato a favore dell'invio di aiuti militari all'Ucraina.",
+      "url": "https://www.ilfoglio.it/politica/2026/03/30/news/magi-europa-lapertura-di-conte-e-solo-linizio-per-noi-e-imprescindibile-il-sostegno-militare-a-kyiv--268414",
+      "livello": "C"
+    },
+    "prog_fdi_2024": {
+      "descrizione": "Programma di Fratelli d'Italia per le europee 2024, 20 pagine. Sul ruolo dell'Unione: 'l'Unione Europea debba occuparsi delle grandi questioni del nostro tempo: la politica estera, la difesa, la sicurezza dei confini esterni, la regolamentazione del fenomeno migratorio, il mercato unico e l'energia, lasciando le politiche nazionali alle competenze dei singoli Stati', secondo il motto 'Fare meno, fare meglio'. Sulla sanita': 'essenziale investire strutturalmente nella sanita' pubblica'. Il documento e' circoscritto ai temi europei e non tratta scuola, autonomia regionale, sistema elettorale, diritti civili.",
+      "url": "https://www.fratelli-italia.it/wp-content/uploads/2024/05/Programma_Europee2024_FdI.pdf",
+      "livello": "B"
+    },
+    "rdc_m5s": {
+      "descrizione": "Il M5S ha presentato un emendamento alla legge di bilancio per ripristinare il Reddito di cittadinanza nel biennio 2025-2026 e propone misure regionali per chi resta escluso dall'Assegno di inclusione. La manovra 2026 della maggioranza dimezza invece il primo mese dell'assegno dopo il rinnovo.",
+      "url": "https://www.fanpage.it/napoli/il-reddito-di-cittadinanza-in-campania-non-tornera-ma-il-m5s-vuole-un-sussidio-per-gli-esclusi-dallassegno-di-inclusione/",
+      "livello": "E"
+    },
+    "scuola_stipendi": {
+      "descrizione": "Dibattito sulle risorse alla scuola: il ministro Valditara propone stipendi docenti differenziati per costo della vita e apertura ai finanziamenti privati, rivendicando 'risorse alla scuola superiori al 10%'. Schlein e il PD contestano gli stipendi bassi e chiedono 'meno tagli e piu' investimenti reali'; il M5S parla di 'scuola delle disuguaglianze'.",
+      "url": "https://www.tecnicadellascuola.it/stipendi-docenti-per-schlein-sono-troppo-bassi-valditara-replica-li-abbiamo-aumentati-il-pd-in-passato-non-ha-saputo-farlo",
+      "livello": "E"
+    },
+    "cannabis_partiti": {
+      "descrizione": "Confronto fra i programmi elettorali sulla cannabis: PD, +Europa, M5S, Verdi e Sinistra Italiana inseriscono la legalizzazione nei programmi; Forza Italia, Lega e Fratelli d'Italia si sono opposte in Parlamento sia alla legalizzazione ricreativa sia a quella medica. Italia Viva non menziona la cannabis nel proprio programma, quindi la sua cella resta vuota.",
+      "url": "https://tg24.sky.it/politica/2022/09/22/cannabis-programmi-elettorali-confronto",
+      "livello": "E"
+    },
+    "magi_migranti": {
+      "descrizione": "Riccardo Magi e' relatore della proposta di legge di iniziativa popolare 'Ero Straniero', che chiede la regolarizzazione degli stranieri radicati sul territorio che lavorano o hanno legami familiari, sul modello di Spagna e Germania; chiede la riforma della legge Bossi-Fini e definisce i decreti flussi del governo segno di 'totale confusione e mancanza di strategia'; contrario all'accordo con l'Albania.",
+      "url": "https://www.piueuropa.eu/migranti_magi_dopo_pronuncia_tribunale_governo_sospenda_missioni_albania_e_ritiri_emendamento_a_dl_flussi",
+      "livello": "C"
+    },
+    "fn_tolleranza_zero": {
+      "descrizione": "Pacchetto sicurezza 'Tolleranza zero' presentato da Roberto Vannacci il 4 marzo 2026 e ribadito nell'agosto 2026: modifica degli articoli 52 e 53 del codice penale su legittima difesa e uso delle armi, 'scudo penale' per le forze dell'ordine, pattugliamento delle strade, pene piu' severe per chi viola le regole durante le manifestazioni. Futuro Nazionale ha depositato emendamenti al decreto sicurezza.",
+      "url": "https://www.ansa.it/sito/notizie/politica/2026/08/10/vannacci-sulla-sicurezza-occorre-la-tolleranza-zero_1206550d-c630-4ef1-9db8-5ddc8dfee1cf.html",
+      "livello": "C"
+    },
+    "iv_matrimonio": {
+      "descrizione": "Ivan Scalfarotto (Italia Viva), 11 maggio 2026, nel decennale della legge Cirinna' sulle unioni civili approvata dal governo Renzi: 'Ora il passo successivo, il matrimonio egualitario'. La legge del 2016 aveva escluso l'adozione piena.",
+      "url": "https://lespresso.it/c/attualita/2026/5/11/unioni-civili-legge-cirinna-numeri-dieci-anni-matrimonio-egualitario/61929",
+      "livello": "C"
+    },
+    "autonomia_senato": {
+      "descrizione": "Voto al Senato sulla legge Calderoli: 110 favorevoli fra maggioranza e gruppi per le autonomie, 64 contrari fra PD, M5S, AVS e Italia Viva. I senatori di Azione si astengono con 3 voti: Calenda e' critico verso la legge ma contrario al referendum abrogativo, temendo che il mancato quorum rafforzi il governo. Azione e' l'unico partito d'opposizione a non sostenere l'iniziativa referendaria.",
+      "url": "https://www.ilpost.it/2024/07/08/autonomia-referendum-centrosinistra-opposizione-compatta/",
+      "livello": "A"
+    },
+    "fn_referendum_giustizia": {
+      "descrizione": "Futuro Nazionale si schiera per il Si' al referendum del marzo 2026 sulla separazione delle carriere: Vannacci sostiene la riforma e preferisce 'un sistema in cui i giudici siano scelti da chi ha cariche elettive piuttosto che lasciarlo alle correnti della magistratura'.",
+      "url": "https://www.quotidiano.net/politica/referendum-giustizia-2026-posizioni-partiti-df6dcacc",
+      "livello": "C"
+    },
+    "magi_legge_elettorale": {
+      "descrizione": "Riccardo Magi sulla nuova legge elettorale: 'uno sfregio alla Costituzione che aumentera' l'astensionismo'; 'Non si votera' piu' per il Parlamento, ma per il capo'; denuncia 'un premio di maggioranza abnorme che trasforma una minoranza nel Paese in una maggioranza parlamentare', dato che il premio scatta al 42% mentre la legge del 1953 lo legava al 50%. +Europa chiede il ritorno al Mattarellum e di vincolare il premio a un'affluenza minima del 70%.",
+      "url": "https://www.piueuropa.eu/l_elettorale_magi_uno_sfregio_alla_costituzione_che_aumenter_l_astensionismo",
+      "livello": "C"
+    },
+    "lega_ue": {
+      "descrizione": "La Lega rifiuta ogni politica volta a creare un Super-Stato europeo e si oppone al trasferimento di sovranita' nazionale agli organi sovranazionali, chiedendo la rinegoziazione dei trattati che limitano la sovranita' italiana. Nel marzo 2025 la delegazione al Parlamento europeo parla di 'deriva bellicista' a proposito del piano di riarmo da 800 miliardi; nel maggio 2026 e' 'assolutamente contraria' all'ingresso dell'Ucraina nell'UE.",
+      "url": "https://www.startmag.it/mondo/lega-salvini-rearm-europe/",
+      "livello": "C"
+    },
+    "pd_difesa_comune": {
+      "descrizione": "Posizione ufficiale del Partito Democratico: 'All'Unione europea serve la difesa comune, non il riarmo nazionale'. Il partito sostiene l'integrazione delle capacita' europee contro la moltiplicazione delle spese militari nazionali.",
+      "url": "https://partitodemocratico.it/schlein-allunione-europea-serve-la-difesa-comune-non-il-riarmo-nazionale/",
+      "livello": "C"
+    },
+    "tajani_ue": {
+      "descrizione": "Antonio Tajani, novembre 2025: Forza Italia e' favorevole al superamento del voto all'unanimita', all'iniziativa legislativa del Parlamento europeo, all'unione bancaria e all'armonizzazione fiscale. Sulla difesa: 'La difesa europea deve essere garantita da un solo esercito europeo. Per Forza Italia questo e' l'obiettivo finale'. Il partito si richiama esplicitamente agli 'Stati Uniti d'Europa' come parte della propria identita' e dell'appartenenza al PPE.",
+      "url": "https://www.esteri.it/en/sala_stampa/archivionotizie/interviste/2025/11/antonio-tajani-unione-europea-e-ora-di-superare-lunanimita-laltravoce-il-quotidiano-nazionale/",
+      "livello": "C"
+    },
+    "mercosur_voto": {
+      "descrizione": "Accordo di libero scambio UE-Mercosur, firmato dopo 25 anni di negoziati e in applicazione provvisoria dal 1 maggio 2026: azzera i dazi sul 91% dell'export UE. Al Parlamento europeo Forza Italia vota a favore delle clausole di salvaguardia, Fratelli d'Italia si astiene (dicembre 2025). Meloni definisce l'accordo prima 'prematuro' poi si dichiara favorevole; l'Italia frena l'accelerazione voluta da Germania e Spagna. La Lega 'promette battaglia' dopo il via libera e Centinaio dichiara 'io non lo firmerei'.",
+      "url": "https://ilmanifesto.it/mercosur-governo-diviso-sul-voto-fratelli-ditalia-si-astiene",
+      "livello": "C"
+    },
+    "mercosur_sinistra": {
+      "descrizione": "Angelo Bonelli (AVS): 'il libero scambio senza regole e' dumping ambientale e un attacco all'Europa'; il libero scambio e' accettabile solo se fondato su regole comuni e reciprocita' reale. Schlein, Conte, Fratoianni e Bonelli partecipano insieme a una manifestazione contro l'accordo.",
+      "url": "https://agenparl.eu/2025/12/18/mercosur-bonelli-avs-libero-scambio-senza-regole-e-dumping-ambientale-e-un-attacco-alleuropa/",
+      "livello": "C"
+    },
+    "mercosur_fi": {
+      "descrizione": "Antonio Tajani, gennaio 2026: l'accordo di libero scambio 'rappresenta una grande opportunita' per tutte le nostre imprese' e portera' 14 miliardi di export aggiuntivo. Maurizio Casasco, responsabile Economia di Forza Italia: 'accordo strategico per l'industria italiana'.",
+      "url": "https://www.esteri.it/en/sala_stampa/archivionotizie/interviste/2026/01/tajani-con-il-mercosur-litalia-guadagnera-14-miliardi-di-export-aggiuntivo-ll-sole-24-ore/",
+      "livello": "C"
+    },
+    "fn_economia": {
+      "descrizione": "Analisi del programma economico di Futuro Nazionale: 'economia protetta e guidata politicamente', con fondo pubblico sovrano, uso esteso del golden power, 'protezionismo, dazi e preferenze nazionali', restrizioni agli investimenti e alle acquisizioni estere. Il partito denuncia una globalizzazione 'dominata dalle multinazionali e dalla finanza internazionale che rischia di divorare il Made in Italy'. Sull'euro Vannacci chiede la capacita' sia di restarci ridefinendo i parametri sia di uscirne 'secondo condizioni, contesto e tempistiche'.",
+      "url": "https://www.ilpost.it/2026/08/18/vannacci-futuro-nazionale-programma-economia-euro/",
+      "livello": "C"
+    },
+    "conte_patto": {
+      "descrizione": "Giuseppe Conte, 6 maggio 2026: il governo si attivi in sede europea per rivedere il Patto di stabilita' e per un nuovo piano di investimenti comuni sul modello del 2020.",
+      "url": "https://askanews.it/2026/05/06/dfp-conte-governo-si-attivi-in-ue-per-rivedere-patto-di-stabilita/",
+      "livello": "C"
+    },
+    "avs_austerita": {
+      "descrizione": "Nicola Fratoianni (AVS): ha chiesto l'esenzione della spesa sociale dai vincoli del Patto di stabilita', ottenendo risposta negativa mentre l'esenzione per la spesa militare veniva approvata. Definisce la manovra 2026 'di austerita', ricca di spese militari e poverissima di investimenti per sanita' e scuola pubblica'.",
+      "url": "https://agenparl.eu/2025/10/24/governo-fratoianni-avs-manovra-di-austerita-ricca-di-spese-militari-e-poverissima-di-investimenti-per-sanita-e-scuola-pubblica-piena-di-tagli-ai-comuni-e-al-sud-il-governo-meloni-continua-a-dis/",
+      "livello": "C"
+    },
+    "pd_patto": {
+      "descrizione": "Elly Schlein ha dichiarato che il PD non avrebbe votato a favore del Patto di stabilita' riformato: la proposta originaria della Commissione era buona ma e' stata 'peggiorata e irrigidita' dal Consiglio, con un accordo giudicato negativo per l'Italia.",
+      "url": "https://www.ilfoglio.it/politica/2024/03/09/news/il-pd-di-elly-schlein-tra-giuseppe-conte-e-pedro-sanchez--94386",
+      "livello": "C"
+    },
+    "vannacci_palestina": {
+      "descrizione": "Roberto Vannacci in videointervista: lo Stato palestinese 'tecnicamente non esiste' perche' privo di confini precisi e di un popolo; 'non puo' esserci riconoscimento se uno Stato non ha territori, confini e sovranita''. Dopo l'annuncio francese di riconoscimento, si dichiara contrario alla proposta.",
+      "url": "https://www.ilgiornaleditalia.it/video/cronaca/723443/vannacci-palestina-al-contrario-stato-territori-confini-sovranita-video.html",
+      "livello": "C"
+    },
+    "calenda_diritti": {
+      "descrizione": "Carlo Calenda, marzo 2023: 'si' matrimonio egualitario, adozione, registrazione figli ma no a GPA', che considera lesiva della dignita' delle donne. ATTENZIONE: il programma di Azione del 2022 non conteneva nulla su matrimonio egualitario, omogenitorialita' e stepchild adoption, e la cosa sollevo' polemiche. Divergenza fra documento e dichiarazione del leader.",
+      "url": "https://www.civonline.it/news/italia-e-mondo/1189295/lgbt-calenda-si-matrimonio-egualitario-adozione-registrazione-figli-ma-no-a-gpa.html",
+      "livello": "C"
+    },
+    "fi_diritti_civili": {
+      "descrizione": "Forza Italia si oppone all'introduzione del matrimonio egualitario e alla tutela giuridica dell'omogenitorialita', allineandosi a FdI e Lega, ma e' l'unico partito di maggioranza a parlare esplicitamente di 'unioni civili' come terreno di confronto. Marina e Pier Silvio Berlusconi hanno sollecitato una svolta liberale sui diritti civili, e il deputato Stefano Benigni e' indicato come possibile proponente del matrimonio egualitario: tendenza emergente, non posizione ufficiale.",
+      "url": "https://www.lacnews24.it/politica/il-campo-largo-della-destra-divisa-sui-diritti-dietro-lunita-di-governo-ce-una-guerra-culturale-jlzrn2o0",
+      "livello": "C"
+    },
+    "m5s_ue": {
+      "descrizione": "Posizione del M5S sull'Unione europea, oscillante fra sovranismo ed europeismo: nel 2021 Di Maio si dichiarava favorevole agli Stati Uniti d'Europa, mentre il 24 aprile 2025 le delegazioni pentastellate votano CONTRO il regolamento EDIP sull'industria europea della difesa. Sul fronte fiscale Conte chiede investimenti comuni europei.",
+      "url": "https://www.eunews.it/en/2025/03/12/defence-eu-parliament-clears-way-for-rearmament-plan-pd-divided-m5s-and-lega-opposed/",
+      "livello": "C"
+    },
+    "avs_ue": {
+      "descrizione": "Programma di Alleanza Verdi e Sinistra per le europee 2024: chiede un processo costituente per un'Europa unita attraverso una convenzione per riformare i Trattati e una vera cittadinanza federale europea; ritiene necessaria una politica estera e di difesa comune, incluso un esercito europeo unificato, per rendere l'UE autonoma dagli USA razionalizzando la spesa militare senza aumentarla. Contraria ai piani di riarmo: 'un mondo sempre piu' armato e' un mondo sempre piu' pericoloso'.",
+      "url": "https://verdisinistra.it/programma-elezioni-europee-8-e-9-giugno-2024/",
+      "livello": "B"
+    },
+    "fdi_stellantis": {
+      "descrizione": "Fratelli d'Italia aveva presentato al Senato un'interrogazione urgente per ricorrere al golden power a tutela degli asset strategici e per l'intervento di Cassa depositi e prestiti in Stellantis. Da presidente del Consiglio Meloni ha pero' abbracciato una posizione piu' elastica e il proposito di far entrare lo Stato in Stellantis e' 'silenziosamente evaporato'; sotto il suo governo sono state cedute la rete TIM a KKR e ITA Airways a Lufthansa, ed e' stato abbandonato il piano di nazionalizzazione di Acciaierie d'Italia.",
+      "url": "https://www.startmag.it/smartcity/giorgia-meloni-invoca-la-cdp-in-stellantis/",
+      "livello": "C"
+    },
+    "pd_libro_verde": {
+      "descrizione": "Libro verde sulle politiche industriali del PD, curato da Andrea Orlando su incarico di Elly Schlein: 'lo Stato deve guidare e cofinanziare lo sviluppo, sostenendo imprese innovative e responsabili'. Prevede un'Agenzia per le partecipazioni pubbliche, un Consiglio indipendente per la strategia industriale e la riforma di Invitalia e Cdp come soggetti attuatori.",
+      "url": "https://www.innovationpost.it/attualita/orlando-e-schlein-ecco-le-idee-del-partito-democratico-per-re-industrializzare-litalia-e-leuropa/",
+      "livello": "C"
+    },
+    "iv_cannabis": {
+      "descrizione": "Italia Viva ha promosso in Parlamento un emendamento per legalizzare i cannabis shop, ma si e' poi astenuta sulla depenalizzazione della coltivazione domestica; sul voto relativo al referendum sulla cannabis PD, M5S, LeU e +Europa votarono a favore, Lega, Forza Italia e FdI contro, Italia Viva si astenne. Renzi si era detto contrario a depenalizzare la coltivazione perche' 'gli italiani non capirebbero'.",
+      "url": "https://tg24.sky.it/politica/2022/09/22/cannabis-programmi-elettorali-confronto",
+      "livello": "C"
+    },
+    "fn_scuola": {
+      "descrizione": "Proposte di Futuro Nazionale sulla scuola: scuola 'dura e selettiva', classi differenziate per profitto, libretto di lavoro utilizzabile dai 14 anni, maggiore peso agli istituti professionali rispetto ai licei, riduzione delle vacanze estive. NESSUNA posizione sul livello di finanziamento della scuola pubblica, che e' l'oggetto della domanda.",
+      "url": "https://www.fanpage.it/politica/la-scuola-dura-e-selettiva-di-vannacci-classi-differenziate-e-il-motto-litalia-gli-italiani-in-ogni-istituto/",
+      "livello": "C"
+    },
+    "salvini_banche": {
+      "descrizione": "Matteo Salvini invoca il golden power sull'operazione UniCredit-Banco BPM, sostenendo che 'una banca non puo' essere considerata mera entita' privata, perche' ha responsabilita' verso l'economia e la societa''; chiede inoltre un prelievo del 5% sugli utili delle dieci maggiori banche per tre anni. Forza Italia contesta la misura e Tajani replica che 'le banche non sono il nemico pubblico'.",
+      "url": "https://www.ansa.it/sito/notizie/economia/2025/08/02/tajani-basta-minacce-alle-banche-non-sono-il-nemico-pubblico_bd423865-c816-4a20-8cce-fc145680e37a.html",
+      "livello": "C"
+    },
+    "conte_ilva": {
+      "descrizione": "Giuseppe Conte, 23 maggio 2025: sulla vicenda ex Ilva 'si' a nazionalizzazione'; ricorda che Invitalia fu creata per garantire la presenza pubblica e tutelare l'interesse collettivo, e afferma che 'la presenza pubblica e' necessaria'.",
+      "url": "https://www.ansa.it/puglia/notizie/2025/05/23/conte-situazione-ex-ilva-complicata-si-a-nazionalizzazione_95655a7d-dbcb-4ed9-9e01-7ca350fe34f2.html",
+      "livello": "C"
+    },
+    "giorgetti_patto": {
+      "descrizione": "Il governo chiede all'UE maggiore flessibilita' sul Patto di stabilita': Giorgetti, 22 maggio 2026, sostiene che 'la flessibilita' Ue sulla difesa deve valere anche per la sicurezza economica', chiedendo di estendere alla crisi energetica la clausola di salvaguardia gia' prevista per la spesa militare, per circa 14 miliardi e fino a 36 miliardi di spazio fiscale aggiuntivo nel 2027. ATTENZIONE: e' la posizione dell'esecutivo, non distingue fra i tre partiti di maggioranza, e chiede flessibilita' DENTRO le regole, non il loro superamento.",
+      "url": "https://www.ansa.it/sito/notizie/economia/2026/05/22/giorgetti-flessibilita-ue-su-difesa-ci-sia-anche-per-la-sicurezza-economica_fad591b3-29f3-4514-a533-ae3879b5d291.html",
+      "livello": "C"
+    },
+    "avs_poverta": {
+      "descrizione": "L'agenda di AVS sul contrasto alla poverta' comprende salario minimo, protezione dei salari dall'inflazione, un possibile ritorno del reddito di cittadinanza e la riduzione dell'orario a parita' di salario. Fratoianni definisce 'insostenibile' la situazione della poverta'.",
+      "url": "https://www.lagazzettadelmezzogiorno.it/news/breaking-news/1918692/poverta-fratoianni-situazione-insostenibile-serve-proposta-avs-sblocca-stipendi.html",
+      "livello": "E"
+    },
+    "pd_poverta": {
+      "descrizione": "Il PD critica la sostituzione del reddito di cittadinanza con Assegno di inclusione e Supporto per la formazione e il lavoro, misure 'frammentate, con copertura piu' stretta, importi piu' bassi e condizioni piu' rigide' che servono 'solo il 60% della platea del reddito di cittadinanza'. Schlein indica fra le priorita' l'aumento dei redditi e denuncia la poverta' assoluta al 9,8% delle famiglie.",
+      "url": "https://www.unita.it/2026/05/16/il-governo-meloni-smantella-il-welfare-e-si-accanisce-contro-i-piu-indifesi-poveri-disabili-e-donne-parla-ilenia-malavasi/",
+      "livello": "E"
+    },
+    "fn_statuto_vita": {
+      "descrizione": "Statuto e programma di Futuro Nazionale sui temi etici: posizione 'pro-vita dal concepimento alla morte naturale', con 'opposizione a eutanasia e omicidio del consenziente (dalla sinistra detto suicidio assistito)'; piena applicazione della legge sulle cure palliative, idratazione e alimentazione non considerate terapie. Sull'aborto: 'l'aborto non e' un diritto', da vietare la RU-486 in regime ambulatoriale o domiciliare. Il programma prevede inoltre l'abolizione delle unioni civili e lo stop al 'gender in tv'.",
+      "url": "https://www.ilmessaggero.it/politica/vannacci_programma_aborto_famiglia_fecondazione_fine_vita_unioni_civili-9723028.html",
+      "livello": "C"
+    },
+    "azione_dl_sicurezza": {
+      "descrizione": "Azione vota CONTRO il decreto sicurezza alla Camera. Calenda: 'Il problema non e' introdurre qualche nuovo reato o aumentare le pene su quelli esistenti. Il problema e' la presenza e il controllo del territorio'; contesta i 69 reati introdotti dal governo e chiede invece regolazione dei social per i minori, tempo pieno a scuola e piu' presenza delle forze dell'ordine la sera.",
+      "url": "https://www.azione.it/la-settimana-di-azione-8/",
+      "livello": "C"
+    },
+    "iv_dl_sicurezza": {
+      "descrizione": "Matteo Renzi sul decreto sicurezza: rappresenta 'una minaccia senza precedenti allo Stato di diritto', contestando in particolare le norme che autorizzano i servizi segreti; per il leader di Italia Viva la misura e' 'oltre il limite'. Il decreto e' approvato il 4 giugno 2025 con 109 si', 69 no e un astenuto.",
+      "url": "https://www.unita.it/2025/06/04/decreto-sicurezza-legge-senato-proteste-opposizione/",
+      "livello": "C"
+    },
+    "fn_energia": {
+      "descrizione": "Programma energetico di Futuro Nazionale: 'no al Green Deal, no alla transizione verso i motori elettrici prevista per il 2035, apertura al gas russo e sostegno al nucleare di nuova generazione'. Vannacci definisce il Green Deal 'roba da ricchi' e il divieto dei motori a scoppio 'ambientalismo ideologico', pur riconoscendo che 'sono in corso dei cambiamenti climatici significativi d'origine antropica'.",
+      "url": "https://www.qualenergia.it/articoli/futuro-nazionale-energia-vecchia-sovranita-vannacci-guarda-novecento/",
+      "livello": "C"
+    },
+    "fn_ponte": {
+      "descrizione": "Roberto Vannacci a Palermo, maggio 2026: 'Siamo favorevoli al Ponte e a tutte le infrastrutture che portano ricchezza e progresso'; l'opera 'attirera' capitali, investimenti e nuove opportunita''. Respinge l'idea che il Ponte sia alternativo alla manutenzione ordinaria: 'bloccare opere fondamentali per il progresso economico del Paese non mi sembra giusto'.",
+      "url": "https://www.strettoweb.com/2026/05/roberto-vannacci-a-palermo-si-al-ponte-sullo-stretto-attirera-capitali-ed-altre-infrastrutture/2094017/",
+      "livello": "C"
+    },
+    "fn_stabilicum": {
+      "descrizione": "Vannacci attacca da giorni la nuova legge elettorale con video contro il governo sui social. Il contesto e' rilevante: senza Futuro Nazionale la maggioranza rischia di non raggiungere il 42% necessario a far scattare il premio, e la legge contiene una norma sulle firme che penalizza il partito. ATTENZIONE: l'opposizione appare tattica piu' che di principio.",
+      "url": "https://www.ilpoliticoweb.it/legge-elettorale-anti-vannacci-melonellum/",
+      "livello": "C"
+    },
+    "avs_scuola": {
+      "descrizione": "AVS ha manifestato davanti al Ministero contro i tagli di quasi 8.000 posti fra docenti e personale ATA e per la mancanza di risorse. Fratoianni: 'i fondi ci sono, ma vengono investiti dove non servono, in armi e missili, invece che in medici, infermieri e insegnanti'; slogan 'meno armi e piu' insegnanti'. Il partito ha depositato la proposta di legge 'Sblocca stipendi' per adeguare le retribuzioni all'inflazione, finanziandola con maggiore tassazione delle rendite finanziarie.",
+      "url": "https://www.orizzontescuola.it/fratoianni-avs-meno-armi-e-piu-insegnanti-meno-missili-e-piu-medici-si-ritorni-al-ministero-della-pubblica-istruzione/",
+      "livello": "C"
+    },
+    "azione_piano_scuola": {
+      "descrizione": "'Piano Scuola' di Azione, elaborato dopo oltre un anno di consultazioni: adeguare lo stipendio iniziale dei docenti italiani agli standard dell'eurozona, ridurre del 30% gli anni necessari a raggiungere il massimo salariale, aumentare di circa 2.800 unita' gli ispettori scolastici regionali, rafforzare il personale ATA con nuove assunzioni. In parallelo, sistema di valutazione periodica dei docenti che premi il merito.",
+      "url": "https://www.azione.it/piano-scuola/",
+      "livello": "B"
+    },
+    "iv_scuola": {
+      "descrizione": "Matteo Renzi sulla scuola: 'Oggi un professore con lo stipendio fa la fame'; 'finche' non paghiamo meglio gli insegnanti e non li valorizziamo, non ci sara' mai una scuola pubblica degna di questo nome'. Critica i tagli alla Carta del docente, misura introdotta dal suo governo. Il programma condiviso con Azione prevede l'aumento delle retribuzioni e una carriera docente con figure intermedie.",
+      "url": "https://www.orizzontescuola.it/oggi-un-professore-con-lo-stipendio-fa-la-fame-matteo-renzi-finche-non-paghiamo-meglio-gli-insegnanti-non-ci-sara-mai-una-scuola-pubblica-degna-di-questo-nome/",
+      "livello": "C"
+    },
+    "pld_sicurezza": {
+      "descrizione": "Pagina di proposte del Partito Liberaldemocratico sulla pubblica sicurezza: 'La sicurezza e' una condizione abilitante della liberta': senza tutela effettiva delle persone e delle comunita', i diritti restano formali'. Propone di rendere strutturale la 'presenza di prossimita'' con un modello 'quartiere/periferie flessibile e misurabile', personale civile in piu' per liberare gli operativi dai compiti amministrativi, e processi penali piu' rapidi per la certezza della pena. Sostiene che 'una politica penale moderna debba essere evidence-based: ridurre la recidiva e' un obiettivo di sicurezza', e mantiene riserve sull'eccessiva criminalizzazione con nuovi reati e pene piu' severe. Sul carcere chiede misure alternative, lavoro e formazione, contro un sovraffollamento al 124,8%.",
+      "url": "https://partitoliberaldemocratico.com/pubblica-sicurezza/",
+      "livello": "B"
+    },
+    "iv_pensioni": {
+      "descrizione": "Italia Viva figura fra i partiti convergenti sul rinnovo di Opzione Donna, lo schema di pensionamento anticipato per le lavoratrici con 35 anni di contributi e almeno 61 di eta'. La manovra 2026 conferma invece l'aumento dell'eta' pensionabile dal 2027.",
+      "url": "https://www.pmi.it/economia/lavoro/486625/riforma-pensioni-correttivi-eta-pensionabile-e-flessibilita-in-uscita.html",
+      "livello": "E"
+    },
+    "piueuropa_programma": {
+      "descrizione": "Programma elettorale di +Europa 'Una Generazione Avanti'. Debito: 'ogni nostra proposta sara' vincolata alla riduzione del debito pubblico', con piani quinquennali di rientro e la proposta di inserire in Costituzione il 'principio di equita' generazionale per evitare scelte miopi che creano indebitamento irresponsabile verso le nuove generazioni'; ogni proposta di spesa e' legata alla riduzione del rapporto debito/PIL di almeno due punti l'anno. Pensioni: il sistema 'non puo' essere gravato da operazioni come Quota 100' e la spesa pensionistica non deve crescere. Welfare: contrario ai sussidi generalizzati, propone di rivedere il reddito di cittadinanza con agenzie private per formazione e collocamento e perdita del beneficio in caso di rifiuto del lavoro. Istruzione e sanita' sono i due pilastri su cui indirizzare 'ogni euro aggiuntivo di spesa pubblica', con tempo pieno in tutte le scuole.",
+      "url": "https://www.piueuropa.eu/una_generazione_avanti_il_programma_elettorale_di_europa",
+      "livello": "B"
+    },
+    "pld_programma": {
+      "descrizione": "Proposte del Partito Liberaldemocratico: il principio di sussidiarieta' non si traduce 'automaticamente in monopolio pubblico o erogazione gratuita illimitata a prescindere dalle condizioni economiche dei beneficiari'; produzione di beni pubblici essenziali fra cui 'infrastrutture fisiche e digitali' e connessione dei territori, in particolare le aree interne spopolate; sull'energia 'si' al nucleare subito, senza se e senza ma'; atlantismo fra i valori fondativi.",
+      "url": "https://partitoliberaldemocratico.com/manifesto/",
+      "livello": "B"
+    },
     "manifesto_pld": {
       "descrizione": "Manifesto e proposte del Partito Liberaldemocratico: 'ruolo strategico del nucleare'; spending review e 'avanzi primari piu' consistenti per la riduzione del debito'; Europa che deve 'cambiare o perire'. Non trattati salario minimo, pensioni, diritti civili, giustizia, riforme istituzionali.",
       "url": "https://partitoliberaldemocratico.com/proposte/",
@@ -115,7 +391,8 @@
       "fonti": [
         "manovra2026",
         "manifesto_pld",
-        "programma_fn"
+        "programma_fn",
+        "prog_azione_iv_2022"
       ],
       "posizioni": {
         "Fratelli d'Italia": {
@@ -170,19 +447,19 @@
           "punteggio": null,
           "livello": null,
           "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "evidenza": "CERCATA SENZA ESITO: ricerca dedicata su questa combinazione, nessuna posizione riportata dalla stampa ne' presente nei documenti di partito. Non ripetere la stessa ricerca."
         },
         "Italia Viva": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 2,
+          "livello": "B",
+          "fonte": "prog_azione_iv_2022",
+          "evidenza": "Come sopra: programma congiunto."
         },
         "Azione": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 2,
+          "livello": "B",
+          "fonte": "prog_azione_iv_2022",
+          "evidenza": "'Non serve inventare nuove tasse, sognare la patrimoniale'; il programma punta su riduzione del cuneo fiscale e semplificazione."
         }
       }
     },
@@ -192,73 +469,81 @@
       "testo_proposto": "Lo Stato dovrebbe intervenire direttamente nell'economia con investimenti pubblici nei settori strategici.",
       "nota_formulazione": "Tolto il riferimento alla 'riconversione ecologica', che legava la domanda a un secondo tema e la spostava a sinistra.",
       "direzione_accordo": "accordo = sinistra",
-      "fonti": [],
+      "fonti": [
+        "prog_azione_iv_2022",
+        "pld_dichiarazioni",
+        "fn_economia",
+        "fdi_stellantis",
+        "pd_libro_verde",
+        "salvini_banche",
+        "conte_ilva"
+      ],
       "posizioni": {
         "AVS": {
           "punteggio": null,
           "livello": null,
           "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "evidenza": "CERCATA SENZA ESITO: ricerca dedicata su questa combinazione, nessuna posizione riportata dalla stampa ne' presente nei documenti di partito. Non ripetere la stessa ricerca."
         },
         "M5S": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 7,
+          "livello": "C",
+          "fonte": "conte_ilva",
+          "evidenza": "Conte favorevole alla nazionalizzazione dell'ex Ilva: 'la presenza pubblica e' necessaria'."
         },
         "PD": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 7,
+          "livello": "C",
+          "fonte": "pd_libro_verde",
+          "evidenza": "'Lo Stato deve guidare e cofinanziare lo sviluppo': Agenzia per le partecipazioni pubbliche e Consiglio per la strategia industriale."
         },
         "+Europa": {
           "punteggio": null,
           "livello": null,
           "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "evidenza": "CERCATA SENZA ESITO: ricerca dedicata su questa combinazione, nessuna posizione riportata dalla stampa ne' presente nei documenti di partito. Non ripetere la stessa ricerca."
         },
         "Italia Viva": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 4,
+          "livello": "B",
+          "fonte": "prog_azione_iv_2022",
+          "evidenza": "Come sopra: programma congiunto."
         },
         "Azione": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 4,
+          "livello": "B",
+          "fonte": "prog_azione_iv_2022",
+          "evidenza": "Politica industriale rivendicata (Piano 4.0) ma realizzata con 'strumenti fiscali semplici ed automatici a supporto degli investimenti', non con intervento diretto dello Stato."
         },
         "Liberaldemocratico": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 1,
+          "livello": "E",
+          "fonte": "pld_dichiarazioni",
+          "evidenza": "Obiettivo dichiarato di 'ridurre la presenza dello Stato e favorire concorrenza e mercato'; taglio della spesa pubblica dell'1% l'anno per cinque anni."
         },
         "Forza Italia": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 3,
+          "livello": "C",
+          "fonte": "salvini_banche",
+          "evidenza": "Contesta la tassa sugli extraprofitti bancari; Tajani: 'le banche non sono il nemico pubblico'. Posizione di mercato dentro la stessa coalizione."
         },
         "Fratelli d'Italia": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 4,
+          "livello": "C",
+          "fonte": "fdi_stellantis",
+          "evidenza": "AMBIVALENZA DOCUMENTATA: da opposizione chiedeva golden power e ingresso di Cdp in Stellantis, al governo ha ceduto rete TIM e ITA e rinunciato alla nazionalizzazione di Acciaierie d'Italia."
         },
         "Lega": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 6,
+          "livello": "C",
+          "fonte": "salvini_banche",
+          "evidenza": "Invoca il golden power su UniCredit-BPM e un prelievo sugli utili bancari: 'una banca non puo' essere considerata mera entita' privata'."
         },
         "Futuro Nazionale": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 7,
+          "livello": "C",
+          "fonte": "fn_economia",
+          "evidenza": "'Economia protetta e guidata politicamente': fondo pubblico sovrano, uso esteso del golden power, forte interventismo statale."
         }
       }
     },
@@ -269,7 +554,14 @@
       "nota_formulazione": "Tolto 'anche a costo di piu' debito', che incorporava l'obiezione.",
       "direzione_accordo": "accordo = sinistra",
       "fonti": [
-        "manifesto_pld"
+        "manifesto_pld",
+        "prog_azione_iv_2022",
+        "fn_dichiarazioni",
+        "conte_patto",
+        "avs_austerita",
+        "pd_patto",
+        "giorgetti_patto",
+        "piueuropa_programma"
       ],
       "posizioni": {
         "Liberaldemocratico": {
@@ -279,64 +571,64 @@
           "evidenza": "Chiede 'avanzi primari piu' consistenti per la riduzione del debito': posizione opposta alla spesa in deficit."
         },
         "AVS": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 7,
+          "livello": "C",
+          "fonte": "avs_austerita",
+          "evidenza": "Chiede l'esenzione della spesa sociale dai vincoli; definisce la manovra 2026 'di austerita''."
         },
         "M5S": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 7,
+          "livello": "C",
+          "fonte": "conte_patto",
+          "evidenza": "Chiede la revisione del Patto di stabilita' e un nuovo piano di investimenti comuni europei."
         },
         "PD": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 6,
+          "livello": "C",
+          "fonte": "pd_patto",
+          "evidenza": "Contrario al Patto riformato perche' 'peggiorato e irrigidito' rispetto alla proposta iniziale: chiede piu' spazio per gli investimenti."
         },
         "+Europa": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 1,
+          "livello": "B",
+          "fonte": "piueuropa_programma",
+          "evidenza": "Posizione opposta alla spesa in deficit: ogni proposta e' vincolata alla riduzione del debito, con l'equita' generazionale da inserire in Costituzione."
         },
         "Italia Viva": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 3,
+          "livello": "B",
+          "fonte": "prog_azione_iv_2022",
+          "evidenza": "Come sopra: programma congiunto."
         },
         "Azione": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 3,
+          "livello": "B",
+          "fonte": "prog_azione_iv_2022",
+          "evidenza": "Il programma rivendica la stabilizzazione del debito come risultato positivo e non chiede flessibilita' sui vincoli."
         },
         "Forza Italia": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 5,
+          "livello": "C",
+          "fonte": "giorgetti_patto",
+          "evidenza": "Come sopra: posizione dell'esecutivo di cui il partito fa parte."
         },
         "Fratelli d'Italia": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 5,
+          "livello": "C",
+          "fonte": "giorgetti_patto",
+          "evidenza": "Chiede flessibilita' su difesa ed energia, ma dentro le regole europee. Posizione di governo, non distinta per partito."
         },
         "Lega": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 5,
+          "livello": "C",
+          "fonte": "giorgetti_patto",
+          "evidenza": "Come sopra: il ministro proponente e' espressione della Lega."
         },
         "Futuro Nazionale": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 6,
+          "livello": "E",
+          "fonte": "fn_dichiarazioni",
+          "evidenza": "Chiede all'UE un'esenzione strutturale dal Patto di stabilita', motivata dalla crisi demografica."
         }
       }
     },
@@ -347,7 +639,10 @@
       "nota_formulazione": "Tolto il riferimento alla 'legge Fornero', che e' lessico connotato, e separata la questione dalle pensioni minime.",
       "direzione_accordo": "accordo = ambigua",
       "fonti": [
-        "manovra2026"
+        "manovra2026",
+        "fn_dichiarazioni",
+        "iv_pensioni",
+        "piueuropa_programma"
       ],
       "posizioni": {
         "Fratelli d'Italia": {
@@ -387,34 +682,34 @@
           "evidenza": "RICOSTRUZIONE DA VERIFICARE: voto contrario alla manovra."
         },
         "+Europa": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 2,
+          "livello": "B",
+          "fonte": "piueuropa_programma",
+          "evidenza": "Il sistema 'non puo' essere gravato da operazioni come Quota 100'; la spesa pensionistica non deve crescere."
         },
         "Italia Viva": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 5,
+          "livello": "E",
+          "fonte": "iv_pensioni",
+          "evidenza": "Favorevole al rinnovo di Opzione Donna, quindi alla flessibilita' in uscita. Evidenza indiretta, da rafforzare."
         },
         "Azione": {
           "punteggio": null,
           "livello": null,
           "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "evidenza": "CERCATA SENZA ESITO: ricerca dedicata su questa combinazione, nessuna posizione riportata dalla stampa ne' presente nei documenti di partito. Non ripetere la stessa ricerca."
         },
         "Liberaldemocratico": {
           "punteggio": null,
           "livello": null,
           "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "evidenza": "CERCATA SENZA ESITO: ricerca dedicata su questa combinazione, nessuna posizione riportata dalla stampa ne' presente nei documenti di partito. Non ripetere la stessa ricerca."
         },
         "Futuro Nazionale": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 6,
+          "livello": "E",
+          "fonte": "fn_dichiarazioni",
+          "evidenza": "Intenzione dichiarata di anticipare gradualmente l'accesso alla pensione, soprattutto per alcune categorie di lavoratori."
         }
       }
     },
@@ -426,7 +721,9 @@
       "direzione_accordo": "accordo = sinistra",
       "fonti": [
         "manovra2026",
-        "manifesto_pld"
+        "manifesto_pld",
+        "prog_azione_iv_2022",
+        "fn_dichiarazioni"
       ],
       "posizioni": {
         "Fratelli d'Italia": {
@@ -475,25 +772,25 @@
           "punteggio": null,
           "livello": null,
           "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "evidenza": "CERCATA SENZA ESITO: ricerca dedicata su questa combinazione, nessuna posizione riportata dalla stampa ne' presente nei documenti di partito. Non ripetere la stessa ricerca."
         },
         "Italia Viva": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 5,
+          "livello": "B",
+          "fonte": "prog_azione_iv_2022",
+          "evidenza": "Come sopra: programma congiunto."
         },
         "Azione": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 5,
+          "livello": "B",
+          "fonte": "prog_azione_iv_2022",
+          "evidenza": "Riforma della governance Stato-regioni, piano straordinario per le liste d'attesa, contrasto alla carenza di personale."
         },
         "Futuro Nazionale": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 5,
+          "livello": "E",
+          "fonte": "fn_dichiarazioni",
+          "evidenza": "Lo statuto cita la 'difesa non negoziabile della sanita'' fra i valori fondativi, ma senza proposte tecniche: evidenza debole, da confermare."
         }
       }
     },
@@ -504,7 +801,14 @@
       "nota_formulazione": "Eliminato il confronto forzato con 'incentivi alla natalita' e bonus mirati': erano due dimensioni distinte compresse in una scala sola.",
       "direzione_accordo": "accordo = sinistra",
       "fonti": [
-        "programma_fn"
+        "programma_fn",
+        "prog_azione_iv_2022",
+        "rdc_m5s",
+        "manovra2026",
+        "avs_poverta",
+        "pd_poverta",
+        "piueuropa_programma",
+        "pld_programma"
       ],
       "posizioni": {
         "Futuro Nazionale": {
@@ -514,64 +818,64 @@
           "evidenza": "Propone di vincolare i sussidi alla disponibilita' ad accettare 'qualsivoglia lavoro compatibile' e di escludere i non cittadini dai benefici straordinari."
         },
         "AVS": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 7,
+          "livello": "E",
+          "fonte": "avs_poverta",
+          "evidenza": "Sostiene il ritorno di misure di sostegno piu' generose, incluso il reddito di cittadinanza."
         },
         "M5S": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 7,
+          "livello": "E",
+          "fonte": "rdc_m5s",
+          "evidenza": "Emendamento alla manovra per ripristinare il Reddito di cittadinanza nel biennio 2025-2026."
         },
         "PD": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 7,
+          "livello": "E",
+          "fonte": "pd_poverta",
+          "evidenza": "Critica la riduzione della platea e degli importi rispetto al reddito di cittadinanza; priorita' all'aumento dei redditi."
         },
         "+Europa": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 3,
+          "livello": "B",
+          "fonte": "piueuropa_programma",
+          "evidenza": "Contrario ai sussidi generalizzati: il reddito di cittadinanza va rivisto, con perdita del beneficio in caso di rifiuto del lavoro."
         },
         "Italia Viva": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 3,
+          "livello": "B",
+          "fonte": "prog_azione_iv_2022",
+          "evidenza": "Come sopra: programma congiunto."
         },
         "Azione": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 3,
+          "livello": "B",
+          "fonte": "prog_azione_iv_2022",
+          "evidenza": "'Eliminare il Reddito di Cittadinanza dopo il primo rifiuto e ridurlo dopo 2 anni': strumento giudicato 'pensato male'."
         },
         "Liberaldemocratico": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 3,
+          "livello": "B",
+          "fonte": "pld_programma",
+          "evidenza": "La sussidiarieta' non deve tradursi in 'erogazione gratuita illimitata a prescindere dalle condizioni economiche dei beneficiari'."
         },
         "Forza Italia": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 2,
+          "livello": "A",
+          "fonte": "manovra2026",
+          "evidenza": "Come sopra."
         },
         "Fratelli d'Italia": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 2,
+          "livello": "A",
+          "fonte": "manovra2026",
+          "evidenza": "Vota la manovra 2026 che dimezza il primo mese dell'Assegno di inclusione dopo il rinnovo; il RdC era gia' stato sostituito nel 2024."
         },
         "Lega": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 2,
+          "livello": "A",
+          "fonte": "manovra2026",
+          "evidenza": "Come sopra."
         }
       }
     },
@@ -582,7 +886,12 @@
       "nota_formulazione": "Eliminato il confronto forzato con 'merito, valutazione e formazione tecnica': si possono volere entrambe le cose.",
       "direzione_accordo": "accordo = sinistra",
       "fonti": [
-        "manifesto_pld"
+        "manifesto_pld",
+        "scuola_stipendi",
+        "avs_scuola",
+        "azione_piano_scuola",
+        "iv_scuola",
+        "piueuropa_programma"
       ],
       "posizioni": {
         "Liberaldemocratico": {
@@ -592,64 +901,64 @@
           "evidenza": "'La riforma del sistema educativo e' la madre di tutte le riforme'. Favorevole all'investimento, con accento sul merito."
         },
         "AVS": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 7,
+          "livello": "C",
+          "fonte": "avs_scuola",
+          "evidenza": "Contro i tagli a docenti e ATA; 'meno armi e piu' insegnanti'; proposta di legge per adeguare gli stipendi all'inflazione."
         },
         "M5S": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 7,
+          "livello": "E",
+          "fonte": "scuola_stipendi",
+          "evidenza": "Critica la proposta di stipendi differenziati come 'scuola delle disuguaglianze'."
         },
         "PD": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 7,
+          "livello": "E",
+          "fonte": "scuola_stipendi",
+          "evidenza": "Schlein contesta gli stipendi bassi dei docenti; il partito chiede 'meno tagli e piu' investimenti reali'."
         },
         "+Europa": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 6,
+          "livello": "B",
+          "fonte": "piueuropa_programma",
+          "evidenza": "Istruzione e sanita' sono i pilastri su cui indirizzare 'ogni euro aggiuntivo di spesa pubblica', con tempo pieno in tutte le scuole."
         },
         "Italia Viva": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 6,
+          "livello": "C",
+          "fonte": "iv_scuola",
+          "evidenza": "Renzi: 'finche' non paghiamo meglio gli insegnanti non ci sara' mai una scuola pubblica degna di questo nome'."
         },
         "Azione": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 6,
+          "livello": "B",
+          "fonte": "azione_piano_scuola",
+          "evidenza": "Piano Scuola: stipendi iniziali adeguati agli standard dell'eurozona, piu' ispettori e personale ATA, con valutazione dei docenti che premi il merito."
         },
         "Forza Italia": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 4,
+          "livello": "E",
+          "fonte": "scuola_stipendi",
+          "evidenza": "Allineata alla linea di governo."
         },
         "Fratelli d'Italia": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 4,
+          "livello": "E",
+          "fonte": "scuola_stipendi",
+          "evidenza": "POSIZIONE INTERMEDIA: il ministro rivendica un aumento delle risorse superiore al 10%, ma propone stipendi differenziati per area e apertura ai finanziamenti privati."
         },
         "Lega": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 4,
+          "livello": "E",
+          "fonte": "scuola_stipendi",
+          "evidenza": "Il ministro dell'Istruzione e' espressione della Lega: stessa posizione."
         },
         "Futuro Nazionale": {
           "punteggio": null,
           "livello": null,
           "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "evidenza": "CERCATA, ESITO PARZIALE: il partito ha posizioni documentate sulla scuola (scuola 'dura e selettiva', classi differenziate per profitto, lavoro dai 14 anni, piu' istituti professionali) ma NESSUNA sul livello di finanziamento, che e' l'oggetto della domanda. Codificarla significherebbe attribuire una posizione mai espressa. Fonte: https://www.fanpage.it/politica/la-scuola-dura-e-selettiva-di-vannacci-classi-differenziate-e-il-motto-litalia-gli-italiani-in-ogni-istituto/"
         }
       }
     },
@@ -660,7 +969,12 @@
       "nota_formulazione": "Separata dalla legge contro l'omotransfobia: l'affermazione originale ne accorpava tre.",
       "direzione_accordo": "accordo = sinistra",
       "fonti": [
-        "diritti_civili"
+        "diritti_civili",
+        "piueuropa_diritti",
+        "iv_matrimonio",
+        "calenda_diritti",
+        "fi_diritti_civili",
+        "fn_statuto_vita"
       ],
       "posizioni": {
         "AVS": {
@@ -694,40 +1008,40 @@
           "evidenza": "Contraria alle adozioni omogenitoriali."
         },
         "+Europa": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 7,
+          "livello": "E",
+          "fonte": "piueuropa_diritti",
+          "evidenza": "Il programma include matrimonio egualitario, adozione per coppie dello stesso sesso e stepchild adoption."
         },
         "Italia Viva": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 6,
+          "livello": "C",
+          "fonte": "iv_matrimonio",
+          "evidenza": "Scalfarotto chiede il matrimonio egualitario come passo successivo alle unioni civili. Sull'adozione piena la posizione storica del partito e' piu' cauta."
         },
         "Azione": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 6,
+          "livello": "C",
+          "fonte": "calenda_diritti",
+          "evidenza": "Calenda favorevole a matrimonio egualitario, adozione e registrazione dei figli; contrario alla GPA."
         },
         "Liberaldemocratico": {
           "punteggio": null,
           "livello": null,
           "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "evidenza": "CERCATA SENZA ESITO: ricerca dedicata sui diritti civili del partito. Lo statuto cita i 'diritti civili' fra i valori fondativi, ma non esiste alcuna presa di posizione pubblica sul tema specifico. Non ripetere la stessa ricerca."
         },
         "Forza Italia": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 3,
+          "livello": "C",
+          "fonte": "fi_diritti_civili",
+          "evidenza": "Contraria al matrimonio egualitario ma con aperture: unico partito di maggioranza a discutere di unioni civili, con una componente interna che spinge per una svolta liberale."
         },
         "Futuro Nazionale": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 1,
+          "livello": "C",
+          "fonte": "fn_statuto_vita",
+          "evidenza": "Il programma prevede l'abolizione delle unioni civili, quindi una posizione piu' restrittiva del quadro attuale."
         }
       }
     },
@@ -738,7 +1052,8 @@
       "nota_formulazione": "Separata dall'aborto, che nell'affermazione originale era accorpato nella stessa domanda.",
       "direzione_accordo": "accordo = sinistra",
       "fonti": [
-        "fine_vita"
+        "fine_vita",
+        "fn_statuto_vita"
       ],
       "posizioni": {
         "PD": {
@@ -799,13 +1114,13 @@
           "punteggio": null,
           "livello": null,
           "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "evidenza": "CERCATA SENZA ESITO: ricerca dedicata sui diritti civili del partito. Lo statuto cita i 'diritti civili' fra i valori fondativi, ma non esiste alcuna presa di posizione pubblica sul tema specifico. Non ripetere la stessa ricerca."
         },
         "Futuro Nazionale": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 1,
+          "livello": "C",
+          "fonte": "fn_statuto_vita",
+          "evidenza": "Lo statuto sancisce la difesa della vita 'dal concepimento alla morte naturale' e l'opposizione esplicita all'eutanasia."
         }
       }
     },
@@ -816,7 +1131,10 @@
       "nota_formulazione": "Tolto 'togliendo il mercato alla criminalita' organizzata', che era l'argomento a favore incorporato nella domanda.",
       "direzione_accordo": "accordo = sinistra",
       "fonti": [
-        "diritti_civili"
+        "diritti_civili",
+        "piueuropa_diritti",
+        "cannabis_partiti",
+        "iv_cannabis"
       ],
       "posizioni": {
         "M5S": {
@@ -832,58 +1150,58 @@
           "evidenza": "Calenda favorevole, ma con politiche di disincentivazione dell'uso."
         },
         "AVS": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 7,
+          "livello": "E",
+          "fonte": "cannabis_partiti",
+          "evidenza": "La legalizzazione figura nel programma di governo."
         },
         "PD": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 7,
+          "livello": "E",
+          "fonte": "cannabis_partiti",
+          "evidenza": "La legalizzazione figura nel programma di governo."
         },
         "+Europa": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 7,
+          "livello": "E",
+          "fonte": "piueuropa_diritti",
+          "evidenza": "La legalizzazione della cannabis figura fra i punti programmatici del partito."
         },
         "Italia Viva": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 4,
+          "livello": "C",
+          "fonte": "iv_cannabis",
+          "evidenza": "POSIZIONE INTERMEDIA DOCUMENTATA: emendamento a favore dei cannabis shop, ma astensione sulla depenalizzazione della coltivazione domestica e sul referendum."
         },
         "Liberaldemocratico": {
           "punteggio": null,
           "livello": null,
           "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "evidenza": "CERCATA SENZA ESITO: ricerca dedicata sui diritti civili del partito. Lo statuto cita i 'diritti civili' fra i valori fondativi, ma non esiste alcuna presa di posizione pubblica sul tema specifico. Non ripetere la stessa ricerca."
         },
         "Forza Italia": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 1,
+          "livello": "E",
+          "fonte": "cannabis_partiti",
+          "evidenza": "Contraria in Parlamento sia alla legalizzazione ricreativa sia a quella medica."
         },
         "Fratelli d'Italia": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 1,
+          "livello": "E",
+          "fonte": "cannabis_partiti",
+          "evidenza": "Come sopra."
         },
         "Lega": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 1,
+          "livello": "E",
+          "fonte": "cannabis_partiti",
+          "evidenza": "Come sopra."
         },
         "Futuro Nazionale": {
           "punteggio": null,
           "livello": null,
           "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "evidenza": "CERCATA, ESITO PARZIALE: documentato l'impianto 'tolleranza zero' con pattuglie contro i trafficanti di droga, ma nessuna dichiarazione esplicita sulla legalizzazione, che e' l'oggetto della domanda. La direzione e' prevedibile ma non documentata. Riferimento: https://www.policymakermag.it/italia/la-tolleranza-zero-di-vannacci-cosa-ce-nel-primo-pacchetto-di-norme-di-futuro-nazionale/"
         }
       }
     },
@@ -894,7 +1212,8 @@
       "nota_formulazione": "Separata dalla valutazione delle operazioni militari israeliane, che era accorpata nella stessa affermazione.",
       "direzione_accordo": "accordo = sinistra",
       "fonti": [
-        "palestina_feb2025"
+        "palestina_feb2025",
+        "vannacci_palestina"
       ],
       "posizioni": {
         "M5S": {
@@ -949,19 +1268,19 @@
           "punteggio": null,
           "livello": null,
           "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "evidenza": "CERCATA SENZA ESITO: ricerca dedicata su questa combinazione, nessuna posizione riportata dalla stampa ne' presente nei documenti di partito. Non ripetere la stessa ricerca."
         },
         "Liberaldemocratico": {
           "punteggio": null,
           "livello": null,
           "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "evidenza": "CERCATA SENZA ESITO: ricerca dedicata su questa combinazione, nessuna posizione riportata dalla stampa ne' presente nei documenti di partito. Non ripetere la stessa ricerca."
         },
         "Futuro Nazionale": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 1,
+          "livello": "C",
+          "fonte": "vannacci_palestina",
+          "evidenza": "Vannacci nega l'esistenza stessa dello Stato palestinese e si oppone al riconoscimento."
         }
       }
     },
@@ -973,7 +1292,8 @@
       "direzione_accordo": "accordo = destra",
       "fonti": [
         "ucraina_gen2025",
-        "ucraina_fn"
+        "ucraina_fn",
+        "magi_ucraina"
       ],
       "posizioni": {
         "Italia Viva": {
@@ -1031,16 +1351,16 @@
           "evidenza": "I deputati di area Vannacci votano contro l'invio di armi insieme a M5S e AVS."
         },
         "+Europa": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 7,
+          "livello": "C",
+          "fonte": "magi_ucraina",
+          "evidenza": "Magi, 30 marzo 2026: 'Per noi e' imprescindibile il sostegno militare a Kyiv'."
         },
         "Liberaldemocratico": {
           "punteggio": null,
           "livello": null,
           "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "evidenza": "CERCATA SENZA ESITO: ricerca dedicata su questa combinazione, nessuna posizione riportata dalla stampa ne' presente nei documenti di partito. Non ripetere la stessa ricerca."
         }
       }
     },
@@ -1052,7 +1372,15 @@
       "direzione_accordo": "accordo = sinistra",
       "fonti": [
         "manifesto_pld",
-        "programma_fn"
+        "programma_fn",
+        "prog_azione_iv_2022",
+        "piueuropa_2024",
+        "prog_fdi_2024",
+        "lega_ue",
+        "pd_difesa_comune",
+        "tajani_ue",
+        "m5s_ue",
+        "avs_ue"
       ],
       "posizioni": {
         "Liberaldemocratico": {
@@ -1068,58 +1396,58 @@
           "evidenza": "Contro il 'federalismo europeo', a favore di 'un'Europa di Stati nazionali cooperanti'."
         },
         "AVS": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 6,
+          "livello": "B",
+          "fonte": "avs_ue",
+          "evidenza": "Chiede una convenzione per riformare i Trattati, cittadinanza federale europea ed esercito europeo unificato, ma per razionalizzare la spesa militare, non per aumentarla."
         },
         "M5S": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 4,
+          "livello": "C",
+          "fonte": "m5s_ue",
+          "evidenza": "AMBIVALENZA DOCUMENTATA: favorevole agli investimenti comuni europei, ma vota contro il regolamento EDIP sulla difesa comune."
         },
         "PD": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 7,
+          "livello": "C",
+          "fonte": "pd_difesa_comune",
+          "evidenza": "Favorevole alla difesa comune europea contro il riarmo nazionale."
         },
         "+Europa": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 7,
+          "livello": "B",
+          "fonte": "piueuropa_2024",
+          "evidenza": "Documento programmatico intitolato 'Stati Uniti d'Europa': 'Verso la federazione continentale'."
         },
         "Italia Viva": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 7,
+          "livello": "B",
+          "fonte": "prog_azione_iv_2022",
+          "evidenza": "Come sopra: programma congiunto."
         },
         "Azione": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 7,
+          "livello": "B",
+          "fonte": "prog_azione_iv_2022",
+          "evidenza": "'Con una svolta in senso federale delle sue Istituzioni, l'Ue puo' fare ancora di piu''; chiede di riaprire le riforme dei Trattati e maggiore capacita' fiscale europea."
         },
         "Forza Italia": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 7,
+          "livello": "C",
+          "fonte": "tajani_ue",
+          "evidenza": "CUNEO INTERNO ALLA COALIZIONE: favorevole al superamento dell'unanimita', all'armonizzazione fiscale e a 'un solo esercito europeo'; si richiama agli 'Stati Uniti d'Europa'. Posizione opposta a quella della Lega."
         },
         "Fratelli d'Italia": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 4,
+          "livello": "B",
+          "fonte": "prog_fdi_2024",
+          "evidenza": "POSIZIONE INTERMEDIA DOCUMENTATA: chiede competenza europea su politica estera, difesa e confini, ma 'lasciando le politiche nazionali alle competenze dei singoli Stati'. Favorevole ai poteri comuni su difesa ed estero, contraria su fisco."
         },
         "Lega": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 1,
+          "livello": "C",
+          "fonte": "lega_ue",
+          "evidenza": "Contraria a ogni trasferimento di sovranita': rifiuta il 'Super-Stato' e chiede la rinegoziazione dei trattati, tornando alla situazione precedente Maastricht."
         }
       }
     },
@@ -1130,74 +1458,80 @@
       "nota_formulazione": "Tolta la clausola 'purche' ci siano regole comuni contro il dumping', che rendeva l'affermazione condivisibile da chiunque.",
       "direzione_accordo": "accordo = destra",
       "fonti": [
-        "dazi2025"
+        "dazi2025",
+        "prog_azione_iv_2022",
+        "pld_dichiarazioni",
+        "mercosur_fi",
+        "mercosur_voto",
+        "mercosur_sinistra",
+        "fn_economia"
       ],
       "posizioni": {
         "AVS": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 2,
+          "livello": "C",
+          "fonte": "mercosur_sinistra",
+          "evidenza": "Bonelli: il libero scambio senza regole comuni e' 'dumping ambientale'. Apertura solo con reciprocita' reale."
         },
         "M5S": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 2,
+          "livello": "C",
+          "fonte": "mercosur_sinistra",
+          "evidenza": "Conte partecipa alla manifestazione contro l'accordo insieme ad AVS."
         },
         "PD": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 5,
+          "livello": "C",
+          "fonte": "mercosur_voto",
+          "evidenza": "DIVERGENZA: risulta favorevole all'accordo, ma Schlein partecipa alla manifestazione contro. Da chiarire con una fonte dedicata."
         },
         "+Europa": {
           "punteggio": null,
           "livello": null,
           "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "evidenza": "CERCATA SENZA ESITO: ricerca dedicata su questa combinazione, nessuna posizione riportata dalla stampa ne' presente nei documenti di partito. Non ripetere la stessa ricerca."
         },
         "Italia Viva": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 7,
+          "livello": "B",
+          "fonte": "prog_azione_iv_2022",
+          "evidenza": "Come sopra: programma congiunto."
         },
         "Azione": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 7,
+          "livello": "B",
+          "fonte": "prog_azione_iv_2022",
+          "evidenza": "'Approvare ogni anno leggi sulla concorrenza che rendano la nostra economia piu' libera e meno gravata da barriere all'ingresso'."
         },
         "Liberaldemocratico": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 7,
+          "livello": "E",
+          "fonte": "pld_dichiarazioni",
+          "evidenza": "Obiettivo dichiarato di favorire 'concorrenza e mercato'."
         },
         "Forza Italia": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 7,
+          "livello": "C",
+          "fonte": "mercosur_fi",
+          "evidenza": "Favorevole all'accordo UE-Mercosur come 'grande opportunita' per tutte le nostre imprese'."
         },
         "Fratelli d'Italia": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 4,
+          "livello": "C",
+          "fonte": "mercosur_voto",
+          "evidenza": "ASTENSIONE al Parlamento europeo nel dicembre 2025; Meloni passa da 'prematuro' a favorevole. Ambivalenza documentata."
         },
         "Lega": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 2,
+          "livello": "C",
+          "fonte": "mercosur_voto",
+          "evidenza": "'Promette battaglia' dopo il via libera; Centinaio: 'io non lo firmerei'."
         },
         "Futuro Nazionale": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 1,
+          "livello": "C",
+          "fonte": "fn_economia",
+          "evidenza": "'Protezionismo, dazi e preferenze nazionali', restrizioni agli investimenti esteri, difesa del Made in Italy dalla globalizzazione."
         }
       }
     },
@@ -1208,7 +1542,8 @@
       "nota_formulazione": "Sostituito il termine 'Green Deal', che e' un'etichetta politicamente connotata, con la misura concreta su cui i partiti hanno votato.",
       "direzione_accordo": "accordo = sinistra",
       "fonti": [
-        "auto2035"
+        "auto2035",
+        "fn_energia"
       ],
       "posizioni": {
         "PD": {
@@ -1257,25 +1592,25 @@
           "punteggio": null,
           "livello": null,
           "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "evidenza": "CERCATA SENZA ESITO: ricerca dedicata su questa combinazione, nessuna posizione riportata dalla stampa ne' presente nei documenti di partito. Non ripetere la stessa ricerca."
         },
         "Azione": {
           "punteggio": null,
           "livello": null,
           "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "evidenza": "CERCATA SENZA ESITO: ricerca dedicata su questa combinazione, nessuna posizione riportata dalla stampa ne' presente nei documenti di partito. Non ripetere la stessa ricerca."
         },
         "Liberaldemocratico": {
           "punteggio": null,
           "livello": null,
           "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "evidenza": "CERCATA SENZA ESITO: ricerca dedicata su questa combinazione, nessuna posizione riportata dalla stampa ne' presente nei documenti di partito. Non ripetere la stessa ricerca."
         },
         "Futuro Nazionale": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 1,
+          "livello": "C",
+          "fonte": "fn_energia",
+          "evidenza": "'No al Green Deal, no alla transizione verso i motori elettrici prevista per il 2035'. Contrario a mantenere il divieto."
         }
       }
     },
@@ -1286,7 +1621,9 @@
       "nota_formulazione": "Eliminato il confronto forzato con la mobilita' sostenibile e sostituito il generico 'grandi opere' con l'opera su cui i partiti si sono effettivamente divisi.",
       "direzione_accordo": "accordo = destra",
       "fonti": [
-        "ponte"
+        "ponte",
+        "prog_azione_iv_2022",
+        "fn_ponte"
       ],
       "posizioni": {
         "Fratelli d'Italia": {
@@ -1329,31 +1666,31 @@
           "punteggio": null,
           "livello": null,
           "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "evidenza": "CERCATA SENZA ESITO: ricerca dedicata su questa combinazione, nessuna posizione riportata dalla stampa ne' presente nei documenti di partito. Non ripetere la stessa ricerca."
         },
         "Italia Viva": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 6,
+          "livello": "B",
+          "fonte": "prog_azione_iv_2022",
+          "evidenza": "Come sopra: programma congiunto."
         },
         "Azione": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 6,
+          "livello": "B",
+          "fonte": "prog_azione_iv_2022",
+          "evidenza": "Chiede il completamento di Torino-Lione, Terzo Valico, Brescia-Padova, Salerno-Reggio Calabria e Napoli-Bari."
         },
         "Liberaldemocratico": {
           "punteggio": null,
           "livello": null,
           "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "evidenza": "CERCATA, ESITO PARZIALE: il partito sostiene la produzione di 'infrastrutture fisiche e digitali' e la connessione dei territori, incluse le aree interne spopolate, ma non risulta alcuna posizione sul Ponte sullo Stretto, che e' l'oggetto della domanda. Fonte: https://partitoliberaldemocratico.com/manifesto/"
         },
         "Futuro Nazionale": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 7,
+          "livello": "C",
+          "fonte": "fn_ponte",
+          "evidenza": "'Siamo favorevoli al Ponte e a tutte le infrastrutture che portano ricchezza e progresso'."
         }
       }
     },
@@ -1365,7 +1702,10 @@
       "direzione_accordo": "accordo = destra",
       "fonti": [
         "migrazione_albania",
-        "programma_fn"
+        "programma_fn",
+        "prog_azione_iv_2022",
+        "pld_dichiarazioni",
+        "magi_migranti"
       ],
       "posizioni": {
         "Fratelli d'Italia": {
@@ -1411,28 +1751,28 @@
           "evidenza": "Come sopra, su posizioni fra le piu' critiche."
         },
         "+Europa": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 1,
+          "livello": "C",
+          "fonte": "magi_migranti",
+          "evidenza": "Contrario a rendere piu' difficile l'ingresso: chiede regolarizzazione di chi lavora ed e' radicato, riforma della Bossi-Fini e stop all'accordo con l'Albania."
         },
         "Italia Viva": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 3,
+          "livello": "B",
+          "fonte": "prog_azione_iv_2022",
+          "evidenza": "Come sopra: programma congiunto."
         },
         "Azione": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 3,
+          "livello": "B",
+          "fonte": "prog_azione_iv_2022",
+          "evidenza": "L'immigrazione e' trattata come risposta al calo della forza lavoro previsto fra 2022 e 2030: impostazione di gestione dei flussi, non di chiusura."
         },
         "Liberaldemocratico": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 4,
+          "livello": "E",
+          "fonte": "pld_dichiarazioni",
+          "evidenza": "'Patto di integrazione' lingua-lavoro-legalita' legato alla programmazione dei flussi: apertura condizionata."
         }
       }
     },
@@ -1443,7 +1783,11 @@
       "nota_formulazione": "Eliminato il confronto forzato con 'prevenzione sociale e garanzie individuali'.",
       "direzione_accordo": "accordo = destra",
       "fonti": [
-        "dl_sicurezza2025"
+        "dl_sicurezza2025",
+        "fn_tolleranza_zero",
+        "azione_dl_sicurezza",
+        "iv_dl_sicurezza",
+        "pld_sicurezza"
       ],
       "posizioni": {
         "Fratelli d'Italia": {
@@ -1486,31 +1830,31 @@
           "punteggio": null,
           "livello": null,
           "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "evidenza": "CERCATA SENZA ESITO: ricerca dedicata su questa combinazione, nessuna posizione riportata dalla stampa ne' presente nei documenti di partito. Non ripetere la stessa ricerca."
         },
         "Italia Viva": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 2,
+          "livello": "C",
+          "fonte": "iv_dl_sicurezza",
+          "evidenza": "Renzi definisce il decreto 'una minaccia senza precedenti allo Stato di diritto'."
         },
         "Azione": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 2,
+          "livello": "C",
+          "fonte": "azione_dl_sicurezza",
+          "evidenza": "Voto contrario al decreto sicurezza: la sicurezza si ottiene con presenza e controllo del territorio, non con nuovi reati."
         },
         "Liberaldemocratico": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 3,
+          "livello": "B",
+          "fonte": "pld_sicurezza",
+          "evidenza": "Chiede piu' presenza sul territorio e certezza della pena, ma esprime riserve esplicite sull'introduzione di nuovi reati e sull'inasprimento delle pene: contrario con aperture."
         },
         "Futuro Nazionale": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 7,
+          "livello": "C",
+          "fonte": "fn_tolleranza_zero",
+          "evidenza": "Pacchetto 'Tolleranza zero': scudo penale per le forze dell'ordine, modifica di legittima difesa e uso delle armi, pene piu' severe."
         }
       }
     },
@@ -1521,7 +1865,9 @@
       "nota_formulazione": "Separata dalla durata dei processi, che era accorpata nella stessa affermazione e su cui sono tutti d'accordo.",
       "direzione_accordo": "accordo = destra",
       "fonti": [
-        "giustizia_carriere"
+        "giustizia_carriere",
+        "pld_dichiarazioni",
+        "fn_referendum_giustizia"
       ],
       "posizioni": {
         "Fratelli d'Italia": {
@@ -1579,16 +1925,16 @@
           "evidenza": "Voto contrario e campagna per il No."
         },
         "Liberaldemocratico": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 7,
+          "livello": "E",
+          "fonte": "pld_dichiarazioni",
+          "evidenza": "Marattin, 27 giugno 2025: 'I pm? La riforma e' ok'. Coerente con il voto favorevole in aula sul nucleare come partito di opposizione riformista."
         },
         "Futuro Nazionale": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 7,
+          "livello": "C",
+          "fonte": "fn_referendum_giustizia",
+          "evidenza": "Schierato per il Si' al referendum del marzo 2026; preferisce giudici scelti da chi ha cariche elettive."
         }
       }
     },
@@ -1660,13 +2006,13 @@
           "punteggio": null,
           "livello": null,
           "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "evidenza": "CERCATA SENZA ESITO: ricerca dedicata su questa combinazione, nessuna posizione riportata dalla stampa ne' presente nei documenti di partito. Non ripetere la stessa ricerca."
         },
         "Futuro Nazionale": {
           "punteggio": null,
           "livello": null,
           "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "evidenza": "CERCATA SENZA ESITO: ricerca dedicata su questa combinazione, nessuna posizione riportata dalla stampa ne' presente nei documenti di partito. Non ripetere la stessa ricerca."
         }
       }
     },
@@ -1677,7 +2023,10 @@
       "nota_formulazione": "Tolto 'anche se questo potrebbe creare differenze territoriali', che incorporava l'obiezione.",
       "direzione_accordo": "accordo = destra",
       "fonti": [
-        "autonomia"
+        "autonomia",
+        "magi_autonomia",
+        "autonomia_senato",
+        "pld_programma"
       ],
       "posizioni": {
         "Lega": {
@@ -1717,34 +2066,34 @@
           "evidenza": "Voto contrario; promotore del referendum abrogativo."
         },
         "+Europa": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 1,
+          "livello": "C",
+          "fonte": "magi_autonomia",
+          "evidenza": "Il segretario Magi definisce l'autonomia differenziata una 'svolta plebiscitaria e secessionista'."
         },
         "Italia Viva": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 1,
+          "livello": "A",
+          "fonte": "autonomia_senato",
+          "evidenza": "Voto contrario al Senato insieme a PD, M5S e AVS."
         },
         "Azione": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 4,
+          "livello": "A",
+          "fonte": "autonomia_senato",
+          "evidenza": "ASTENSIONE al Senato: critica la legge ma non ne sostiene l'abrogazione referendaria. Posizione intermedia documentata."
         },
         "Liberaldemocratico": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 5,
+          "livello": "E",
+          "fonte": "pld_programma",
+          "evidenza": "Favorevole a un federalismo in cui gli enti locali abbiano 'non molte materie ma chiare, con risorse' e autonomia finanziaria effettiva."
         },
         "Futuro Nazionale": {
           "punteggio": null,
           "livello": null,
           "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "evidenza": "CERCATA, ESITO CONTRADDITTORIO: Vannacci dichiara che 'si deve essere autonomisti in Italia e sovranisti in Europa', ma il programma del partito e' centrato sulla sovranita' nazionale e diversi commentatori giudicano le due posizioni inconciliabili, definendo la sua visione 'centralista'. Le fonti disponibili sono blog di opinione, non testate giornalistiche. Serve una fonte diretta prima di codificare. Riferimento: https://www.policymakermag.it/italia/vannacci-vice-di-salvini-lega-al-bivio-tra-sovranismo-e-federalismo/"
         }
       }
     },
@@ -1755,7 +2104,10 @@
       "nota_formulazione": "RISCRITTA SUL TEMA VIVO: la formulazione attuale sul proporzionale e' superata dalla riforma del 2026, su cui i partiti si sono effettivamente divisi. E' anche il tema su cui avevo segnalato che l'ampiezza dei punteggi andava verificata.",
       "direzione_accordo": "accordo = destra",
       "fonti": [
-        "legge_elettorale2026"
+        "legge_elettorale2026",
+        "prog_azione_iv_2022",
+        "magi_legge_elettorale",
+        "fn_stabilicum"
       ],
       "posizioni": {
         "Fratelli d'Italia": {
@@ -1795,34 +2147,34 @@
           "evidenza": "Voto contrario."
         },
         "+Europa": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 1,
+          "livello": "C",
+          "fonte": "magi_legge_elettorale",
+          "evidenza": "Contrario al premio di maggioranza: 'un premio abnorme che trasforma una minoranza nel Paese in una maggioranza parlamentare'. Chiede il ritorno al Mattarellum."
         },
         "Italia Viva": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 6,
+          "livello": "B",
+          "fonte": "prog_azione_iv_2022",
+          "evidenza": "Come sopra: programma congiunto. Stessa avvertenza sul voto contrario del 2024."
         },
         "Azione": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 6,
+          "livello": "B",
+          "fonte": "prog_azione_iv_2022",
+          "evidenza": "Il programma propone il modello del 'sindaco d'Italia' con la conseguente riforma del sistema elettorale. ATTENZIONE: nel 2024 Azione ha poi votato contro il premierato."
         },
         "Liberaldemocratico": {
           "punteggio": null,
           "livello": null,
           "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "evidenza": "CERCATA SENZA ESITO: ricerca dedicata su questa combinazione, nessuna posizione riportata dalla stampa ne' presente nei documenti di partito. Non ripetere la stessa ricerca."
         },
         "Futuro Nazionale": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "Da documentare nel prossimo giro: nessuna fonte diretta consultata per questa cella."
+          "punteggio": 2,
+          "livello": "C",
+          "fonte": "fn_stabilicum",
+          "evidenza": "Contrario allo Stabilicum, ma con una motivazione probabilmente tattica: la legge penalizza il partito sulle firme e il premio al 42% dipende dalla sua alleanza col centrodestra."
         }
       }
     }
