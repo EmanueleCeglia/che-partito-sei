@@ -13,11 +13,11 @@ create table if not exists public.quiz_responses (
   quiz_version      text        not null,
 
   -- Dati socio-demografici del form
-  eta               smallint    not null check (eta between 14 and 100),
+  eta_fascia        text        not null check (eta_fascia in ('14-17','18-24','25-34','35-44','45-54','55-64','65-74','75+')),
   sesso             text        not null check (sesso in ('maschio', 'femmina', 'non_binario', 'non_indicare')),
   regione           text        not null,
   provincia         text        not null,
-  comune            text        not null,
+  comune            text,       -- facoltativo dalla v2.6: null se non indicato
   istruzione        text        not null check (istruzione in ('elementari', 'media', 'superiori', 'triennale', 'magistrale', 'dottorato')),
   occupazione       text        not null check (occupazione in ('studente', 'disoccupato', 'tirocinante', 'pubblico', 'privato', 'indipendente', 'pensionato')),
   reddito           text        not null check (reddito in ('0-15000', '15001-28000', '28001-50000', '50001-75000', '75001+', 'non_indicare')),

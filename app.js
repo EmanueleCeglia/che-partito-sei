@@ -19,7 +19,7 @@ const PARTY_COLORS = {
 };
 
 // ── State ──
-const QUIZ_VERSION = 'v2.5'; // bump on every data/logic change: also busts caches
+const QUIZ_VERSION = 'v2.6'; // bump on every data/logic change: also busts caches
 
 // ── Supabase ──
 const SUPABASE_URL = 'https://cqeugyowkbaghccpgvna.supabase.co';
@@ -30,7 +30,7 @@ const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBh
 const PENDING_KEY = 'chePartito_pending';
 // Cambiare questa stringa ogni volta che il testo dell'informativa cambia: il
 // consenso vale per la versione che l'utente ha effettivamente letto.
-const INFORMATIVA_VERSIONE = '2026-08-25';
+const INFORMATIVA_VERSIONE = '2026-08-25b';
 
 let quizData = null;       // raw JSON data
 let questions = [];        // flat array of all questions in order
@@ -697,11 +697,11 @@ function resetDemographicForm() {
 function buildResponseRow(demographics, results, selfRanking) {
   return {
     quiz_version: QUIZ_VERSION,
-    eta: demographics.eta,
+    eta_fascia: demographics.eta_fascia,
     sesso: demographics.sesso,
     regione: demographics.regione,
     provincia: demographics.provincia,
-    comune: demographics.comune,
+    comune: demographics.comune || null,   // facoltativo
     istruzione: demographics.istruzione,
     occupazione: demographics.occupazione,
     reddito: demographics.reddito,
@@ -931,7 +931,7 @@ function handleFormSubmit(e) {
 
   // Collect data
   const demographics = {
-    eta: parseInt(dom.fieldEta.value, 10),
+    eta_fascia: dom.fieldEta.value,
     sesso: dom.fieldSesso.value,
     regione: dom.fieldRegione.value,
     provincia: dom.fieldProvincia.value,

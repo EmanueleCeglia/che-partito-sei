@@ -82,17 +82,20 @@ Stated openly, because they affect how results should be read:
 
 ## Data collected
 
-Age, sex, region / province / municipality of residence, education, employment status, income bracket,
-citizenship, the 25 answers, the self-ranking, and the computed result. No IP address, no user agent,
-no session identifier, no account.
+Age band, sex, region and province of residence, municipality **only if the user chooses to give it**,
+education, employment status, income bracket, citizenship, the 25 answers, the self-ranking, and the
+computed result. No date of birth, no IP address, no user agent, no session identifier, no account.
 
 Responses go to a Supabase table whose row-level security policy allows **insert only**: the anonymous
 key shipped in the client cannot read back a single response. Reading requires the dashboard.
 
-> **Note on anonymity.** The demographic form can produce roughly 1.4 billion distinct profiles for a
-> population of 59 million. Most combinations are therefore unique or near-unique, which means the data
-> is pseudonymous rather than anonymous — and it includes political opinions, a special category under
-> the GDPR. This is being addressed; see the open issues.
+> **Note on anonymity.** An earlier version asked for exact age and a mandatory municipality, which
+> could produce about 1.4 billion distinct demographic profiles for a population of 59 million — most
+> of them unique. User testing also showed the mandatory municipality caused people to abandon the
+> questionnaire. Both were changed: age is now banded and the municipality is optional, which brings
+> the figure down to roughly 1.7 million profiles when it is left out, or about thirty people per
+> profile. The data still reveals political opinions, a special category under the GDPR, so it is
+> collected under explicit consent and treated as personal data throughout.
 
 ## Running it locally
 
@@ -133,8 +136,8 @@ stored response. Bump it whenever questions or scores change.
   using the self-ranking as an external validation criterion.
 - Independent double coding of the party positions, to measure how reproducible the 1–7 scale is
   between coders.
-- GDPR: explicit consent for political opinions, a full privacy notice, and reducing the granularity
-  of the demographic data.
+- Independent legal review. Explicit consent, a full Article 13 notice and reduced demographic
+  granularity are in place, but none of it has been checked by a lawyer.
 
 ## Credits
 

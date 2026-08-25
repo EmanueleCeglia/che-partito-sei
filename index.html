@@ -10,7 +10,7 @@
   <meta name="theme-color" content="#070b1e">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <link rel="stylesheet" href="styles.css?v=2.5">
+  <link rel="stylesheet" href="styles.css?v=2.6">
 </head>
 
 <body>
@@ -204,10 +204,11 @@
         <p><strong>Titolare del trattamento.</strong> Emanuele Ceglia, Leonardo Ventimiglia — per qualsiasi richiesta:
           emanueleceglia0@gmail.com</p>
 
-        <p><strong>Quali dati raccogliamo.</strong> Età, sesso, regione, provincia e comune di
-          residenza, livello di istruzione, situazione occupazionale, fascia di reddito, cittadinanza,
-          le tue 25 risposte al quiz, la classifica dei partiti che compili tu e il risultato calcolato.
-          Non raccogliamo indirizzo IP, dati del browser, cookie di tracciamento né alcun account.</p>
+        <p><strong>Quali dati raccogliamo.</strong> Fascia d'età, sesso, regione e provincia di residenza, il comune solo se scegli di indicarlo,
+          livello di istruzione, situazione occupazionale, fascia di reddito, cittadinanza, le tue 25
+          risposte al quiz, la classifica dei partiti che compili tu e il risultato calcolato. Non
+          raccogliamo la data di nascita, l'indirizzo IP, dati del browser, cookie di tracciamento ne'
+          alcun account.</p>
 
         <p><strong>Perché.</strong> Per una ricerca statistica su come le caratteristiche
           socio-demografiche si legano alle opinioni politiche. I risultati verranno diffusi solo in
@@ -225,11 +226,12 @@
         <p><strong>Per quanto tempo.</strong> Fino alla conclusione della ricerca e comunque non oltre
           24 mesi dalla raccolta, dopodiché i dati vengono cancellati o resi definitivamente anonimi.</p>
 
-        <p><strong>Sull'anonimato, con franchezza.</strong> Non conserviamo nulla che ti identifichi
-          direttamente. La combinazione dei dati demografici che ti chiediamo può però risultare rara o
-          addirittura unica, soprattutto nei comuni piccoli. Per questo non li consideriamo dati anonimi
-          ma dati personali a tutti gli effetti, li proteggiamo come tali e non li pubblicheremo mai a
-          livello individuale.</p>
+        <p><strong>Sull'anonimato, con franchezza.</strong> Non conserviamo nulla che ti identifichi direttamente. Chiediamo la fascia d'età e non l'età
+          esatta, e lasciamo il comune facoltativo, proprio per non costruire profili troppo
+          circostanziati: senza il comune, ogni combinazione possibile di dati demografici corrisponde in
+          media a diverse decine di persone. Se scegli di indicare il comune e questo e' piccolo, il tuo
+          profilo diventa però più raro. Per questo trattiamo comunque queste informazioni come dati
+          personali, non le pubblicheremo mai a livello individuale ma solo aggregate.</p>
 
         <p><strong>I tuoi diritti.</strong> Puoi revocare il consenso in qualsiasi momento, e chiedere
           accesso, rettifica, cancellazione o limitazione dei dati, oppure opporti al trattamento. La
@@ -244,8 +246,18 @@
 
       <!-- Età -->
       <div class="demo-form__field">
-        <label for="field-eta" class="demo-form__label">Età <span class="required">*</span></label>
-        <input type="number" id="field-eta" class="demo-form__input" min="14" max="100" placeholder="Es. 25" required>
+        <label for="field-eta" class="demo-form__label">Fascia d'età <span class="required">*</span></label>
+        <select id="field-eta" class="demo-form__select" required>
+          <option value="" disabled selected>Seleziona...</option>
+          <option value="14-17">14-17 anni</option>
+          <option value="18-24">18-24 anni</option>
+          <option value="25-34">25-34 anni</option>
+          <option value="35-44">35-44 anni</option>
+          <option value="45-54">45-54 anni</option>
+          <option value="55-64">55-64 anni</option>
+          <option value="65-74">65-74 anni</option>
+          <option value="75+">75 anni o più</option>
+        </select>
       </div>
 
       <!-- Sesso -->
@@ -284,11 +296,17 @@
 
       <!-- Residenza: Comune -->
       <div class="demo-form__field">
-        <label for="field-comune" class="demo-form__label">Comune <span class="required">*</span></label>
+        <label for="field-comune" class="demo-form__label">
+          Comune <span class="demo-form__optional">facoltativo</span>
+        </label>
+        <p class="demo-form__hint">
+          Serve solo a confrontare aree diverse dello stesso territorio. Puoi lasciarlo vuoto:
+          il questionario si completa lo stesso.
+        </p>
         <input type="text" id="filter-comune" class="demo-form__filter" placeholder="🔍 Cerca comune..."
           autocomplete="off" aria-label="Cerca comune..." disabled>
         <ul id="suggest-comune" class="demo-form__suggest hidden" role="listbox"></ul>
-        <select id="field-comune" class="demo-form__select demo-form__select--hidden" required disabled>
+        <select id="field-comune" class="demo-form__select demo-form__select--hidden" disabled>
           <option value="" disabled selected>Prima seleziona la provincia</option>
         </select>
       </div>
@@ -462,7 +480,7 @@
     </div>
   </div>
 
-  <script src="app.js?v=2.5"></script>
+  <script src="app.js?v=2.6"></script>
 </body>
 
 </html>
