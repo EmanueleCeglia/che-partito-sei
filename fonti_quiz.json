@@ -14,8 +14,9 @@
       "A": "voto parlamentare registrato sul tema specifico",
       "B": "programma o manifesto ufficiale del partito",
       "C": "dichiarazione ufficiale datata della leadership da fonte verificabile",
-      "D": "ricostruzione da evidenza indiretta: da rafforzare",
-      "E": "dichiarazione riportata dalla stampa o ricostruzione giornalistica, senza atto ne' documento di partito: la piu' debole, da confermare"
+      "E": "dichiarazione riportata dalla stampa o ricostruzione giornalistica di una posizione espressa dal partito",
+      "D": "ricostruzione indiretta, senza una posizione espressa direttamente dal partito: da confermare prima di usarlo",
+      "F": "INFERENZA, nessuna fonte: punteggio dedotto dalla coerenza ideologica del partito e dalle sue posizioni su temi vicini. NON e' evidenza. Filtrabile ed escludibile in blocco"
     },
     "regola_voti_di_fiducia": "I voti posti con la questione di fiducia sono ESCLUSI dalla codifica: misurano la lealta' alla maggioranza, non la posizione sul merito."
   },
@@ -370,6 +371,81 @@
       "url": "https://partitoliberaldemocratico.com/manifesto/",
       "livello": "B"
     },
+    "leo_piueuropa_fisco": {
+      "descrizione": "Codifica di Leo. Proposta fiscale di +Europa dalla pagina ufficiale del partito.",
+      "url": "https://www.facebook.com/piueuropa/posts/la-proposta-fiscale-di-europa-tassema-davveroabbiamo-una-proposta-sostenibile-e-/218370805497260/",
+      "livello": "C"
+    },
+    "leo_avs_programma": {
+      "descrizione": "Codifica di Leo. Programma di Alleanza Verdi e Sinistra per le europee 2024.",
+      "url": "https://verdisinistra.it/programma-elezioni-europee-8-e-9-giugno-2024/",
+      "livello": "B"
+    },
+    "leo_piueuropa_2022": {
+      "descrizione": "Codifica di Leo. Programma di +Europa per le politiche 2022, versione 'in pillole'.",
+      "url": "https://assets.nationbuilder.com/piueuropa/pages/1728/attachments/original/1661777290/PROGRAMMA__EUROPA_2022_in_pillole.pdf?1661777290",
+      "livello": "B"
+    },
+    "leo_quota41": {
+      "descrizione": "Codifica di Leo. Fact-checking sul costo di Quota 41.",
+      "url": "https://pagellapolitica.it/fact-checking/costo-quota-41-pensioni",
+      "livello": "C"
+    },
+    "leo_marattin_pensioni": {
+      "descrizione": "Codifica di Leo. Intervista a Marattin: il governo 'ha tenuto la barra dritta sulle pensioni'.",
+      "url": "https://giornaleradio.fm/le-esclusive-di-giornale-radio/marattin-a-giornale-radio-meloni-e-il-suo-governo-hanno-tenuto-la-barra-dritta-sulle-pensioni-e-se-ne-vergognano/",
+      "livello": "C"
+    },
+    "leo_pld_cannabis": {
+      "descrizione": "Codifica di Leo. DA VERIFICARE: la fonte indicata e' 'ho visto un reel, posizione uguale a quella di Calenda', senza link ne' data. Non e' verificabile da terzi: o si recupera l'URL del video, oppure la cella va riportata a vuota.",
+      "url": "(nessun link fornito)",
+      "livello": "D"
+    },
+    "leo_magi_palestina": {
+      "descrizione": "Codifica di Leo. Magi sul riconoscimento dello Stato di Palestina: 'Meloni segua Macron'.",
+      "url": "https://www.piueuropa.eu/m_o_magi_su_riconoscimento_stato_palestina_meloni_segua_macron",
+      "livello": "C"
+    },
+    "leo_marattin_palestina": {
+      "descrizione": "Codifica di Leo. Marattin: 'la linea di Meloni e' buonsenso'. DA RIVEDERE: la linea di Meloni nel settembre 2025 era il riconoscimento a due condizioni, non il rifiuto; condividerla e' una posizione condizionata piu' che una contrarieta' netta, quindi il punteggio 1 potrebbe essere troppo severo.",
+      "url": "https://www.luigimarattin.it/2025/09/25/palestina-la-linea-di-meloni-e-buonsenso-la-versione-di-marattin/",
+      "livello": "C"
+    },
+    "leo_pld_ucraina": {
+      "descrizione": "Codifica di Leo. Appello sull'invio di armi all'Ucraina. ATTENZIONE AL LIVELLO: l'articolo e' dell'APRILE 2023, mentre il Partito Liberaldemocratico e' nato l'8 marzo 2025. Non puo' quindi essere un documento programmatico del partito (livello B): al massimo e' una posizione personale di Marattin precedente alla fondazione.",
+      "url": "https://www.linkiesta.it/2023/04/appello-ucraina-armi-liberazione/",
+      "livello": "B"
+    },
+    "leo_piueuropa_manifesto": {
+      "descrizione": "Codifica di Leo. Manifesto di +Europa.",
+      "url": "https://www.piueuropa.eu/manifesto",
+      "livello": "D"
+    },
+    "leo_clima_partiti": {
+      "descrizione": "Codifica di Leo. Ricostruzione delle posizioni dei partiti italiani sui cambiamenti climatici in vista delle europee.",
+      "url": "https://www.italiasolare.eu/is-news/cambiamenti-climatici-la-posizione-dei-partiti-italiani-in-vista-delle-elezioni-europee/",
+      "livello": "D"
+    },
+    "leo_azione_auto": {
+      "descrizione": "Codifica di Leo. Posizione di Azione sull'auto alle europee 2024. NOTA: Leo aveva lasciato in bianco il livello di evidenza; assegnato E in base al tipo di fonte, che e' una ricostruzione giornalistica di posizioni espresse dal partito.",
+      "url": "https://it.motor1.com/news/722182/elezioni-europee-2024-auto-azione/",
+      "livello": "E"
+    },
+    "leo_magi_ponte": {
+      "descrizione": "Codifica di Leo. Magi sul Ponte sullo Stretto: 'da Meloni minacce inaccettabili, vuole il governo sopra la legge'.",
+      "url": "https://www.piueuropa.eu/ponte_stretto_magi_da_meloni_minacce_inaccettabili_vuole_governo_sopra_la_legge",
+      "livello": "C"
+    },
+    "leo_pld_ponte": {
+      "descrizione": "Codifica di Leo. L'opposizione di principio del centrosinistra al Ponte come assist a Salvini.",
+      "url": "https://www.ilriformista.it/ponte-sullo-stretto-lopposizione-di-principio-del-centrosinistra-che-diventa-un-assist-per-salvini-477418/",
+      "livello": "C"
+    },
+    "leo_vannacci_video": {
+      "descrizione": "Codifica di Leo. Dichiarazione video di Vannacci.",
+      "url": "https://www.youtube.com/watch?v=qlxLY9EFwDo",
+      "livello": "E"
+    },
     "manifesto_pld": {
       "descrizione": "Manifesto e proposte del Partito Liberaldemocratico: 'ruolo strategico del nucleare'; spending review e 'avanzi primari piu' consistenti per la riduzione del debito'; Europa che deve 'cambiare o perire'. Non trattati salario minimo, pensioni, diritti civili, giustizia, riforme istituzionali.",
       "url": "https://partitoliberaldemocratico.com/proposte/",
@@ -392,7 +468,8 @@
         "manovra2026",
         "manifesto_pld",
         "programma_fn",
-        "prog_azione_iv_2022"
+        "prog_azione_iv_2022",
+        "leo_piueuropa_fisco"
       ],
       "posizioni": {
         "Fratelli d'Italia": {
@@ -444,10 +521,10 @@
           "evidenza": "RICOSTRUZIONE DA VERIFICARE: voto contrario alla manovra."
         },
         "+Europa": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "CERCATA SENZA ESITO: ricerca dedicata su questa combinazione, nessuna posizione riportata dalla stampa ne' presente nei documenti di partito. Non ripetere la stessa ricerca."
+          "punteggio": 2,
+          "livello": "C",
+          "fonte": "leo_piueuropa_fisco",
+          "evidenza": "Codificata da Leo."
         },
         "Italia Viva": {
           "punteggio": 2,
@@ -476,14 +553,16 @@
         "fdi_stellantis",
         "pd_libro_verde",
         "salvini_banche",
-        "conte_ilva"
+        "conte_ilva",
+        "leo_avs_programma",
+        "leo_piueuropa_2022"
       ],
       "posizioni": {
         "AVS": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "CERCATA SENZA ESITO: ricerca dedicata su questa combinazione, nessuna posizione riportata dalla stampa ne' presente nei documenti di partito. Non ripetere la stessa ricerca."
+          "punteggio": 7,
+          "livello": "B",
+          "fonte": "leo_avs_programma",
+          "evidenza": "Codificata da Leo."
         },
         "M5S": {
           "punteggio": 7,
@@ -498,10 +577,10 @@
           "evidenza": "'Lo Stato deve guidare e cofinanziare lo sviluppo': Agenzia per le partecipazioni pubbliche e Consiglio per la strategia industriale."
         },
         "+Europa": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "CERCATA SENZA ESITO: ricerca dedicata su questa combinazione, nessuna posizione riportata dalla stampa ne' presente nei documenti di partito. Non ripetere la stessa ricerca."
+          "punteggio": 3,
+          "livello": "B",
+          "fonte": "leo_piueuropa_2022",
+          "evidenza": "Codificata da Leo."
         },
         "Italia Viva": {
           "punteggio": 4,
@@ -635,14 +714,16 @@
     {
       "id": "pensioni",
       "tema": "Eta' pensionabile",
-      "testo_proposto": "Si dovrebbe poter andare in pensione prima di quanto consenta la legge attuale.",
-      "nota_formulazione": "Tolto il riferimento alla 'legge Fornero', che e' lessico connotato, e separata la questione dalle pensioni minime.",
+      "testo_proposto": "Si dovrebbe poter andare in pensione prima di quanto consenta la legge attuale, anche a costo di aumentare il debito pubblico.",
+      "nota_formulazione": "Tolto il riferimento alla 'legge Fornero', che e' lessico connotato, e separata la questione dalle pensioni minime. AGGIUNTO POI il costo esplicito: senza di esso l'anticipo pensionistico e' un pasto gratis su cui quasi tutti sono d'accordo, e l'item non discrimina. ATTENZIONE: reintroduce una clausola di costo che altrove abbiamo tolto; se la si tiene qui andrebbe valutato se applicare lo stesso criterio anche ad altre domande, per coerenza.",
       "direzione_accordo": "accordo = ambigua",
       "fonti": [
         "manovra2026",
         "fn_dichiarazioni",
         "iv_pensioni",
-        "piueuropa_programma"
+        "piueuropa_programma",
+        "leo_quota41",
+        "leo_marattin_pensioni"
       ],
       "posizioni": {
         "Fratelli d'Italia": {
@@ -694,16 +775,16 @@
           "evidenza": "Favorevole al rinnovo di Opzione Donna, quindi alla flessibilita' in uscita. Evidenza indiretta, da rafforzare."
         },
         "Azione": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "CERCATA SENZA ESITO: ricerca dedicata su questa combinazione, nessuna posizione riportata dalla stampa ne' presente nei documenti di partito. Non ripetere la stessa ricerca."
+          "punteggio": 2,
+          "livello": "C",
+          "fonte": "leo_quota41",
+          "evidenza": "Codificata da Leo."
         },
         "Liberaldemocratico": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "CERCATA SENZA ESITO: ricerca dedicata su questa combinazione, nessuna posizione riportata dalla stampa ne' presente nei documenti di partito. Non ripetere la stessa ricerca."
+          "punteggio": 2,
+          "livello": "C",
+          "fonte": "leo_marattin_pensioni",
+          "evidenza": "Codificata da Leo."
         },
         "Futuro Nazionale": {
           "punteggio": 6,
@@ -723,7 +804,8 @@
         "manovra2026",
         "manifesto_pld",
         "prog_azione_iv_2022",
-        "fn_dichiarazioni"
+        "fn_dichiarazioni",
+        "piueuropa_programma"
       ],
       "posizioni": {
         "Fratelli d'Italia": {
@@ -769,10 +851,10 @@
           "evidenza": "RICOSTRUZIONE DA VERIFICARE: voto contrario."
         },
         "+Europa": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "CERCATA SENZA ESITO: ricerca dedicata su questa combinazione, nessuna posizione riportata dalla stampa ne' presente nei documenti di partito. Non ripetere la stessa ricerca."
+          "punteggio": 6,
+          "livello": "B",
+          "fonte": "piueuropa_programma",
+          "evidenza": "NON E' INFERENZA, era una svista: il programma indica istruzione E SANITA' come i due pilastri su cui indirizzare 'ogni euro aggiuntivo di spesa pubblica'. Dalla stessa frase avevo codificato la scuola dimenticando la sanita'."
         },
         "Italia Viva": {
           "punteggio": 5,
@@ -955,10 +1037,10 @@
           "evidenza": "Il ministro dell'Istruzione e' espressione della Lega: stessa posizione."
         },
         "Futuro Nazionale": {
-          "punteggio": null,
-          "livello": null,
+          "punteggio": 3,
+          "livello": "F",
           "fonte": null,
-          "evidenza": "CERCATA, ESITO PARZIALE: il partito ha posizioni documentate sulla scuola (scuola 'dura e selettiva', classi differenziate per profitto, lavoro dai 14 anni, piu' istituti professionali) ma NESSUNA sul livello di finanziamento, che e' l'oggetto della domanda. Codificarla significherebbe attribuire una posizione mai espressa. Fonte: https://www.fanpage.it/politica/la-scuola-dura-e-selettiva-di-vannacci-classi-differenziate-e-il-motto-litalia-gli-italiani-in-ogni-istituto/"
+          "evidenza": "INFERENZA: il programma e' centrato su selettivita', classi differenziate e lavoro dai 14 anni, e in economia su sgravi fiscali; nessun accenno a maggiori risorse. Non ostilita' alla scuola, ma un'altra priorita'. Fiducia medio-bassa."
         }
       }
     },
@@ -1026,10 +1108,10 @@
           "evidenza": "Calenda favorevole a matrimonio egualitario, adozione e registrazione dei figli; contrario alla GPA."
         },
         "Liberaldemocratico": {
-          "punteggio": null,
-          "livello": null,
+          "punteggio": 6,
+          "livello": "F",
           "fonte": null,
-          "evidenza": "CERCATA SENZA ESITO: ricerca dedicata sui diritti civili del partito. Lo statuto cita i 'diritti civili' fra i valori fondativi, ma non esiste alcuna presa di posizione pubblica sul tema specifico. Non ripetere la stessa ricerca."
+          "evidenza": "INFERENZA: partito liberale aderente ad ALDE, con i 'diritti civili' fra i valori fondativi. Azione, Italia Viva e +Europa stanno fra 6 e 7. Fiducia medio-alta."
         },
         "Forza Italia": {
           "punteggio": 3,
@@ -1111,10 +1193,10 @@
           "evidenza": "Allineata all'impostazione restrittiva della maggioranza."
         },
         "Liberaldemocratico": {
-          "punteggio": null,
-          "livello": null,
+          "punteggio": 7,
+          "livello": "F",
           "fonte": null,
-          "evidenza": "CERCATA SENZA ESITO: ricerca dedicata sui diritti civili del partito. Lo statuto cita i 'diritti civili' fra i valori fondativi, ma non esiste alcuna presa di posizione pubblica sul tema specifico. Non ripetere la stessa ricerca."
+          "evidenza": "INFERENZA: stessa matrice liberale; tutti i partiti dell'area, compreso +Europa, stanno a 7. Fiducia medio-alta."
         },
         "Futuro Nazionale": {
           "punteggio": 1,
@@ -1134,7 +1216,8 @@
         "diritti_civili",
         "piueuropa_diritti",
         "cannabis_partiti",
-        "iv_cannabis"
+        "iv_cannabis",
+        "leo_pld_cannabis"
       ],
       "posizioni": {
         "M5S": {
@@ -1174,10 +1257,10 @@
           "evidenza": "POSIZIONE INTERMEDIA DOCUMENTATA: emendamento a favore dei cannabis shop, ma astensione sulla depenalizzazione della coltivazione domestica e sul referendum."
         },
         "Liberaldemocratico": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "CERCATA SENZA ESITO: ricerca dedicata sui diritti civili del partito. Lo statuto cita i 'diritti civili' fra i valori fondativi, ma non esiste alcuna presa di posizione pubblica sul tema specifico. Non ripetere la stessa ricerca."
+          "punteggio": 5,
+          "livello": "D",
+          "fonte": "leo_pld_cannabis",
+          "evidenza": "Codificata da Leo. FONTE NON VERIFICABILE: 'ho visto un reel', senza link ne' data. Livello abbassato a D in attesa dell'URL."
         },
         "Forza Italia": {
           "punteggio": 1,
@@ -1198,10 +1281,10 @@
           "evidenza": "Come sopra."
         },
         "Futuro Nazionale": {
-          "punteggio": null,
-          "livello": null,
+          "punteggio": 1,
+          "livello": "F",
           "fonte": null,
-          "evidenza": "CERCATA, ESITO PARZIALE: documentato l'impianto 'tolleranza zero' con pattuglie contro i trafficanti di droga, ma nessuna dichiarazione esplicita sulla legalizzazione, che e' l'oggetto della domanda. La direzione e' prevedibile ma non documentata. Riferimento: https://www.policymakermag.it/italia/la-tolleranza-zero-di-vannacci-cosa-ce-nel-primo-pacchetto-di-norme-di-futuro-nazionale/"
+          "evidenza": "INFERENZA: statuto pro-vita, pacchetto 'tolleranza zero' con pattuglie contro i trafficanti, impianto tradizionalista. Nessuna direzione alternativa plausibile. Fiducia alta."
         }
       }
     },
@@ -1213,7 +1296,9 @@
       "direzione_accordo": "accordo = sinistra",
       "fonti": [
         "palestina_feb2025",
-        "vannacci_palestina"
+        "vannacci_palestina",
+        "leo_magi_palestina",
+        "leo_marattin_palestina"
       ],
       "posizioni": {
         "M5S": {
@@ -1265,16 +1350,16 @@
           "evidenza": "Voto contrario con la maggioranza."
         },
         "+Europa": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "CERCATA SENZA ESITO: ricerca dedicata su questa combinazione, nessuna posizione riportata dalla stampa ne' presente nei documenti di partito. Non ripetere la stessa ricerca."
+          "punteggio": 6,
+          "livello": "C",
+          "fonte": "leo_magi_palestina",
+          "evidenza": "Codificata da Leo."
         },
         "Liberaldemocratico": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "CERCATA SENZA ESITO: ricerca dedicata su questa combinazione, nessuna posizione riportata dalla stampa ne' presente nei documenti di partito. Non ripetere la stessa ricerca."
+          "punteggio": 1,
+          "livello": "C",
+          "fonte": "leo_marattin_palestina",
+          "evidenza": "Codificata da Leo. PUNTEGGIO DA RIVEDERE: la fonte mostra adesione alla linea del riconoscimento condizionato, che non equivale a una contrarieta' netta."
         },
         "Futuro Nazionale": {
           "punteggio": 1,
@@ -1293,7 +1378,8 @@
       "fonti": [
         "ucraina_gen2025",
         "ucraina_fn",
-        "magi_ucraina"
+        "magi_ucraina",
+        "leo_pld_ucraina"
       ],
       "posizioni": {
         "Italia Viva": {
@@ -1357,10 +1443,10 @@
           "evidenza": "Magi, 30 marzo 2026: 'Per noi e' imprescindibile il sostegno militare a Kyiv'."
         },
         "Liberaldemocratico": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "CERCATA SENZA ESITO: ricerca dedicata su questa combinazione, nessuna posizione riportata dalla stampa ne' presente nei documenti di partito. Non ripetere la stessa ricerca."
+          "punteggio": 6,
+          "livello": "B",
+          "fonte": "leo_pld_ucraina",
+          "evidenza": "Codificata da Leo. LIVELLO DA CORREGGERE: la fonte e' dell'aprile 2023 e precede la fondazione del partito, quindi non e' un documento programmatico."
         }
       }
     },
@@ -1464,7 +1550,8 @@
         "mercosur_fi",
         "mercosur_voto",
         "mercosur_sinistra",
-        "fn_economia"
+        "fn_economia",
+        "leo_piueuropa_manifesto"
       ],
       "posizioni": {
         "AVS": {
@@ -1486,10 +1573,10 @@
           "evidenza": "DIVERGENZA: risulta favorevole all'accordo, ma Schlein partecipa alla manifestazione contro. Da chiarire con una fonte dedicata."
         },
         "+Europa": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "CERCATA SENZA ESITO: ricerca dedicata su questa combinazione, nessuna posizione riportata dalla stampa ne' presente nei documenti di partito. Non ripetere la stessa ricerca."
+          "punteggio": 5,
+          "livello": "D",
+          "fonte": "leo_piueuropa_manifesto",
+          "evidenza": "Codificata da Leo."
         },
         "Italia Viva": {
           "punteggio": 7,
@@ -1538,12 +1625,14 @@
     {
       "id": "green_deal",
       "tema": "Obiettivi climatici europei",
-      "testo_proposto": "L'Unione europea dovrebbe mantenere il divieto di vendita di nuove auto a benzina e diesel dal 2035.",
-      "nota_formulazione": "Sostituito il termine 'Green Deal', che e' un'etichetta politicamente connotata, con la misura concreta su cui i partiti hanno votato.",
+      "testo_proposto": "Dal 2035 in Europa dovrebbero poter essere vendute solo auto nuove a zero emissioni.",
+      "nota_formulazione": "RISCRITTA DUE VOLTE. Prima era ancorata all'etichetta 'Green Deal', politicamente connotata. Poi al divieto del 2035, che pero' a dicembre 2025 la Commissione ha rivisto: non piu' azzeramento ma riduzione del 90%, con apertura a ibridi plug-in, biocarburanti avanzati ed e-fuels. Chiedere se cancellare un divieto gia' in parte cancellato non aveva piu' senso: ora la domanda verte sull'obiettivo di fondo, che resta in discussione.",
       "direzione_accordo": "accordo = sinistra",
       "fonti": [
         "auto2035",
-        "fn_energia"
+        "fn_energia",
+        "leo_clima_partiti",
+        "leo_azione_auto"
       ],
       "posizioni": {
         "PD": {
@@ -1589,22 +1678,22 @@
           "evidenza": "La delegazione vota contro."
         },
         "+Europa": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "CERCATA SENZA ESITO: ricerca dedicata su questa combinazione, nessuna posizione riportata dalla stampa ne' presente nei documenti di partito. Non ripetere la stessa ricerca."
+          "punteggio": 6,
+          "livello": "D",
+          "fonte": "leo_clima_partiti",
+          "evidenza": "Codificata da Leo."
         },
         "Azione": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "CERCATA SENZA ESITO: ricerca dedicata su questa combinazione, nessuna posizione riportata dalla stampa ne' presente nei documenti di partito. Non ripetere la stessa ricerca."
+          "punteggio": 2,
+          "livello": "E",
+          "fonte": "leo_azione_auto",
+          "evidenza": "Codificata da Leo; livello assegnato in base al tipo di fonte perche' era rimasto in bianco."
         },
         "Liberaldemocratico": {
-          "punteggio": null,
-          "livello": null,
+          "punteggio": 3,
+          "livello": "F",
           "fonte": null,
-          "evidenza": "CERCATA SENZA ESITO: ricerca dedicata su questa combinazione, nessuna posizione riportata dalla stampa ne' presente nei documenti di partito. Non ripetere la stessa ricerca."
+          "evidenza": "INFERENZA: 'si' al nucleare subito, senza se e senza ma' e approccio dichiaratamente 'pragmatico e non ideologico'; un partito di mercato tende a osteggiare un mandato tecnologico. Azione, profilo simile, sta a 2. Fiducia media."
         },
         "Futuro Nazionale": {
           "punteggio": 1,
@@ -1623,7 +1712,9 @@
       "fonti": [
         "ponte",
         "prog_azione_iv_2022",
-        "fn_ponte"
+        "fn_ponte",
+        "leo_magi_ponte",
+        "leo_pld_ponte"
       ],
       "posizioni": {
         "Fratelli d'Italia": {
@@ -1663,10 +1754,10 @@
           "evidenza": "Contrario, insieme al resto dell'opposizione."
         },
         "+Europa": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "CERCATA SENZA ESITO: ricerca dedicata su questa combinazione, nessuna posizione riportata dalla stampa ne' presente nei documenti di partito. Non ripetere la stessa ricerca."
+          "punteggio": 2,
+          "livello": "C",
+          "fonte": "leo_magi_ponte",
+          "evidenza": "Codificata da Leo."
         },
         "Italia Viva": {
           "punteggio": 6,
@@ -1681,10 +1772,10 @@
           "evidenza": "Chiede il completamento di Torino-Lione, Terzo Valico, Brescia-Padova, Salerno-Reggio Calabria e Napoli-Bari."
         },
         "Liberaldemocratico": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "CERCATA, ESITO PARZIALE: il partito sostiene la produzione di 'infrastrutture fisiche e digitali' e la connessione dei territori, incluse le aree interne spopolate, ma non risulta alcuna posizione sul Ponte sullo Stretto, che e' l'oggetto della domanda. Fonte: https://partitoliberaldemocratico.com/manifesto/"
+          "punteggio": 6,
+          "livello": "C",
+          "fonte": "leo_pld_ponte",
+          "evidenza": "Codificata da Leo."
         },
         "Futuro Nazionale": {
           "punteggio": 7,
@@ -1827,10 +1918,10 @@
           "evidenza": "Voto contrario, con ostruzionismo in aula."
         },
         "+Europa": {
-          "punteggio": null,
-          "livello": null,
+          "punteggio": 1,
+          "livello": "F",
           "fonte": null,
-          "evidenza": "CERCATA SENZA ESITO: ricerca dedicata su questa combinazione, nessuna posizione riportata dalla stampa ne' presente nei documenti di partito. Non ripetere la stessa ricerca."
+          "evidenza": "INFERENZA: tradizione radicale e garantista, opposizione al decreto sicurezza con tutta l'opposizione, impegno di Magi su carceri e diritti. Fiducia alta."
         },
         "Italia Viva": {
           "punteggio": 2,
@@ -1945,7 +2036,8 @@
       "nota_formulazione": "Tolto 'per garantire stabilita' e decisione al governo', che era l'argomento a favore incorporato nella domanda.",
       "direzione_accordo": "accordo = destra",
       "fonti": [
-        "premierato"
+        "premierato",
+        "leo_vannacci_video"
       ],
       "posizioni": {
         "Fratelli d'Italia": {
@@ -2003,16 +2095,16 @@
           "evidenza": "Voto contrario con le altre opposizioni."
         },
         "Liberaldemocratico": {
-          "punteggio": null,
-          "livello": null,
+          "punteggio": 5,
+          "livello": "F",
           "fonte": null,
-          "evidenza": "CERCATA SENZA ESITO: ricerca dedicata su questa combinazione, nessuna posizione riportata dalla stampa ne' presente nei documenti di partito. Non ripetere la stessa ricerca."
+          "evidenza": "INFERENZA DEBOLE: riformista sulle istituzioni e Marattin viene dall'Italia Viva del 'sindaco d'Italia', ma IV e Azione hanno poi votato contro quel testo. Fiducia bassa: il partito tira in due direzioni."
         },
         "Futuro Nazionale": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "CERCATA SENZA ESITO: ricerca dedicata su questa combinazione, nessuna posizione riportata dalla stampa ne' presente nei documenti di partito. Non ripetere la stessa ricerca."
+          "punteggio": 7,
+          "livello": "E",
+          "fonte": "leo_vannacci_video",
+          "evidenza": "Codificata da Leo."
         }
       }
     },
@@ -2026,7 +2118,8 @@
         "autonomia",
         "magi_autonomia",
         "autonomia_senato",
-        "pld_programma"
+        "pld_programma",
+        "leo_vannacci_video"
       ],
       "posizioni": {
         "Lega": {
@@ -2090,10 +2183,10 @@
           "evidenza": "Favorevole a un federalismo in cui gli enti locali abbiano 'non molte materie ma chiare, con risorse' e autonomia finanziaria effettiva."
         },
         "Futuro Nazionale": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": null,
-          "evidenza": "CERCATA, ESITO CONTRADDITTORIO: Vannacci dichiara che 'si deve essere autonomisti in Italia e sovranisti in Europa', ma il programma del partito e' centrato sulla sovranita' nazionale e diversi commentatori giudicano le due posizioni inconciliabili, definendo la sua visione 'centralista'. Le fonti disponibili sono blog di opinione, non testate giornalistiche. Serve una fonte diretta prima di codificare. Riferimento: https://www.policymakermag.it/italia/vannacci-vice-di-salvini-lega-al-bivio-tra-sovranismo-e-federalismo/"
+          "punteggio": 5,
+          "livello": "D",
+          "fonte": "leo_vannacci_video",
+          "evidenza": "Codificata da Leo, che ha sciolto il caso lasciato aperto come contraddittorio."
         }
       }
     },
@@ -2165,10 +2258,10 @@
           "evidenza": "Il programma propone il modello del 'sindaco d'Italia' con la conseguente riforma del sistema elettorale. ATTENZIONE: nel 2024 Azione ha poi votato contro il premierato."
         },
         "Liberaldemocratico": {
-          "punteggio": null,
-          "livello": null,
+          "punteggio": 3,
+          "livello": "F",
           "fonte": null,
-          "evidenza": "CERCATA SENZA ESITO: ricerca dedicata su questa combinazione, nessuna posizione riportata dalla stampa ne' presente nei documenti di partito. Non ripetere la stessa ricerca."
+          "evidenza": "INFERENZA DEBOLE: da riformista della governabilita' il premio di maggioranza gli converrebbe, da partito piccolo lo penalizza, e la legge lo esclude sulle firme. Fiducia bassa."
         },
         "Futuro Nazionale": {
           "punteggio": 2,

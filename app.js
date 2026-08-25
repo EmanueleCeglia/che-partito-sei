@@ -19,7 +19,7 @@ const PARTY_COLORS = {
 };
 
 // ── State ──
-const QUIZ_VERSION = 'v2.3'; // bump on every data/logic change: also busts caches
+const QUIZ_VERSION = 'v2.4'; // bump on every data/logic change: also busts caches
 
 // ── Supabase ──
 const SUPABASE_URL = 'https://cqeugyowkbaghccpgvna.supabase.co';
@@ -44,6 +44,11 @@ let rankUnknown = [];    // declared unknown
 let rankPresented = [];  // the shuffled order actually shown, kept for the analysis
 let rankStartedAt = 0;
 let noticeTimer = null;
+
+// Quante volte si puo' dichiarare di non avere un'opinione. E' anche la soglia
+// minima implicita: restano sempre almeno 20 risposte sostanziali su 25.
+const NO_OPINION_BUDGET = 5;
+let noOpinion = [];   // true dove l'utente ha dichiarato di non avere un'opinione
 
 // ── DOM References ──
 const $ = (sel) => document.querySelector(sel);
@@ -74,6 +79,8 @@ const dom = {
   quizStatement: $('#quiz-statement'),
   quizStatementText: $('#quiz-statement-text'),
   quizNotice: $('#quiz-notice'),
+  btnNoOpinion: $('#btn-no-opinion'),
+  noOpinionLeft: $('#no-opinion-left'),
   ratingButtons: $('#rating-buttons'),
   
   // Banner
@@ -91,6 +98,9 @@ const dom = {
   filterRegione: $('#filter-regione'),
   filterProvincia: $('#filter-provincia'),
   filterComune: $('#filter-comune'),
+  suggestRegione: $('#suggest-regione'),
+  suggestProvincia: $('#suggest-provincia'),
+  suggestComune: $('#suggest-comune'),
   fieldIstruzione: $('#field-istruzione'),
   fieldOccupazione: $('#field-occupazione'),
   fieldReddito: $('#field-reddito'),
@@ -135,6 +145,7 @@ function showScreen(screenId) {
 function saveProgress() {
   const data = {
     answers,
+    noOpinion,
     currentIndex,
     timestamp: Date.now(),
   };
@@ -226,12 +237,16 @@ function startQuiz(resumeFrom = null) {
 
   if (resumeFrom) {
     answers = resumeFrom.answers;
+    noOpinion = resumeFrom.noOpinion || [];
     // Pad/trim answers if data changed
     while (answers.length < questions.length) answers.push(null);
     answers = answers.slice(0, questions.length);
+    while (noOpinion.length < questions.length) noOpinion.push(false);
+    noOpinion = noOpinion.slice(0, questions.length);
     currentIndex = Math.min(resumeFrom.currentIndex, questions.length - 1);
   } else {
     answers = new Array(questions.length).fill(null);
+    noOpinion = new Array(questions.length).fill(false);
     currentIndex = 0;
     clearProgress();
   }
@@ -239,10 +254,8 @@ function startQuiz(resumeFrom = null) {
   dom.quizTotalNum.textContent = questions.length;
   showScreen('screen-quiz');
 
-  // Show banner the first time the user ever sees the quiz (resume included)
-  if (!localStorage.getItem('chePartito_banner_seen')) {
-    dom.infoBanner.classList.add('active');
-  }
+  // Il banner esce a ogni avvio: e' una premessa sul metodo, non una notifica
+  dom.infoBanner.classList.add('active');
 
   // Show category transition for first category
   if (!resumeFrom) {
@@ -278,6 +291,32 @@ function hideCategoryTransition() {
   dom.catTransition.classList.remove('active');
 }
 
+/** Quante dichiarazioni di "non ho un'opinione" restano */
+function noOpinionLeft() {
+  return NO_OPINION_BUDGET - noOpinion.filter(Boolean).length;
+}
+
+/** Una domanda e' sistemata se ha una risposta o se e' stata dichiarata senza opinione */
+function isSettled(i) {
+  return answers[i] !== null || noOpinion[i];
+}
+
+/** Aggiorna etichetta e stato del pulsante per la domanda corrente */
+function renderNoOpinionButton() {
+  const left = noOpinionLeft();
+  const attiva = noOpinion[currentIndex];
+  dom.btnNoOpinion.classList.toggle('used', attiva);
+  // Se e' gia' attiva su questa domanda deve restare premibile per annullarla
+  dom.btnNoOpinion.disabled = !attiva && left <= 0;
+  if (attiva) {
+    dom.noOpinionLeft.textContent = 'tocca per annullare';
+  } else if (left > 0) {
+    dom.noOpinionLeft.textContent = left === 1 ? 'ne resta 1' : `ne restano ${left}`;
+  } else {
+    dom.noOpinionLeft.textContent = 'esaurite';
+  }
+}
+
 /** Flash a short message over the quiz */
 function showQuizNotice(message) {
   dom.quizNotice.textContent = message;
@@ -291,7 +330,7 @@ function showQuizNotice(message) {
  * doing nothing at all, so send the user back to the gap instead.
  */
 function finishQuiz() {
-  const missing = answers.findIndex(a => a === null);
+  const missing = questions.findIndex((_, i) => !isSettled(i));
   if (missing !== -1) {
     showQuizNotice(`Manca la risposta alla domanda ${missing + 1} di ${questions.length}`);
     goToQuestion(missing, missing < currentIndex ? 'backward' : 'forward');
@@ -315,8 +354,8 @@ function renderQuestion() {
 
   // Update counter & progress
   dom.quizCurrentNum.textContent = currentIndex + 1;
-  const answered = answers.filter(a => a !== null).length;
-  const progress = (answered / questions.length) * 100;
+  const sistemate = questions.filter((_, i) => isSettled(i)).length;
+  const progress = (sistemate / questions.length) * 100;
   dom.progressFill.style.width = `${progress}%`;
 
   // Update statement text
@@ -327,6 +366,8 @@ function renderQuestion() {
   dom.ratingButtons.querySelectorAll('.rating-btn').forEach(btn => {
     btn.classList.toggle('selected', parseInt(btn.dataset.value) === selectedValue);
   });
+
+  renderNoOpinionButton();
 
   // Update navigation
   dom.btnPrev.disabled = currentIndex === 0;
@@ -389,7 +430,10 @@ function selectRating(value) {
   // Mid-slide the index is about to change: the click would land on the wrong one
   if (isTransitioning) return;
 
+  // Rispondere sul serio annulla la dichiarazione e restituisce il gettone
+  noOpinion[currentIndex] = false;
   answers[currentIndex] = value;
+  renderNoOpinionButton();
 
   // Visual feedback
   dom.ratingButtons.querySelectorAll('.rating-btn').forEach(btn => {
@@ -503,9 +547,103 @@ function clearSelectFilter(input, select) {
   input.value = '';
   input.classList.remove('no-results');
   [...select.options].forEach(opt => { opt.hidden = false; });
+  if (typeof closeAllSuggestions === 'function') closeAllSuggestions();
 }
 
-/** Let a search box narrow down the options of the select below it */
+/** Chiude tutte le liste di suggerimenti aperte */
+function closeAllSuggestions() {
+  [dom.suggestRegione, dom.suggestProvincia, dom.suggestComune]
+    .forEach(l => l.classList.add('hidden'));
+}
+
+/**
+ * Trasforma casella di testo e select in un campo con suggerimenti: mentre si
+ * scrive compare sotto l'elenco delle voci compatibili, e si sceglie da li'.
+ * Il select resta nel DOM, nascosto, perche' e' lui a portare il valore nel
+ * form e a farsi validare.
+ */
+function attachCombobox(input, select, list) {
+  let evidenziato = -1;
+
+  const voci = () => [...select.options].filter(o => o.value);
+
+  function mostra(query) {
+    const q = normalizeForSearch(query.trim());
+    const trovate = voci().filter(o => !q || normalizeForSearch(o.textContent).includes(q));
+    list.innerHTML = '';
+    evidenziato = -1;
+
+    if (!trovate.length) {
+      const vuoto = document.createElement('li');
+      vuoto.className = 'demo-form__suggest-empty';
+      vuoto.textContent = 'Nessun risultato';
+      list.appendChild(vuoto);
+    } else {
+      // Oltre un certo numero la lista diventa illeggibile: si affina scrivendo
+      trovate.slice(0, 60).forEach(o => {
+        const li = document.createElement('li');
+        li.className = 'demo-form__suggest-item';
+        li.setAttribute('role', 'option');
+        li.dataset.value = o.value;
+        li.textContent = o.textContent;
+        list.appendChild(li);
+      });
+      if (trovate.length > 60) {
+        const altro = document.createElement('li');
+        altro.className = 'demo-form__suggest-empty';
+        altro.textContent = `...e altri ${trovate.length - 60}: continua a scrivere`;
+        list.appendChild(altro);
+      }
+    }
+    list.classList.remove('hidden');
+  }
+
+  function scegli(valore, etichetta) {
+    input.value = etichetta;
+    select.value = valore;
+    select.dispatchEvent(new Event('change'));
+    select.classList.remove('invalid');
+    list.classList.add('hidden');
+  }
+
+  function evidenzia(delta) {
+    const items = [...list.querySelectorAll('.demo-form__suggest-item')];
+    if (!items.length) return;
+    items.forEach(i => i.classList.remove('active'));
+    evidenziato = (evidenziato + delta + items.length) % items.length;
+    const el = items[evidenziato];
+    el.classList.add('active');
+    el.scrollIntoView({ block: 'nearest' });
+  }
+
+  input.addEventListener('input', () => {
+    // Scrivere annulla la scelta precedente: il campo torna incompleto
+    if (select.value) { select.value = ''; select.dispatchEvent(new Event('change')); }
+    mostra(input.value);
+  });
+  input.addEventListener('focus', () => { if (!select.disabled) mostra(input.value); });
+
+  input.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowDown') { e.preventDefault(); evidenzia(1); return; }
+    if (e.key === 'ArrowUp') { e.preventDefault(); evidenzia(-1); return; }
+    if (e.key === 'Escape') { list.classList.add('hidden'); return; }
+    if (e.key === 'Enter') {
+      e.preventDefault();   // dentro un form l'invio farebbe submit
+      const el = list.querySelector('.demo-form__suggest-item.active')
+             || list.querySelector('.demo-form__suggest-item');
+      if (el) scegli(el.dataset.value, el.textContent);
+    }
+  });
+
+  list.addEventListener('mousedown', (e) => {
+    const el = e.target.closest('.demo-form__suggest-item');
+    if (el) { e.preventDefault(); scegli(el.dataset.value, el.textContent); }
+  });
+
+  input.addEventListener('blur', () => setTimeout(() => list.classList.add('hidden'), 120));
+}
+
+/** Non piu' usata: sostituita da attachCombobox */
 function attachSelectFilter(input, select) {
   // Enter inside a form submits it; here it should just do nothing
   input.addEventListener('keydown', (e) => {
@@ -976,7 +1114,7 @@ function initEventHandlers() {
 
   // Next button
   dom.btnNext.addEventListener('click', () => {
-    if (answers[currentIndex] === null) {
+    if (!isSettled(currentIndex)) {
       // Shake the rating buttons to prompt selection
       dom.ratingButtons.style.animation = 'none';
       dom.ratingButtons.offsetHeight; // force reflow
@@ -991,16 +1129,38 @@ function initEventHandlers() {
     }
   });
 
+  // "Non ho un'opinione": consuma un gettone, o lo restituisce se gia' attivo
+  dom.btnNoOpinion.addEventListener('click', () => {
+    if (isTransitioning) return;
+    if (noOpinion[currentIndex]) {
+      noOpinion[currentIndex] = false;
+      renderNoOpinionButton();
+      return;
+    }
+    if (noOpinionLeft() <= 0) {
+      showQuizNotice('Hai esaurito le dichiarazioni disponibili: su questa domanda scegli un valore.');
+      return;
+    }
+    noOpinion[currentIndex] = true;
+    answers[currentIndex] = null;
+    saveProgress();
+    renderQuestion();
+    clearTimeout(autoAdvanceTimer);
+    autoAdvanceTimer = setTimeout(() => {
+      if (currentIndex < questions.length - 1) goToQuestion(currentIndex + 1, 'forward');
+      else finishQuiz();
+    }, 350);
+  });
+
   // Banner dismiss
   dom.btnBannerDismiss.addEventListener('click', () => {
     dom.infoBanner.classList.remove('active');
-    localStorage.setItem('chePartito_banner_seen', 'true');
   });
 
-  // Search boxes over the residence selects
-  attachSelectFilter(dom.filterRegione, dom.fieldRegione);
-  attachSelectFilter(dom.filterProvincia, dom.fieldProvincia);
-  attachSelectFilter(dom.filterComune, dom.fieldComune);
+  // Campi residenza con suggerimenti mentre si scrive
+  attachCombobox(dom.filterRegione, dom.fieldRegione, dom.suggestRegione);
+  attachCombobox(dom.filterProvincia, dom.fieldProvincia, dom.suggestProvincia);
+  attachCombobox(dom.filterComune, dom.fieldComune, dom.suggestComune);
 
   // Form cascading selects
   dom.fieldRegione.addEventListener('change', () => {
@@ -1137,7 +1297,7 @@ function initEventHandlers() {
     } else if (e.key === 'ArrowLeft') {
       if (currentIndex > 0) goToQuestion(currentIndex - 1, 'backward');
     } else if (e.key === 'ArrowRight') {
-      if (answers[currentIndex] !== null && currentIndex < questions.length - 1) {
+      if (isSettled(currentIndex) && currentIndex < questions.length - 1) {
         goToQuestion(currentIndex + 1, 'forward');
       }
     }

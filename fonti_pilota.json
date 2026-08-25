@@ -19,7 +19,8 @@
       "B": "programma o manifesto ufficiale del partito (documento pubblico)",
       "C": "dichiarazione ufficiale e datata della leadership, riportata da fonte giornalistica verificabile",
       "D": "expert survey o ricostruzione giornalistica di posizione, senza atto o documento diretto",
-      "E": "dichiarazione riportata dalla stampa o ricostruzione giornalistica, senza atto ne' documento di partito: la piu' debole, da confermare"
+      "E": "dichiarazione riportata dalla stampa o ricostruzione giornalistica, senza atto ne' documento di partito: la piu' debole, da confermare",
+      "F": "INFERENZA, nessuna fonte: punteggio dedotto dalla coerenza ideologica del partito. NON e' evidenza, e' filtrabile ed escludibile in blocco."
     }
   },
   "domande": [
@@ -68,10 +69,10 @@
           "evidenza": "Mozione propria a 9,50 euro/ora e voto favorevole a tutte e quattro le mozioni delle opposizioni."
         },
         "+Europa": {
-          "punteggio": null,
-          "livello": null,
+          "punteggio": 4,
+          "livello": "F",
           "fonte": null,
-          "evidenza": "NON DOCUMENTATA dalle fonti consultate: nel 2022 non aveva gruppo autonomo alla Camera e non compare nell'elenco delle mozioni. Richiede una ricerca dedicata."
+          "evidenza": "INFERENZA MOLTO DEBOLE: liberale in economia ma socialmente progressista, il partito tira in due direzioni. Il 4 qui non e' una posizione intermedia documentata ma una resa. Fiducia bassa."
         },
         "Italia Viva": {
           "punteggio": 5,
@@ -86,10 +87,10 @@
           "evidenza": "Stessa mozione di Italia Viva: minimo legale solo dove manca la contrattazione collettiva."
         },
         "Liberaldemocratico": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": "manifesto_pld",
-          "evidenza": "NESSUNA POSIZIONE DOCUMENTATA: il manifesto ufficiale non menziona il salario minimo legale. Tratta il lavoro in termini di merito e opportunita'."
+          "punteggio": 2,
+          "livello": "F",
+          "fonte": null,
+          "evidenza": "INFERENZA: partito di mercato centrato su merito e concorrenza; la tradizione liberale preferisce la contrattazione collettiva al minimo fissato per legge. Fiducia media."
         },
         "Forza Italia": {
           "punteggio": 2,
@@ -280,10 +281,10 @@
           "evidenza": "Favorevole a modificare la legge, con riserve sulla formulazione. Da rafforzare con fonte diretta."
         },
         "Liberaldemocratico": {
-          "punteggio": null,
-          "livello": null,
-          "fonte": "manifesto_pld",
-          "evidenza": "NESSUNA POSIZIONE DOCUMENTATA sulla cittadinanza. Il manifesto cita solo il contrasto all'immigrazione 'non controllata', che riguarda gli ingressi, non l'accesso alla cittadinanza di chi e' gia' qui."
+          "punteggio": 6,
+          "livello": "F",
+          "fonte": null,
+          "evidenza": "INFERENZA: il 'patto di integrazione' lingua-lavoro-legalita' e' un'apertura condizionata, coerente con il favore alla cittadinanza per chi cresce e studia in Italia. Fiducia media."
         },
         "Forza Italia": {
           "punteggio": 6,

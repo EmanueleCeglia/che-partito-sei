@@ -1676,6 +1676,100 @@ body::before {
   }
 }
 
+/* Pulsante "non ho un'opinione", con il residuo a vista */
+.quiz__no-opinion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  margin-top: 10px;
+  padding: 11px 14px;
+  border-radius: var(--radius-md);
+  border: 1px dashed var(--border-light);
+  background: transparent;
+  color: var(--text-tertiary);
+  font-family: var(--font-family);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: color var(--transition-fast), border-color var(--transition-fast), background var(--transition-fast);
+}
+
+.quiz__no-opinion:hover:not(:disabled) {
+  color: var(--text-secondary);
+  border-color: var(--text-tertiary);
+}
+
+.quiz__no-opinion:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.quiz__no-opinion.used {
+  border-style: solid;
+  border-color: var(--accent-amber);
+  background: rgba(245, 158, 11, 0.10);
+  color: var(--accent-amber);
+}
+
+.quiz__no-opinion-count {
+  font-size: 0.75rem;
+  opacity: 0.8;
+  white-space: nowrap;
+}
+
+/* Il select resta per la validazione ma non si vede: comanda il combobox.
+   Selettore elemento + classe: deve battere la regola base .demo-form__select
+   che compare piu' avanti nel foglio. */
+select.demo-form__select--hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Lista dei suggerimenti sotto il campo */
+.demo-form__field {
+  position: relative;
+}
+
+.demo-form__suggest {
+  list-style: none;
+  margin: 4px 0 0;
+  padding: 4px;
+  max-height: 260px;
+  overflow-y: auto;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-light);
+  background: var(--bg-tertiary);
+  box-shadow: var(--shadow-lg);
+  z-index: 50;
+}
+
+.demo-form__suggest-item {
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+.demo-form__suggest-item:hover,
+.demo-form__suggest-item.active {
+  background: rgba(99, 102, 241, 0.18);
+}
+
+.demo-form__suggest-empty {
+  padding: 10px 12px;
+  font-size: 0.85rem;
+  color: var(--text-tertiary);
+}
+
 /* Transient toast over the quiz */
 .quiz__notice {
   position: fixed;

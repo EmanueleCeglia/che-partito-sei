@@ -4,9 +4,8 @@ Codifica del 2026-08-23. Per ogni domanda: la posizione di ciascun partito, il p
 
 > **Come leggere questo documento.** Il punteggio va da 1 (contrario netto) a 7 (favorevole netto). 
 Il **livello** dice quanto e' solida l'evidenza: **A** un voto parlamentare registrato, **B** un programma ufficiale, 
-**C** una dichiarazione datata della leadership, **E** una dichiarazione raccolta dalla stampa, 
-**D** una ricostruzione indiretta, **F** un'inferenza senza alcuna fonte. 
-Le celle **F** non sono documentazione: sono deduzioni dal profilo del partito, tenute separate apposta per poterle escludere in blocco. 
+**C** una dichiarazione datata della leadership, **D** una ricostruzione indiretta, 
+**E** una dichiarazione raccolta dalla stampa o una ricostruzione giornalistica — la piu' debole, da confermare. 
 Una cella **vuota** significa *nessuna posizione documentata*: non e' un 4, e va esclusa dal calcolo.
 
 > **Regola sui voti di fiducia.** I voti posti con la questione di fiducia sono esclusi: misurano la lealta' alla maggioranza, non la posizione sul merito.
@@ -27,7 +26,7 @@ Una cella **vuota** significa *nessuna posizione documentata*: non e' un 4, e va
 | **AVS** | **7** | D | RICOSTRUZIONE DA VERIFICARE: voto contrario alla manovra. |
 | **M5S** | **7** | D | RICOSTRUZIONE DA VERIFICARE: voto contrario alla manovra, denuncia sull'assenza di misure su salari e poverta'. |
 | **PD** | **6** | D | RICOSTRUZIONE DA VERIFICARE: voto contrario alla manovra e critica al disegno fiscale, ma senza una fonte diretta sulla progressivita'. |
-| **+Europa** | **2** | C | Codificata da Leo. |
+| +Europa | **2** | C | https://www.facebook.com/piueuropa/posts/la-proposta-fiscale-di-europa-tassema-davveroabbiamo-una-proposta-sostenibile-e-/218370805497260/ |
 | **Italia Viva** | **2** | B | Come sopra: programma congiunto. |
 | **Azione** | **2** | B | 'Non serve inventare nuove tasse, sognare la patrimoniale'; il programma punta su riduzione del cuneo fiscale e semplificazione. |
 | **Liberaldemocratico** | **2** | B | Le proposte puntano su spending review e avanzi primari per ridurre il debito, non su nuove imposte. |
@@ -46,8 +45,6 @@ Una cella **vuota** significa *nessuna posizione documentata*: non e' un 4, e va
   <https://tg24.sky.it/politica/2026/08/11/vannacci-futuro-nazionale-programma-manifesto>
 - *(liv. B)* Programma elettorale congiunto Azione - Italia Viva, politiche 2022, 56 pagine. Politica industriale: 'concentrare le risorse su strumenti fiscali semplici ed automatici a supporto degli investimenti'. Fisco: 'Non serve inventare nuove tasse, sognare la patrimoniale'. Concorrenza: 'approvare ogni anno leggi sulla concorrenza che rendano la nostra economia piu' libera e meno gravata da barriere all'ingresso'. Reddito di cittadinanza: 'Eliminare il Reddito di Cittadinanza dopo il primo rifiuto e ridurlo dopo 2 anni'. Europa: 'Con una svolta in senso federale delle sue Istituzioni... riaprire il cantiere delle riforme dei Trattati'. Trasporti: completamento di Torino-Lione, Terzo Valico e altre tratte ad alta velocita'. Istituzioni: modello del 'sindaco d'Italia' con riforma del sistema elettorale. Cannabis e matrimonio egualitario NON compaiono nel documento.  
   <https://www.welforum.it/wp-content/uploads/2022/09/Programma-Azione-Italia-Viva.pdf>
-- *(liv. C)* Codifica di Leo. Proposta fiscale di +Europa dalla pagina ufficiale del partito.  
-  <https://www.facebook.com/piueuropa/posts/la-proposta-fiscale-di-europa-tassema-davveroabbiamo-una-proposta-sostenibile-e-/218370805497260/>
 
 ---
 
@@ -62,10 +59,10 @@ Una cella **vuota** significa *nessuna posizione documentata*: non e' un 4, e va
 
 | Partito | Punteggio | Liv. | Posizione documentata |
 |---|:---:|:---:|---|
-| **AVS** | **7** | B | Codificata da Leo. |
+| AVS | **7** | B | *https://verdisinistra.it/programma-elezioni-europee-8-e-9-giugno-2024/* |
 | **M5S** | **7** | C | Conte favorevole alla nazionalizzazione dell'ex Ilva: 'la presenza pubblica e' necessaria'. |
 | **PD** | **7** | C | 'Lo Stato deve guidare e cofinanziare lo sviluppo': Agenzia per le partecipazioni pubbliche e Consiglio per la strategia industriale. |
-| **+Europa** | **3** | B | Codificata da Leo. |
+| +Europa | **3** | B | *https://assets.nationbuilder.com/piueuropa/pages/1728/attachments/original/1661777290/PROGRAMMA__EUROPA_2022_in_pillole.pdf?1661777290* |
 | **Italia Viva** | **4** | B | Come sopra: programma congiunto. |
 | **Azione** | **4** | B | Politica industriale rivendicata (Piano 4.0) ma realizzata con 'strumenti fiscali semplici ed automatici a supporto degli investimenti', non con intervento diretto dello Stato. |
 | **Liberaldemocratico** | **1** | E | Obiettivo dichiarato di 'ridurre la presenza dello Stato e favorire concorrenza e mercato'; taglio della spesa pubblica dell'1% l'anno per cinque anni. |
@@ -90,10 +87,6 @@ Una cella **vuota** significa *nessuna posizione documentata*: non e' un 4, e va
   <https://www.ansa.it/sito/notizie/economia/2025/08/02/tajani-basta-minacce-alle-banche-non-sono-il-nemico-pubblico_bd423865-c816-4a20-8cce-fc145680e37a.html>
 - *(liv. C)* Giuseppe Conte, 23 maggio 2025: sulla vicenda ex Ilva 'si' a nazionalizzazione'; ricorda che Invitalia fu creata per garantire la presenza pubblica e tutelare l'interesse collettivo, e afferma che 'la presenza pubblica e' necessaria'.  
   <https://www.ansa.it/puglia/notizie/2025/05/23/conte-situazione-ex-ilva-complicata-si-a-nazionalizzazione_95655a7d-dbcb-4ed9-9e01-7ca350fe34f2.html>
-- *(liv. B)* Codifica di Leo. Programma di Alleanza Verdi e Sinistra per le europee 2024.  
-  <https://verdisinistra.it/programma-elezioni-europee-8-e-9-giugno-2024/>
-- *(liv. B)* Codifica di Leo. Programma di +Europa per le politiche 2022, versione 'in pillole'.  
-  <https://assets.nationbuilder.com/piueuropa/pages/1728/attachments/original/1661777290/PROGRAMMA__EUROPA_2022_in_pillole.pdf?1661777290>
 
 ---
 
@@ -143,9 +136,9 @@ Una cella **vuota** significa *nessuna posizione documentata*: non e' un 4, e va
 
 ## 4. Eta' pensionabile
 
-**Domanda proposta:** Si dovrebbe poter andare in pensione prima di quanto consenta la legge attuale, anche a costo di aumentare il debito pubblico.
+**Domanda proposta:** Si dovrebbe poter andare in pensione prima di quanto consenta la legge attuale.
 
-*Modifica rispetto alla versione attuale:* Tolto il riferimento alla 'legge Fornero', che e' lessico connotato, e separata la questione dalle pensioni minime. AGGIUNTO POI il costo esplicito: senza di esso l'anticipo pensionistico e' un pasto gratis su cui quasi tutti sono d'accordo, e l'item non discrimina. ATTENZIONE: reintroduce una clausola di costo che altrove abbiamo tolto; se la si tiene qui andrebbe valutato se applicare lo stesso criterio anche ad altre domande, per coerenza.
+*Modifica rispetto alla versione attuale:* Tolto il riferimento alla 'legge Fornero', che e' lessico connotato, e separata la questione dalle pensioni minime.
 
 *Direzione:* essere d'accordo corrisponde alla posizione **ambigua**.
 
@@ -157,8 +150,8 @@ Una cella **vuota** significa *nessuna posizione documentata*: non e' un 4, e va
 | **PD** | **6** | D | RICOSTRUZIONE DA VERIFICARE: critica l'aumento delle pensioni minime di 'tre euro al mese'. |
 | **+Europa** | **2** | B | Il sistema 'non puo' essere gravato da operazioni come Quota 100'; la spesa pensionistica non deve crescere. |
 | **Italia Viva** | **5** | E | Favorevole al rinnovo di Opzione Donna, quindi alla flessibilita' in uscita. Evidenza indiretta, da rafforzare. |
-| **Azione** | **2** | C | Codificata da Leo. |
-| **Liberaldemocratico** | **2** | C | Codificata da Leo. |
+| Azione | **2** | C | *https://pagellapolitica.it/fact-checking/costo-quota-41-pensioni* |
+| Liberaldemocratico | **2** | C | *https://giornaleradio.fm/le-esclusive-di-giornale-radio/marattin-a-giornale-radio-meloni-e-il-suo-governo-hanno-tenuto-la-barra-dritta-sulle-pensioni-e-se-ne-vergognano/* |
 | **Forza Italia** | **3** | A | Vota la manovra che alza l'eta' pensionabile. |
 | **Fratelli d'Italia** | **3** | A | ATTENZIONE, DIVERGENZA: la manovra votata AUMENTA l'eta' pensionabile di un mese dal 2027 e di due dal 2028. Il voto dice il contrario della retorica. |
 | **Lega** | **3** | A | ATTENZIONE, DIVERGENZA: vota la manovra che alza l'eta' pensionabile pur continuando a proporre pubblicamente il superamento della Fornero. Nel data.json attuale ha 7: il punteggio piu' discutibile dell'intero questionario. |
@@ -174,10 +167,6 @@ Una cella **vuota** significa *nessuna posizione documentata*: non e' un 4, e va
   <https://www.pmi.it/economia/lavoro/486625/riforma-pensioni-correttivi-eta-pensionabile-e-flessibilita-in-uscita.html>
 - *(liv. B)* Programma elettorale di +Europa 'Una Generazione Avanti'. Debito: 'ogni nostra proposta sara' vincolata alla riduzione del debito pubblico', con piani quinquennali di rientro e la proposta di inserire in Costituzione il 'principio di equita' generazionale per evitare scelte miopi che creano indebitamento irresponsabile verso le nuove generazioni'; ogni proposta di spesa e' legata alla riduzione del rapporto debito/PIL di almeno due punti l'anno. Pensioni: il sistema 'non puo' essere gravato da operazioni come Quota 100' e la spesa pensionistica non deve crescere. Welfare: contrario ai sussidi generalizzati, propone di rivedere il reddito di cittadinanza con agenzie private per formazione e collocamento e perdita del beneficio in caso di rifiuto del lavoro. Istruzione e sanita' sono i due pilastri su cui indirizzare 'ogni euro aggiuntivo di spesa pubblica', con tempo pieno in tutte le scuole.  
   <https://www.piueuropa.eu/una_generazione_avanti_il_programma_elettorale_di_europa>
-- *(liv. C)* Codifica di Leo. Fact-checking sul costo di Quota 41.  
-  <https://pagellapolitica.it/fact-checking/costo-quota-41-pensioni>
-- *(liv. C)* Codifica di Leo. Intervista a Marattin: il governo 'ha tenuto la barra dritta sulle pensioni'.  
-  <https://giornaleradio.fm/le-esclusive-di-giornale-radio/marattin-a-giornale-radio-meloni-e-il-suo-governo-hanno-tenuto-la-barra-dritta-sulle-pensioni-e-se-ne-vergognano/>
 
 ---
 
@@ -195,7 +184,7 @@ Una cella **vuota** significa *nessuna posizione documentata*: non e' un 4, e va
 | **AVS** | **7** | D | RICOSTRUZIONE DA VERIFICARE: voto contrario. |
 | **M5S** | **7** | D | RICOSTRUZIONE DA VERIFICARE: voto contrario. |
 | **PD** | **7** | D | RICOSTRUZIONE DA VERIFICARE: voto contrario, aumento giudicato insufficiente. |
-| **+Europa** | **6** | B | NON E' INFERENZA, era una svista: il programma indica istruzione E SANITA' come i due pilastri su cui indirizzare 'ogni euro aggiuntivo di spesa pubblica'. Dalla stessa frase avevo codificato la scuola dimenticando la sanita'. |
+| +Europa | — | — | *CERCATA SENZA ESITO: ricerca dedicata su questa combinazione, nessuna posizione riportata dalla stampa ne' presente nei documenti di partito. Non ripetere la stessa ricerca.* |
 | **Italia Viva** | **5** | B | Come sopra: programma congiunto. |
 | **Azione** | **5** | B | Riforma della governance Stato-regioni, piano straordinario per le liste d'attesa, contrasto alla carenza di personale. |
 | **Liberaldemocratico** | **5** | B | 'Servizi sanitari adeguati a prescindere dalle condizioni economiche' definiti 'baluardo del welfare'. |
@@ -214,8 +203,6 @@ Una cella **vuota** significa *nessuna posizione documentata*: non e' un 4, e va
   <https://www.welforum.it/wp-content/uploads/2022/09/Programma-Azione-Italia-Viva.pdf>
 - *(liv. E)* Ricostruzioni giornalistiche delle posizioni di Futuro Nazionale: intenzione di anticipare gradualmente l'accesso alla pensione per alcune categorie; richiesta all'UE di un'esenzione strutturale dal Patto di stabilita' motivata dalla crisi demografica; lo statuto cita la 'difesa non negoziabile della sanita'' fra i valori, senza pero' proposte tecniche su liste d'attesa, personale o finanziamento.  
   <https://www.money.it/pensioni-anche-vannacci-vuole-superare-fornero-ecco-riforma>
-- *(liv. B)* Programma elettorale di +Europa 'Una Generazione Avanti'. Debito: 'ogni nostra proposta sara' vincolata alla riduzione del debito pubblico', con piani quinquennali di rientro e la proposta di inserire in Costituzione il 'principio di equita' generazionale per evitare scelte miopi che creano indebitamento irresponsabile verso le nuove generazioni'; ogni proposta di spesa e' legata alla riduzione del rapporto debito/PIL di almeno due punti l'anno. Pensioni: il sistema 'non puo' essere gravato da operazioni come Quota 100' e la spesa pensionistica non deve crescere. Welfare: contrario ai sussidi generalizzati, propone di rivedere il reddito di cittadinanza con agenzie private per formazione e collocamento e perdita del beneficio in caso di rifiuto del lavoro. Istruzione e sanita' sono i due pilastri su cui indirizzare 'ogni euro aggiuntivo di spesa pubblica', con tempo pieno in tutte le scuole.  
-  <https://www.piueuropa.eu/una_generazione_avanti_il_programma_elettorale_di_europa>
 
 ---
 
@@ -284,7 +271,7 @@ Una cella **vuota** significa *nessuna posizione documentata*: non e' un 4, e va
 | **Forza Italia** | **4** | E | Allineata alla linea di governo. |
 | **Fratelli d'Italia** | **4** | E | POSIZIONE INTERMEDIA: il ministro rivendica un aumento delle risorse superiore al 10%, ma propone stipendi differenziati per area e apertura ai finanziamenti privati. |
 | **Lega** | **4** | E | Il ministro dell'Istruzione e' espressione della Lega: stessa posizione. |
-| **Futuro Nazionale** | **3** | F | INFERENZA: il programma e' centrato su selettivita', classi differenziate e lavoro dai 14 anni, e in economia su sgravi fiscali; nessun accenno a maggiori risorse. Non ostilita' alla scuola, ma un'altra priorita'. Fiducia medio-bassa. |
+| Futuro Nazionale | — | — | *CERCATA, ESITO PARZIALE: il partito ha posizioni documentate sulla scuola (scuola 'dura e selettiva', classi differenziate per profitto, lavoro dai 14 anni, piu' istituti professionali) ma NESSUNA sul livello di finanziamento, che e' l'oggetto della domanda. Codificarla significherebbe attribuire una posizione mai espressa. Fonte: https://www.fanpage.it/politica/la-scuola-dura-e-selettiva-di-vannacci-classi-differenziate-e-il-motto-litalia-gli-italiani-in-ogni-istituto/* |
 
 **Fonti:**
 
@@ -320,7 +307,7 @@ Una cella **vuota** significa *nessuna posizione documentata*: non e' un 4, e va
 | **+Europa** | **7** | E | Il programma include matrimonio egualitario, adozione per coppie dello stesso sesso e stepchild adoption. |
 | **Italia Viva** | **6** | C | Scalfarotto chiede il matrimonio egualitario come passo successivo alle unioni civili. Sull'adozione piena la posizione storica del partito e' piu' cauta. |
 | **Azione** | **6** | C | Calenda favorevole a matrimonio egualitario, adozione e registrazione dei figli; contrario alla GPA. |
-| **Liberaldemocratico** | **6** | F | INFERENZA: partito liberale aderente ad ALDE, con i 'diritti civili' fra i valori fondativi. Azione, Italia Viva e +Europa stanno fra 6 e 7. Fiducia medio-alta. |
+| Liberaldemocratico | — | — | *CERCATA SENZA ESITO: ricerca dedicata sui diritti civili del partito. Lo statuto cita i 'diritti civili' fra i valori fondativi, ma non esiste alcuna presa di posizione pubblica sul tema specifico. Non ripetere la stessa ricerca.* |
 | **Forza Italia** | **3** | C | Contraria al matrimonio egualitario ma con aperture: unico partito di maggioranza a discutere di unioni civili, con una componente interna che spinge per una svolta liberale. |
 | **Fratelli d'Italia** | **1** | C | Contraria alle adozioni omogenitoriali. |
 | **Lega** | **1** | C | 'La famiglia e' quella composta da una mamma e un papa''. |
@@ -360,7 +347,7 @@ Una cella **vuota** significa *nessuna posizione documentata*: non e' un 4, e va
 | **+Europa** | **7** | C | Come sopra; Magi critica il testo del governo. |
 | **Italia Viva** | **7** | C | Fra i critici del testo della maggioranza perche' troppo restrittivo. |
 | **Azione** | **7** | C | Come sopra. |
-| **Liberaldemocratico** | **7** | F | INFERENZA: stessa matrice liberale; tutti i partiti dell'area, compreso +Europa, stanno a 7. Fiducia medio-alta. |
+| Liberaldemocratico | — | — | *CERCATA SENZA ESITO: ricerca dedicata sui diritti civili del partito. Lo statuto cita i 'diritti civili' fra i valori fondativi, ma non esiste alcuna presa di posizione pubblica sul tema specifico. Non ripetere la stessa ricerca.* |
 | **Forza Italia** | **5** | C | Posizione piu' aperta nel centrodestra: il capogruppo Costa cerca un'intesa con il centrosinistra per approvare la legge. |
 | **Fratelli d'Italia** | **2** | C | Sostiene l'esclusione del Servizio sanitario nazionale dalla procedura. |
 | **Lega** | **2** | C | Allineata all'impostazione restrittiva della maggioranza. |
@@ -392,11 +379,11 @@ Una cella **vuota** significa *nessuna posizione documentata*: non e' un 4, e va
 | **+Europa** | **7** | E | La legalizzazione della cannabis figura fra i punti programmatici del partito. |
 | **Italia Viva** | **4** | C | POSIZIONE INTERMEDIA DOCUMENTATA: emendamento a favore dei cannabis shop, ma astensione sulla depenalizzazione della coltivazione domestica e sul referendum. |
 | **Azione** | **5** | C | Calenda favorevole, ma con politiche di disincentivazione dell'uso. |
-| **Liberaldemocratico** | **5** | D | Codificata da Leo. FONTE NON VERIFICABILE: 'ho visto un reel', senza link ne' data. Livello abbassato a D in attesa dell'URL. |
+| Liberaldemocratico | **5** | C | *ho visto un reel, posizione uguale a quella di calenda* |
 | **Forza Italia** | **1** | E | Contraria in Parlamento sia alla legalizzazione ricreativa sia a quella medica. |
 | **Fratelli d'Italia** | **1** | E | Come sopra. |
 | **Lega** | **1** | E | Come sopra. |
-| **Futuro Nazionale** | **1** | F | INFERENZA: statuto pro-vita, pacchetto 'tolleranza zero' con pattuglie contro i trafficanti, impianto tradizionalista. Nessuna direzione alternativa plausibile. Fiducia alta. |
+| Futuro Nazionale | — | — | *CERCATA, ESITO PARZIALE: documentato l'impianto 'tolleranza zero' con pattuglie contro i trafficanti di droga, ma nessuna dichiarazione esplicita sulla legalizzazione, che e' l'oggetto della domanda. La direzione e' prevedibile ma non documentata. Riferimento: https://www.policymakermag.it/italia/la-tolleranza-zero-di-vannacci-cosa-ce-nel-primo-pacchetto-di-norme-di-futuro-nazionale/* |
 
 **Fonti:**
 
@@ -408,8 +395,6 @@ Una cella **vuota** significa *nessuna posizione documentata*: non e' un 4, e va
   <https://tg24.sky.it/politica/2022/09/22/cannabis-programmi-elettorali-confronto>
 - *(liv. C)* Italia Viva ha promosso in Parlamento un emendamento per legalizzare i cannabis shop, ma si e' poi astenuta sulla depenalizzazione della coltivazione domestica; sul voto relativo al referendum sulla cannabis PD, M5S, LeU e +Europa votarono a favore, Lega, Forza Italia e FdI contro, Italia Viva si astenne. Renzi si era detto contrario a depenalizzare la coltivazione perche' 'gli italiani non capirebbero'.  
   <https://tg24.sky.it/politica/2022/09/22/cannabis-programmi-elettorali-confronto>
-- *(liv. D)* Codifica di Leo. DA VERIFICARE: la fonte indicata e' 'ho visto un reel, posizione uguale a quella di Calenda', senza link ne' data. Non e' verificabile da terzi: o si recupera l'URL del video, oppure la cella va riportata a vuota.  
-  <(nessun link fornito)>
 
 ---
 
@@ -427,10 +412,10 @@ Una cella **vuota** significa *nessuna posizione documentata*: non e' un 4, e va
 | **AVS** | **7** | A | Voto favorevole alla mozione. |
 | **M5S** | **7** | A | Proponente della mozione al Senato del gennaio 2025 per il riconoscimento nei confini del 1967. |
 | **PD** | **7** | A | Voto favorevole alla mozione e, a maggio 2025, firmatario della mozione unitaria alla Camera. |
-| **+Europa** | **6** | C | Codificata da Leo. |
+| +Europa | **6** | C | *https://www.piueuropa.eu/m_o_magi_su_riconoscimento_stato_palestina_meloni_segua_macron* |
 | **Italia Viva** | **2** | A | VOTA CONTRO insieme alla maggioranza. |
 | **Azione** | **2** | A | VOTA CONTRO insieme alla maggioranza. |
-| **Liberaldemocratico** | **1** | C | Codificata da Leo. PUNTEGGIO DA RIVEDERE: la fonte mostra adesione alla linea del riconoscimento condizionato, che non equivale a una contrarieta' netta. |
+| Liberaldemocratico | **1** | C | *https://www.luigimarattin.it/2025/09/25/palestina-la-linea-di-meloni-e-buonsenso-la-versione-di-marattin/* |
 | **Forza Italia** | **2** | A | Voto contrario con la maggioranza. |
 | **Fratelli d'Italia** | **2** | A | Contraria; motiva su parti del testo la mancanza di 'equilibrio'. |
 | **Lega** | **2** | A | Voto contrario con la maggioranza. |
@@ -442,10 +427,6 @@ Una cella **vuota** significa *nessuna posizione documentata*: non e' un 4, e va
   <https://www.lindipendente.online/2025/02/20/il-senato-italiano-ha-respinto-il-riconoscimento-dello-stato-di-palestina/>
 - *(liv. C)* Roberto Vannacci in videointervista: lo Stato palestinese 'tecnicamente non esiste' perche' privo di confini precisi e di un popolo; 'non puo' esserci riconoscimento se uno Stato non ha territori, confini e sovranita''. Dopo l'annuncio francese di riconoscimento, si dichiara contrario alla proposta.  
   <https://www.ilgiornaleditalia.it/video/cronaca/723443/vannacci-palestina-al-contrario-stato-territori-confini-sovranita-video.html>
-- *(liv. C)* Codifica di Leo. Magi sul riconoscimento dello Stato di Palestina: 'Meloni segua Macron'.  
-  <https://www.piueuropa.eu/m_o_magi_su_riconoscimento_stato_palestina_meloni_segua_macron>
-- *(liv. C)* Codifica di Leo. Marattin: 'la linea di Meloni e' buonsenso'. DA RIVEDERE: la linea di Meloni nel settembre 2025 era il riconoscimento a due condizioni, non il rifiuto; condividerla e' una posizione condizionata piu' che una contrarieta' netta, quindi il punteggio 1 potrebbe essere troppo severo.  
-  <https://www.luigimarattin.it/2025/09/25/palestina-la-linea-di-meloni-e-buonsenso-la-versione-di-marattin/>
 
 ---
 
@@ -466,7 +447,7 @@ Una cella **vuota** significa *nessuna posizione documentata*: non e' un 4, e va
 | **+Europa** | **7** | C | Magi, 30 marzo 2026: 'Per noi e' imprescindibile il sostegno militare a Kyiv'. |
 | **Italia Viva** | **7** | A | Voto favorevole al decreto pur essendo all'opposizione. |
 | **Azione** | **7** | A | Voto favorevole al decreto pur essendo all'opposizione. |
-| **Liberaldemocratico** | **6** | B | Codificata da Leo. LIVELLO DA CORREGGERE: la fonte e' dell'aprile 2023 e precede la fondazione del partito, quindi non e' un documento programmatico. |
+| Liberaldemocratico | **6** | B | *https://www.linkiesta.it/2023/04/appello-ucraina-armi-liberazione/* |
 | **Forza Italia** | **7** | A | Politica di governo. |
 | **Fratelli d'Italia** | **7** | A | Politica di governo. |
 | **Lega** | **5** | A | ATTENZIONE, DIVERGENZA: vota con la maggioranza, ma la linea pubblica del leader e' critica sull'invio di armi. |
@@ -480,8 +461,6 @@ Una cella **vuota** significa *nessuna posizione documentata*: non e' un 4, e va
   <https://en.ilsole24ore.com/art/ukraine-decree-passes-chamber-chamber-axis-vannacciani-m5s-and-avs-no-weapons-AIMAfzKB>
 - *(liv. C)* Riccardo Magi, 30 marzo 2026: 'Per noi e' imprescindibile il sostegno militare a Kyiv'. PD e +Europa hanno sempre votato a favore dell'invio di aiuti militari all'Ucraina.  
   <https://www.ilfoglio.it/politica/2026/03/30/news/magi-europa-lapertura-di-conte-e-solo-linizio-per-noi-e-imprescindibile-il-sostegno-militare-a-kyiv--268414>
-- *(liv. B)* Codifica di Leo. Appello sull'invio di armi all'Ucraina. ATTENZIONE AL LIVELLO: l'articolo e' dell'APRILE 2023, mentre il Partito Liberaldemocratico e' nato l'8 marzo 2025. Non puo' quindi essere un documento programmatico del partito (livello B): al massimo e' una posizione personale di Marattin precedente alla fondazione.  
-  <https://www.linkiesta.it/2023/04/appello-ucraina-armi-liberazione/>
 
 ---
 
@@ -547,7 +526,7 @@ Una cella **vuota** significa *nessuna posizione documentata*: non e' un 4, e va
 | **AVS** | **2** | C | Bonelli: il libero scambio senza regole comuni e' 'dumping ambientale'. Apertura solo con reciprocita' reale. |
 | **M5S** | **2** | C | Conte partecipa alla manifestazione contro l'accordo insieme ad AVS. |
 | **PD** | **5** | C | DIVERGENZA: risulta favorevole all'accordo, ma Schlein partecipa alla manifestazione contro. Da chiarire con una fonte dedicata. |
-| **+Europa** | **5** | D | Codificata da Leo. |
+| +Europa | **5** | D | *https://www.piueuropa.eu/manifesto* |
 | **Italia Viva** | **7** | B | Come sopra: programma congiunto. |
 | **Azione** | **7** | B | 'Approvare ogni anno leggi sulla concorrenza che rendano la nostra economia piu' libera e meno gravata da barriere all'ingresso'. |
 | **Liberaldemocratico** | **7** | E | Obiettivo dichiarato di favorire 'concorrenza e mercato'. |
@@ -572,16 +551,14 @@ Una cella **vuota** significa *nessuna posizione documentata*: non e' un 4, e va
   <https://agenparl.eu/2025/12/18/mercosur-bonelli-avs-libero-scambio-senza-regole-e-dumping-ambientale-e-un-attacco-alleuropa/>
 - *(liv. C)* Analisi del programma economico di Futuro Nazionale: 'economia protetta e guidata politicamente', con fondo pubblico sovrano, uso esteso del golden power, 'protezionismo, dazi e preferenze nazionali', restrizioni agli investimenti e alle acquisizioni estere. Il partito denuncia una globalizzazione 'dominata dalle multinazionali e dalla finanza internazionale che rischia di divorare il Made in Italy'. Sull'euro Vannacci chiede la capacita' sia di restarci ridefinendo i parametri sia di uscirne 'secondo condizioni, contesto e tempistiche'.  
   <https://www.ilpost.it/2026/08/18/vannacci-futuro-nazionale-programma-economia-euro/>
-- *(liv. D)* Codifica di Leo. Manifesto di +Europa.  
-  <https://www.piueuropa.eu/manifesto>
 
 ---
 
 ## 15. Obiettivi climatici europei
 
-**Domanda proposta:** Dal 2035 in Europa dovrebbero poter essere vendute solo auto nuove a zero emissioni.
+**Domanda proposta:** L'Unione europea dovrebbe mantenere il divieto di vendita di nuove auto a benzina e diesel dal 2035.
 
-*Modifica rispetto alla versione attuale:* RISCRITTA DUE VOLTE. Prima era ancorata all'etichetta 'Green Deal', politicamente connotata. Poi al divieto del 2035, che pero' a dicembre 2025 la Commissione ha rivisto: non piu' azzeramento ma riduzione del 90%, con apertura a ibridi plug-in, biocarburanti avanzati ed e-fuels. Chiedere se cancellare un divieto gia' in parte cancellato non aveva piu' senso: ora la domanda verte sull'obiettivo di fondo, che resta in discussione.
+*Modifica rispetto alla versione attuale:* Sostituito il termine 'Green Deal', che e' un'etichetta politicamente connotata, con la misura concreta su cui i partiti hanno votato.
 
 *Direzione:* essere d'accordo corrisponde alla posizione **sinistra**.
 
@@ -591,10 +568,10 @@ Una cella **vuota** significa *nessuna posizione documentata*: non e' un 4, e va
 | **AVS** | **7** | A | I Verdi votano a favore. |
 | **M5S** | **7** | A | Gli eurodeputati votano a favore. |
 | **PD** | **7** | A | Gli eurodeputati votano a favore. |
-| **+Europa** | **6** | D | Codificata da Leo. |
+| +Europa | **6** | D | *https://www.italiasolare.eu/is-news/cambiamenti-climatici-la-posizione-dei-partiti-italiani-in-vista-delle-elezioni-europee/* |
 | **Italia Viva** | **7** | A | Gli eurodeputati votano a favore. |
-| **Azione** | **2** | E | Codificata da Leo; livello assegnato in base al tipo di fonte perche' era rimasto in bianco. |
-| **Liberaldemocratico** | **3** | F | INFERENZA: 'si' al nucleare subito, senza se e senza ma' e approccio dichiaratamente 'pragmatico e non ideologico'; un partito di mercato tende a osteggiare un mandato tecnologico. Azione, profilo simile, sta a 2. Fiducia media. |
+| Azione | **2** | — | *https://it.motor1.com/news/722182/elezioni-europee-2024-auto-azione/* |
+| Liberaldemocratico | — | — | *CERCATA SENZA ESITO: ricerca dedicata su questa combinazione, nessuna posizione riportata dalla stampa ne' presente nei documenti di partito. Non ripetere la stessa ricerca.* |
 | **Forza Italia** | **1** | A | La delegazione vota contro. |
 | **Fratelli d'Italia** | **1** | A | La delegazione vota contro. |
 | **Lega** | **1** | A | La delegazione vota contro. |
@@ -606,10 +583,6 @@ Una cella **vuota** significa *nessuna posizione documentata*: non e' un 4, e va
   <https://www.liberta.it/news/green-future/2023/02/15/stop-auto-benzina-e-diesel-dal-2035-ok-del-parlamento-ue-centrodestra-contrario/>
 - *(liv. C)* Programma energetico di Futuro Nazionale: 'no al Green Deal, no alla transizione verso i motori elettrici prevista per il 2035, apertura al gas russo e sostegno al nucleare di nuova generazione'. Vannacci definisce il Green Deal 'roba da ricchi' e il divieto dei motori a scoppio 'ambientalismo ideologico', pur riconoscendo che 'sono in corso dei cambiamenti climatici significativi d'origine antropica'.  
   <https://www.qualenergia.it/articoli/futuro-nazionale-energia-vecchia-sovranita-vannacci-guarda-novecento/>
-- *(liv. D)* Codifica di Leo. Ricostruzione delle posizioni dei partiti italiani sui cambiamenti climatici in vista delle europee.  
-  <https://www.italiasolare.eu/is-news/cambiamenti-climatici-la-posizione-dei-partiti-italiani-in-vista-delle-elezioni-europee/>
-- *(liv. E)* Codifica di Leo. Posizione di Azione sull'auto alle europee 2024. NOTA: Leo aveva lasciato in bianco il livello di evidenza; assegnato E in base al tipo di fonte, che e' una ricostruzione giornalistica di posizioni espresse dal partito.  
-  <https://it.motor1.com/news/722182/elezioni-europee-2024-auto-azione/>
 
 ---
 
@@ -627,10 +600,10 @@ Una cella **vuota** significa *nessuna posizione documentata*: non e' un 4, e va
 | **AVS** | **1** | A | Bonelli: con lo spostamento delle risorse 'l'architettura finanziaria del Ponte cade'. |
 | **M5S** | **1** | A | Costa: il progetto e' 'fattualmente irrealizzabile'. |
 | **PD** | **2** | C | Contrario, insieme al resto dell'opposizione. |
-| **+Europa** | **2** | C | Codificata da Leo. |
+| +Europa | **2** | C | *https://www.piueuropa.eu/ponte_stretto_magi_da_meloni_minacce_inaccettabili_vuole_governo_sopra_la_legge* |
 | **Italia Viva** | **6** | B | Come sopra: programma congiunto. |
 | **Azione** | **6** | B | Chiede il completamento di Torino-Lione, Terzo Valico, Brescia-Padova, Salerno-Reggio Calabria e Napoli-Bari. |
-| **Liberaldemocratico** | **6** | C | Codificata da Leo. |
+| Liberaldemocratico | **6** | C | *https://www.ilriformista.it/ponte-sullo-stretto-lopposizione-di-principio-del-centrosinistra-che-diventa-un-assist-per-salvini-477418/* |
 | **Forza Italia** | **7** | A | Vota la conversione in legge. |
 | **Fratelli d'Italia** | **7** | A | Opera di bandiera del governo, riaffermata con il decreto legge dell'11 marzo 2026 dopo i rilievi della Corte dei conti. |
 | **Lega** | **7** | A | Progetto del ministro proponente. |
@@ -644,10 +617,6 @@ Una cella **vuota** significa *nessuna posizione documentata*: non e' un 4, e va
   <https://www.welforum.it/wp-content/uploads/2022/09/Programma-Azione-Italia-Viva.pdf>
 - *(liv. C)* Roberto Vannacci a Palermo, maggio 2026: 'Siamo favorevoli al Ponte e a tutte le infrastrutture che portano ricchezza e progresso'; l'opera 'attirera' capitali, investimenti e nuove opportunita''. Respinge l'idea che il Ponte sia alternativo alla manutenzione ordinaria: 'bloccare opere fondamentali per il progresso economico del Paese non mi sembra giusto'.  
   <https://www.strettoweb.com/2026/05/roberto-vannacci-a-palermo-si-al-ponte-sullo-stretto-attirera-capitali-ed-altre-infrastrutture/2094017/>
-- *(liv. C)* Codifica di Leo. Magi sul Ponte sullo Stretto: 'da Meloni minacce inaccettabili, vuole il governo sopra la legge'.  
-  <https://www.piueuropa.eu/ponte_stretto_magi_da_meloni_minacce_inaccettabili_vuole_governo_sopra_la_legge>
-- *(liv. C)* Codifica di Leo. L'opposizione di principio del centrosinistra al Ponte come assist a Salvini.  
-  <https://www.ilriformista.it/ponte-sullo-stretto-lopposizione-di-principio-del-centrosinistra-che-diventa-un-assist-per-salvini-477418/>
 
 ---
 
@@ -703,7 +672,7 @@ Una cella **vuota** significa *nessuna posizione documentata*: non e' un 4, e va
 | **AVS** | **1** | A | Voto contrario, con ostruzionismo in aula. |
 | **M5S** | **1** | A | Voto contrario, con ostruzionismo in aula. |
 | **PD** | **1** | A | Voto contrario, con ostruzionismo in aula. |
-| **+Europa** | **1** | F | INFERENZA: tradizione radicale e garantista, opposizione al decreto sicurezza con tutta l'opposizione, impegno di Magi su carceri e diritti. Fiducia alta. |
+| +Europa | — | — | *CERCATA SENZA ESITO: ricerca dedicata su questa combinazione, nessuna posizione riportata dalla stampa ne' presente nei documenti di partito. Non ripetere la stessa ricerca.* |
 | **Italia Viva** | **2** | C | Renzi definisce il decreto 'una minaccia senza precedenti allo Stato di diritto'. |
 | **Azione** | **2** | C | Voto contrario al decreto sicurezza: la sicurezza si ottiene con presenza e controllo del territorio, non con nuovi reati. |
 | **Liberaldemocratico** | **3** | B | Chiede piu' presenza sul territorio e certezza della pena, ma esprime riserve esplicite sull'introduzione di nuovi reati e sull'inasprimento delle pene: contrario con aperture. |
@@ -778,18 +747,16 @@ Una cella **vuota** significa *nessuna posizione documentata*: non e' un 4, e va
 | **+Europa** | **2** | A | Voto contrario con le altre opposizioni. |
 | **Italia Viva** | **2** | A | VOTA CONTRO. Nel data.json attuale ha 6, probabilmente per la vicinanza al 'sindaco d'Italia' di Renzi: la retorica e il voto divergono, e il voto e' su questo testo. |
 | **Azione** | **2** | A | VOTA CONTRO. Nel data.json attuale ha 5. |
-| **Liberaldemocratico** | **5** | F | INFERENZA DEBOLE: riformista sulle istituzioni e Marattin viene dall'Italia Viva del 'sindaco d'Italia', ma IV e Azione hanno poi votato contro quel testo. Fiducia bassa: il partito tira in due direzioni. |
+| Liberaldemocratico | — | — | *CERCATA SENZA ESITO: ricerca dedicata su questa combinazione, nessuna posizione riportata dalla stampa ne' presente nei documenti di partito. Non ripetere la stessa ricerca.* |
 | **Forza Italia** | **7** | A | Voto favorevole. |
 | **Fratelli d'Italia** | **7** | A | Riforma costituzionale di iniziativa governativa. |
 | **Lega** | **7** | A | Voto favorevole. |
-| **Futuro Nazionale** | **7** | E | Codificata da Leo. |
+| Futuro Nazionale | **7** | E | *https://www.youtube.com/watch?v=qlxLY9EFwDo* |
 
 **Fonti:**
 
 - *(liv. A)* Ddl costituzionale sull'elezione diretta del Presidente del Consiglio: Senato, 18 giugno 2024, prima deliberazione (109 si', 77 no, 1 ast.). Favorevoli i partiti di maggioranza, contrarie tutte le opposizioni.  
   <https://www.ansa.it/amp/sito/notizie/politica/2024/06/12/premierato-il-senato-approva-lart.-5-con-lelezione-diretta-del-presidente-del_5e380035-6c81-471f-a4dd-b71adca22a4d.html>
-- *(liv. E)* Codifica di Leo. Dichiarazione video di Vannacci.  
-  <https://www.youtube.com/watch?v=qlxLY9EFwDo>
 
 ---
 
@@ -814,7 +781,7 @@ Una cella **vuota** significa *nessuna posizione documentata*: non e' un 4, e va
 | **Forza Italia** | **6** | A | Voto favorevole. |
 | **Fratelli d'Italia** | **6** | A | Voto favorevole come parte dell'accordo di maggioranza. |
 | **Lega** | **7** | A | Legge di iniziativa del ministro Calderoli. |
-| **Futuro Nazionale** | **5** | D | Codificata da Leo, che ha sciolto il caso lasciato aperto come contraddittorio. |
+| Futuro Nazionale | **5** | D | *CERCATA, ESITO CONTRADDITTORIO: Vannacci dichiara che 'si deve essere autonomisti in Italia e sovranisti in Europa', ma il programma del partito e' centrato sulla sovranita' nazionale e diversi commentatori giudicano le due posizioni inconciliabili, definendo la sua visione 'centralista'. Le fonti disponibili sono blog di opinione, non testate giornalistiche. Serve una fonte diretta prima di codificare. Riferimento: https://www.policymakermag.it/italia/vannacci-vice-di-salvini-lega-al-bivio-tra-sovranismo-e-federalismo/* |
 
 **Fonti:**
 
@@ -826,8 +793,6 @@ Una cella **vuota** significa *nessuna posizione documentata*: non e' un 4, e va
   <https://www.ilpost.it/2024/07/08/autonomia-referendum-centrosinistra-opposizione-compatta/>
 - *(liv. B)* Proposte del Partito Liberaldemocratico: il principio di sussidiarieta' non si traduce 'automaticamente in monopolio pubblico o erogazione gratuita illimitata a prescindere dalle condizioni economiche dei beneficiari'; produzione di beni pubblici essenziali fra cui 'infrastrutture fisiche e digitali' e connessione dei territori, in particolare le aree interne spopolate; sull'energia 'si' al nucleare subito, senza se e senza ma'; atlantismo fra i valori fondativi.  
   <https://partitoliberaldemocratico.com/manifesto/>
-- *(liv. E)* Codifica di Leo. Dichiarazione video di Vannacci.  
-  <https://www.youtube.com/watch?v=qlxLY9EFwDo>
 
 ---
 
@@ -848,7 +813,7 @@ Una cella **vuota** significa *nessuna posizione documentata*: non e' un 4, e va
 | **+Europa** | **1** | C | Contrario al premio di maggioranza: 'un premio abnorme che trasforma una minoranza nel Paese in una maggioranza parlamentare'. Chiede il ritorno al Mattarellum. |
 | **Italia Viva** | **6** | B | Come sopra: programma congiunto. Stessa avvertenza sul voto contrario del 2024. |
 | **Azione** | **6** | B | Il programma propone il modello del 'sindaco d'Italia' con la conseguente riforma del sistema elettorale. ATTENZIONE: nel 2024 Azione ha poi votato contro il premierato. |
-| **Liberaldemocratico** | **3** | F | INFERENZA DEBOLE: da riformista della governabilita' il premio di maggioranza gli converrebbe, da partito piccolo lo penalizza, e la legge lo esclude sulle firme. Fiducia bassa. |
+| Liberaldemocratico | — | — | *CERCATA SENZA ESITO: ricerca dedicata su questa combinazione, nessuna posizione riportata dalla stampa ne' presente nei documenti di partito. Non ripetere la stessa ricerca.* |
 | **Forza Italia** | **7** | A | Voto favorevole. |
 | **Fratelli d'Italia** | **7** | A | Riforma sostenuta dal governo: premio di 70 seggi alla coalizione sopra il 42%. |
 | **Lega** | **7** | A | Voto favorevole. |

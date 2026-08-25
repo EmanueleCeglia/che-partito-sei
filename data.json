@@ -1,8 +1,8 @@
 {
   "_meta": {
-    "versione": "v2.3",
-    "aggiornato": "2026-08-23",
-    "nota": "Punteggi corretti sulle celle con evidenza di livello A (voto parlamentare registrato) o B (programma ufficiale), e domande riformulate per togliere argomenti incorporati e affermazioni doppie. Fonti e motivazioni in fonti_quiz.json e POSIZIONI_E_FONTI.md. Le restanti domande e celle sono ancora quelle della v2.1 e attendono documentazione.",
+    "versione": "v2.4",
+    "aggiornato": "2026-08-25",
+    "nota": "Punteggi documentati in fonti_quiz.json e POSIZIONI_E_FONTI.md, con il livello di evidenza per ogni cella. Le ultime 11 celle sono di livello F, cioe' inferenze dal profilo del partito senza alcuna fonte: sono marcate come tali nella documentazione e vanno escluse da qualsiasi analisi che pretenda di poggiare su evidenza. Domande riformulate per togliere argomenti incorporati e affermazioni doppie; quattro sono volutamente invertite per bilanciare la direzione delle risposte.",
     "celle_corrette": 15,
     "domande_riformulate": 12,
     "domande_invertite": [
@@ -11,7 +11,8 @@
       "Cannabis",
       "Auto e obiettivi climatici"
     ],
-    "nota_inversione": "In queste domande la formulazione e' girata rispetto a POSIZIONI_E_FONTI.md, dove compaiono in forma affermativa: qui essere d'accordo corrisponde alla posizione opposta e i punteggi sono specchiati (8 meno il valore documentato). Serve a bilanciare il numero di domande in cui rispondere \"sono d'accordo\" coincide con la posizione di sinistra, perche' le persone tendono ad acconsentire piu' che a dissentire."
+    "nota_inversione": "In queste domande la formulazione e' girata rispetto a POSIZIONI_E_FONTI.md, dove compaiono in forma affermativa: qui essere d'accordo corrisponde alla posizione opposta e i punteggi sono specchiati (8 meno il valore documentato). Serve a bilanciare il numero di domande in cui rispondere \"sono d'accordo\" coincide con la posizione di sinistra, perche' le persone tendono ad acconsentire piu' che a dissentire.",
+    "celle_inferite": 11
   },
   "parties": [
     "AVS",
@@ -58,10 +59,10 @@
             "AVS": 1,
             "M5S": 1,
             "PD": 2,
-            "+Europa": 3,
+            "+Europa": 4,
             "Italia Viva": 3,
             "Azione": 3,
-            "Liberaldemocratico": 5,
+            "Liberaldemocratico": 6,
             "Forza Italia": 6,
             "Fratelli d'Italia": 6,
             "Lega": 6,
@@ -108,7 +109,7 @@
         {
           "id": "q5",
           "theme": "Età pensionabile",
-          "text": "Si dovrebbe poter andare in pensione prima di quanto consenta la legge attuale.",
+          "text": "Si dovrebbe poter andare in pensione prima di quanto consenta la legge attuale, anche a costo di aumentare il debito pubblico.",
           "scores": {
             "AVS": 6,
             "M5S": 6,
@@ -202,7 +203,7 @@
             "+Europa": 7,
             "Italia Viva": 6,
             "Azione": 6,
-            "Liberaldemocratico": 5,
+            "Liberaldemocratico": 6,
             "Forza Italia": 3,
             "Fratelli d'Italia": 1,
             "Lega": 1,
@@ -220,7 +221,7 @@
             "+Europa": 7,
             "Italia Viva": 6,
             "Azione": 5,
-            "Liberaldemocratico": 6,
+            "Liberaldemocratico": 7,
             "Forza Italia": 2,
             "Fratelli d'Italia": 1,
             "Lega": 1,
@@ -238,7 +239,7 @@
             "+Europa": 1,
             "Italia Viva": 2,
             "Azione": 3,
-            "Liberaldemocratico": 3,
+            "Liberaldemocratico": 2,
             "Forza Italia": 4,
             "Fratelli d'Italia": 7,
             "Lega": 7,
@@ -372,7 +373,7 @@
         {
           "id": "q16",
           "theme": "Auto e obiettivi climatici",
-          "text": "L'Unione europea dovrebbe cancellare il divieto di vendita di nuove auto a benzina e diesel dal 2035.",
+          "text": "Anche dopo il 2035 dovrebbero poter essere vendute in Europa auto nuove a benzina e diesel.",
           "scores": {
             "AVS": 1,
             "M5S": 2,
@@ -439,7 +440,7 @@
             "AVS": 1,
             "M5S": 2,
             "PD": 2,
-            "+Europa": 2,
+            "+Europa": 1,
             "Italia Viva": 4,
             "Azione": 3,
             "Liberaldemocratico": 3,
@@ -485,7 +486,7 @@
             "+Europa": 2,
             "Italia Viva": 2,
             "Azione": 2,
-            "Liberaldemocratico": 4,
+            "Liberaldemocratico": 5,
             "Forza Italia": 6,
             "Fratelli d'Italia": 7,
             "Lega": 6,

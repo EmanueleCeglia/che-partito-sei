@@ -8,7 +8,7 @@
   <meta name="theme-color" content="#070b1e">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <link rel="stylesheet" href="styles.css?v=2.3">
+  <link rel="stylesheet" href="styles.css?v=2.4">
 </head>
 <body>
 
@@ -163,6 +163,10 @@
         <span>Neutrale</span>
         <span>Accordo</span>
       </div>
+      <button type="button" id="btn-no-opinion" class="quiz__no-opinion">
+        <span class="quiz__no-opinion-label">Non ho un'opinione</span>
+        <span id="no-opinion-left" class="quiz__no-opinion-count"></span>
+      </button>
       <div class="quiz__nav">
         <button id="btn-prev" class="quiz__nav-btn" disabled>← Precedente</button>
         <button id="btn-next" class="quiz__nav-btn quiz__nav-btn--next">Successiva →</button>
@@ -214,7 +218,8 @@
       <div class="demo-form__field">
         <label for="field-regione" class="demo-form__label">Regione di residenza <span class="required">*</span></label>
         <input type="text" id="filter-regione" class="demo-form__filter" placeholder="🔍 Cerca regione..." autocomplete="off" aria-label="Cerca regione...">
-        <select id="field-regione" class="demo-form__select" required>
+        <ul id="suggest-regione" class="demo-form__suggest hidden" role="listbox"></ul>
+        <select id="field-regione" class="demo-form__select demo-form__select--hidden" required>
           <option value="" disabled selected>Seleziona regione...</option>
         </select>
       </div>
@@ -223,7 +228,8 @@
       <div class="demo-form__field">
         <label for="field-provincia" class="demo-form__label">Provincia <span class="required">*</span></label>
         <input type="text" id="filter-provincia" class="demo-form__filter" placeholder="🔍 Cerca provincia..." autocomplete="off" aria-label="Cerca provincia..." disabled>
-        <select id="field-provincia" class="demo-form__select" required disabled>
+        <ul id="suggest-provincia" class="demo-form__suggest hidden" role="listbox"></ul>
+        <select id="field-provincia" class="demo-form__select demo-form__select--hidden" required disabled>
           <option value="" disabled selected>Prima seleziona la regione</option>
         </select>
       </div>
@@ -232,7 +238,8 @@
       <div class="demo-form__field">
         <label for="field-comune" class="demo-form__label">Comune <span class="required">*</span></label>
         <input type="text" id="filter-comune" class="demo-form__filter" placeholder="🔍 Cerca comune..." autocomplete="off" aria-label="Cerca comune..." disabled>
-        <select id="field-comune" class="demo-form__select" required disabled>
+        <ul id="suggest-comune" class="demo-form__suggest hidden" role="listbox"></ul>
+        <select id="field-comune" class="demo-form__select demo-form__select--hidden" required disabled>
           <option value="" disabled selected>Prima seleziona la provincia</option>
         </select>
       </div>
@@ -392,6 +399,6 @@
     </div>
   </div>
 
-  <script src="app.js?v=2.3"></script>
+  <script src="app.js?v=2.4"></script>
 </body>
 </html>
