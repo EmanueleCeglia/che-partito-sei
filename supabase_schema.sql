@@ -39,6 +39,12 @@ create table if not exists public.quiz_responses (
   self_ranking_presented  jsonb,   -- ordine in cui gli sono stati mostrati
   self_ranking_ms         integer, -- tempo impiegato, per riconoscere le risposte a caso
 
+  -- Consenso esplicito ex art. 9(2)(a) GDPR e versione dell'informativa a cui si
+  -- riferisce. L'art. 7(1) impone di poter DIMOSTRARE il consenso, non solo di
+  -- averlo chiesto. Vedi supabase_migration_v2.5.sql.
+  consenso_esplicito      boolean,
+  informativa_versione    text,
+
   -- Orologio del browser: utile solo per diagnosticare, non fidarsene.
   -- Per l'analisi usare created_at, che e' del server.
   client_timestamp  timestamptz

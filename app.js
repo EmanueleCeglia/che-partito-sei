@@ -19,7 +19,7 @@ const PARTY_COLORS = {
 };
 
 // ── State ──
-const QUIZ_VERSION = 'v2.4'; // bump on every data/logic change: also busts caches
+const QUIZ_VERSION = 'v2.5'; // bump on every data/logic change: also busts caches
 
 // ── Supabase ──
 const SUPABASE_URL = 'https://cqeugyowkbaghccpgvna.supabase.co';
@@ -28,6 +28,9 @@ const SUPABASE_TABLE = 'quiz_responses';
 // guards the data are the RLS policies in supabase_schema.sql (insert, no read).
 const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNxZXVneW93a2JhZ2hjY3Bndm5hIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODczMTQ2MTksImV4cCI6MjEwMjg5MDYxOX0.TDmCPDGf-aFa06QU6V7Dpd_a3MGMpGCFWDeC8SPsxa8';
 const PENDING_KEY = 'chePartito_pending';
+// Cambiare questa stringa ogni volta che il testo dell'informativa cambia: il
+// consenso vale per la versione che l'utente ha effettivamente letto.
+const INFORMATIVA_VERSIONE = '2026-08-25';
 
 let quizData = null;       // raw JSON data
 let questions = [];        // flat array of all questions in order
@@ -105,6 +108,7 @@ const dom = {
   fieldOccupazione: $('#field-occupazione'),
   fieldReddito: $('#field-reddito'),
   fieldCittadinanza: $('#field-cittadinanza'),
+  fieldConsenso: $('#field-consenso'),
   formError: $('#form-error'),
 
   // Self-ranking Screen
@@ -686,6 +690,7 @@ function resetDemographicForm() {
   dom.filterComune.disabled = true;
   dom.formError.classList.add('hidden');
   dom.demographicForm.querySelectorAll('.invalid').forEach(el => el.classList.remove('invalid'));
+  dom.fieldConsenso.checked = false;
 }
 
 /** Shape a submission the way the quiz_responses table expects it */
@@ -701,6 +706,8 @@ function buildResponseRow(demographics, results, selfRanking) {
     occupazione: demographics.occupazione,
     reddito: demographics.reddito,
     cittadinanza: demographics.cittadinanza,
+    consenso_esplicito: true,          // senza spunta il form non passa la validazione
+    informativa_versione: INFORMATIVA_VERSIONE,
     answers,
     results,
     self_ranking: selfRanking.order,

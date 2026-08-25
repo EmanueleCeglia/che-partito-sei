@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
   <title>Che Partito Sei? | Quiz Politico Italiano</title>
-  <meta name="description" content="Scopri quale partito politico italiano è più vicino alle tue idee. Rispondi a 25 domande su 7 temi politici e ottieni la tua classifica personalizzata.">
+  <meta name="description"
+    content="Scopri quale partito politico italiano è più vicino alle tue idee. Rispondi a 25 domande su 7 temi politici e ottieni la tua classifica personalizzata.">
   <meta name="theme-color" content="#070b1e">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <link rel="stylesheet" href="styles.css?v=2.4">
+  <link rel="stylesheet" href="styles.css?v=2.5">
 </head>
+
 <body>
 
   <!-- Loading Overlay -->
@@ -29,7 +32,8 @@
 
     <p class="landing__subtitle">
       Scopri quale partito politico italiano rispecchia di più le tue idee.
-      Rispondi a 25 domande su temi chiave della politica italiana e ottieni la tua classifica personalizzata in ~5 minuti.
+      Rispondi a 25 domande su temi chiave della politica italiana e ottieni la tua classifica personalizzata in ~5
+      minuti.
     </p>
 
     <div class="landing__stats">
@@ -188,11 +192,53 @@
     <div class="form-screen__privacy">
       <span class="form-screen__privacy-icon">🔒</span>
       <p>
-        <strong>Privacy</strong> — I dati raccolti saranno utilizzati in forma anonima e aggregata
-        per analisi statistica. Non sarà possibile risalire all'identità dei singoli partecipanti.
-        Nessun dato personale identificativo viene memorizzato.
+        <strong>Privacy</strong> — Non chiediamo nome, email o altri identificativi, e i risultati
+        saranno pubblicati solo in forma aggregata. Le tue risposte rivelano però opinioni politiche,
+        che la legge protegge in modo particolare: per questo ti chiediamo un consenso esplicito.
       </p>
     </div>
+
+    <details class="form-screen__informativa">
+      <summary>Leggi l'informativa completa</summary>
+      <div class="form-screen__informativa-corpo">
+        <p><strong>Titolare del trattamento.</strong> Emanuele Ceglia, Leonardo Ventimiglia — per qualsiasi richiesta:
+          emanueleceglia0@gmail.com</p>
+
+        <p><strong>Quali dati raccogliamo.</strong> Età, sesso, regione, provincia e comune di
+          residenza, livello di istruzione, situazione occupazionale, fascia di reddito, cittadinanza,
+          le tue 25 risposte al quiz, la classifica dei partiti che compili tu e il risultato calcolato.
+          Non raccogliamo indirizzo IP, dati del browser, cookie di tracciamento né alcun account.</p>
+
+        <p><strong>Perché.</strong> Per una ricerca statistica su come le caratteristiche
+          socio-demografiche si legano alle opinioni politiche. I risultati verranno diffusi solo in
+          forma aggregata, mai come risposte individuali. Nessun uso commerciale, nessuna profilazione
+          pubblicitaria, nessuna comunicazione a terzi.</p>
+
+        <p><strong>Base giuridica.</strong> Il tuo consenso esplicito, ai sensi dell'articolo 6(1)(a)
+          e dell'articolo 9(2)(a) del GDPR. L'articolo 9 si applica perché le risposte a questo quiz
+          rivelano opinioni politiche, che sono una categoria particolare di dati personali.</p>
+
+        <p><strong>Dove finiscono.</strong> Su un database Supabase con server nell'Unione europea.
+          L'accesso in lettura è riservato a chi conduce la ricerca: la chiave pubblica presente in
+          questa pagina consente solo di inserire una risposta, non di leggerne alcuna.</p>
+
+        <p><strong>Per quanto tempo.</strong> Fino alla conclusione della ricerca e comunque non oltre
+          24 mesi dalla raccolta, dopodiché i dati vengono cancellati o resi definitivamente anonimi.</p>
+
+        <p><strong>Sull'anonimato, con franchezza.</strong> Non conserviamo nulla che ti identifichi
+          direttamente. La combinazione dei dati demografici che ti chiediamo può però risultare rara o
+          addirittura unica, soprattutto nei comuni piccoli. Per questo non li consideriamo dati anonimi
+          ma dati personali a tutti gli effetti, li proteggiamo come tali e non li pubblicheremo mai a
+          livello individuale.</p>
+
+        <p><strong>I tuoi diritti.</strong> Puoi revocare il consenso in qualsiasi momento, e chiedere
+          accesso, rettifica, cancellazione o limitazione dei dati, oppure opporti al trattamento. La
+          revoca non pregiudica la liceità del trattamento già avvenuto. Poiché non conserviamo
+          identificativi, per una richiesta su una risposta specifica dovrai indicarci i dati che hai
+          inserito e la data approssimativa, così da poterla rintracciare. Hai inoltre diritto di
+          proporre reclamo al Garante per la protezione dei dati personali.</p>
+      </div>
+    </details>
 
     <form id="demographic-form" class="demo-form" novalidate>
 
@@ -217,7 +263,8 @@
       <!-- Residenza: Regione -->
       <div class="demo-form__field">
         <label for="field-regione" class="demo-form__label">Regione di residenza <span class="required">*</span></label>
-        <input type="text" id="filter-regione" class="demo-form__filter" placeholder="🔍 Cerca regione..." autocomplete="off" aria-label="Cerca regione...">
+        <input type="text" id="filter-regione" class="demo-form__filter" placeholder="🔍 Cerca regione..."
+          autocomplete="off" aria-label="Cerca regione...">
         <ul id="suggest-regione" class="demo-form__suggest hidden" role="listbox"></ul>
         <select id="field-regione" class="demo-form__select demo-form__select--hidden" required>
           <option value="" disabled selected>Seleziona regione...</option>
@@ -227,7 +274,8 @@
       <!-- Residenza: Provincia -->
       <div class="demo-form__field">
         <label for="field-provincia" class="demo-form__label">Provincia <span class="required">*</span></label>
-        <input type="text" id="filter-provincia" class="demo-form__filter" placeholder="🔍 Cerca provincia..." autocomplete="off" aria-label="Cerca provincia..." disabled>
+        <input type="text" id="filter-provincia" class="demo-form__filter" placeholder="🔍 Cerca provincia..."
+          autocomplete="off" aria-label="Cerca provincia..." disabled>
         <ul id="suggest-provincia" class="demo-form__suggest hidden" role="listbox"></ul>
         <select id="field-provincia" class="demo-form__select demo-form__select--hidden" required disabled>
           <option value="" disabled selected>Prima seleziona la regione</option>
@@ -237,7 +285,8 @@
       <!-- Residenza: Comune -->
       <div class="demo-form__field">
         <label for="field-comune" class="demo-form__label">Comune <span class="required">*</span></label>
-        <input type="text" id="filter-comune" class="demo-form__filter" placeholder="🔍 Cerca comune..." autocomplete="off" aria-label="Cerca comune..." disabled>
+        <input type="text" id="filter-comune" class="demo-form__filter" placeholder="🔍 Cerca comune..."
+          autocomplete="off" aria-label="Cerca comune..." disabled>
         <ul id="suggest-comune" class="demo-form__suggest hidden" role="listbox"></ul>
         <select id="field-comune" class="demo-form__select demo-form__select--hidden" required disabled>
           <option value="" disabled selected>Prima seleziona la provincia</option>
@@ -246,7 +295,8 @@
 
       <!-- Livello di istruzione -->
       <div class="demo-form__field">
-        <label for="field-istruzione" class="demo-form__label">Livello di istruzione massimo <span class="required">*</span></label>
+        <label for="field-istruzione" class="demo-form__label">Livello di istruzione massimo <span
+            class="required">*</span></label>
         <select id="field-istruzione" class="demo-form__select" required>
           <option value="" disabled selected>Seleziona...</option>
           <option value="elementari">Licenza elementare</option>
@@ -260,7 +310,8 @@
 
       <!-- Situazione occupazionale -->
       <div class="demo-form__field">
-        <label for="field-occupazione" class="demo-form__label">Situazione occupazionale <span class="required">*</span></label>
+        <label for="field-occupazione" class="demo-form__label">Situazione occupazionale <span
+            class="required">*</span></label>
         <select id="field-occupazione" class="demo-form__select" required>
           <option value="" disabled selected>Seleziona...</option>
           <option value="studente">Studente</option>
@@ -289,7 +340,8 @@
 
       <!-- Cittadinanza -->
       <div class="demo-form__field">
-        <label for="field-cittadinanza" class="demo-form__label">Hai la cittadinanza italiana e il diritto di voto? <span class="required">*</span></label>
+        <label for="field-cittadinanza" class="demo-form__label">Hai la cittadinanza italiana e il diritto di voto?
+          <span class="required">*</span></label>
         <select id="field-cittadinanza" class="demo-form__select" required>
           <option value="" disabled selected>Seleziona...</option>
           <option value="si">Sì, ho cittadinanza e diritto di voto</option>
@@ -297,8 +349,19 @@
         </select>
       </div>
 
+      <!-- Consenso esplicito: senza, non si puo' trattare un dato dell'art. 9 -->
+      <div class="demo-form__consenso">
+        <input type="checkbox" id="field-consenso" class="demo-form__checkbox" required>
+        <label for="field-consenso">
+          Acconsento al trattamento dei dati che ho inserito e delle mie risposte, <strong>comprese le
+            opinioni politiche che rivelano</strong>, per finalità di ricerca statistica, secondo
+          l'informativa qui sopra. <span class="required">*</span>
+        </label>
+      </div>
+
       <!-- Form error -->
-      <p id="form-error" class="demo-form__error hidden">Per favore compila tutti i campi obbligatori.</p>
+      <p id="form-error" class="demo-form__error hidden">Per favore compila tutti i campi obbligatori e presta il
+        consenso.</p>
 
       <!-- Submit -->
       <button type="submit" id="btn-form-submit" class="btn btn--primary demo-form__submit">
@@ -317,7 +380,7 @@
       <h2 class="ranking-screen__title">🎯 Secondo te?</h2>
       <p class="ranking-screen__subtitle">
         Prima di scoprire il risultato: <strong>tocca i partiti nell'ordine in cui li senti
-        vicini a te</strong>, dal più vicino al più lontano. Non c'è una risposta giusta —
+          vicini a te</strong>, dal più vicino al più lontano. Non c'è una risposta giusta —
         ci interessa la tua percezione, non quella del quiz.
       </p>
     </div>
@@ -399,6 +462,7 @@
     </div>
   </div>
 
-  <script src="app.js?v=2.4"></script>
+  <script src="app.js?v=2.5"></script>
 </body>
+
 </html>

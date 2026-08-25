@@ -1676,6 +1676,69 @@ body::before {
   }
 }
 
+/* Informativa estesa, ripiegata per non soffocare il form */
+.form-screen__informativa {
+  margin: -12px 0 20px;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+}
+
+.form-screen__informativa summary {
+  padding: 12px 16px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent-blue);
+  cursor: pointer;
+}
+
+.form-screen__informativa-corpo {
+  padding: 0 16px 14px;
+}
+
+.form-screen__informativa-corpo p {
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin: 0 0 12px;
+}
+
+.form-screen__informativa-corpo strong {
+  color: var(--text-primary);
+}
+
+/* Consenso esplicito */
+.demo-form__consenso {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-light);
+  background: var(--surface);
+}
+
+.demo-form__checkbox {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  margin-top: 1px;
+  accent-color: var(--accent-indigo);
+  cursor: pointer;
+}
+
+.demo-form__consenso label {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.demo-form__checkbox.invalid {
+  outline: 2px solid var(--accent-rose);
+  outline-offset: 3px;
+}
+
 /* Pulsante "non ho un'opinione", con il residuo a vista */
 .quiz__no-opinion {
   display: flex;
