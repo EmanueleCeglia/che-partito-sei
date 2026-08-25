@@ -19,7 +19,7 @@ const PARTY_COLORS = {
 };
 
 // ── State ──
-const QUIZ_VERSION = 'v2.7'; // bump on every data/logic change: also busts caches
+const QUIZ_VERSION = 'v2.8'; // bump on every data/logic change: also busts caches
 
 // ── Supabase ──
 const SUPABASE_URL = 'https://cqeugyowkbaghccpgvna.supabase.co';
@@ -611,10 +611,14 @@ function attachCombobox(input, select, list) {
       vuoto.textContent = 'Nessun risultato';
       list.appendChild(vuoto);
     } else {
-      // Oltre un certo numero la lista diventa illeggibile: si affina scrivendo
-      trovate.slice(0, 60).forEach(o => {
+      // Le voci speciali stanno in cima. In fondo a un elenco di ventuno regioni,
+      // dentro una lista alta 260px, "Estero" non lo trovava nessuno.
+      const speciali = trovate.filter(o => o.value === ESTERO);
+      const normali = trovate.filter(o => o.value !== ESTERO);
+      [...speciali, ...normali].slice(0, 60).forEach(o => {
         const li = document.createElement('li');
-        li.className = 'demo-form__suggest-item';
+        li.className = 'demo-form__suggest-item'
+          + (o.value === ESTERO ? ' demo-form__suggest-item--speciale' : '');
         li.setAttribute('role', 'option');
         li.dataset.value = o.value;
         li.textContent = o.textContent;

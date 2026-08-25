@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "versione": "v2.7",
+    "versione": "v2.8",
     "aggiornato": "2026-08-25",
     "nota": "Punteggi documentati in fonti_quiz.json e POSIZIONI_E_FONTI.md, con il livello di evidenza per ogni cella. Le ultime 11 celle sono di livello F, cioe' inferenze dal profilo del partito senza alcuna fonte: sono marcate come tali nella documentazione e vanno escluse da qualsiasi analisi che pretenda di poggiare su evidenza. Domande riformulate per togliere argomenti incorporati e affermazioni doppie; quattro sono volutamente invertite per bilanciare la direzione delle risposte.",
     "celle_corrette": 15,

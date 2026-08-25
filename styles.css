@@ -1841,6 +1841,15 @@ select.demo-form__select--hidden {
   cursor: pointer;
 }
 
+/* Voce speciale in cima all'elenco, staccata dalle altre */
+.demo-form__suggest-item--speciale {
+  border-bottom: 1px solid var(--border-light);
+  margin-bottom: 4px;
+  padding-bottom: 12px;
+  color: var(--accent-blue);
+  font-weight: 600;
+}
+
 .demo-form__suggest-item:hover,
 .demo-form__suggest-item.active {
   background: rgba(99, 102, 241, 0.18);
