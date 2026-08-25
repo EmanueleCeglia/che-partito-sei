@@ -82,9 +82,10 @@ Stated openly, because they affect how results should be read:
 
 ## Data collected
 
-Age band, sex, region and province of residence, municipality **only if the user chooses to give it**,
-education, employment status, income bracket, citizenship, the 25 answers, the self-ranking, and the
-computed result. No date of birth, no IP address, no user agent, no session identifier, no account.
+Age band, sex, region and province of residence — or, for Italians registered as living abroad (AIRE,
+who vote in the overseas constituency), the country instead — municipality **only if the user chooses
+to give it**, education, employment status, income bracket, citizenship, the 25 answers, the
+self-ranking, and the computed result. No date of birth, no IP address, no user agent, no session identifier, no account.
 
 Responses go to a Supabase table whose row-level security policy allows **insert only**: the anonymous
 key shipped in the client cannot read back a single response. Reading requires the dashboard.
@@ -120,6 +121,8 @@ app.js                        quiz logic, scoring, Supabase submission with offl
 styles.css                    styles
 data.json                     the 25 questions and the 11 × 25 party scores actually used
 comuni.json                   7,904 Italian municipalities by region and province
+paesi.json                    251 countries, for residents abroad
+build_paesi.py                regenerates paesi.json from the ISTAT list
 POSIZIONI_E_FONTI.md          every party position with its source and evidence level
 fonti_quiz.json               the same, machine-readable
 fonti_pilota.json             the three-question methodological pilot

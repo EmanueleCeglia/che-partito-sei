@@ -19,7 +19,7 @@ const PARTY_COLORS = {
 };
 
 // ── State ──
-const QUIZ_VERSION = 'v2.6'; // bump on every data/logic change: also busts caches
+const QUIZ_VERSION = 'v2.7'; // bump on every data/logic change: also busts caches
 
 // ── Supabase ──
 const SUPABASE_URL = 'https://cqeugyowkbaghccpgvna.supabase.co';
@@ -30,7 +30,7 @@ const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBh
 const PENDING_KEY = 'chePartito_pending';
 // Cambiare questa stringa ogni volta che il testo dell'informativa cambia: il
 // consenso vale per la versione che l'utente ha effettivamente letto.
-const INFORMATIVA_VERSIONE = '2026-08-25b';
+const INFORMATIVA_VERSIONE = '2026-08-25c';
 
 let quizData = null;       // raw JSON data
 let questions = [];        // flat array of all questions in order
@@ -98,6 +98,12 @@ const dom = {
   fieldRegione: $('#field-regione'),
   fieldProvincia: $('#field-provincia'),
   fieldComune: $('#field-comune'),
+  fieldPaese: $('#field-paese'),
+  filterPaese: $('#filter-paese'),
+  suggestPaese: $('#suggest-paese'),
+  wrapProvincia: $('#wrap-provincia'),
+  wrapComune: $('#wrap-comune'),
+  wrapPaese: $('#wrap-paese'),
   filterRegione: $('#filter-regione'),
   filterProvincia: $('#filter-provincia'),
   filterComune: $('#filter-comune'),
@@ -134,6 +140,11 @@ const dom = {
 
 // ── Comuni Data ──
 let comuniData = null;
+let paesiData = null;
+
+// Valore speciale della regione per chi risiede all'estero: iscritti AIRE, che
+// votano nella circoscrizione Estero.
+const ESTERO = 'Estero (iscritto AIRE)';
 
 // ── Utility functions ──
 
@@ -184,16 +195,19 @@ function clearProgress() {
 
 async function loadData() {
   try {
-    const [quizRes, comuniRes] = await Promise.all([
+    const [quizRes, comuniRes, paesiRes] = await Promise.all([
       fetch(`data.json?v=${QUIZ_VERSION}`),
-      fetch(`comuni.json?v=${QUIZ_VERSION}`)
+      fetch(`comuni.json?v=${QUIZ_VERSION}`),
+      fetch(`paesi.json?v=${QUIZ_VERSION}`)
     ]);
     
     if (!quizRes.ok) throw new Error(`HTTP ${quizRes.status} on data.json`);
     if (!comuniRes.ok) throw new Error(`HTTP ${comuniRes.status} on comuni.json`);
+    if (!paesiRes.ok) throw new Error(`HTTP ${paesiRes.status} on paesi.json`);
     
     quizData = await quizRes.json();
     comuniData = await comuniRes.json();
+    paesiData = await paesiRes.json();
   } catch (err) {
     console.error('Failed to load data:', err);
     dom.loadingOverlay.innerHTML = `
@@ -536,6 +550,20 @@ function showFormScreen() {
       opt.textContent = reg;
       dom.fieldRegione.appendChild(opt);
     });
+    // In fondo, dopo le venti regioni, cosi' chi vive in Italia non se lo trova fra i piedi
+    const estero = document.createElement('option');
+    estero.value = ESTERO;
+    estero.textContent = ESTERO;
+    dom.fieldRegione.appendChild(estero);
+  }
+
+  if (dom.fieldPaese.options.length <= 1 && paesiData) {
+    paesiData.forEach(p => {
+      const opt = document.createElement('option');
+      opt.value = p;
+      opt.textContent = p;
+      dom.fieldPaese.appendChild(opt);
+    });
   }
 
   showScreen('screen-form');
@@ -556,7 +584,7 @@ function clearSelectFilter(input, select) {
 
 /** Chiude tutte le liste di suggerimenti aperte */
 function closeAllSuggestions() {
-  [dom.suggestRegione, dom.suggestProvincia, dom.suggestComune]
+  [dom.suggestRegione, dom.suggestProvincia, dom.suggestComune, dom.suggestPaese]
     .forEach(l => l.classList.add('hidden'));
 }
 
@@ -676,6 +704,35 @@ function attachSelectFilter(input, select) {
   });
 }
 
+/**
+ * Mostra i campi giusti a seconda che si risieda in Italia o all'estero, e
+ * sposta di conseguenza l'obbligatorieta': senza questo, un campo nascosto ma
+ * ancora required bloccherebbe l'invio senza che l'utente capisca perche'.
+ */
+function aggiornaResidenza() {
+  const estero = dom.fieldRegione.value === ESTERO;
+
+  dom.wrapPaese.classList.toggle('hidden', !estero);
+  dom.wrapProvincia.classList.toggle('hidden', estero);
+  dom.wrapComune.classList.toggle('hidden', estero);
+
+  dom.fieldPaese.required = estero;
+  dom.fieldProvincia.required = !estero;
+
+  if (estero) {
+    // Sgombera provincia e comune: chi vive all'estero non ne ha
+    dom.fieldProvincia.value = '';
+    dom.fieldComune.value = '';
+    clearSelectFilter(dom.filterProvincia, dom.fieldProvincia);
+    clearSelectFilter(dom.filterComune, dom.fieldComune);
+    dom.fieldProvincia.classList.remove('invalid');
+  } else {
+    dom.fieldPaese.value = '';
+    clearSelectFilter(dom.filterPaese, dom.fieldPaese);
+    dom.fieldPaese.classList.remove('invalid');
+  }
+}
+
 /** Clear the demographic form so a replay starts from a blank sheet */
 function resetDemographicForm() {
   dom.demographicForm.reset();
@@ -686,8 +743,11 @@ function resetDemographicForm() {
   clearSelectFilter(dom.filterRegione, dom.fieldRegione);
   clearSelectFilter(dom.filterProvincia, dom.fieldProvincia);
   clearSelectFilter(dom.filterComune, dom.fieldComune);
+  dom.fieldPaese.value = '';
+  clearSelectFilter(dom.filterPaese, dom.fieldPaese);
   dom.filterProvincia.disabled = true;
   dom.filterComune.disabled = true;
+  aggiornaResidenza();
   dom.formError.classList.add('hidden');
   dom.demographicForm.querySelectorAll('.invalid').forEach(el => el.classList.remove('invalid'));
   dom.fieldConsenso.checked = false;
@@ -700,8 +760,9 @@ function buildResponseRow(demographics, results, selfRanking) {
     eta_fascia: demographics.eta_fascia,
     sesso: demographics.sesso,
     regione: demographics.regione,
-    provincia: demographics.provincia,
-    comune: demographics.comune || null,   // facoltativo
+    provincia: demographics.provincia || null,   // vuota per chi vive all'estero
+    comune: demographics.comune || null,         // facoltativo
+    paese_estero: demographics.paese_estero || null,
     istruzione: demographics.istruzione,
     occupazione: demographics.occupazione,
     reddito: demographics.reddito,
@@ -936,6 +997,7 @@ function handleFormSubmit(e) {
     regione: dom.fieldRegione.value,
     provincia: dom.fieldProvincia.value,
     comune: dom.fieldComune.value,
+    paese_estero: dom.fieldPaese.value,
     istruzione: dom.fieldIstruzione.value,
     occupazione: dom.fieldOccupazione.value,
     reddito: dom.fieldReddito.value,
@@ -1168,10 +1230,13 @@ function initEventHandlers() {
   attachCombobox(dom.filterRegione, dom.fieldRegione, dom.suggestRegione);
   attachCombobox(dom.filterProvincia, dom.fieldProvincia, dom.suggestProvincia);
   attachCombobox(dom.filterComune, dom.fieldComune, dom.suggestComune);
+  attachCombobox(dom.filterPaese, dom.fieldPaese, dom.suggestPaese);
 
   // Form cascading selects
   dom.fieldRegione.addEventListener('change', () => {
     const reg = dom.fieldRegione.value;
+    aggiornaResidenza();
+    if (reg === ESTERO) { dom.fieldRegione.classList.remove('invalid'); return; }
     dom.fieldProvincia.innerHTML = '<option value="" disabled selected>Seleziona provincia...</option>';
     dom.fieldComune.innerHTML = '<option value="" disabled selected>Prima seleziona la provincia</option>';
     dom.fieldComune.disabled = true;
