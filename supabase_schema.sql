@@ -35,9 +35,9 @@ create table if not exists public.quiz_responses (
   -- Classifica soggettiva dei partiti, dal piu' vicino al piu' lontano secondo
   -- l'utente, raccolta PRIMA di mostrargli i risultati. Nullable: le risposte
   -- della v2.1 non ce l'hanno. Vedi supabase_migration_v2.2.sql.
-  self_ranking            jsonb,   -- solo i partiti che ha voluto ordinare
-  self_ranking_unknown    jsonb,   -- quelli dichiarati sconosciuti
-  self_ranking_presented  jsonb,   -- ordine in cui gli sono stati mostrati
+  self_ranking            jsonb,   -- dalla v2.9: i TRE partiti scelti, dal piu' vicino
+  self_ranking_unknown    jsonb,   -- OBSOLETA dalla v2.9: sempre null, resta per le risposte precedenti
+  self_ranking_presented  jsonb,   -- ordine in cui gli undici partiti sono stati mostrati
   self_ranking_ms         integer, -- tempo impiegato, per riconoscere le risposte a caso
 
   -- Consenso esplicito ex art. 9(2)(a) GDPR e versione dell'informativa a cui si

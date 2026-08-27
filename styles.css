@@ -1573,6 +1573,25 @@ body::before {
   cursor: not-allowed;
 }
 
+/* Schede rese inerti una volta completata la top 3 */
+.party-chip--spenta {
+  opacity: 0.4;
+  cursor: default;
+  pointer-events: none;
+}
+
+/* Conferma che la scelta e' completa */
+.ranking-screen__done {
+  margin-top: var(--space-md);
+  padding: var(--space-md);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  background: rgba(16, 185, 129, 0.10);
+  color: var(--accent-emerald);
+  font-size: 0.88rem;
+  text-align: center;
+}
+
 /* The ranking the user is building */
 .ranking-order,
 .ranking-pool {

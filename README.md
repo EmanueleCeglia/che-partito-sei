@@ -7,7 +7,7 @@ positions comes from.
 **Live at [www.quizpolitico.it](https://www.quizpolitico.it)**
 
 The quiz asks 25 statements on a 1–7 agreement scale, collects demographic information, asks you to
-rank the parties yourself *before* revealing anything, and only then shows the result.
+name your own top three parties *before* revealing anything, and only then shows the result.
 
 ---
 
@@ -53,10 +53,12 @@ Each question in `POSIZIONI_E_FONTI.md` records what was changed and why.
 
 ## Reducing bias in the answers
 
-- The **self-ranking screen** asks users to order the parties from closest to furthest *before* seeing
-  any result. Parties are presented in a **randomly shuffled order that is saved with the response**,
-  so presentation-order effects can be controlled for in analysis. The time taken is recorded too:
-  a ranking of eleven parties completed in four seconds is noise, and can be filtered out.
+- The **self-ranking screen** asks users to pick the three parties they feel closest to, in order,
+  *before* seeing any result. Parties are presented in a **randomly shuffled order that is saved with
+  the response**, so presentation-order effects can be controlled for in analysis. The time taken is
+  recorded too: three picks made in two seconds are noise, and can be filtered out. Earlier versions
+  asked for a full ranking of all eleven parties; the positions at the bottom were largely arbitrary
+  and the task was long, so it was cut to the part that carries the signal.
 - A **"no opinion" button** with a budget of five uses per quiz. The midpoint of a Likert scale is not
   the same as "I don't know" — research on voting advice applications finds most midpoint answers
   express dilemmas or rejection of the question's premise, not ignorance. The cap also guarantees at

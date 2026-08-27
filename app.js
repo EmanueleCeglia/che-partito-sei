@@ -19,7 +19,7 @@ const PARTY_COLORS = {
 };
 
 // ── State ──
-const QUIZ_VERSION = 'v2.8'; // bump on every data/logic change: also busts caches
+const QUIZ_VERSION = 'v2.9'; // bump on every data/logic change: also busts caches
 
 // ── Supabase ──
 const SUPABASE_URL = 'https://cqeugyowkbaghccpgvna.supabase.co';
@@ -40,11 +40,13 @@ let isTransitioning = false;
 let autoAdvanceTimer = null;
 let pendingDemographics = null; // filled by the form, used after the ranking
 
-// Self-ranking state
-let rankPool = [];       // still to place
-let rankOrder = [];      // placed, closest first
-let rankUnknown = [];    // declared unknown
-let rankPresented = [];  // the shuffled order actually shown, kept for the analysis
+// Classifica soggettiva: si chiedono solo i primi tre, ed e' obbligatorio.
+// Ordinare tutti e undici i partiti era un compito lungo e, per quelli in fondo,
+// per lo piu' arbitrario: la top 3 e' l'informazione che conta e costa poco.
+const TOP_N = 3;
+let rankPool = [];       // partiti ancora disponibili
+let rankOrder = [];      // i prescelti, dal piu' vicino
+let rankPresented = [];  // l'ordine mescolato mostrato, salvato per l'analisi
 let rankStartedAt = 0;
 let noticeTimer = null;
 
@@ -122,9 +124,8 @@ const dom = {
   rankingOrder: $('#ranking-order'),
   rankingPool: $('#ranking-pool'),
   rankingPoolLabel: $('#ranking-pool-label'),
-  rankingUnknown: $('#ranking-unknown'),
-  rankingUnknownWrap: $('#ranking-unknown-wrap'),
   rankingHint: $('#ranking-hint'),
+  rankingDone: $('#ranking-done'),
   rankingCount: $('#ranking-count'),
   rankingTotal: $('#ranking-total'),
   rankingProgressFill: $('#ranking-progress-fill'),
@@ -776,7 +777,7 @@ function buildResponseRow(demographics, results, selfRanking) {
     answers,
     results,
     self_ranking: selfRanking.order,
-    self_ranking_unknown: selfRanking.unknown,
+    self_ranking_unknown: null,    // dalla v2.9 non si dichiarano piu' i partiti sconosciuti
     self_ranking_presented: selfRanking.presented,
     self_ranking_ms: selfRanking.ms,
     client_timestamp: new Date().toISOString(),
@@ -876,18 +877,11 @@ function buildPartyChip(party, variant, position) {
   chip.appendChild(name);
 
   if (variant === 'pool') {
-    // The whole chip picks the party; the small button parks it as unknown
+    // Tutta la scheda seleziona il partito
     chip.classList.add('party-chip--tappable');
     chip.dataset.pick = party;
     chip.setAttribute('role', 'button');
     chip.setAttribute('tabindex', '0');
-
-    const unknown = document.createElement('button');
-    unknown.type = 'button';
-    unknown.className = 'party-chip__action';
-    unknown.dataset.unknown = party;
-    unknown.textContent = 'non lo conosco';
-    chip.appendChild(unknown);
   } else {
     const undo = document.createElement('button');
     undo.type = 'button';
@@ -902,8 +896,7 @@ function buildPartyChip(party, variant, position) {
 }
 
 function renderRanking() {
-  const total = rankPresented.length;
-  const placed = rankOrder.length + rankUnknown.length;
+  const completa = rankOrder.length >= TOP_N;
 
   dom.rankingOrder.innerHTML = '';
   rankOrder.forEach((party, i) => {
@@ -912,31 +905,33 @@ function renderRanking() {
 
   dom.rankingPool.innerHTML = '';
   rankPool.forEach(party => {
-    dom.rankingPool.appendChild(buildPartyChip(party, 'pool'));
+    const chip = buildPartyChip(party, 'pool');
+    // Raggiunti i tre, le schede restano visibili ma inerti: toglierle
+    // farebbe sparire meta' schermata di colpo
+    if (completa) {
+      chip.classList.add('party-chip--spenta');
+      chip.removeAttribute('tabindex');
+      delete chip.dataset.pick;
+    }
+    dom.rankingPool.appendChild(chip);
   });
 
-  dom.rankingUnknown.innerHTML = '';
-  rankUnknown.forEach(party => {
-    dom.rankingUnknown.appendChild(buildPartyChip(party, 'unknown'));
-  });
-
-  dom.rankingUnknownWrap.classList.toggle('hidden', rankUnknown.length === 0);
-  dom.rankingPoolLabel.classList.toggle('hidden', rankPool.length === 0);
+  dom.rankingPoolLabel.classList.toggle('hidden', completa);
   dom.rankingHint.classList.toggle('hidden', rankOrder.length > 0);
+  dom.rankingDone.classList.toggle('hidden', !completa);
 
-  dom.rankingCount.textContent = placed;
-  dom.rankingProgressFill.style.width = `${(placed / total) * 100}%`;
+  dom.rankingCount.textContent = rankOrder.length;
+  dom.rankingProgressFill.style.width = `${(rankOrder.length / TOP_N) * 100}%`;
 
-  // Every party has to be either ranked or declared unknown, and a ranking made
-  // only of "non lo conosco" would carry no information at all
-  dom.btnRankingSubmit.disabled = rankPool.length > 0 || rankOrder.length === 0;
-  if (!dom.btnRankingSubmit.disabled) dom.rankingError.classList.add('hidden');
+  // Il pulsante resta attivo anche se la scelta e' incompleta: un pulsante grigio
+  // che non reagisce lascia l'utente senza sapere cosa manca. E' il click a dirlo,
+  // come gia' avviene nel form demografico.
+  if (completa) dom.rankingError.classList.add('hidden');
 }
 
 /** Put a party back among the ones to place, in the order it was shown in */
 function returnToPool(party) {
   rankOrder = rankOrder.filter(p => p !== party);
-  rankUnknown = rankUnknown.filter(p => p !== party);
   rankPool.push(party);
   rankPool.sort((a, b) => rankPresented.indexOf(a) - rankPresented.indexOf(b));
   renderRanking();
@@ -948,30 +943,26 @@ function showRankingScreen() {
   rankPresented = shuffle(quizData.parties);
   rankPool = [...rankPresented];
   rankOrder = [];
-  rankUnknown = [];
   rankStartedAt = Date.now();
 
-  dom.rankingTotal.textContent = rankPresented.length;
+  dom.rankingTotal.textContent = TOP_N;
   dom.rankingError.classList.add('hidden');
   renderRanking();
   showScreen('screen-ranking');
 }
 
 function handleRankingSubmit() {
-  if (rankPool.length > 0) {
-    dom.rankingError.textContent = 'Colloca tutti i partiti: ordina quelli che conosci e segna gli altri come "non lo conosco".';
-    dom.rankingError.classList.remove('hidden');
-    return;
-  }
-  if (rankOrder.length === 0) {
-    dom.rankingError.textContent = 'Ordina almeno un partito prima di continuare.';
+  if (rankOrder.length < TOP_N) {
+    const mancanti = TOP_N - rankOrder.length;
+    dom.rankingError.textContent = mancanti === 1
+      ? 'Scegli ancora un partito: servono tre scelte per vedere i risultati.'
+      : `Scegli ancora ${mancanti} partiti: servono tre scelte per vedere i risultati.`;
     dom.rankingError.classList.remove('hidden');
     return;
   }
 
   const selfRanking = {
-    order: [...rankOrder],         // closest first
-    unknown: [...rankUnknown],
+    order: [...rankOrder],         // dal piu' vicino
     presented: [...rankPresented], // to control for presentation-order effects
     ms: Date.now() - rankStartedAt // a few seconds for 11 parties means noise
   };
@@ -1302,15 +1293,8 @@ function initEventHandlers() {
     const undo = e.target.closest('[data-undo]');
     if (undo) return returnToPool(undo.dataset.undo);
 
-    const unknown = e.target.closest('[data-unknown]');
-    if (unknown) {
-      rankPool = rankPool.filter(p => p !== unknown.dataset.unknown);
-      rankUnknown.push(unknown.dataset.unknown);
-      return renderRanking();
-    }
-
     const pick = e.target.closest('[data-pick]');
-    if (pick) {
+    if (pick && rankOrder.length < TOP_N) {
       rankPool = rankPool.filter(p => p !== pick.dataset.pick);
       rankOrder.push(pick.dataset.pick);
       renderRanking();
@@ -1321,7 +1305,7 @@ function initEventHandlers() {
   dom.screenRanking.addEventListener('keydown', (e) => {
     if (e.key !== 'Enter' && e.key !== ' ') return;
     const pick = e.target.closest('[data-pick]');
-    if (!pick) return;
+    if (!pick || rankOrder.length >= TOP_N) return;
     e.preventDefault();
     rankPool = rankPool.filter(p => p !== pick.dataset.pick);
     rankOrder.push(pick.dataset.pick);

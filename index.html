@@ -10,7 +10,7 @@
   <meta name="theme-color" content="#070b1e">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <link rel="stylesheet" href="styles.css?v=2.8">
+  <link rel="stylesheet" href="styles.css?v=2.9">
 </head>
 
 <body>
@@ -411,8 +411,8 @@
     <div class="ranking-screen__header">
       <h2 class="ranking-screen__title">🎯 Secondo te?</h2>
       <p class="ranking-screen__subtitle">
-        Prima di scoprire il risultato: <strong>tocca i partiti nell'ordine in cui li senti
-          vicini a te</strong>, dal più vicino al più lontano. Non c'è una risposta giusta —
+        Prima di scoprire il risultato: <strong>scegli i tre partiti che senti più vicini a
+          te</strong>, toccandoli in ordine, dal primo al terzo. Non c'è una risposta giusta —
         ci interessa la tua percezione, non quella del quiz.
       </p>
     </div>
@@ -422,7 +422,7 @@
         <div id="ranking-progress-fill" class="ranking-screen__progress-fill" style="width: 0%"></div>
       </div>
       <p class="ranking-screen__progress-text">
-        <span id="ranking-count">0</span> di <span id="ranking-total">11</span> partiti collocati
+        <span id="ranking-count">0</span> di <span id="ranking-total">3</span> scelti
       </p>
     </div>
 
@@ -431,22 +431,19 @@
     <p id="ranking-hint" class="ranking-screen__hint">
       Inizia dal partito che senti <strong>più vicino</strong> a te.
     </p>
+    <p id="ranking-done" class="ranking-screen__done hidden">
+      Hai scelto i tuoi tre. Se vuoi cambiarne uno, annullalo qui sopra.
+    </p>
 
     <!-- Partiti ancora da collocare, in ordine casuale -->
     <div class="ranking-screen__section">
-      <p id="ranking-pool-label" class="ranking-screen__section-label">Da collocare</p>
+      <p id="ranking-pool-label" class="ranking-screen__section-label">Gli altri partiti</p>
       <div id="ranking-pool" class="ranking-pool"></div>
-    </div>
-
-    <!-- Quelli dichiarati sconosciuti -->
-    <div id="ranking-unknown-wrap" class="ranking-screen__section hidden">
-      <p class="ranking-screen__section-label">Non li conosci</p>
-      <div id="ranking-unknown" class="ranking-pool ranking-pool--unknown"></div>
     </div>
 
     <p id="ranking-error" class="ranking-screen__error hidden"></p>
 
-    <button type="button" id="btn-ranking-submit" class="btn btn--primary ranking-screen__submit" disabled>
+    <button type="button" id="btn-ranking-submit" class="btn btn--primary ranking-screen__submit">
       Vedi i Risultati 🏆
     </button>
   </div>
@@ -494,7 +491,7 @@
     </div>
   </div>
 
-  <script src="app.js?v=2.8"></script>
+  <script src="app.js?v=2.9"></script>
 </body>
 
 </html>
