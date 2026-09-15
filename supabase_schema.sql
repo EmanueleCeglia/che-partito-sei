@@ -34,7 +34,7 @@ create table if not exists public.quiz_responses (
 
   -- Classifica soggettiva dei partiti, dal piu' vicino al piu' lontano secondo
   -- l'utente, raccolta PRIMA di mostrargli i risultati. Nullable: le risposte
-  -- della v2.1 non ce l'hanno. Vedi supabase_migration_v2.2.sql.
+  -- della v2.1 non ce l'hanno. Storico in v.1/supabase_migration_v2.2.sql.
   self_ranking            jsonb,   -- dalla v2.9: i TRE partiti scelti, dal piu' vicino
   self_ranking_unknown    jsonb,   -- OBSOLETA dalla v2.9: sempre null, resta per le risposte precedenti
   self_ranking_presented  jsonb,   -- ordine in cui gli undici partiti sono stati mostrati
@@ -42,13 +42,21 @@ create table if not exists public.quiz_responses (
 
   -- Consenso esplicito ex art. 9(2)(a) GDPR e versione dell'informativa a cui si
   -- riferisce. L'art. 7(1) impone di poter DIMOSTRARE il consenso, non solo di
-  -- averlo chiesto. Vedi supabase_migration_v2.5.sql.
+  -- averlo chiesto. Storico in v.1/supabase_migration_v2.5.sql.
   consenso_esplicito      boolean,
   informativa_versione    text,
 
   -- Orologio del browser: utile solo per diagnosticare, non fidarsene.
   -- Per l'analisi usare created_at, che e' del server.
-  client_timestamp  timestamptz
+  client_timestamp  timestamptz,
+
+  -- O si risiede in Italia con una provincia, o all'estero (iscritti AIRE) con
+  -- un paese: mai entrambi, mai nessuno dei due
+  constraint residenza_coerente check (
+    (regione = 'Estero (iscritto AIRE)' and paese_estero is not null and provincia is null)
+    or
+    (regione <> 'Estero (iscritto AIRE)' and paese_estero is null and provincia is not null)
+  )
 );
 
 -- Nessun dato identificativo viene salvato: niente IP, niente user agent,

@@ -19,7 +19,7 @@ const PARTY_COLORS = {
 };
 
 // ── State ──
-const QUIZ_VERSION = 'v2.9'; // bump on every data/logic change: also busts caches
+const QUIZ_VERSION = 'v3.0'; // bump on every data/logic change: also busts caches
 
 // ── Supabase ──
 const SUPABASE_URL = 'https://cqeugyowkbaghccpgvna.supabase.co';
@@ -163,6 +163,7 @@ function saveProgress() {
     answers,
     noOpinion,
     currentIndex,
+    quizVersion: QUIZ_VERSION,
     timestamp: Date.now(),
   };
   localStorage.setItem('chePartito_progress_v2', JSON.stringify(data));
@@ -174,8 +175,10 @@ function loadProgress() {
     const raw = localStorage.getItem('chePartito_progress_v2');
     if (!raw) return null;
     const data = JSON.parse(raw);
-    // Only allow resume if less than 7 days old
-    if (Date.now() - data.timestamp > 7 * 24 * 60 * 60 * 1000) {
+    // Only allow resume if less than 7 days old, and on the same questionnaire:
+    // answers given to a different version would land on different questions
+    const stale = Date.now() - data.timestamp > 7 * 24 * 60 * 60 * 1000;
+    if (stale || data.quizVersion !== QUIZ_VERSION) {
       localStorage.removeItem('chePartito_progress_v2');
       return null;
     }
@@ -499,8 +502,10 @@ function calculateScores() {
     if (userAnswer === null) return;
 
     quizData.parties.forEach(party => {
+      // null = nessuna posizione documentata: la cella resta fuori dalla media,
+      // invece di valere come la distanza da zero
       const partyScore = q.scores[party];
-      if (partyScore === undefined) return;
+      if (partyScore === undefined || partyScore === null) return;
 
       // Alignment: 7 when perfect match, 1 when max distance (6)
       const distance = Math.abs(userAnswer - partyScore);
@@ -678,35 +683,6 @@ function attachCombobox(input, select, list) {
   });
 
   input.addEventListener('blur', () => setTimeout(() => list.classList.add('hidden'), 120));
-}
-
-/** Non piu' usata: sostituita da attachCombobox */
-function attachSelectFilter(input, select) {
-  // Enter inside a form submits it; here it should just do nothing
-  input.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter') e.preventDefault();
-  });
-
-  input.addEventListener('input', () => {
-    const query = normalizeForSearch(input.value.trim());
-    let visible = 0;
-
-    [...select.options].forEach(opt => {
-      if (!opt.value) return; // the "Seleziona..." placeholder always stays
-      const match = !query || normalizeForSearch(opt.textContent).includes(query);
-      opt.hidden = !match;
-      if (match) visible++;
-    });
-
-    // Drop a choice the filter just hid, so it can't be submitted unseen
-    const chosen = select.selectedOptions[0];
-    if (chosen && chosen.hidden) {
-      select.selectedIndex = 0;
-      select.dispatchEvent(new Event('change'));
-    }
-
-    input.classList.toggle('no-results', visible === 0);
-  });
 }
 
 /**

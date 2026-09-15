@@ -1,18 +1,20 @@
 {
   "_meta": {
-    "versione": "v2.9",
-    "aggiornato": "2026-08-25",
-    "nota": "Punteggi documentati in fonti_quiz.json e POSIZIONI_E_FONTI.md, con il livello di evidenza per ogni cella. Le ultime 11 celle sono di livello F, cioe' inferenze dal profilo del partito senza alcuna fonte: sono marcate come tali nella documentazione e vanno escluse da qualsiasi analisi che pretenda di poggiare su evidenza. Domande riformulate per togliere argomenti incorporati e affermazioni doppie; quattro sono volutamente invertite per bilanciare la direzione delle risposte.",
-    "celle_corrette": 15,
-    "domande_riformulate": 12,
+    "versione": "v3.0",
+    "aggiornato": "2026-09-15",
+    "generato_da": "build_data.py a partire da fonti_quiz.json: non modificare a mano",
+    "nota": "I punteggi null indicano una posizione non documentata e sono esclusi dal calcolo. Nelle domande invertite il punteggio e' specchiato (8 meno il valore documentato).",
     "domande_invertite": [
-      "Salario minimo",
-      "Requisiti per la cittadinanza",
       "Cannabis",
       "Auto e obiettivi climatici"
     ],
-    "nota_inversione": "In queste domande la formulazione e' girata rispetto a POSIZIONI_E_FONTI.md, dove compaiono in forma affermativa: qui essere d'accordo corrisponde alla posizione opposta e i punteggi sono specchiati (8 meno il valore documentato). Serve a bilanciare il numero di domande in cui rispondere \"sono d'accordo\" coincide con la posizione di sinistra, perche' le persone tendono ad acconsentire piu' che a dissentire.",
-    "celle_inferite": 11
+    "celle_per_livello": {
+      "A": 131,
+      "B": 53,
+      "C": 60,
+      "E": 8,
+      "null": 23
+    }
   },
   "parties": [
     "AVS",
@@ -35,93 +37,97 @@
       "questions": [
         {
           "id": "q1",
-          "theme": "Progressività fiscale",
-          "text": "Il sistema fiscale dovrebbe essere più progressivo, con maggiore prelievo su grandi patrimoni, extraprofitti e rendite, anche a costo di tasse più alte per i redditi alti.",
+          "key": "patrimoniale",
+          "theme": "Tassazione dei grandi patrimoni",
+          "text": "Chi possiede grandi patrimoni dovrebbe pagare più tasse di quante ne paghi oggi.",
           "scores": {
             "AVS": 7,
-            "M5S": 7,
-            "PD": 6,
-            "+Europa": 4,
-            "Italia Viva": 3,
-            "Azione": 4,
-            "Liberaldemocratico": 3,
-            "Forza Italia": 2,
-            "Fratelli d'Italia": 2,
+            "M5S": 4,
+            "PD": 5,
+            "+Europa": null,
+            "Italia Viva": 2,
+            "Azione": 3,
+            "Liberaldemocratico": 1,
+            "Forza Italia": 1,
+            "Fratelli d'Italia": 1,
             "Lega": 1,
-            "Futuro Nazionale": 2
+            "Futuro Nazionale": null
           }
         },
         {
           "id": "q2",
-          "theme": "Salario minimo",
-          "text": "Il livello dei salari dovrebbe essere lasciato alla contrattazione tra sindacati e imprese, senza un minimo fissato per legge.",
+          "key": "salario_minimo",
+          "theme": "Salario minimo legale",
+          "text": "La legge dovrebbe fissare una retribuzione oraria minima valida per tutti i settori.",
           "scores": {
-            "AVS": 1,
-            "M5S": 1,
-            "PD": 2,
-            "+Europa": 4,
-            "Italia Viva": 3,
-            "Azione": 3,
-            "Liberaldemocratico": 6,
-            "Forza Italia": 6,
-            "Fratelli d'Italia": 6,
-            "Lega": 6,
-            "Futuro Nazionale": 6
-          },
-          "invertita": true
+            "AVS": 7,
+            "M5S": 7,
+            "PD": 7,
+            "+Europa": 7,
+            "Italia Viva": 5,
+            "Azione": 6,
+            "Liberaldemocratico": null,
+            "Forza Italia": 1,
+            "Fratelli d'Italia": 1,
+            "Lega": 1,
+            "Futuro Nazionale": 4
+          }
         },
         {
           "id": "q3",
+          "key": "ruolo_stato",
           "theme": "Ruolo dello Stato nell'economia",
-          "text": "Lo Stato dovrebbe intervenire direttamente nell'economia con politica industriale pubblica, investimenti in settori strategici e riconversione ecologica.",
+          "text": "Lo Stato dovrebbe intervenire direttamente nell'economia con investimenti pubblici nei settori strategici.",
           "scores": {
-            "AVS": 7,
-            "M5S": 6,
-            "PD": 6,
-            "+Europa": 4,
-            "Italia Viva": 3,
-            "Azione": 5,
+            "AVS": 6,
+            "M5S": 7,
+            "PD": 7,
+            "+Europa": null,
+            "Italia Viva": null,
+            "Azione": 6,
             "Liberaldemocratico": 2,
-            "Forza Italia": 4,
-            "Fratelli d'Italia": 5,
-            "Lega": 5,
-            "Futuro Nazionale": 5
+            "Forza Italia": 3,
+            "Fratelli d'Italia": 4,
+            "Lega": 6,
+            "Futuro Nazionale": 7
           }
         },
         {
           "id": "q4",
-          "theme": "Austerità vs. spesa pubblica",
-          "text": "L'Italia dovrebbe avere più flessibilità sui vincoli di bilancio europei per aumentare la spesa pubblica e gli investimenti, anche a costo di più debito.",
+          "key": "vincoli_bilancio",
+          "theme": "Vincoli di bilancio europei",
+          "text": "L'Italia dovrebbe aumentare la spesa pubblica in deficit anche superando i vincoli europei.",
           "scores": {
-            "AVS": 7,
-            "M5S": 7,
+            "AVS": 6,
+            "M5S": 6,
             "PD": 5,
-            "+Europa": 3,
-            "Italia Viva": 3,
-            "Azione": 3,
-            "Liberaldemocratico": 2,
-            "Forza Italia": 4,
-            "Fratelli d'Italia": 5,
-            "Lega": 6,
+            "+Europa": 1,
+            "Italia Viva": null,
+            "Azione": null,
+            "Liberaldemocratico": 1,
+            "Forza Italia": 3,
+            "Fratelli d'Italia": 3,
+            "Lega": 3,
             "Futuro Nazionale": 6
           }
         },
         {
           "id": "q5",
+          "key": "pensioni",
           "theme": "Età pensionabile",
-          "text": "Si dovrebbe poter andare in pensione prima di quanto consenta la legge attuale, anche a costo di aumentare il debito pubblico.",
+          "text": "Si dovrebbe poter andare in pensione prima di quanto consenta la legge attuale.",
           "scores": {
-            "AVS": 6,
-            "M5S": 6,
-            "PD": 5,
-            "+Europa": 2,
-            "Italia Viva": 3,
-            "Azione": 3,
+            "AVS": 7,
+            "M5S": 7,
+            "PD": 7,
+            "+Europa": null,
+            "Italia Viva": 5,
+            "Azione": 2,
             "Liberaldemocratico": 2,
-            "Forza Italia": 3,
-            "Fratelli d'Italia": 3,
-            "Lega": 3,
-            "Futuro Nazionale": 5
+            "Forza Italia": 5,
+            "Fratelli d'Italia": 4,
+            "Lega": 7,
+            "Futuro Nazionale": 7
           }
         }
       ]
@@ -132,57 +138,60 @@
       "color": "#f59e0b",
       "questions": [
         {
-          "id": "q5",
-          "theme": "Sanità pubblica vs. ruolo del privato",
-          "text": "La sanità dovrebbe essere gestita esclusivamente dal sistema pubblico, con più risorse al SSN e limitazione del ruolo del privato accreditato.",
-          "scores": {
-            "AVS": 7,
-            "M5S": 6,
-            "PD": 6,
-            "+Europa": 4,
-            "Italia Viva": 4,
-            "Azione": 5,
-            "Liberaldemocratico": 3,
-            "Forza Italia": 3,
-            "Fratelli d'Italia": 3,
-            "Lega": 3,
-            "Futuro Nazionale": 4
-          }
-        },
-        {
           "id": "q6",
-          "theme": "Welfare universale vs. mirato",
-          "text": "Il welfare dovrebbe essere universale e garantire sostegni economici a tutti i cittadini in difficoltà (come il reddito minimo), piuttosto che limitarsi a incentivi alla natalità e bonus mirati.",
+          "key": "sanita",
+          "theme": "Finanziamento della sanità pubblica",
+          "text": "Il finanziamento del Servizio sanitario nazionale dovrebbe aumentare in modo consistente.",
           "scores": {
             "AVS": 7,
             "M5S": 7,
-            "PD": 5,
-            "+Europa": 4,
-            "Italia Viva": 3,
-            "Azione": 3,
-            "Liberaldemocratico": 2,
+            "PD": 7,
+            "+Europa": null,
+            "Italia Viva": 6,
+            "Azione": 6,
+            "Liberaldemocratico": 5,
             "Forza Italia": 3,
-            "Fratelli d'Italia": 2,
-            "Lega": 2,
-            "Futuro Nazionale": 1
+            "Fratelli d'Italia": 3,
+            "Lega": 3,
+            "Futuro Nazionale": null
           }
         },
         {
           "id": "q7",
-          "theme": "Istruzione pubblica vs. merito",
-          "text": "La scuola pubblica dovrebbe ricevere molte più risorse, con classi più piccole, stabilizzazione dei precari e forte diritto allo studio, piuttosto che puntare su merito, valutazione e formazione tecnica.",
+          "key": "welfare",
+          "theme": "Sostegni al reddito",
+          "text": "Lo Stato dovrebbe garantire un sostegno economico a chiunque si trovi in difficoltà economica.",
           "scores": {
             "AVS": 7,
-            "M5S": 6,
+            "M5S": 7,
             "PD": 6,
-            "+Europa": 3,
+            "+Europa": null,
             "Italia Viva": 2,
             "Azione": 3,
-            "Liberaldemocratico": 2,
-            "Forza Italia": 3,
-            "Fratelli d'Italia": 3,
-            "Lega": 3,
+            "Liberaldemocratico": 3,
+            "Forza Italia": 1,
+            "Fratelli d'Italia": 1,
+            "Lega": 1,
             "Futuro Nazionale": 2
+          }
+        },
+        {
+          "id": "q8",
+          "key": "istruzione",
+          "theme": "Risorse alla scuola pubblica",
+          "text": "La scuola pubblica dovrebbe ricevere più risorse di quante ne riceva oggi.",
+          "scores": {
+            "AVS": 7,
+            "M5S": 7,
+            "PD": 7,
+            "+Europa": 7,
+            "Italia Viva": 6,
+            "Azione": 6,
+            "Liberaldemocratico": 3,
+            "Forza Italia": 4,
+            "Fratelli d'Italia": 4,
+            "Lega": 4,
+            "Futuro Nazionale": null
           }
         }
       ]
@@ -193,35 +202,18 @@
       "color": "#ec4899",
       "questions": [
         {
-          "id": "q8",
-          "theme": "Diritti LGBTQIA+",
-          "text": "Le coppie dello stesso sesso dovrebbero poter sposarsi e adottare figli, e dovrebbe esistere una legge specifica contro l'omotransfobia.",
+          "id": "q9",
+          "key": "lgbt",
+          "theme": "Matrimonio e adozioni per coppie dello stesso sesso",
+          "text": "Le coppie dello stesso sesso dovrebbero poter accedere al matrimonio e all'adozione.",
           "scores": {
             "AVS": 7,
-            "M5S": 5,
+            "M5S": 7,
             "PD": 7,
             "+Europa": 7,
             "Italia Viva": 6,
-            "Azione": 6,
-            "Liberaldemocratico": 6,
-            "Forza Italia": 3,
-            "Fratelli d'Italia": 1,
-            "Lega": 1,
-            "Futuro Nazionale": 1
-          }
-        },
-        {
-          "id": "q9",
-          "theme": "Biodiritto e autodeterminazione",
-          "text": "Ogni individuo dovrebbe avere il diritto all'eutanasia e al suicidio assistito regolati per legge, e l'accesso all'aborto dovrebbe essere pienamente garantito.",
-          "scores": {
-            "AVS": 7,
-            "M5S": 5,
-            "PD": 6,
-            "+Europa": 7,
-            "Italia Viva": 6,
-            "Azione": 5,
-            "Liberaldemocratico": 7,
+            "Azione": 7,
+            "Liberaldemocratico": null,
             "Forza Italia": 2,
             "Fratelli d'Italia": 1,
             "Lega": 1,
@@ -230,39 +222,59 @@
         },
         {
           "id": "q10",
-          "theme": "Requisiti per la cittadinanza",
-          "text": "Per ottenere la cittadinanza italiana dovrebbero contare gli anni di residenza, non il percorso scolastico svolto in Italia.",
+          "key": "fine_vita",
+          "theme": "Fine vita",
+          "text": "Dovrebbe esistere una legge che consenta il suicidio medicalmente assistito.",
           "scores": {
-            "AVS": 1,
-            "M5S": 2,
-            "PD": 2,
-            "+Europa": 1,
-            "Italia Viva": 2,
-            "Azione": 3,
-            "Liberaldemocratico": 2,
+            "AVS": 7,
+            "M5S": 7,
+            "PD": 7,
+            "+Europa": 7,
+            "Italia Viva": 7,
+            "Azione": 7,
+            "Liberaldemocratico": null,
             "Forza Italia": 4,
-            "Fratelli d'Italia": 7,
-            "Lega": 7,
-            "Futuro Nazionale": 7
-          },
-          "invertita": true
+            "Fratelli d'Italia": 2,
+            "Lega": 2,
+            "Futuro Nazionale": 1
+          }
         },
         {
           "id": "q11",
+          "key": "cittadinanza",
+          "theme": "Cittadinanza a chi cresce in Italia",
+          "text": "Chi nasce o cresce in Italia da genitori stranieri e completa un ciclo di studi nel Paese dovrebbe ottenere la cittadinanza italiana.",
+          "scores": {
+            "AVS": 7,
+            "M5S": 7,
+            "PD": 7,
+            "+Europa": 7,
+            "Italia Viva": 6,
+            "Azione": 7,
+            "Liberaldemocratico": 6,
+            "Forza Italia": 3,
+            "Fratelli d'Italia": 1,
+            "Lega": 1,
+            "Futuro Nazionale": 1
+          }
+        },
+        {
+          "id": "q12",
+          "key": "cannabis",
           "theme": "Cannabis",
           "text": "La produzione e la vendita di cannabis dovrebbero restare vietate.",
           "scores": {
             "AVS": 1,
-            "M5S": 2,
+            "M5S": 3,
             "PD": 3,
             "+Europa": 1,
-            "Italia Viva": 3,
-            "Azione": 4,
-            "Liberaldemocratico": 3,
-            "Forza Italia": 6,
-            "Fratelli d'Italia": 7,
+            "Italia Viva": 4,
+            "Azione": 3,
+            "Liberaldemocratico": null,
+            "Forza Italia": 7,
+            "Fratelli d'Italia": 6,
             "Lega": 7,
-            "Futuro Nazionale": 7
+            "Futuro Nazionale": null
           },
           "invertita": true
         }
@@ -274,75 +286,79 @@
       "color": "#3b82f6",
       "questions": [
         {
-          "id": "q11",
-          "theme": "Riconoscimento della Palestina",
+          "id": "q13",
+          "key": "palestina",
+          "theme": "Riconoscimento dello Stato di Palestina",
           "text": "L'Italia dovrebbe riconoscere formalmente lo Stato di Palestina.",
           "scores": {
             "AVS": 7,
-            "M5S": 6,
+            "M5S": 7,
             "PD": 7,
-            "+Europa": 3,
+            "+Europa": 7,
             "Italia Viva": 3,
-            "Azione": 3,
+            "Azione": 5,
             "Liberaldemocratico": 3,
-            "Forza Italia": 2,
-            "Fratelli d'Italia": 2,
-            "Lega": 3,
-            "Futuro Nazionale": 4
+            "Forza Italia": 3,
+            "Fratelli d'Italia": 3,
+            "Lega": 2,
+            "Futuro Nazionale": 1
           }
         },
         {
-          "id": "q12",
+          "id": "q14",
+          "key": "ucraina",
           "theme": "Sostegno militare all'Ucraina",
           "text": "L'Italia dovrebbe continuare a fornire armi all'Ucraina.",
           "scores": {
             "AVS": 1,
-            "M5S": 2,
+            "M5S": 1,
             "PD": 7,
             "+Europa": 7,
             "Italia Viva": 7,
             "Azione": 7,
-            "Liberaldemocratico": 7,
+            "Liberaldemocratico": null,
             "Forza Italia": 7,
-            "Fratelli d'Italia": 6,
-            "Lega": 5,
-            "Futuro Nazionale": 2
+            "Fratelli d'Italia": 7,
+            "Lega": 6,
+            "Futuro Nazionale": 1
           }
         },
         {
-          "id": "q13",
+          "id": "q15",
+          "key": "europa",
           "theme": "Integrazione europea",
-          "text": "L'Europa dovrebbe evolvere verso una federazione con poteri comuni su difesa, fisco e politica estera, superando il principio dell'unanimità.",
+          "text": "L'Unione europea dovrebbe avere poteri comuni su difesa, fisco e politica estera.",
           "scores": {
             "AVS": 6,
             "M5S": 4,
             "PD": 7,
             "+Europa": 7,
             "Italia Viva": 7,
-            "Azione": 7,
-            "Liberaldemocratico": 5,
-            "Forza Italia": 5,
-            "Fratelli d'Italia": 2,
+            "Azione": 6,
+            "Liberaldemocratico": 6,
+            "Forza Italia": 7,
+            "Fratelli d'Italia": 4,
             "Lega": 1,
             "Futuro Nazionale": 1
           }
         },
         {
-          "id": "q14",
-          "theme": "Globalizzazione e commercio",
-          "text": "Il libero scambio e l'apertura ai mercati globali sono positivi per l'Italia, purché ci siano regole comuni contro il dumping e la concorrenza sleale.",
+          "id": "q16",
+          "key": "commercio",
+          "theme": "Libero scambio",
+          "text": "L'apertura ai mercati internazionali conviene all'Italia.",
           "scores": {
             "AVS": 2,
-            "M5S": 4,
-            "PD": 5,
-            "+Europa": 7,
-            "Italia Viva": 6,
-            "Azione": 6,
+            "M5S": 2,
+            "PD": 6,
+            "+Europa": null,
+            "Italia Viva": null,
+            "Azione": null,
             "Liberaldemocratico": 7,
             "Forza Italia": 6,
-            "Fratelli d'Italia": 3,
+            "Fratelli d'Italia": 6,
             "Lega": 2,
-            "Futuro Nazionale": 1
+            "Futuro Nazionale": 2
           }
         }
       ]
@@ -353,35 +369,37 @@
       "color": "#22c55e",
       "questions": [
         {
-          "id": "q15",
-          "theme": "Nucleare",
+          "id": "q17",
+          "key": "nucleare",
+          "theme": "Energia nucleare",
           "text": "L'Italia dovrebbe reintrodurre la produzione di energia nucleare.",
           "scores": {
             "AVS": 1,
             "M5S": 1,
-            "PD": 3,
-            "+Europa": 6,
+            "PD": 1,
+            "+Europa": 4,
             "Italia Viva": 4,
             "Azione": 7,
-            "Liberaldemocratico": 6,
-            "Forza Italia": 6,
-            "Fratelli d'Italia": 5,
-            "Lega": 6,
-            "Futuro Nazionale": 5
+            "Liberaldemocratico": 7,
+            "Forza Italia": 7,
+            "Fratelli d'Italia": 7,
+            "Lega": 7,
+            "Futuro Nazionale": 7
           }
         },
         {
-          "id": "q16",
+          "id": "q18",
+          "key": "auto_2035",
           "theme": "Auto e obiettivi climatici",
           "text": "Anche dopo il 2035 dovrebbero poter essere vendute in Europa auto nuove a benzina e diesel.",
           "scores": {
             "AVS": 1,
-            "M5S": 2,
-            "PD": 2,
-            "+Europa": 3,
+            "M5S": 1,
+            "PD": 1,
+            "+Europa": null,
             "Italia Viva": 1,
-            "Azione": 5,
-            "Liberaldemocratico": 5,
+            "Azione": 6,
+            "Liberaldemocratico": 6,
             "Forza Italia": 7,
             "Fratelli d'Italia": 7,
             "Lega": 7,
@@ -390,21 +408,22 @@
           "invertita": true
         },
         {
-          "id": "q17",
-          "theme": "Grandi opere vs. mobilità sostenibile",
-          "text": "L'Italia dovrebbe dare priorità a grandi opere come il Ponte sullo Stretto, alta velocità e porti, piuttosto che concentrarsi su trasporto pubblico locale e mobilità sostenibile.",
+          "id": "q19",
+          "key": "ponte",
+          "theme": "Ponte sullo Stretto",
+          "text": "L'Italia dovrebbe realizzare il Ponte sullo Stretto di Messina.",
           "scores": {
             "AVS": 1,
-            "M5S": 2,
-            "PD": 3,
-            "+Europa": 5,
-            "Italia Viva": 6,
-            "Azione": 6,
-            "Liberaldemocratico": 5,
+            "M5S": 1,
+            "PD": 1,
+            "+Europa": 1,
+            "Italia Viva": 7,
+            "Azione": 5,
+            "Liberaldemocratico": 7,
             "Forza Italia": 7,
             "Fratelli d'Italia": 7,
             "Lega": 7,
-            "Futuro Nazionale": 6
+            "Futuro Nazionale": 7
           }
         }
       ]
@@ -415,57 +434,60 @@
       "color": "#ef4444",
       "questions": [
         {
-          "id": "q18",
-          "theme": "Migrazione",
-          "text": "L'Italia dovrebbe adottare una politica migratoria più restrittiva, con controllo rigoroso dei confini, rimpatri rapidi e riduzione degli arrivi.",
+          "id": "q20",
+          "key": "migrazione",
+          "theme": "Politica migratoria",
+          "text": "L'Italia dovrebbe rendere più difficile l'ingresso di nuovi immigrati.",
           "scores": {
             "AVS": 1,
-            "M5S": 2,
-            "PD": 2,
-            "+Europa": 3,
-            "Italia Viva": 4,
-            "Azione": 5,
-            "Liberaldemocratico": 5,
-            "Forza Italia": 5,
-            "Fratelli d'Italia": 6,
+            "M5S": 1,
+            "PD": 1,
+            "+Europa": 1,
+            "Italia Viva": 1,
+            "Azione": 1,
+            "Liberaldemocratico": 3,
+            "Forza Italia": 7,
+            "Fratelli d'Italia": 7,
             "Lega": 7,
             "Futuro Nazionale": 7
           }
         },
         {
-          "id": "q19",
+          "id": "q21",
+          "key": "ordine_pubblico",
           "theme": "Sicurezza e ordine pubblico",
           "text": "Servono pene più severe e più poteri alle forze dell'ordine.",
           "scores": {
             "AVS": 1,
-            "M5S": 2,
-            "PD": 2,
+            "M5S": 1,
+            "PD": 1,
             "+Europa": 1,
-            "Italia Viva": 4,
-            "Azione": 3,
-            "Liberaldemocratico": 3,
-            "Forza Italia": 6,
-            "Fratelli d'Italia": 6,
+            "Italia Viva": 1,
+            "Azione": 1,
+            "Liberaldemocratico": 2,
+            "Forza Italia": 7,
+            "Fratelli d'Italia": 7,
             "Lega": 7,
             "Futuro Nazionale": 7
           }
         },
         {
-          "id": "q20",
-          "theme": "Separazione delle carriere",
+          "id": "q22",
+          "key": "giustizia",
+          "theme": "Separazione delle carriere dei magistrati",
           "text": "Le carriere dei giudici e dei pubblici ministeri dovrebbero essere separate.",
           "scores": {
-            "AVS": 2,
+            "AVS": 1,
             "M5S": 1,
-            "PD": 2,
-            "+Europa": 7,
+            "PD": 1,
+            "+Europa": 6,
             "Italia Viva": 4,
             "Azione": 7,
             "Liberaldemocratico": 7,
             "Forza Italia": 7,
-            "Fratelli d'Italia": 6,
-            "Lega": 6,
-            "Futuro Nazionale": 4
+            "Fratelli d'Italia": 7,
+            "Lega": 7,
+            "Futuro Nazionale": 7
           }
         }
       ]
@@ -476,56 +498,59 @@
       "color": "#8b5cf6",
       "questions": [
         {
-          "id": "q21",
-          "theme": "Elezione diretta del premier",
+          "id": "q23",
+          "key": "premierato",
+          "theme": "Elezione diretta del capo del governo",
           "text": "Il Presidente del Consiglio dovrebbe essere eletto direttamente dai cittadini.",
           "scores": {
             "AVS": 1,
-            "M5S": 2,
+            "M5S": 1,
             "PD": 1,
-            "+Europa": 2,
+            "+Europa": 1,
             "Italia Viva": 2,
             "Azione": 2,
-            "Liberaldemocratico": 5,
-            "Forza Italia": 6,
+            "Liberaldemocratico": null,
+            "Forza Italia": 7,
             "Fratelli d'Italia": 7,
-            "Lega": 6,
-            "Futuro Nazionale": 6
+            "Lega": 7,
+            "Futuro Nazionale": 5
           }
         },
         {
-          "id": "q22",
+          "id": "q24",
+          "key": "autonomia",
           "theme": "Autonomia delle regioni",
           "text": "Le regioni dovrebbero gestire autonomamente materie oggi statali come sanità e scuola.",
           "scores": {
             "AVS": 1,
             "M5S": 1,
-            "PD": 2,
-            "+Europa": 3,
-            "Italia Viva": 4,
-            "Azione": 3,
-            "Liberaldemocratico": 2,
-            "Forza Italia": 5,
-            "Fratelli d'Italia": 6,
+            "PD": 1,
+            "+Europa": 1,
+            "Italia Viva": 1,
+            "Azione": 4,
+            "Liberaldemocratico": 5,
+            "Forza Italia": 7,
+            "Fratelli d'Italia": 7,
             "Lega": 7,
-            "Futuro Nazionale": 4
+            "Futuro Nazionale": null
           }
         },
         {
-          "id": "q23",
-          "theme": "Legge elettorale",
-          "text": "L'Italia dovrebbe adottare un sistema elettorale proporzionale che garantisca massima rappresentanza, anche a costo di governi di coalizione meno stabili.",
+          "id": "q25",
+          "key": "legge_elettorale",
+          "theme": "Premio di maggioranza",
+          "text": "Chi vince le elezioni dovrebbe ricevere un premio in seggi che gli garantisca la maggioranza.",
           "scores": {
-            "AVS": 6,
-            "M5S": 7,
-            "PD": 5,
-            "+Europa": 5,
+            "AVS": 1,
+            "M5S": 1,
+            "PD": 1,
+            "+Europa": 1,
             "Italia Viva": 2,
-            "Azione": 4,
-            "Liberaldemocratico": 5,
-            "Forza Italia": 3,
-            "Fratelli d'Italia": 2,
-            "Lega": 2,
+            "Azione": 2,
+            "Liberaldemocratico": 3,
+            "Forza Italia": 7,
+            "Fratelli d'Italia": 7,
+            "Lega": 7,
             "Futuro Nazionale": 2
           }
         }

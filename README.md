@@ -21,20 +21,25 @@ All 275 cells — 11 parties × 25 questions — are recorded in
 
 | Level | Meaning | Cells |
 |:---:|---|---:|
-| **A** | Recorded parliamentary vote on that specific issue | 96 |
-| **B** | Official party programme or manifesto | 45 |
-| **C** | Dated official statement by the party leadership | 84 |
-| **E** | Position reported by the press | 26 |
-| **D** | Indirect reconstruction, no position expressed directly by the party | 13 |
-| **F** | **Inference — no source at all** | 11 |
+| **A** | Recorded parliamentary vote on that specific measure | 131 |
+| **B** | Party programme, statute, bill or official document | 53 |
+| **C** | Dated statement by the party leadership | 60 |
+| **E** | Position reported by the press, no party act or document | 8 |
+| — | **No documented position**: excluded from the calculation | 23 |
 
-Level F cells are deductions from a party's ideological profile. They are **not evidence**, they are
-marked as such, and they can be filtered out in one line. They exist because eleven cells could not be
-documented even after a dedicated search for each: mostly for parties founded in 2025 and 2026, on
-topics no journalist has yet asked them about.
+Every source cited was re-read on 2026-09-15 (version 3.0), and each description reports only what the
+source actually says. A source that turned out not to contain what was attributed to it was replaced,
+or the cell was left empty. There are no inferences left: the level D reconstructions and level F
+guesses of earlier versions were either backed by evidence or removed. An empty cell is not a 4 — the
+party is simply compared on fewer questions.
 
-Where a party's stated line contradicts how it actually voted, the file says so rather than picking a
-side quietly. Those cases are flagged for human arbitration.
+Where a party's stated line contradicts how it actually voted, the cell says so
+(`DIVERGENZA DOCUMENTATA`) and the score weights the vote.
+
+`fonti_quiz.json` is the single source of truth. [`build_data.py`](build_data.py) generates both
+`data.json` and `POSIZIONI_E_FONTI.md` from it, and `python build_data.py --check` fails if either has
+been edited by hand. Until v2.9 `data.json` was maintained by hand and had drifted from the
+documentation in 135 of 275 cells: the quiz was not using the scores this file documented.
 
 ## Question design
 
@@ -46,8 +51,9 @@ The questions were rewritten to remove three defects common to this kind of quiz
 - **Embedded arguments.** "The Prime Minister should be directly elected *to guarantee stability and
   decisiveness*" pushes toward yes. The rationale was removed.
 - **Directional imbalance.** People agree more readily than they disagree. If most statements are
-  phrased so that agreeing means "left", results drift left. Four questions are therefore deliberately
-  inverted, bringing the balance to 12 / 12 with one genuinely ambiguous item.
+  phrased so that agreeing means "left", results drift left. Two questions (cannabis and the 2035
+  combustion-engine rule) are therefore deliberately inverted, bringing the balance to 12 / 12 with one
+  genuinely ambiguous item (retirement age).
 
 Each question in `POSIZIONI_E_FONTI.md` records what was changed and why.
 
@@ -72,12 +78,14 @@ Stated openly, because they affect how results should be read:
 
 - **The scoring favours parties with moderate profiles.** Scores are `7 − |your answer − party
   position|`, averaged. A party sitting near the middle of every scale is never far from anyone: before
-  a user answers a single question, the most centrist party already averages 4.91 against 4.14 for the
+  a user answers a single question, the most centrist party already averages 5.05 against 4.16 for the
   most distinctive one. This does not affect users with coherent views, who are matched correctly
   regardless — it lands entirely on undecided users, who are the quiz's main audience. Two standard
   remedies exist (normalising each party against its own baseline, or the hybrid proximity/directional
   algorithm) and neither is implemented yet.
-- **Eleven positions are inferred, not documented** — see level F above.
+- **23 positions are undocumented** and left empty. They concentrate on the smaller and newer parties:
+  +Europa is compared on 18 questions, the Liberaldemocratici on 19, Futuro Nazionale on 20, against 25
+  for the larger parties.
 - **Party positions age.** One question had to be rewritten mid-project because the European Commission
   revised the 2035 combustion-engine ban underneath it. `quiz_version` is stored with every response so
   answers stay attributable to the exact questionnaire that produced them.
@@ -121,19 +129,24 @@ designed to live in browsers; what protects the data are the RLS policies in tha
 index.html                    all five screens: landing, quiz, form, self-ranking, results
 app.js                        quiz logic, scoring, Supabase submission with offline retry queue
 styles.css                    styles
-data.json                     the 25 questions and the 11 × 25 party scores actually used
+fonti_quiz.json               source of truth: questions, party positions, evidence and sources
+build_data.py                 generates data.json and POSIZIONI_E_FONTI.md from fonti_quiz.json
+data.json                     generated: the 25 questions and the 11 × 25 scores the quiz uses
+POSIZIONI_E_FONTI.md          generated: every party position with its source and evidence level
 comuni.json                   7,904 Italian municipalities by region and province
 paesi.json                    251 countries, for residents abroad
 build_paesi.py                regenerates paesi.json from the ISTAT list
-POSIZIONI_E_FONTI.md          every party position with its source and evidence level
-fonti_quiz.json               the same, machine-readable
-fonti_pilota.json             the three-question methodological pilot
 supabase_schema.sql           table, RLS policies, constraints
 build_comuni.py               regenerates comuni.json
+v.1/                          archive of version 2.9, the last one with hand-maintained scores
 ```
 
-`QUIZ_VERSION` in `app.js` doubles as a cache-busting parameter and as the version stamped on every
-stored response. Bump it whenever questions or scores change.
+`v.1/` keeps the project exactly as it was before the scores were rebuilt from the sources, including
+the database migrations from v2.2 to v2.9, now folded into `supabase_schema.sql`.
+
+To change a question or a score, edit `fonti_quiz.json` and run `python build_data.py`. Then bump
+`QUIZ_VERSION` in `app.js`: it doubles as a cache-busting parameter and as the version stamped on every
+stored response, so answers stay attributable to the questionnaire that produced them.
 
 ## Open issues
 

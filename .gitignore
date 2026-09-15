@@ -11,3 +11,7 @@ raw_data.txt
 *.log
 .DS_Store
 Thumbs.db
+
+# Archivio locale della v2.9: non va pubblicato, sarebbe un quiz funzionante
+# che invia risposte al database
+v.1/

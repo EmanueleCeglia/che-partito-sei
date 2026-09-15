@@ -1,868 +1,967 @@
 # Posizioni dei partiti e fonti
 
-Codifica del 2026-08-23. Per ogni domanda: la posizione di ciascun partito, il punteggio proposto e la fonte da cui deriva.
+Codifica v3.0 del 2026-09-15. File generato da `build_data.py` a partire da `fonti_quiz.json`: le modifiche vanno fatte li'.
 
-> **Come leggere questo documento.** Il punteggio va da 1 (contrario netto) a 7 (favorevole netto). 
-Il **livello** dice quanto e' solida l'evidenza: **A** un voto parlamentare registrato, **B** un programma ufficiale, 
-**C** una dichiarazione datata della leadership, **E** una dichiarazione raccolta dalla stampa, 
-**D** una ricostruzione indiretta, **F** un'inferenza senza alcuna fonte. 
-Le celle **F** non sono documentazione: sono deduzioni dal profilo del partito, tenute separate apposta per poterle escludere in blocco. 
-Una cella **vuota** significa *nessuna posizione documentata*: non e' un 4, e va esclusa dal calcolo.
+> Codifica verificata cella per cella: ogni fonte citata è stata riletta o confermata il 2026-09-15 e la descrizione riporta solo ciò che contiene. Dove non esiste una posizione documentata la cella è null ed è esclusa dal calcolo. Le inferenze senza fonte (livello F) e le ricostruzioni indirette (livello D) della codifica precedente sono state sostituite da evidenza oppure portate a null.
 
-> **Regola sui voti di fiducia.** I voti posti con la questione di fiducia sono esclusi: misurano la lealta' alla maggioranza, non la posizione sul merito.
+## Come leggere questo documento
 
----
+**Scala.** **7** favorevole in modo netto e attivo (voto favorevole, proposta propria); **6** favorevole con riserve o in versione attenuata; **5** favorevole in linea di principio ma con condizioni rilevanti; **4** posizione intermedia DOCUMENTATA (astensione, ambivalenza o divergenza documentate). Mai per 'non si sa'; **3** contrario con aperture parziali; **2** contrario, con qualche apertura o riserva documentata; **1** contrario in modo netto ed esplicito; **null** NESSUNA POSIZIONE DOCUMENTATA: la cella è esclusa dal calcolo, non vale come un 4.
 
-## 1. Progressivita' fiscale
+**Livelli di evidenza.** **A** voto parlamentare registrato sull'atto specifico; **B** programma, statuto, proposta di legge o documento ufficiale del partito; **C** dichiarazione datata della leadership, riportata da fonte verificabile; **E** posizione riportata o ricostruita dalla stampa, senza atto né documento del partito: la più debole.
 
-**Domanda proposta:** Chi ha redditi alti dovrebbe pagare piu' tasse di quante ne paghi oggi.
+**Convenzioni.**
 
-*Modifica rispetto alla versione attuale:* Tolto l'inciso 'anche a costo di tasse piu' alte per i redditi alti', che incorporava l'obiezione nella domanda.
+- Un voto favorevole su un atto che realizza esattamente l'affermazione vale 7, un voto contrario 1, un'astensione 4. Ci si discosta solo quando un'altra fonte documentata mostra riserve o aperture, e l'evidenza lo dice.
+- I voti posti con la questione di fiducia sono esclusi: misurano la lealtà alla maggioranza, non la posizione sul merito. Dove la Camera ha votato separatamente fiducia e provvedimento, conta il voto sul provvedimento.
+- Quando voto e dichiarazioni divergono, la cella lo scrive (DIVERGENZA DOCUMENTATA) e il punteggio pesa soprattutto il voto.
+- Una fonte che non contiene ciò che le si attribuiva viene sostituita o la cella diventa null: nessun punteggio resta appoggiato a una citazione non trovata.
 
-*Direzione:* essere d'accordo corrisponde alla posizione **sinistra**.
+**Fonti.** Il campo verificata di ogni fonte riporta la data in cui è stata riletta. In pochi casi la pagina originale non era raggiungibile (errore 403) e il contenuto è stato confermato attraverso altri articoli che riportano la stessa notizia: la descrizione riporta solo quanto confermato.
 
-
-| Partito | Punteggio | Liv. | Posizione documentata |
-|---|:---:|:---:|---|
-| **AVS** | **7** | D | RICOSTRUZIONE DA VERIFICARE: voto contrario alla manovra. |
-| **M5S** | **7** | D | RICOSTRUZIONE DA VERIFICARE: voto contrario alla manovra, denuncia sull'assenza di misure su salari e poverta'. |
-| **PD** | **6** | D | RICOSTRUZIONE DA VERIFICARE: voto contrario alla manovra e critica al disegno fiscale, ma senza una fonte diretta sulla progressivita'. |
-| **+Europa** | **2** | C | Codificata da Leo. |
-| **Italia Viva** | **2** | B | Come sopra: programma congiunto. |
-| **Azione** | **2** | B | 'Non serve inventare nuove tasse, sognare la patrimoniale'; il programma punta su riduzione del cuneo fiscale e semplificazione. |
-| **Liberaldemocratico** | **2** | B | Le proposte puntano su spending review e avanzi primari per ridurre il debito, non su nuove imposte. |
-| **Forza Italia** | **2** | A | Come sopra; storicamente favorevole alla riduzione della pressione fiscale. |
-| **Fratelli d'Italia** | **2** | A | Vota la manovra che riduce l'Irpef del secondo scaglione dal 35 al 33%: alleggerimento sui redditi medio-alti. |
-| **Lega** | **2** | A | Come sopra. |
-| **Futuro Nazionale** | **2** | B | Il pilastro 'Eccellenza' prevede l'abbassamento della pressione fiscale. |
-
-**Fonti:**
-
-- *(liv. A)* Legge di bilancio 2026, approvazione definitiva alla Camera il 30 dicembre 2025 (216 si', 126 no). Taglio Irpef del secondo scaglione dal 35 al 33%, fondo sanitario +2,4 mld, eta' pensionabile in aumento di un mese dal 2027 e di altri due dal 2028.  
-  <https://www.quotidiano.net/economia/manovra-camera-ncpdmpej>
-- *(liv. B)* Manifesto e proposte del Partito Liberaldemocratico: 'ruolo strategico del nucleare'; spending review e 'avanzi primari piu' consistenti per la riduzione del debito'; Europa che deve 'cambiare o perire'. Non trattati salario minimo, pensioni, diritti civili, giustizia, riforme istituzionali.  
-  <https://partitoliberaldemocratico.com/proposte/>
-- *(liv. B)* Programma di Futuro Nazionale, pubblicato l'11 agosto 2026: cittadinanza dopo almeno 20 anni di dimora regolare e livello C1, rifiuto 'categorico e senza possibilita' negoziale' di ius soli e ius scholae; abbassamento della pressione fiscale; sgravi per l'assunzione di manodopera italiana; contro il federalismo europeo, per 'un'Europa di Stati nazionali cooperanti'; l'immigrazione di massa 'sgretola la compattezza di una civilta''.  
-  <https://tg24.sky.it/politica/2026/08/11/vannacci-futuro-nazionale-programma-manifesto>
-- *(liv. B)* Programma elettorale congiunto Azione - Italia Viva, politiche 2022, 56 pagine. Politica industriale: 'concentrare le risorse su strumenti fiscali semplici ed automatici a supporto degli investimenti'. Fisco: 'Non serve inventare nuove tasse, sognare la patrimoniale'. Concorrenza: 'approvare ogni anno leggi sulla concorrenza che rendano la nostra economia piu' libera e meno gravata da barriere all'ingresso'. Reddito di cittadinanza: 'Eliminare il Reddito di Cittadinanza dopo il primo rifiuto e ridurlo dopo 2 anni'. Europa: 'Con una svolta in senso federale delle sue Istituzioni... riaprire il cantiere delle riforme dei Trattati'. Trasporti: completamento di Torino-Lione, Terzo Valico e altre tratte ad alta velocita'. Istituzioni: modello del 'sindaco d'Italia' con riforma del sistema elettorale. Cannabis e matrimonio egualitario NON compaiono nel documento.  
-  <https://www.welforum.it/wp-content/uploads/2022/09/Programma-Azione-Italia-Viva.pdf>
-- *(liv. C)* Codifica di Leo. Proposta fiscale di +Europa dalla pagina ufficiale del partito.  
-  <https://www.facebook.com/piueuropa/posts/la-proposta-fiscale-di-europa-tassema-davveroabbiamo-una-proposta-sostenibile-e-/218370805497260/>
+| Livello | Celle |
+|:---:|---:|
+| A | 131 |
+| B | 53 |
+| C | 60 |
+| E | 8 |
+| null | 23 |
 
 ---
 
-## 2. Ruolo dello Stato nell'economia
+## 1. Tassazione dei grandi patrimoni
 
-**Domanda proposta:** Lo Stato dovrebbe intervenire direttamente nell'economia con investimenti pubblici nei settori strategici.
+*Categoria:* Economia, Fisco e Lavoro
 
-*Modifica rispetto alla versione attuale:* Tolto il riferimento alla 'riconversione ecologica', che legava la domanda a un secondo tema e la spostava a sinistra.
+**Affermazione:** Chi possiede grandi patrimoni dovrebbe pagare più tasse di quante ne paghi oggi.
 
-*Direzione:* essere d'accordo corrisponde alla posizione **sinistra**.
-
+*Direzione:* accordo = sinistra. *Formulazione:* Sostituisce la domanda sui redditi alti, per cui non esisteva una posizione documentata di nessun partito di sinistra: le celle poggiavano su un voto contrario all'intera legge di bilancio. Sui grandi patrimoni, fra febbraio e novembre 2025, si sono espressi quasi tutti i leader.
 
 | Partito | Punteggio | Liv. | Posizione documentata |
 |---|:---:|:---:|---|
-| **AVS** | **7** | B | Codificata da Leo. |
-| **M5S** | **7** | C | Conte favorevole alla nazionalizzazione dell'ex Ilva: 'la presenza pubblica e' necessaria'. |
-| **PD** | **7** | C | 'Lo Stato deve guidare e cofinanziare lo sviluppo': Agenzia per le partecipazioni pubbliche e Consiglio per la strategia industriale. |
-| **+Europa** | **3** | B | Codificata da Leo. |
-| **Italia Viva** | **4** | B | Come sopra: programma congiunto. |
-| **Azione** | **4** | B | Politica industriale rivendicata (Piano 4.0) ma realizzata con 'strumenti fiscali semplici ed automatici a supporto degli investimenti', non con intervento diretto dello Stato. |
-| **Liberaldemocratico** | **1** | E | Obiettivo dichiarato di 'ridurre la presenza dello Stato e favorire concorrenza e mercato'; taglio della spesa pubblica dell'1% l'anno per cinque anni. |
-| **Forza Italia** | **3** | C | Contesta la tassa sugli extraprofitti bancari; Tajani: 'le banche non sono il nemico pubblico'. Posizione di mercato dentro la stessa coalizione. |
-| **Fratelli d'Italia** | **4** | C | AMBIVALENZA DOCUMENTATA: da opposizione chiedeva golden power e ingresso di Cdp in Stellantis, al governo ha ceduto rete TIM e ITA e rinunciato alla nazionalizzazione di Acciaierie d'Italia. |
-| **Lega** | **6** | C | Invoca il golden power su UniCredit-BPM e un prelievo sugli utili bancari: 'una banca non puo' essere considerata mera entita' privata'. |
-| **Futuro Nazionale** | **7** | C | 'Economia protetta e guidata politicamente': fondo pubblico sovrano, uso esteso del golden power, forte interventismo statale. |
+| **AVS** | **7** | B | Il programma europeo chiede un'imposta europea sui grandi patrimoni; Fratoianni (14/02/2025): «È il momento di un'imposizione patrimoniale sulle grandi ricchezze anche in Italia». |
+| **M5S** | **4** | C | POSIZIONE INTERMEDIA DOCUMENTATA: Conte a febbraio 2025 la ritiene giusta ma solo a livello europeo o globale; a novembre 2025 «non è all'ordine del giorno». |
+| **PD** | **5** | C | Schlein: «Non è un tabù intervenire sui grandi patrimoni, ma è bene farlo a livello europeo». Favorevole, a condizione che sia europea. |
+| **+Europa** | **—** | — | Nessuna posizione trovata sulla patrimoniale. |
+| **Italia Viva** | **2** | C | Renzi definisce la proposta un «autogol mediatico del centrosinistra». |
+| **Azione** | **3** | C | AMBIVALENZA DOCUMENTATA: Calenda riconosce che «i grandi patrimoni debbano pagare più tasse è una cosa corretta» ma contesta l'applicazione, e altrove dice «No a patrimoniale». |
+| **Liberaldemocratico** | **1** | C | Marattin: imposta inefficiente e ingiusta, la priorità è abbassare le tasse. |
+| **Forza Italia** | **1** | C | Tajani: «Con noi, mai la patrimoniale». |
+| **Fratelli d'Italia** | **1** | C | Meloni: le patrimoniali «con la destra al governo non vedranno mai la luce». |
+| **Lega** | **1** | C | Salvini: «finché la Lega sarà al Governo non ci sarà nessuna tassa patrimoniale». |
+| **Futuro Nazionale** | **—** | — | Il programma chiede di ridurre la pressione fiscale ma non parla di patrimoniale; nessuna dichiarazione trovata. |
 
 **Fonti:**
 
-- *(liv. B)* Programma elettorale congiunto Azione - Italia Viva, politiche 2022, 56 pagine. Politica industriale: 'concentrare le risorse su strumenti fiscali semplici ed automatici a supporto degli investimenti'. Fisco: 'Non serve inventare nuove tasse, sognare la patrimoniale'. Concorrenza: 'approvare ogni anno leggi sulla concorrenza che rendano la nostra economia piu' libera e meno gravata da barriere all'ingresso'. Reddito di cittadinanza: 'Eliminare il Reddito di Cittadinanza dopo il primo rifiuto e ridurlo dopo 2 anni'. Europa: 'Con una svolta in senso federale delle sue Istituzioni... riaprire il cantiere delle riforme dei Trattati'. Trasporti: completamento di Torino-Lione, Terzo Valico e altre tratte ad alta velocita'. Istituzioni: modello del 'sindaco d'Italia' con riforma del sistema elettorale. Cannabis e matrimonio egualitario NON compaiono nel documento.  
-  <https://www.welforum.it/wp-content/uploads/2022/09/Programma-Azione-Italia-Viva.pdf>
-- *(liv. E)* Dichiarazioni e ricostruzioni sulle posizioni del Partito Liberaldemocratico: Marattin sulla riforma della giustizia, 27 giugno 2025, 'I pm? La riforma e' ok'; sull'immigrazione un 'patto di integrazione' lingua-lavoro-legalita' legato alla programmazione dei flussi; in economia riduzione della spesa pubblica dell'1% l'anno per cinque anni per abolire l'IRAP e azzerare l'IRES, con l'obiettivo di 'ridurre la presenza dello Stato e favorire concorrenza e mercato'.  
-  <https://www.luigimarattin.it/2025/06/27/marattin-libdem-alternativi-a-destra-e-sinistra-i-pm-la-riforma-e-ok/>
-- *(liv. C)* Analisi del programma economico di Futuro Nazionale: 'economia protetta e guidata politicamente', con fondo pubblico sovrano, uso esteso del golden power, 'protezionismo, dazi e preferenze nazionali', restrizioni agli investimenti e alle acquisizioni estere. Il partito denuncia una globalizzazione 'dominata dalle multinazionali e dalla finanza internazionale che rischia di divorare il Made in Italy'. Sull'euro Vannacci chiede la capacita' sia di restarci ridefinendo i parametri sia di uscirne 'secondo condizioni, contesto e tempistiche'.  
-  <https://www.ilpost.it/2026/08/18/vannacci-futuro-nazionale-programma-economia-euro/>
-- *(liv. C)* Fratelli d'Italia aveva presentato al Senato un'interrogazione urgente per ricorrere al golden power a tutela degli asset strategici e per l'intervento di Cassa depositi e prestiti in Stellantis. Da presidente del Consiglio Meloni ha pero' abbracciato una posizione piu' elastica e il proposito di far entrare lo Stato in Stellantis e' 'silenziosamente evaporato'; sotto il suo governo sono state cedute la rete TIM a KKR e ITA Airways a Lufthansa, ed e' stato abbandonato il piano di nazionalizzazione di Acciaierie d'Italia.  
-  <https://www.startmag.it/smartcity/giorgia-meloni-invoca-la-cdp-in-stellantis/>
-- *(liv. C)* Libro verde sulle politiche industriali del PD, curato da Andrea Orlando su incarico di Elly Schlein: 'lo Stato deve guidare e cofinanziare lo sviluppo, sostenendo imprese innovative e responsabili'. Prevede un'Agenzia per le partecipazioni pubbliche, un Consiglio indipendente per la strategia industriale e la riforma di Invitalia e Cdp come soggetti attuatori.  
-  <https://www.innovationpost.it/attualita/orlando-e-schlein-ecco-le-idee-del-partito-democratico-per-re-industrializzare-litalia-e-leuropa/>
-- *(liv. C)* Matteo Salvini invoca il golden power sull'operazione UniCredit-Banco BPM, sostenendo che 'una banca non puo' essere considerata mera entita' privata, perche' ha responsabilita' verso l'economia e la societa''; chiede inoltre un prelievo del 5% sugli utili delle dieci maggiori banche per tre anni. Forza Italia contesta la misura e Tajani replica che 'le banche non sono il nemico pubblico'.  
-  <https://www.ansa.it/sito/notizie/economia/2025/08/02/tajani-basta-minacce-alle-banche-non-sono-il-nemico-pubblico_bd423865-c816-4a20-8cce-fc145680e37a.html>
-- *(liv. C)* Giuseppe Conte, 23 maggio 2025: sulla vicenda ex Ilva 'si' a nazionalizzazione'; ricorda che Invitalia fu creata per garantire la presenza pubblica e tutelare l'interesse collettivo, e afferma che 'la presenza pubblica e' necessaria'.  
+- *(liv. B, verificata il 2026-09-15)* Programma di AVS per le europee 2024: «Adottare un'imposta europea sui grandi patrimoni»; «Promuovere la legalizzazione della cannabis»; «Rivedere gli accordi di libero scambio e interrompere definitivamente i negoziati con il Mercosur»; «una Strategia industriale europea»; «una direttiva quadro per un reddito minimo europeo»; «un processo costituente per un'Europa unita... una Convenzione per una riforma dei Trattati».  
+  <https://verdisinistra.it/programma-elezioni-europee-8-e-9-giugno-2024/>
+- *(liv. C, verificata il 2026-09-15)* 10 novembre 2025, dibattito sulla proposta della CGIL. Meloni: le patrimoniali «con la destra al governo non vedranno mai la luce». Conte: «una patrimoniale non è all'ordine del giorno». Schlein favorevole a una tassazione europea dei grandi patrimoni. Renzi la definisce un «autogol mediatico del centrosinistra».  
+  <https://pagellapolitica.it/articoli/dibattito-patrimoniale-divisioni-partiti>
+- *(liv. C, verificata il 2026-09-15)* 14 febbraio 2025. Schlein: «Non è un tabù intervenire sui grandi patrimoni, ma è bene farlo a livello europeo, meglio ancora se a livello internazionale». Conte: la tassazione «va fatta a livello globale o quantomeno europeo». Fratoianni: «È il momento di un'imposizione patrimoniale sulle grandi ricchezze anche in Italia».  
+  <https://www.ilfattoquotidiano.it/2025/02/14/tassa-grandi-patrimoni-schlein-conte-fratoianni-video/7878488/>
+- *(liv. C, verificata il 2026-09-15)* Carlo Calenda, 15 febbraio 2025: «Che i grandi patrimoni debbano pagare più tasse è una cosa corretta. Il problema, come per molte cose proposte dalla sinistra, è l'applicazione». In un'intervista a ItaliaOggi: «le tasse vanno tagliate. No a patrimoniale e tasse di successione».  
+  <https://www.agenzianova.com/a/67b05ea820f2d2.21155922/5896971/2025-02-15/fisco-calenda-su-patrimoniale-non-e-piu-tempo-per-bandierine>
+- *(liv. C, verificata il 2026-09-15)* Luigi Marattin (segretario PLD) risponde a Fratoianni: la patrimoniale personale è stata abolita dai governi progressisti perché inefficiente e ingiusta; la priorità è abbassare le tasse a chi lavora e produce, intervenendo sulla spesa.  
+  <https://www.adnkronos.com/cronaca/luigi-marattin-nicola-fratoianni-patrimoniale-tassa-spesa-pubblica_TDWOzNFaptLHytATwtitN>
+- *(liv. C, verificata il 2026-09-15)* Antonio Tajani al congresso di Forza Italia: «Con noi, mai la patrimoniale».  
+  <https://www.sardiniapost.it/politica/tajani-al-congresso-di-forza-italia-con-noi-mai-la-patrimoniale-vannacci-fa-solo-un-favore-alla-sinistra/>
+- *(liv. C, verificata il 2026-09-15)* Matteo Salvini, agosto 2026: «La patrimoniale non ha alcun senso, finché la Lega sarà al Governo non ci sarà nessuna tassa patrimoniale».  
+  <https://www.italpress.com/fisco-salvini-con-la-lega-al-governo-non-ci-sara-nessuna-patrimoniale/>
+
+---
+
+## 2. Salario minimo legale
+
+*Categoria:* Economia, Fisco e Lavoro
+
+**Affermazione:** La legge dovrebbe fissare una retribuzione oraria minima valida per tutti i settori.
+
+*Direzione:* accordo = sinistra. *Formulazione:* Tolta l'inversione della v2. La formulazione girata (salari lasciati alla contrattazione) era sensata, ma dopo la riscrittura della legge elettorale bastava invertire due domande per mantenere il bilanciamento 12/12.
+
+| Partito | Punteggio | Liv. | Posizione documentata |
+|---|:---:|:---:|---|
+| **AVS** | **7** | A | Mozione propria a 10 €/ora; firmataria della proposta unitaria del 2023. |
+| **M5S** | **7** | A | Mozione propria a 9 €/ora inderogabili; firmataria della proposta unitaria del 2023. |
+| **PD** | **7** | A | Mozione propria a 9,50 €/ora; firmataria della proposta unitaria del 2023. |
+| **+Europa** | **7** | B | Firmataria (Magi) della proposta unitaria per un minimo inderogabile di 9 €/ora. Nella codifica precedente era un'inferenza (F). |
+| **Italia Viva** | **5** | A | Mozione con Azione a 9 €/ora solo nei settori non coperti da contrattazione: favorevole con un limite rilevante. Non firma la proposta unitaria del 2023. |
+| **Azione** | **6** | B | Nel 2022 mozione limitata ai settori senza contratto; nel 2023 firma la proposta unitaria per un minimo di 9 €/ora. |
+| **Liberaldemocratico** | **—** | — | Nessuna posizione verificabile del partito sul salario minimo legale; la cella precedente era un'inferenza (F). |
+| **Forza Italia** | **1** | A | Vota la mozione di maggioranza contraria al minimo legale. |
+| **Fratelli d'Italia** | **1** | A | Vota la mozione di maggioranza contraria al minimo legale. |
+| **Lega** | **1** | A | Vota la mozione di maggioranza contraria al minimo legale. |
+| **Futuro Nazionale** | **4** | C | DIVERGENZA DOCUMENTATA: a giugno 2026 il deputato Bof chiede in aula un minimo orario per legge, ma il programma di agosto 2026 affida i salari alla contrattazione collettiva nazionale. |
+
+**Fonti:**
+
+- *(liv. A, verificata il 2026-09-15)* Camera, 30 novembre 2022: cinque mozioni sul salario minimo. PD 9,50 €/ora, M5S 9 €/ora inderogabili, AVS 10 €/ora con rivalutazione, Azione-Italia Viva 9 €/ora solo nei settori non coperti da contrattazione. Approvata solo la mozione della maggioranza (FdI, Lega, FI, Noi Moderati), che punta sui contratti collettivi invece di un minimo legale: 163 sì, 121 no, 19 astenuti.  
+  <https://pagellapolitica.it/articoli/salario-minimo-mozioni-camera-opposizione>
+- *(liv. B, verificata il 2026-09-15)* Luglio 2023: proposta di legge unitaria per una soglia minima inderogabile di 9 euro l'ora, firmata da PD, M5S, Azione, AVS e +Europa (Schlein, Conte, Richetti, Fratoianni, Bonelli, Magi). Italia Viva non la firma. A dicembre 2023 i firmatari ritirano le firme per protesta contro lo svuotamento del testo da parte della maggioranza.  
+  <https://www.linkiesta.it/2023/07/salario-minimo-opposizioni-proposta/>
+- *(liv. C, verificata il 2026-09-15)* Il deputato di Futuro Nazionale Gianangelo Bof in aula, 10 giugno 2026, applaudito da Vannacci: vorremmo «fissare una soglia minima oraria»; «il lavoro di una persona deve avere un valore minimo sotto il quale non si può andare». Gli stessi deputati, allora nella Lega, a dicembre 2023 avevano votato contro.  
+  <https://pagellapolitica.it/articoli/futuro-nazionale-vannacci-salario-minimo>
+
+---
+
+## 3. Ruolo dello Stato nell'economia
+
+*Categoria:* Economia, Fisco e Lavoro
+
+**Affermazione:** Lo Stato dovrebbe intervenire direttamente nell'economia con investimenti pubblici nei settori strategici.
+
+*Direzione:* accordo = sinistra. *Formulazione:* Tolti 'politica industriale pubblica' e 'riconversione ecologica', che nella versione precedente mescolavano due temi.
+
+| Partito | Punteggio | Liv. | Posizione documentata |
+|---|:---:|:---:|---|
+| **AVS** | **6** | B | Il programma chiede una «Strategia industriale europea» per competitività e transizione climatica: politica industriale pubblica, a livello europeo. |
+| **M5S** | **7** | C | Conte sull'ex Ilva: «sia necessaria la nazionalizzazione»; «il pubblico è una presenza necessaria». |
+| **PD** | **7** | C | Schlein chiede l'intervento dello Stato e di un consorzio di partecipate pubbliche nell'ex Ilva. La fonte precedente (Libro verde) non conteneva le frasi citate ed è stata sostituita. |
+| **+Europa** | **—** | — | La cella precedente citava il programma 2022 senza riportarne il contenuto, e il documento non è leggibile. Nessuna posizione verificata. |
+| **Italia Viva** | **—** | — | L'unica fonte era il programma 2022 di Azione-Italia Viva, il cui PDF pubblicato non è leggibile: non è stato possibile verificarlo. |
+| **Azione** | **6** | C | Calenda: «Solo una nazionalizzazione può salvare l'ex Ilva»: intervento diretto dello Stato in un settore strategico. |
+| **Liberaldemocratico** | **2** | B | Manifesto: «Il mercato quale miglior strumento per allocare le risorse», con un'azione pubblica «efficace ma limitata»; Marattin (2026): lo Stato gestisce troppe società in settori concorrenziali. |
+| **Forza Italia** | **3** | C | Tajani contro un prelievo sulle banche: non possono essere indicate «come il nemico pubblico numero uno». Posizione di mercato dentro la coalizione. |
+| **Fratelli d'Italia** | **4** | C | AMBIVALENZA DOCUMENTATA: da opposizione chiedeva golden power e Cdp in Stellantis; al governo ha rilanciato le privatizzazioni. |
+| **Lega** | **6** | C | Salvini chiede di usare il golden power per fermare l'offerta di UniCredit su Banco BPM; il governo lo esercita. |
+| **Futuro Nazionale** | **7** | C | Programma economico: fondo sovrano per investimenti pubblici, golden power esteso, Stato contro la globalizzazione «dominata dalle multinazionali». |
+
+**Fonti:**
+
+- *(liv. B, verificata il 2026-09-15)* Programma di AVS per le europee 2024: «Adottare un'imposta europea sui grandi patrimoni»; «Promuovere la legalizzazione della cannabis»; «Rivedere gli accordi di libero scambio e interrompere definitivamente i negoziati con il Mercosur»; «una Strategia industriale europea»; «una direttiva quadro per un reddito minimo europeo»; «un processo costituente per un'Europa unita... una Convenzione per una riforma dei Trattati».  
+  <https://verdisinistra.it/programma-elezioni-europee-8-e-9-giugno-2024/>
+- *(liv. C, verificata il 2026-09-15)* Giuseppe Conte, 23 maggio 2025, sull'ex Ilva: «Credo che nella condizione in cui siamo sia necessaria la nazionalizzazione»; «il pubblico è una presenza necessaria».  
   <https://www.ansa.it/puglia/notizie/2025/05/23/conte-situazione-ex-ilva-complicata-si-a-nazionalizzazione_95655a7d-dbcb-4ed9-9e01-7ca350fe34f2.html>
-- *(liv. B)* Codifica di Leo. Programma di Alleanza Verdi e Sinistra per le europee 2024.  
-  <https://verdisinistra.it/programma-elezioni-europee-8-e-9-giugno-2024/>
-- *(liv. B)* Codifica di Leo. Programma di +Europa per le politiche 2022, versione 'in pillole'.  
-  <https://assets.nationbuilder.com/piueuropa/pages/1728/attachments/original/1661777290/PROGRAMMA__EUROPA_2022_in_pillole.pdf?1661777290>
-
----
-
-## 3. Vincoli di bilancio europei
-
-**Domanda proposta:** L'Italia dovrebbe aumentare la spesa pubblica in deficit anche superando i vincoli europei.
-
-*Modifica rispetto alla versione attuale:* Tolto 'anche a costo di piu' debito', che incorporava l'obiezione.
-
-*Direzione:* essere d'accordo corrisponde alla posizione **sinistra**.
-
-
-| Partito | Punteggio | Liv. | Posizione documentata |
-|---|:---:|:---:|---|
-| **AVS** | **7** | C | Chiede l'esenzione della spesa sociale dai vincoli; definisce la manovra 2026 'di austerita''. |
-| **M5S** | **7** | C | Chiede la revisione del Patto di stabilita' e un nuovo piano di investimenti comuni europei. |
-| **PD** | **6** | C | Contrario al Patto riformato perche' 'peggiorato e irrigidito' rispetto alla proposta iniziale: chiede piu' spazio per gli investimenti. |
-| **+Europa** | **1** | B | Posizione opposta alla spesa in deficit: ogni proposta e' vincolata alla riduzione del debito, con l'equita' generazionale da inserire in Costituzione. |
-| **Italia Viva** | **3** | B | Come sopra: programma congiunto. |
-| **Azione** | **3** | B | Il programma rivendica la stabilizzazione del debito come risultato positivo e non chiede flessibilita' sui vincoli. |
-| **Liberaldemocratico** | **2** | B | Chiede 'avanzi primari piu' consistenti per la riduzione del debito': posizione opposta alla spesa in deficit. |
-| **Forza Italia** | **5** | C | Come sopra: posizione dell'esecutivo di cui il partito fa parte. |
-| **Fratelli d'Italia** | **5** | C | Chiede flessibilita' su difesa ed energia, ma dentro le regole europee. Posizione di governo, non distinta per partito. |
-| **Lega** | **5** | C | Come sopra: il ministro proponente e' espressione della Lega. |
-| **Futuro Nazionale** | **6** | E | Chiede all'UE un'esenzione strutturale dal Patto di stabilita', motivata dalla crisi demografica. |
-
-**Fonti:**
-
-- *(liv. B)* Manifesto e proposte del Partito Liberaldemocratico: 'ruolo strategico del nucleare'; spending review e 'avanzi primari piu' consistenti per la riduzione del debito'; Europa che deve 'cambiare o perire'. Non trattati salario minimo, pensioni, diritti civili, giustizia, riforme istituzionali.  
-  <https://partitoliberaldemocratico.com/proposte/>
-- *(liv. B)* Programma elettorale congiunto Azione - Italia Viva, politiche 2022, 56 pagine. Politica industriale: 'concentrare le risorse su strumenti fiscali semplici ed automatici a supporto degli investimenti'. Fisco: 'Non serve inventare nuove tasse, sognare la patrimoniale'. Concorrenza: 'approvare ogni anno leggi sulla concorrenza che rendano la nostra economia piu' libera e meno gravata da barriere all'ingresso'. Reddito di cittadinanza: 'Eliminare il Reddito di Cittadinanza dopo il primo rifiuto e ridurlo dopo 2 anni'. Europa: 'Con una svolta in senso federale delle sue Istituzioni... riaprire il cantiere delle riforme dei Trattati'. Trasporti: completamento di Torino-Lione, Terzo Valico e altre tratte ad alta velocita'. Istituzioni: modello del 'sindaco d'Italia' con riforma del sistema elettorale. Cannabis e matrimonio egualitario NON compaiono nel documento.  
-  <https://www.welforum.it/wp-content/uploads/2022/09/Programma-Azione-Italia-Viva.pdf>
-- *(liv. E)* Ricostruzioni giornalistiche delle posizioni di Futuro Nazionale: intenzione di anticipare gradualmente l'accesso alla pensione per alcune categorie; richiesta all'UE di un'esenzione strutturale dal Patto di stabilita' motivata dalla crisi demografica; lo statuto cita la 'difesa non negoziabile della sanita'' fra i valori, senza pero' proposte tecniche su liste d'attesa, personale o finanziamento.  
-  <https://www.money.it/pensioni-anche-vannacci-vuole-superare-fornero-ecco-riforma>
-- *(liv. C)* Giuseppe Conte, 6 maggio 2026: il governo si attivi in sede europea per rivedere il Patto di stabilita' e per un nuovo piano di investimenti comuni sul modello del 2020.  
-  <https://askanews.it/2026/05/06/dfp-conte-governo-si-attivi-in-ue-per-rivedere-patto-di-stabilita/>
-- *(liv. C)* Nicola Fratoianni (AVS): ha chiesto l'esenzione della spesa sociale dai vincoli del Patto di stabilita', ottenendo risposta negativa mentre l'esenzione per la spesa militare veniva approvata. Definisce la manovra 2026 'di austerita', ricca di spese militari e poverissima di investimenti per sanita' e scuola pubblica'.  
-  <https://agenparl.eu/2025/10/24/governo-fratoianni-avs-manovra-di-austerita-ricca-di-spese-militari-e-poverissima-di-investimenti-per-sanita-e-scuola-pubblica-piena-di-tagli-ai-comuni-e-al-sud-il-governo-meloni-continua-a-dis/>
-- *(liv. C)* Elly Schlein ha dichiarato che il PD non avrebbe votato a favore del Patto di stabilita' riformato: la proposta originaria della Commissione era buona ma e' stata 'peggiorata e irrigidita' dal Consiglio, con un accordo giudicato negativo per l'Italia.  
-  <https://www.ilfoglio.it/politica/2024/03/09/news/il-pd-di-elly-schlein-tra-giuseppe-conte-e-pedro-sanchez--94386>
-- *(liv. C)* Il governo chiede all'UE maggiore flessibilita' sul Patto di stabilita': Giorgetti, 22 maggio 2026, sostiene che 'la flessibilita' Ue sulla difesa deve valere anche per la sicurezza economica', chiedendo di estendere alla crisi energetica la clausola di salvaguardia gia' prevista per la spesa militare, per circa 14 miliardi e fino a 36 miliardi di spazio fiscale aggiuntivo nel 2027. ATTENZIONE: e' la posizione dell'esecutivo, non distingue fra i tre partiti di maggioranza, e chiede flessibilita' DENTRO le regole, non il loro superamento.  
-  <https://www.ansa.it/sito/notizie/economia/2026/05/22/giorgetti-flessibilita-ue-su-difesa-ci-sia-anche-per-la-sicurezza-economica_fad591b3-29f3-4514-a533-ae3879b5d291.html>
-- *(liv. B)* Programma elettorale di +Europa 'Una Generazione Avanti'. Debito: 'ogni nostra proposta sara' vincolata alla riduzione del debito pubblico', con piani quinquennali di rientro e la proposta di inserire in Costituzione il 'principio di equita' generazionale per evitare scelte miopi che creano indebitamento irresponsabile verso le nuove generazioni'; ogni proposta di spesa e' legata alla riduzione del rapporto debito/PIL di almeno due punti l'anno. Pensioni: il sistema 'non puo' essere gravato da operazioni come Quota 100' e la spesa pensionistica non deve crescere. Welfare: contrario ai sussidi generalizzati, propone di rivedere il reddito di cittadinanza con agenzie private per formazione e collocamento e perdita del beneficio in caso di rifiuto del lavoro. Istruzione e sanita' sono i due pilastri su cui indirizzare 'ogni euro aggiuntivo di spesa pubblica', con tempo pieno in tutte le scuole.  
-  <https://www.piueuropa.eu/una_generazione_avanti_il_programma_elettorale_di_europa>
-
----
-
-## 4. Eta' pensionabile
-
-**Domanda proposta:** Si dovrebbe poter andare in pensione prima di quanto consenta la legge attuale, anche a costo di aumentare il debito pubblico.
-
-*Modifica rispetto alla versione attuale:* Tolto il riferimento alla 'legge Fornero', che e' lessico connotato, e separata la questione dalle pensioni minime. AGGIUNTO POI il costo esplicito: senza di esso l'anticipo pensionistico e' un pasto gratis su cui quasi tutti sono d'accordo, e l'item non discrimina. ATTENZIONE: reintroduce una clausola di costo che altrove abbiamo tolto; se la si tiene qui andrebbe valutato se applicare lo stesso criterio anche ad altre domande, per coerenza.
-
-*Direzione:* essere d'accordo corrisponde alla posizione **ambigua**.
-
-
-| Partito | Punteggio | Liv. | Posizione documentata |
-|---|:---:|:---:|---|
-| **AVS** | **6** | D | RICOSTRUZIONE DA VERIFICARE: voto contrario alla manovra. |
-| **M5S** | **6** | D | RICOSTRUZIONE DA VERIFICARE: voto contrario alla manovra. |
-| **PD** | **6** | D | RICOSTRUZIONE DA VERIFICARE: critica l'aumento delle pensioni minime di 'tre euro al mese'. |
-| **+Europa** | **2** | B | Il sistema 'non puo' essere gravato da operazioni come Quota 100'; la spesa pensionistica non deve crescere. |
-| **Italia Viva** | **5** | E | Favorevole al rinnovo di Opzione Donna, quindi alla flessibilita' in uscita. Evidenza indiretta, da rafforzare. |
-| **Azione** | **2** | C | Codificata da Leo. |
-| **Liberaldemocratico** | **2** | C | Codificata da Leo. |
-| **Forza Italia** | **3** | A | Vota la manovra che alza l'eta' pensionabile. |
-| **Fratelli d'Italia** | **3** | A | ATTENZIONE, DIVERGENZA: la manovra votata AUMENTA l'eta' pensionabile di un mese dal 2027 e di due dal 2028. Il voto dice il contrario della retorica. |
-| **Lega** | **3** | A | ATTENZIONE, DIVERGENZA: vota la manovra che alza l'eta' pensionabile pur continuando a proporre pubblicamente il superamento della Fornero. Nel data.json attuale ha 7: il punteggio piu' discutibile dell'intero questionario. |
-| **Futuro Nazionale** | **6** | E | Intenzione dichiarata di anticipare gradualmente l'accesso alla pensione, soprattutto per alcune categorie di lavoratori. |
-
-**Fonti:**
-
-- *(liv. A)* Legge di bilancio 2026, approvazione definitiva alla Camera il 30 dicembre 2025 (216 si', 126 no). Taglio Irpef del secondo scaglione dal 35 al 33%, fondo sanitario +2,4 mld, eta' pensionabile in aumento di un mese dal 2027 e di altri due dal 2028.  
-  <https://www.quotidiano.net/economia/manovra-camera-ncpdmpej>
-- *(liv. E)* Ricostruzioni giornalistiche delle posizioni di Futuro Nazionale: intenzione di anticipare gradualmente l'accesso alla pensione per alcune categorie; richiesta all'UE di un'esenzione strutturale dal Patto di stabilita' motivata dalla crisi demografica; lo statuto cita la 'difesa non negoziabile della sanita'' fra i valori, senza pero' proposte tecniche su liste d'attesa, personale o finanziamento.  
-  <https://www.money.it/pensioni-anche-vannacci-vuole-superare-fornero-ecco-riforma>
-- *(liv. E)* Italia Viva figura fra i partiti convergenti sul rinnovo di Opzione Donna, lo schema di pensionamento anticipato per le lavoratrici con 35 anni di contributi e almeno 61 di eta'. La manovra 2026 conferma invece l'aumento dell'eta' pensionabile dal 2027.  
-  <https://www.pmi.it/economia/lavoro/486625/riforma-pensioni-correttivi-eta-pensionabile-e-flessibilita-in-uscita.html>
-- *(liv. B)* Programma elettorale di +Europa 'Una Generazione Avanti'. Debito: 'ogni nostra proposta sara' vincolata alla riduzione del debito pubblico', con piani quinquennali di rientro e la proposta di inserire in Costituzione il 'principio di equita' generazionale per evitare scelte miopi che creano indebitamento irresponsabile verso le nuove generazioni'; ogni proposta di spesa e' legata alla riduzione del rapporto debito/PIL di almeno due punti l'anno. Pensioni: il sistema 'non puo' essere gravato da operazioni come Quota 100' e la spesa pensionistica non deve crescere. Welfare: contrario ai sussidi generalizzati, propone di rivedere il reddito di cittadinanza con agenzie private per formazione e collocamento e perdita del beneficio in caso di rifiuto del lavoro. Istruzione e sanita' sono i due pilastri su cui indirizzare 'ogni euro aggiuntivo di spesa pubblica', con tempo pieno in tutte le scuole.  
-  <https://www.piueuropa.eu/una_generazione_avanti_il_programma_elettorale_di_europa>
-- *(liv. C)* Codifica di Leo. Fact-checking sul costo di Quota 41.  
-  <https://pagellapolitica.it/fact-checking/costo-quota-41-pensioni>
-- *(liv. C)* Codifica di Leo. Intervista a Marattin: il governo 'ha tenuto la barra dritta sulle pensioni'.  
-  <https://giornaleradio.fm/le-esclusive-di-giornale-radio/marattin-a-giornale-radio-meloni-e-il-suo-governo-hanno-tenuto-la-barra-dritta-sulle-pensioni-e-se-ne-vergognano/>
-
----
-
-## 5. Sanita' pubblica
-
-**Domanda proposta:** Il finanziamento del Servizio sanitario nazionale dovrebbe aumentare in modo consistente.
-
-*Modifica rispetto alla versione attuale:* Separata dalla questione del privato accreditato, che era accorpata nella stessa affermazione.
-
-*Direzione:* essere d'accordo corrisponde alla posizione **sinistra**.
-
-
-| Partito | Punteggio | Liv. | Posizione documentata |
-|---|:---:|:---:|---|
-| **AVS** | **7** | D | RICOSTRUZIONE DA VERIFICARE: voto contrario. |
-| **M5S** | **7** | D | RICOSTRUZIONE DA VERIFICARE: voto contrario. |
-| **PD** | **7** | D | RICOSTRUZIONE DA VERIFICARE: voto contrario, aumento giudicato insufficiente. |
-| **+Europa** | **6** | B | NON E' INFERENZA, era una svista: il programma indica istruzione E SANITA' come i due pilastri su cui indirizzare 'ogni euro aggiuntivo di spesa pubblica'. Dalla stessa frase avevo codificato la scuola dimenticando la sanita'. |
-| **Italia Viva** | **5** | B | Come sopra: programma congiunto. |
-| **Azione** | **5** | B | Riforma della governance Stato-regioni, piano straordinario per le liste d'attesa, contrasto alla carenza di personale. |
-| **Liberaldemocratico** | **5** | B | 'Servizi sanitari adeguati a prescindere dalle condizioni economiche' definiti 'baluardo del welfare'. |
-| **Forza Italia** | **4** | A | Come sopra. |
-| **Fratelli d'Italia** | **4** | A | Vota la manovra che porta il fondo sanitario a 143,1 mld, +2,4 mld: aumento reale ma contestato come insufficiente. |
-| **Lega** | **4** | A | Come sopra. |
-| **Futuro Nazionale** | **5** | E | Lo statuto cita la 'difesa non negoziabile della sanita'' fra i valori fondativi, ma senza proposte tecniche: evidenza debole, da confermare. |
-
-**Fonti:**
-
-- *(liv. A)* Legge di bilancio 2026, approvazione definitiva alla Camera il 30 dicembre 2025 (216 si', 126 no). Taglio Irpef del secondo scaglione dal 35 al 33%, fondo sanitario +2,4 mld, eta' pensionabile in aumento di un mese dal 2027 e di altri due dal 2028.  
-  <https://www.quotidiano.net/economia/manovra-camera-ncpdmpej>
-- *(liv. B)* Manifesto e proposte del Partito Liberaldemocratico: 'ruolo strategico del nucleare'; spending review e 'avanzi primari piu' consistenti per la riduzione del debito'; Europa che deve 'cambiare o perire'. Non trattati salario minimo, pensioni, diritti civili, giustizia, riforme istituzionali.  
-  <https://partitoliberaldemocratico.com/proposte/>
-- *(liv. B)* Programma elettorale congiunto Azione - Italia Viva, politiche 2022, 56 pagine. Politica industriale: 'concentrare le risorse su strumenti fiscali semplici ed automatici a supporto degli investimenti'. Fisco: 'Non serve inventare nuove tasse, sognare la patrimoniale'. Concorrenza: 'approvare ogni anno leggi sulla concorrenza che rendano la nostra economia piu' libera e meno gravata da barriere all'ingresso'. Reddito di cittadinanza: 'Eliminare il Reddito di Cittadinanza dopo il primo rifiuto e ridurlo dopo 2 anni'. Europa: 'Con una svolta in senso federale delle sue Istituzioni... riaprire il cantiere delle riforme dei Trattati'. Trasporti: completamento di Torino-Lione, Terzo Valico e altre tratte ad alta velocita'. Istituzioni: modello del 'sindaco d'Italia' con riforma del sistema elettorale. Cannabis e matrimonio egualitario NON compaiono nel documento.  
-  <https://www.welforum.it/wp-content/uploads/2022/09/Programma-Azione-Italia-Viva.pdf>
-- *(liv. E)* Ricostruzioni giornalistiche delle posizioni di Futuro Nazionale: intenzione di anticipare gradualmente l'accesso alla pensione per alcune categorie; richiesta all'UE di un'esenzione strutturale dal Patto di stabilita' motivata dalla crisi demografica; lo statuto cita la 'difesa non negoziabile della sanita'' fra i valori, senza pero' proposte tecniche su liste d'attesa, personale o finanziamento.  
-  <https://www.money.it/pensioni-anche-vannacci-vuole-superare-fornero-ecco-riforma>
-- *(liv. B)* Programma elettorale di +Europa 'Una Generazione Avanti'. Debito: 'ogni nostra proposta sara' vincolata alla riduzione del debito pubblico', con piani quinquennali di rientro e la proposta di inserire in Costituzione il 'principio di equita' generazionale per evitare scelte miopi che creano indebitamento irresponsabile verso le nuove generazioni'; ogni proposta di spesa e' legata alla riduzione del rapporto debito/PIL di almeno due punti l'anno. Pensioni: il sistema 'non puo' essere gravato da operazioni come Quota 100' e la spesa pensionistica non deve crescere. Welfare: contrario ai sussidi generalizzati, propone di rivedere il reddito di cittadinanza con agenzie private per formazione e collocamento e perdita del beneficio in caso di rifiuto del lavoro. Istruzione e sanita' sono i due pilastri su cui indirizzare 'ogni euro aggiuntivo di spesa pubblica', con tempo pieno in tutte le scuole.  
-  <https://www.piueuropa.eu/una_generazione_avanti_il_programma_elettorale_di_europa>
-
----
-
-## 6. Sostegni al reddito
-
-**Domanda proposta:** Lo Stato dovrebbe garantire un sostegno economico a chiunque si trovi in difficolta' economica.
-
-*Modifica rispetto alla versione attuale:* Eliminato il confronto forzato con 'incentivi alla natalita' e bonus mirati': erano due dimensioni distinte compresse in una scala sola.
-
-*Direzione:* essere d'accordo corrisponde alla posizione **sinistra**.
-
-
-| Partito | Punteggio | Liv. | Posizione documentata |
-|---|:---:|:---:|---|
-| **AVS** | **7** | E | Sostiene il ritorno di misure di sostegno piu' generose, incluso il reddito di cittadinanza. |
-| **M5S** | **7** | E | Emendamento alla manovra per ripristinare il Reddito di cittadinanza nel biennio 2025-2026. |
-| **PD** | **7** | E | Critica la riduzione della platea e degli importi rispetto al reddito di cittadinanza; priorita' all'aumento dei redditi. |
-| **+Europa** | **3** | B | Contrario ai sussidi generalizzati: il reddito di cittadinanza va rivisto, con perdita del beneficio in caso di rifiuto del lavoro. |
-| **Italia Viva** | **3** | B | Come sopra: programma congiunto. |
-| **Azione** | **3** | B | 'Eliminare il Reddito di Cittadinanza dopo il primo rifiuto e ridurlo dopo 2 anni': strumento giudicato 'pensato male'. |
-| **Liberaldemocratico** | **3** | B | La sussidiarieta' non deve tradursi in 'erogazione gratuita illimitata a prescindere dalle condizioni economiche dei beneficiari'. |
-| **Forza Italia** | **2** | A | Come sopra. |
-| **Fratelli d'Italia** | **2** | A | Vota la manovra 2026 che dimezza il primo mese dell'Assegno di inclusione dopo il rinnovo; il RdC era gia' stato sostituito nel 2024. |
-| **Lega** | **2** | A | Come sopra. |
-| **Futuro Nazionale** | **2** | B | Propone di vincolare i sussidi alla disponibilita' ad accettare 'qualsivoglia lavoro compatibile' e di escludere i non cittadini dai benefici straordinari. |
-
-**Fonti:**
-
-- *(liv. B)* Programma di Futuro Nazionale, pubblicato l'11 agosto 2026: cittadinanza dopo almeno 20 anni di dimora regolare e livello C1, rifiuto 'categorico e senza possibilita' negoziale' di ius soli e ius scholae; abbassamento della pressione fiscale; sgravi per l'assunzione di manodopera italiana; contro il federalismo europeo, per 'un'Europa di Stati nazionali cooperanti'; l'immigrazione di massa 'sgretola la compattezza di una civilta''.  
-  <https://tg24.sky.it/politica/2026/08/11/vannacci-futuro-nazionale-programma-manifesto>
-- *(liv. B)* Programma elettorale congiunto Azione - Italia Viva, politiche 2022, 56 pagine. Politica industriale: 'concentrare le risorse su strumenti fiscali semplici ed automatici a supporto degli investimenti'. Fisco: 'Non serve inventare nuove tasse, sognare la patrimoniale'. Concorrenza: 'approvare ogni anno leggi sulla concorrenza che rendano la nostra economia piu' libera e meno gravata da barriere all'ingresso'. Reddito di cittadinanza: 'Eliminare il Reddito di Cittadinanza dopo il primo rifiuto e ridurlo dopo 2 anni'. Europa: 'Con una svolta in senso federale delle sue Istituzioni... riaprire il cantiere delle riforme dei Trattati'. Trasporti: completamento di Torino-Lione, Terzo Valico e altre tratte ad alta velocita'. Istituzioni: modello del 'sindaco d'Italia' con riforma del sistema elettorale. Cannabis e matrimonio egualitario NON compaiono nel documento.  
-  <https://www.welforum.it/wp-content/uploads/2022/09/Programma-Azione-Italia-Viva.pdf>
-- *(liv. E)* Il M5S ha presentato un emendamento alla legge di bilancio per ripristinare il Reddito di cittadinanza nel biennio 2025-2026 e propone misure regionali per chi resta escluso dall'Assegno di inclusione. La manovra 2026 della maggioranza dimezza invece il primo mese dell'assegno dopo il rinnovo.  
-  <https://www.fanpage.it/napoli/il-reddito-di-cittadinanza-in-campania-non-tornera-ma-il-m5s-vuole-un-sussidio-per-gli-esclusi-dallassegno-di-inclusione/>
-- *(liv. A)* Legge di bilancio 2026, approvazione definitiva alla Camera il 30 dicembre 2025 (216 si', 126 no). Taglio Irpef del secondo scaglione dal 35 al 33%, fondo sanitario +2,4 mld, eta' pensionabile in aumento di un mese dal 2027 e di altri due dal 2028.  
-  <https://www.quotidiano.net/economia/manovra-camera-ncpdmpej>
-- *(liv. E)* L'agenda di AVS sul contrasto alla poverta' comprende salario minimo, protezione dei salari dall'inflazione, un possibile ritorno del reddito di cittadinanza e la riduzione dell'orario a parita' di salario. Fratoianni definisce 'insostenibile' la situazione della poverta'.  
-  <https://www.lagazzettadelmezzogiorno.it/news/breaking-news/1918692/poverta-fratoianni-situazione-insostenibile-serve-proposta-avs-sblocca-stipendi.html>
-- *(liv. E)* Il PD critica la sostituzione del reddito di cittadinanza con Assegno di inclusione e Supporto per la formazione e il lavoro, misure 'frammentate, con copertura piu' stretta, importi piu' bassi e condizioni piu' rigide' che servono 'solo il 60% della platea del reddito di cittadinanza'. Schlein indica fra le priorita' l'aumento dei redditi e denuncia la poverta' assoluta al 9,8% delle famiglie.  
-  <https://www.unita.it/2026/05/16/il-governo-meloni-smantella-il-welfare-e-si-accanisce-contro-i-piu-indifesi-poveri-disabili-e-donne-parla-ilenia-malavasi/>
-- *(liv. B)* Programma elettorale di +Europa 'Una Generazione Avanti'. Debito: 'ogni nostra proposta sara' vincolata alla riduzione del debito pubblico', con piani quinquennali di rientro e la proposta di inserire in Costituzione il 'principio di equita' generazionale per evitare scelte miopi che creano indebitamento irresponsabile verso le nuove generazioni'; ogni proposta di spesa e' legata alla riduzione del rapporto debito/PIL di almeno due punti l'anno. Pensioni: il sistema 'non puo' essere gravato da operazioni come Quota 100' e la spesa pensionistica non deve crescere. Welfare: contrario ai sussidi generalizzati, propone di rivedere il reddito di cittadinanza con agenzie private per formazione e collocamento e perdita del beneficio in caso di rifiuto del lavoro. Istruzione e sanita' sono i due pilastri su cui indirizzare 'ogni euro aggiuntivo di spesa pubblica', con tempo pieno in tutte le scuole.  
-  <https://www.piueuropa.eu/una_generazione_avanti_il_programma_elettorale_di_europa>
-- *(liv. B)* Proposte del Partito Liberaldemocratico: il principio di sussidiarieta' non si traduce 'automaticamente in monopolio pubblico o erogazione gratuita illimitata a prescindere dalle condizioni economiche dei beneficiari'; produzione di beni pubblici essenziali fra cui 'infrastrutture fisiche e digitali' e connessione dei territori, in particolare le aree interne spopolate; sull'energia 'si' al nucleare subito, senza se e senza ma'; atlantismo fra i valori fondativi.  
+- *(liv. C, verificata il 2026-09-15)* Elly Schlein sull'ex Ilva, settembre 2026: senza un forte intervento pubblico la crisi non si risolve; chiede l'intervento dello Stato e di un consorzio di partecipate pubbliche per garantire produzione, lavoro, salute e ambiente.  
+  <https://www.statoquotidiano.it/07/09/2026/schlein-sullilva-di-taranto-limpressione-e-che-il-governo-piu-che-una-soluzione-stia-cercando-un-alibi/1348040/>
+- *(liv. C, verificata il 2026-09-15)* Carlo Calenda, 2026: «Solo una nazionalizzazione può salvare l'ex Ilva», per ragioni di sicurezza nazionale e con un legame con il ministero della Difesa.  
+  <https://www.facebook.com/Eurocomunicazione/videos/calenda-solo-una-nazionalizzazione-pu%C3%B2-salvare-lex-ilva/958338407096659/>
+- *(liv. B, verificata il 2026-09-15)* Manifesto del PLD: «Il mercato quale miglior strumento per allocare le risorse», con «un'efficace ma limitata azione pubblica»; welfare che sostiene «chi è in difficoltà» ma che non deve «tradursi necessariamente in un'offerta illimitata e gratuita di tali servizi indipendentemente dalle condizioni economiche dei beneficiari».  
   <https://partitoliberaldemocratico.com/manifesto/>
-
----
-
-## 7. Risorse alla scuola pubblica
-
-**Domanda proposta:** La scuola pubblica dovrebbe ricevere piu' risorse di quante ne riceva oggi.
-
-*Modifica rispetto alla versione attuale:* Eliminato il confronto forzato con 'merito, valutazione e formazione tecnica': si possono volere entrambe le cose.
-
-*Direzione:* essere d'accordo corrisponde alla posizione **sinistra**.
-
-
-| Partito | Punteggio | Liv. | Posizione documentata |
-|---|:---:|:---:|---|
-| **AVS** | **7** | C | Contro i tagli a docenti e ATA; 'meno armi e piu' insegnanti'; proposta di legge per adeguare gli stipendi all'inflazione. |
-| **M5S** | **7** | E | Critica la proposta di stipendi differenziati come 'scuola delle disuguaglianze'. |
-| **PD** | **7** | E | Schlein contesta gli stipendi bassi dei docenti; il partito chiede 'meno tagli e piu' investimenti reali'. |
-| **+Europa** | **6** | B | Istruzione e sanita' sono i pilastri su cui indirizzare 'ogni euro aggiuntivo di spesa pubblica', con tempo pieno in tutte le scuole. |
-| **Italia Viva** | **6** | C | Renzi: 'finche' non paghiamo meglio gli insegnanti non ci sara' mai una scuola pubblica degna di questo nome'. |
-| **Azione** | **6** | B | Piano Scuola: stipendi iniziali adeguati agli standard dell'eurozona, piu' ispettori e personale ATA, con valutazione dei docenti che premi il merito. |
-| **Liberaldemocratico** | **5** | B | 'La riforma del sistema educativo e' la madre di tutte le riforme'. Favorevole all'investimento, con accento sul merito. |
-| **Forza Italia** | **4** | E | Allineata alla linea di governo. |
-| **Fratelli d'Italia** | **4** | E | POSIZIONE INTERMEDIA: il ministro rivendica un aumento delle risorse superiore al 10%, ma propone stipendi differenziati per area e apertura ai finanziamenti privati. |
-| **Lega** | **4** | E | Il ministro dell'Istruzione e' espressione della Lega: stessa posizione. |
-| **Futuro Nazionale** | **3** | F | INFERENZA: il programma e' centrato su selettivita', classi differenziate e lavoro dai 14 anni, e in economia su sgravi fiscali; nessun accenno a maggiori risorse. Non ostilita' alla scuola, ma un'altra priorita'. Fiducia medio-bassa. |
-
-**Fonti:**
-
-- *(liv. B)* Manifesto e proposte del Partito Liberaldemocratico: 'ruolo strategico del nucleare'; spending review e 'avanzi primari piu' consistenti per la riduzione del debito'; Europa che deve 'cambiare o perire'. Non trattati salario minimo, pensioni, diritti civili, giustizia, riforme istituzionali.  
-  <https://partitoliberaldemocratico.com/proposte/>
-- *(liv. E)* Dibattito sulle risorse alla scuola: il ministro Valditara propone stipendi docenti differenziati per costo della vita e apertura ai finanziamenti privati, rivendicando 'risorse alla scuola superiori al 10%'. Schlein e il PD contestano gli stipendi bassi e chiedono 'meno tagli e piu' investimenti reali'; il M5S parla di 'scuola delle disuguaglianze'.  
-  <https://www.tecnicadellascuola.it/stipendi-docenti-per-schlein-sono-troppo-bassi-valditara-replica-li-abbiamo-aumentati-il-pd-in-passato-non-ha-saputo-farlo>
-- *(liv. C)* AVS ha manifestato davanti al Ministero contro i tagli di quasi 8.000 posti fra docenti e personale ATA e per la mancanza di risorse. Fratoianni: 'i fondi ci sono, ma vengono investiti dove non servono, in armi e missili, invece che in medici, infermieri e insegnanti'; slogan 'meno armi e piu' insegnanti'. Il partito ha depositato la proposta di legge 'Sblocca stipendi' per adeguare le retribuzioni all'inflazione, finanziandola con maggiore tassazione delle rendite finanziarie.  
-  <https://www.orizzontescuola.it/fratoianni-avs-meno-armi-e-piu-insegnanti-meno-missili-e-piu-medici-si-ritorni-al-ministero-della-pubblica-istruzione/>
-- *(liv. B)* 'Piano Scuola' di Azione, elaborato dopo oltre un anno di consultazioni: adeguare lo stipendio iniziale dei docenti italiani agli standard dell'eurozona, ridurre del 30% gli anni necessari a raggiungere il massimo salariale, aumentare di circa 2.800 unita' gli ispettori scolastici regionali, rafforzare il personale ATA con nuove assunzioni. In parallelo, sistema di valutazione periodica dei docenti che premi il merito.  
-  <https://www.azione.it/piano-scuola/>
-- *(liv. C)* Matteo Renzi sulla scuola: 'Oggi un professore con lo stipendio fa la fame'; 'finche' non paghiamo meglio gli insegnanti e non li valorizziamo, non ci sara' mai una scuola pubblica degna di questo nome'. Critica i tagli alla Carta del docente, misura introdotta dal suo governo. Il programma condiviso con Azione prevede l'aumento delle retribuzioni e una carriera docente con figure intermedie.  
-  <https://www.orizzontescuola.it/oggi-un-professore-con-lo-stipendio-fa-la-fame-matteo-renzi-finche-non-paghiamo-meglio-gli-insegnanti-non-ci-sara-mai-una-scuola-pubblica-degna-di-questo-nome/>
-- *(liv. B)* Programma elettorale di +Europa 'Una Generazione Avanti'. Debito: 'ogni nostra proposta sara' vincolata alla riduzione del debito pubblico', con piani quinquennali di rientro e la proposta di inserire in Costituzione il 'principio di equita' generazionale per evitare scelte miopi che creano indebitamento irresponsabile verso le nuove generazioni'; ogni proposta di spesa e' legata alla riduzione del rapporto debito/PIL di almeno due punti l'anno. Pensioni: il sistema 'non puo' essere gravato da operazioni come Quota 100' e la spesa pensionistica non deve crescere. Welfare: contrario ai sussidi generalizzati, propone di rivedere il reddito di cittadinanza con agenzie private per formazione e collocamento e perdita del beneficio in caso di rifiuto del lavoro. Istruzione e sanita' sono i due pilastri su cui indirizzare 'ogni euro aggiuntivo di spesa pubblica', con tempo pieno in tutte le scuole.  
-  <https://www.piueuropa.eu/una_generazione_avanti_il_programma_elettorale_di_europa>
-
----
-
-## 8. Matrimonio e adozioni per coppie dello stesso sesso
-
-**Domanda proposta:** Le coppie dello stesso sesso dovrebbero poter accedere al matrimonio e all'adozione.
-
-*Modifica rispetto alla versione attuale:* Separata dalla legge contro l'omotransfobia: l'affermazione originale ne accorpava tre.
-
-*Direzione:* essere d'accordo corrisponde alla posizione **sinistra**.
-
-
-| Partito | Punteggio | Liv. | Posizione documentata |
-|---|:---:|:---:|---|
-| **AVS** | **7** | C | Disegni di legge depositati per matrimonio egualitario e adozioni per single e coppie gay. |
-| **M5S** | **7** | C | Favorevole al matrimonio egualitario. |
-| **PD** | **7** | C | Schlein annuncia un intervento su adozioni e matrimonio egualitario. |
-| **+Europa** | **7** | E | Il programma include matrimonio egualitario, adozione per coppie dello stesso sesso e stepchild adoption. |
-| **Italia Viva** | **6** | C | Scalfarotto chiede il matrimonio egualitario come passo successivo alle unioni civili. Sull'adozione piena la posizione storica del partito e' piu' cauta. |
-| **Azione** | **6** | C | Calenda favorevole a matrimonio egualitario, adozione e registrazione dei figli; contrario alla GPA. |
-| **Liberaldemocratico** | **6** | F | INFERENZA: partito liberale aderente ad ALDE, con i 'diritti civili' fra i valori fondativi. Azione, Italia Viva e +Europa stanno fra 6 e 7. Fiducia medio-alta. |
-| **Forza Italia** | **3** | C | Contraria al matrimonio egualitario ma con aperture: unico partito di maggioranza a discutere di unioni civili, con una componente interna che spinge per una svolta liberale. |
-| **Fratelli d'Italia** | **1** | C | Contraria alle adozioni omogenitoriali. |
-| **Lega** | **1** | C | 'La famiglia e' quella composta da una mamma e un papa''. |
-| **Futuro Nazionale** | **1** | C | Il programma prevede l'abolizione delle unioni civili, quindi una posizione piu' restrittiva del quadro attuale. |
-
-**Fonti:**
-
-- *(liv. C)* Ricostruzione delle posizioni dei partiti su matrimonio egualitario e omogenitorialita': Lega e FdI contrarie ('la famiglia e' quella composta da una mamma e un papa''); PD con Schlein, M5S e AVS favorevoli, con proposte di legge depositate. Sulla cannabis M5S favorevole; Calenda (Azione) favorevole con politiche di disincentivazione.  
-  <https://www.editorialedomani.it/politica/italia/cosa-pensano-i-partiti-su-matrimonio-egualitario-e-omogenitorialita-m7gz1hfl>
-- *(liv. E)* Ricostruzione giornalistica del programma di +Europa sui diritti civili: matrimonio egualitario, adozione per coppie non sposate e dello stesso sesso, stepchild adoption, riforma della legge 164, eutanasia e legalizzazione della cannabis.  
-  <https://www.gay.it/europa-programma-lgbtqia-donne-disabilita-e-immigrazione>
-- *(liv. C)* Ivan Scalfarotto (Italia Viva), 11 maggio 2026, nel decennale della legge Cirinna' sulle unioni civili approvata dal governo Renzi: 'Ora il passo successivo, il matrimonio egualitario'. La legge del 2016 aveva escluso l'adozione piena.  
-  <https://lespresso.it/c/attualita/2026/5/11/unioni-civili-legge-cirinna-numeri-dieci-anni-matrimonio-egualitario/61929>
-- *(liv. C)* Carlo Calenda, marzo 2023: 'si' matrimonio egualitario, adozione, registrazione figli ma no a GPA', che considera lesiva della dignita' delle donne. ATTENZIONE: il programma di Azione del 2022 non conteneva nulla su matrimonio egualitario, omogenitorialita' e stepchild adoption, e la cosa sollevo' polemiche. Divergenza fra documento e dichiarazione del leader.  
-  <https://www.civonline.it/news/italia-e-mondo/1189295/lgbt-calenda-si-matrimonio-egualitario-adozione-registrazione-figli-ma-no-a-gpa.html>
-- *(liv. C)* Forza Italia si oppone all'introduzione del matrimonio egualitario e alla tutela giuridica dell'omogenitorialita', allineandosi a FdI e Lega, ma e' l'unico partito di maggioranza a parlare esplicitamente di 'unioni civili' come terreno di confronto. Marina e Pier Silvio Berlusconi hanno sollecitato una svolta liberale sui diritti civili, e il deputato Stefano Benigni e' indicato come possibile proponente del matrimonio egualitario: tendenza emergente, non posizione ufficiale.  
-  <https://www.lacnews24.it/politica/il-campo-largo-della-destra-divisa-sui-diritti-dietro-lunita-di-governo-ce-una-guerra-culturale-jlzrn2o0>
-- *(liv. C)* Statuto e programma di Futuro Nazionale sui temi etici: posizione 'pro-vita dal concepimento alla morte naturale', con 'opposizione a eutanasia e omicidio del consenziente (dalla sinistra detto suicidio assistito)'; piena applicazione della legge sulle cure palliative, idratazione e alimentazione non considerate terapie. Sull'aborto: 'l'aborto non e' un diritto', da vietare la RU-486 in regime ambulatoriale o domiciliare. Il programma prevede inoltre l'abolizione delle unioni civili e lo stop al 'gender in tv'.  
-  <https://www.ilmessaggero.it/politica/vannacci_programma_aborto_famiglia_fecondazione_fine_vita_unioni_civili-9723028.html>
-
----
-
-## 9. Fine vita
-
-**Domanda proposta:** Dovrebbe esistere una legge che consenta il suicidio medicalmente assistito.
-
-*Modifica rispetto alla versione attuale:* Separata dall'aborto, che nell'affermazione originale era accorpato nella stessa domanda.
-
-*Direzione:* essere d'accordo corrisponde alla posizione **sinistra**.
-
-
-| Partito | Punteggio | Liv. | Posizione documentata |
-|---|:---:|:---:|---|
-| **AVS** | **7** | C | Come sopra. |
-| **M5S** | **7** | C | Come sopra. |
-| **PD** | **7** | C | Ddl Bazoli; giudica il testo della maggioranza piu' restrittivo delle sentenze della Consulta. |
-| **+Europa** | **7** | C | Come sopra; Magi critica il testo del governo. |
-| **Italia Viva** | **7** | C | Fra i critici del testo della maggioranza perche' troppo restrittivo. |
-| **Azione** | **7** | C | Come sopra. |
-| **Liberaldemocratico** | **7** | F | INFERENZA: stessa matrice liberale; tutti i partiti dell'area, compreso +Europa, stanno a 7. Fiducia medio-alta. |
-| **Forza Italia** | **5** | C | Posizione piu' aperta nel centrodestra: il capogruppo Costa cerca un'intesa con il centrosinistra per approvare la legge. |
-| **Fratelli d'Italia** | **2** | C | Sostiene l'esclusione del Servizio sanitario nazionale dalla procedura. |
-| **Lega** | **2** | C | Allineata all'impostazione restrittiva della maggioranza. |
-| **Futuro Nazionale** | **1** | C | Lo statuto sancisce la difesa della vita 'dal concepimento alla morte naturale' e l'opposizione esplicita all'eutanasia. |
-
-**Fonti:**
-
-- *(liv. C)* Fine vita: discussione parlamentare avviata il 3 giugno 2026. Il testo della maggioranza esclude il Servizio sanitario nazionale dalla procedura, impostazione sostenuta da FdI; Forza Italia si mostra aperta al compromesso con il centrosinistra. PD, M5S, AVS, Italia Viva, Azione e +Europa giudicano il testo piu' restrittivo delle sentenze della Consulta del 2019 e del 2024.  
-  <https://www.ilpost.it/2026/06/05/fine-vita-inerzia-immobilismo-parlamento/>
-- *(liv. C)* Statuto e programma di Futuro Nazionale sui temi etici: posizione 'pro-vita dal concepimento alla morte naturale', con 'opposizione a eutanasia e omicidio del consenziente (dalla sinistra detto suicidio assistito)'; piena applicazione della legge sulle cure palliative, idratazione e alimentazione non considerate terapie. Sull'aborto: 'l'aborto non e' un diritto', da vietare la RU-486 in regime ambulatoriale o domiciliare. Il programma prevede inoltre l'abolizione delle unioni civili e lo stop al 'gender in tv'.  
-  <https://www.ilmessaggero.it/politica/vannacci_programma_aborto_famiglia_fecondazione_fine_vita_unioni_civili-9723028.html>
-
----
-
-## 10. Cannabis
-
-**Domanda proposta:** La produzione e la vendita di cannabis dovrebbero essere legali e regolate dallo Stato.
-
-*Modifica rispetto alla versione attuale:* Tolto 'togliendo il mercato alla criminalita' organizzata', che era l'argomento a favore incorporato nella domanda.
-
-*Direzione:* essere d'accordo corrisponde alla posizione **sinistra**.
-
-
-| Partito | Punteggio | Liv. | Posizione documentata |
-|---|:---:|:---:|---|
-| **AVS** | **7** | E | La legalizzazione figura nel programma di governo. |
-| **M5S** | **7** | C | Favorevole alla legalizzazione. |
-| **PD** | **7** | E | La legalizzazione figura nel programma di governo. |
-| **+Europa** | **7** | E | La legalizzazione della cannabis figura fra i punti programmatici del partito. |
-| **Italia Viva** | **4** | C | POSIZIONE INTERMEDIA DOCUMENTATA: emendamento a favore dei cannabis shop, ma astensione sulla depenalizzazione della coltivazione domestica e sul referendum. |
-| **Azione** | **5** | C | Calenda favorevole, ma con politiche di disincentivazione dell'uso. |
-| **Liberaldemocratico** | **5** | D | Codificata da Leo. FONTE NON VERIFICABILE: 'ho visto un reel', senza link ne' data. Livello abbassato a D in attesa dell'URL. |
-| **Forza Italia** | **1** | E | Contraria in Parlamento sia alla legalizzazione ricreativa sia a quella medica. |
-| **Fratelli d'Italia** | **1** | E | Come sopra. |
-| **Lega** | **1** | E | Come sopra. |
-| **Futuro Nazionale** | **1** | F | INFERENZA: statuto pro-vita, pacchetto 'tolleranza zero' con pattuglie contro i trafficanti, impianto tradizionalista. Nessuna direzione alternativa plausibile. Fiducia alta. |
-
-**Fonti:**
-
-- *(liv. C)* Ricostruzione delle posizioni dei partiti su matrimonio egualitario e omogenitorialita': Lega e FdI contrarie ('la famiglia e' quella composta da una mamma e un papa''); PD con Schlein, M5S e AVS favorevoli, con proposte di legge depositate. Sulla cannabis M5S favorevole; Calenda (Azione) favorevole con politiche di disincentivazione.  
-  <https://www.editorialedomani.it/politica/italia/cosa-pensano-i-partiti-su-matrimonio-egualitario-e-omogenitorialita-m7gz1hfl>
-- *(liv. E)* Ricostruzione giornalistica del programma di +Europa sui diritti civili: matrimonio egualitario, adozione per coppie non sposate e dello stesso sesso, stepchild adoption, riforma della legge 164, eutanasia e legalizzazione della cannabis.  
-  <https://www.gay.it/europa-programma-lgbtqia-donne-disabilita-e-immigrazione>
-- *(liv. E)* Confronto fra i programmi elettorali sulla cannabis: PD, +Europa, M5S, Verdi e Sinistra Italiana inseriscono la legalizzazione nei programmi; Forza Italia, Lega e Fratelli d'Italia si sono opposte in Parlamento sia alla legalizzazione ricreativa sia a quella medica. Italia Viva non menziona la cannabis nel proprio programma, quindi la sua cella resta vuota.  
-  <https://tg24.sky.it/politica/2022/09/22/cannabis-programmi-elettorali-confronto>
-- *(liv. C)* Italia Viva ha promosso in Parlamento un emendamento per legalizzare i cannabis shop, ma si e' poi astenuta sulla depenalizzazione della coltivazione domestica; sul voto relativo al referendum sulla cannabis PD, M5S, LeU e +Europa votarono a favore, Lega, Forza Italia e FdI contro, Italia Viva si astenne. Renzi si era detto contrario a depenalizzare la coltivazione perche' 'gli italiani non capirebbero'.  
-  <https://tg24.sky.it/politica/2022/09/22/cannabis-programmi-elettorali-confronto>
-- *(liv. D)* Codifica di Leo. DA VERIFICARE: la fonte indicata e' 'ho visto un reel, posizione uguale a quella di Calenda', senza link ne' data. Non e' verificabile da terzi: o si recupera l'URL del video, oppure la cella va riportata a vuota.  
-  <(nessun link fornito)>
-
----
-
-## 11. Riconoscimento dello Stato di Palestina
-
-**Domanda proposta:** L'Italia dovrebbe riconoscere formalmente lo Stato di Palestina.
-
-*Modifica rispetto alla versione attuale:* Separata dalla valutazione delle operazioni militari israeliane, che era accorpata nella stessa affermazione.
-
-*Direzione:* essere d'accordo corrisponde alla posizione **sinistra**.
-
-
-| Partito | Punteggio | Liv. | Posizione documentata |
-|---|:---:|:---:|---|
-| **AVS** | **7** | A | Voto favorevole alla mozione. |
-| **M5S** | **7** | A | Proponente della mozione al Senato del gennaio 2025 per il riconoscimento nei confini del 1967. |
-| **PD** | **7** | A | Voto favorevole alla mozione e, a maggio 2025, firmatario della mozione unitaria alla Camera. |
-| **+Europa** | **6** | C | Codificata da Leo. |
-| **Italia Viva** | **2** | A | VOTA CONTRO insieme alla maggioranza. |
-| **Azione** | **2** | A | VOTA CONTRO insieme alla maggioranza. |
-| **Liberaldemocratico** | **1** | C | Codificata da Leo. PUNTEGGIO DA RIVEDERE: la fonte mostra adesione alla linea del riconoscimento condizionato, che non equivale a una contrarieta' netta. |
-| **Forza Italia** | **2** | A | Voto contrario con la maggioranza. |
-| **Fratelli d'Italia** | **2** | A | Contraria; motiva su parti del testo la mancanza di 'equilibrio'. |
-| **Lega** | **2** | A | Voto contrario con la maggioranza. |
-| **Futuro Nazionale** | **1** | C | Vannacci nega l'esistenza stessa dello Stato palestinese e si oppone al riconoscimento. |
-
-**Fonti:**
-
-- *(liv. A)* Senato, 19-20 febbraio 2025: respinta la mozione per il riconoscimento dello Stato di Palestina nei confini del 1967 (80 no, 45 si'). Contrari maggioranza, Italia Viva e Azione; favorevoli PD, AVS e M5S proponente. FdI motiva l'astensione su parti del testo con la mancanza di 'equilibrio'. A maggio 2025 la Camera respinge la mozione unitaria di PD, M5S e AVS.  
-  <https://www.lindipendente.online/2025/02/20/il-senato-italiano-ha-respinto-il-riconoscimento-dello-stato-di-palestina/>
-- *(liv. C)* Roberto Vannacci in videointervista: lo Stato palestinese 'tecnicamente non esiste' perche' privo di confini precisi e di un popolo; 'non puo' esserci riconoscimento se uno Stato non ha territori, confini e sovranita''. Dopo l'annuncio francese di riconoscimento, si dichiara contrario alla proposta.  
-  <https://www.ilgiornaleditalia.it/video/cronaca/723443/vannacci-palestina-al-contrario-stato-territori-confini-sovranita-video.html>
-- *(liv. C)* Codifica di Leo. Magi sul riconoscimento dello Stato di Palestina: 'Meloni segua Macron'.  
-  <https://www.piueuropa.eu/m_o_magi_su_riconoscimento_stato_palestina_meloni_segua_macron>
-- *(liv. C)* Codifica di Leo. Marattin: 'la linea di Meloni e' buonsenso'. DA RIVEDERE: la linea di Meloni nel settembre 2025 era il riconoscimento a due condizioni, non il rifiuto; condividerla e' una posizione condizionata piu' che una contrarieta' netta, quindi il punteggio 1 potrebbe essere troppo severo.  
-  <https://www.luigimarattin.it/2025/09/25/palestina-la-linea-di-meloni-e-buonsenso-la-versione-di-marattin/>
-
----
-
-## 12. Sostegno militare all'Ucraina
-
-**Domanda proposta:** L'Italia dovrebbe continuare a fornire armi all'Ucraina.
-
-*Modifica rispetto alla versione attuale:* Separata dal rafforzamento della NATO, che era accorpato. ESCLUSO dalla codifica il voto del 25 febbraio 2026 al Senato perche' posto con la fiducia: misura la lealta' al governo, non la posizione sul merito.
-
-*Direzione:* essere d'accordo corrisponde alla posizione **destra**.
-
-
-| Partito | Punteggio | Liv. | Posizione documentata |
-|---|:---:|:---:|---|
-| **AVS** | **1** | A | Voto contrario. |
-| **M5S** | **1** | A | Voto contrario, confermato da Conte nell'agosto 2026. |
-| **PD** | **6** | A | Voto favorevole nel gennaio 2025. Nell'agosto 2026 la posizione e' in discussione dentro la coalizione: da riverificare. |
-| **+Europa** | **7** | C | Magi, 30 marzo 2026: 'Per noi e' imprescindibile il sostegno militare a Kyiv'. |
-| **Italia Viva** | **7** | A | Voto favorevole al decreto pur essendo all'opposizione. |
-| **Azione** | **7** | A | Voto favorevole al decreto pur essendo all'opposizione. |
-| **Liberaldemocratico** | **6** | B | Codificata da Leo. LIVELLO DA CORREGGERE: la fonte e' dell'aprile 2023 e precede la fondazione del partito, quindi non e' un documento programmatico. |
-| **Forza Italia** | **7** | A | Politica di governo. |
-| **Fratelli d'Italia** | **7** | A | Politica di governo. |
-| **Lega** | **5** | A | ATTENZIONE, DIVERGENZA: vota con la maggioranza, ma la linea pubblica del leader e' critica sull'invio di armi. |
-| **Futuro Nazionale** | **1** | A | I deputati di area Vannacci votano contro l'invio di armi insieme a M5S e AVS. |
-
-**Fonti:**
-
-- *(liv. A)* Camera, gennaio 2025: conversione del decreto che proroga la cessione di mezzi ed equipaggiamenti all'Ucraina (192 si', 41 no). Le opposizioni si dividono: PD, Italia Viva e Azione votano a favore, M5S e AVS contro.  
-  <https://www.ilfattoquotidiano.it/2025/01/22/invio-armi-ucraina-voto-pd-decreto-centrodestra-risoluzione-dem/7847380/>
-- *(liv. A)* Camera: i deputati di area Vannacci votano contro l'invio di armi insieme a M5S e AVS.  
-  <https://en.ilsole24ore.com/art/ukraine-decree-passes-chamber-chamber-axis-vannacciani-m5s-and-avs-no-weapons-AIMAfzKB>
-- *(liv. C)* Riccardo Magi, 30 marzo 2026: 'Per noi e' imprescindibile il sostegno militare a Kyiv'. PD e +Europa hanno sempre votato a favore dell'invio di aiuti militari all'Ucraina.  
-  <https://www.ilfoglio.it/politica/2026/03/30/news/magi-europa-lapertura-di-conte-e-solo-linizio-per-noi-e-imprescindibile-il-sostegno-militare-a-kyiv--268414>
-- *(liv. B)* Codifica di Leo. Appello sull'invio di armi all'Ucraina. ATTENZIONE AL LIVELLO: l'articolo e' dell'APRILE 2023, mentre il Partito Liberaldemocratico e' nato l'8 marzo 2025. Non puo' quindi essere un documento programmatico del partito (livello B): al massimo e' una posizione personale di Marattin precedente alla fondazione.  
-  <https://www.linkiesta.it/2023/04/appello-ucraina-armi-liberazione/>
-
----
-
-## 13. Integrazione europea
-
-**Domanda proposta:** L'Unione europea dovrebbe avere poteri comuni su difesa, fisco e politica estera.
-
-*Modifica rispetto alla versione attuale:* Tolto il riferimento tecnico al 'superamento dell'unanimita'', poco comprensibile a chi non segue il dossier.
-
-*Direzione:* essere d'accordo corrisponde alla posizione **sinistra**.
-
-
-| Partito | Punteggio | Liv. | Posizione documentata |
-|---|:---:|:---:|---|
-| **AVS** | **6** | B | Chiede una convenzione per riformare i Trattati, cittadinanza federale europea ed esercito europeo unificato, ma per razionalizzare la spesa militare, non per aumentarla. |
-| **M5S** | **4** | C | AMBIVALENZA DOCUMENTATA: favorevole agli investimenti comuni europei, ma vota contro il regolamento EDIP sulla difesa comune. |
-| **PD** | **7** | C | Favorevole alla difesa comune europea contro il riarmo nazionale. |
-| **+Europa** | **7** | B | Documento programmatico intitolato 'Stati Uniti d'Europa': 'Verso la federazione continentale'. |
-| **Italia Viva** | **7** | B | Come sopra: programma congiunto. |
-| **Azione** | **7** | B | 'Con una svolta in senso federale delle sue Istituzioni, l'Ue puo' fare ancora di piu''; chiede di riaprire le riforme dei Trattati e maggiore capacita' fiscale europea. |
-| **Liberaldemocratico** | **6** | B | 'L'Europa e' a un bivio: cambiare o perire'; integrazione europea fra i principi fondativi del partito. |
-| **Forza Italia** | **7** | C | CUNEO INTERNO ALLA COALIZIONE: favorevole al superamento dell'unanimita', all'armonizzazione fiscale e a 'un solo esercito europeo'; si richiama agli 'Stati Uniti d'Europa'. Posizione opposta a quella della Lega. |
-| **Fratelli d'Italia** | **4** | B | POSIZIONE INTERMEDIA DOCUMENTATA: chiede competenza europea su politica estera, difesa e confini, ma 'lasciando le politiche nazionali alle competenze dei singoli Stati'. Favorevole ai poteri comuni su difesa ed estero, contraria su fisco. |
-| **Lega** | **1** | C | Contraria a ogni trasferimento di sovranita': rifiuta il 'Super-Stato' e chiede la rinegoziazione dei trattati, tornando alla situazione precedente Maastricht. |
-| **Futuro Nazionale** | **1** | B | Contro il 'federalismo europeo', a favore di 'un'Europa di Stati nazionali cooperanti'. |
-
-**Fonti:**
-
-- *(liv. B)* Manifesto e proposte del Partito Liberaldemocratico: 'ruolo strategico del nucleare'; spending review e 'avanzi primari piu' consistenti per la riduzione del debito'; Europa che deve 'cambiare o perire'. Non trattati salario minimo, pensioni, diritti civili, giustizia, riforme istituzionali.  
-  <https://partitoliberaldemocratico.com/proposte/>
-- *(liv. B)* Programma di Futuro Nazionale, pubblicato l'11 agosto 2026: cittadinanza dopo almeno 20 anni di dimora regolare e livello C1, rifiuto 'categorico e senza possibilita' negoziale' di ius soli e ius scholae; abbassamento della pressione fiscale; sgravi per l'assunzione di manodopera italiana; contro il federalismo europeo, per 'un'Europa di Stati nazionali cooperanti'; l'immigrazione di massa 'sgretola la compattezza di una civilta''.  
-  <https://tg24.sky.it/politica/2026/08/11/vannacci-futuro-nazionale-programma-manifesto>
-- *(liv. B)* Programma elettorale congiunto Azione - Italia Viva, politiche 2022, 56 pagine. Politica industriale: 'concentrare le risorse su strumenti fiscali semplici ed automatici a supporto degli investimenti'. Fisco: 'Non serve inventare nuove tasse, sognare la patrimoniale'. Concorrenza: 'approvare ogni anno leggi sulla concorrenza che rendano la nostra economia piu' libera e meno gravata da barriere all'ingresso'. Reddito di cittadinanza: 'Eliminare il Reddito di Cittadinanza dopo il primo rifiuto e ridurlo dopo 2 anni'. Europa: 'Con una svolta in senso federale delle sue Istituzioni... riaprire il cantiere delle riforme dei Trattati'. Trasporti: completamento di Torino-Lione, Terzo Valico e altre tratte ad alta velocita'. Istituzioni: modello del 'sindaco d'Italia' con riforma del sistema elettorale. Cannabis e matrimonio egualitario NON compaiono nel documento.  
-  <https://www.welforum.it/wp-content/uploads/2022/09/Programma-Azione-Italia-Viva.pdf>
-- *(liv. B)* Documento programmatico di +Europa per le europee 2024, 'Stati Uniti d'Europa': 'Verso la federazione continentale con passaggi anche di integrazione differenziata'.  
-  <https://www.piueuropa.eu/programma_europee_2024>
-- *(liv. B)* Programma di Fratelli d'Italia per le europee 2024, 20 pagine. Sul ruolo dell'Unione: 'l'Unione Europea debba occuparsi delle grandi questioni del nostro tempo: la politica estera, la difesa, la sicurezza dei confini esterni, la regolamentazione del fenomeno migratorio, il mercato unico e l'energia, lasciando le politiche nazionali alle competenze dei singoli Stati', secondo il motto 'Fare meno, fare meglio'. Sulla sanita': 'essenziale investire strutturalmente nella sanita' pubblica'. Il documento e' circoscritto ai temi europei e non tratta scuola, autonomia regionale, sistema elettorale, diritti civili.  
-  <https://www.fratelli-italia.it/wp-content/uploads/2024/05/Programma_Europee2024_FdI.pdf>
-- *(liv. C)* La Lega rifiuta ogni politica volta a creare un Super-Stato europeo e si oppone al trasferimento di sovranita' nazionale agli organi sovranazionali, chiedendo la rinegoziazione dei trattati che limitano la sovranita' italiana. Nel marzo 2025 la delegazione al Parlamento europeo parla di 'deriva bellicista' a proposito del piano di riarmo da 800 miliardi; nel maggio 2026 e' 'assolutamente contraria' all'ingresso dell'Ucraina nell'UE.  
-  <https://www.startmag.it/mondo/lega-salvini-rearm-europe/>
-- *(liv. C)* Posizione ufficiale del Partito Democratico: 'All'Unione europea serve la difesa comune, non il riarmo nazionale'. Il partito sostiene l'integrazione delle capacita' europee contro la moltiplicazione delle spese militari nazionali.  
-  <https://partitodemocratico.it/schlein-allunione-europea-serve-la-difesa-comune-non-il-riarmo-nazionale/>
-- *(liv. C)* Antonio Tajani, novembre 2025: Forza Italia e' favorevole al superamento del voto all'unanimita', all'iniziativa legislativa del Parlamento europeo, all'unione bancaria e all'armonizzazione fiscale. Sulla difesa: 'La difesa europea deve essere garantita da un solo esercito europeo. Per Forza Italia questo e' l'obiettivo finale'. Il partito si richiama esplicitamente agli 'Stati Uniti d'Europa' come parte della propria identita' e dell'appartenenza al PPE.  
-  <https://www.esteri.it/en/sala_stampa/archivionotizie/interviste/2025/11/antonio-tajani-unione-europea-e-ora-di-superare-lunanimita-laltravoce-il-quotidiano-nazionale/>
-- *(liv. C)* Posizione del M5S sull'Unione europea, oscillante fra sovranismo ed europeismo: nel 2021 Di Maio si dichiarava favorevole agli Stati Uniti d'Europa, mentre il 24 aprile 2025 le delegazioni pentastellate votano CONTRO il regolamento EDIP sull'industria europea della difesa. Sul fronte fiscale Conte chiede investimenti comuni europei.  
-  <https://www.eunews.it/en/2025/03/12/defence-eu-parliament-clears-way-for-rearmament-plan-pd-divided-m5s-and-lega-opposed/>
-- *(liv. B)* Programma di Alleanza Verdi e Sinistra per le europee 2024: chiede un processo costituente per un'Europa unita attraverso una convenzione per riformare i Trattati e una vera cittadinanza federale europea; ritiene necessaria una politica estera e di difesa comune, incluso un esercito europeo unificato, per rendere l'UE autonoma dagli USA razionalizzando la spesa militare senza aumentarla. Contraria ai piani di riarmo: 'un mondo sempre piu' armato e' un mondo sempre piu' pericoloso'.  
-  <https://verdisinistra.it/programma-elezioni-europee-8-e-9-giugno-2024/>
-
----
-
-## 14. Libero scambio
-
-**Domanda proposta:** L'apertura ai mercati internazionali conviene all'Italia.
-
-*Modifica rispetto alla versione attuale:* Tolta la clausola 'purche' ci siano regole comuni contro il dumping', che rendeva l'affermazione condivisibile da chiunque.
-
-*Direzione:* essere d'accordo corrisponde alla posizione **destra**.
-
-
-| Partito | Punteggio | Liv. | Posizione documentata |
-|---|:---:|:---:|---|
-| **AVS** | **2** | C | Bonelli: il libero scambio senza regole comuni e' 'dumping ambientale'. Apertura solo con reciprocita' reale. |
-| **M5S** | **2** | C | Conte partecipa alla manifestazione contro l'accordo insieme ad AVS. |
-| **PD** | **5** | C | DIVERGENZA: risulta favorevole all'accordo, ma Schlein partecipa alla manifestazione contro. Da chiarire con una fonte dedicata. |
-| **+Europa** | **5** | D | Codificata da Leo. |
-| **Italia Viva** | **7** | B | Come sopra: programma congiunto. |
-| **Azione** | **7** | B | 'Approvare ogni anno leggi sulla concorrenza che rendano la nostra economia piu' libera e meno gravata da barriere all'ingresso'. |
-| **Liberaldemocratico** | **7** | E | Obiettivo dichiarato di favorire 'concorrenza e mercato'. |
-| **Forza Italia** | **7** | C | Favorevole all'accordo UE-Mercosur come 'grande opportunita' per tutte le nostre imprese'. |
-| **Fratelli d'Italia** | **4** | C | ASTENSIONE al Parlamento europeo nel dicembre 2025; Meloni passa da 'prematuro' a favorevole. Ambivalenza documentata. |
-| **Lega** | **2** | C | 'Promette battaglia' dopo il via libera; Centinaio: 'io non lo firmerei'. |
-| **Futuro Nazionale** | **1** | C | 'Protezionismo, dazi e preferenze nazionali', restrizioni agli investimenti esteri, difesa del Made in Italy dalla globalizzazione. |
-
-**Fonti:**
-
-- *(liv. C)* Accordo commerciale UE-USA del luglio 2025: dazio al 15% sulla maggior parte dei beni europei. Il governo lo giudica 'positivo e sostenibile'; tutte le opposizioni, da Renzi al PD a +Europa, lo criticano come una resa. ATTENZIONE: questa fonte documenta il giudizio su UNO SPECIFICO accordo, non la posizione di principio sul libero scambio. +Europa e Azione sono storicamente liberoscambiste pur avendo criticato l'intesa. NON usare questa fonte per codificare la domanda: serve una fonte dedicata sui programmi.  
-  <https://pagellapolitica.it/articoli/dazi-von-der-leyen-trump-governo-opposizioni>
-- *(liv. B)* Programma elettorale congiunto Azione - Italia Viva, politiche 2022, 56 pagine. Politica industriale: 'concentrare le risorse su strumenti fiscali semplici ed automatici a supporto degli investimenti'. Fisco: 'Non serve inventare nuove tasse, sognare la patrimoniale'. Concorrenza: 'approvare ogni anno leggi sulla concorrenza che rendano la nostra economia piu' libera e meno gravata da barriere all'ingresso'. Reddito di cittadinanza: 'Eliminare il Reddito di Cittadinanza dopo il primo rifiuto e ridurlo dopo 2 anni'. Europa: 'Con una svolta in senso federale delle sue Istituzioni... riaprire il cantiere delle riforme dei Trattati'. Trasporti: completamento di Torino-Lione, Terzo Valico e altre tratte ad alta velocita'. Istituzioni: modello del 'sindaco d'Italia' con riforma del sistema elettorale. Cannabis e matrimonio egualitario NON compaiono nel documento.  
-  <https://www.welforum.it/wp-content/uploads/2022/09/Programma-Azione-Italia-Viva.pdf>
-- *(liv. E)* Dichiarazioni e ricostruzioni sulle posizioni del Partito Liberaldemocratico: Marattin sulla riforma della giustizia, 27 giugno 2025, 'I pm? La riforma e' ok'; sull'immigrazione un 'patto di integrazione' lingua-lavoro-legalita' legato alla programmazione dei flussi; in economia riduzione della spesa pubblica dell'1% l'anno per cinque anni per abolire l'IRAP e azzerare l'IRES, con l'obiettivo di 'ridurre la presenza dello Stato e favorire concorrenza e mercato'.  
-  <https://www.luigimarattin.it/2025/06/27/marattin-libdem-alternativi-a-destra-e-sinistra-i-pm-la-riforma-e-ok/>
-- *(liv. C)* Antonio Tajani, gennaio 2026: l'accordo di libero scambio 'rappresenta una grande opportunita' per tutte le nostre imprese' e portera' 14 miliardi di export aggiuntivo. Maurizio Casasco, responsabile Economia di Forza Italia: 'accordo strategico per l'industria italiana'.  
-  <https://www.esteri.it/en/sala_stampa/archivionotizie/interviste/2026/01/tajani-con-il-mercosur-litalia-guadagnera-14-miliardi-di-export-aggiuntivo-ll-sole-24-ore/>
-- *(liv. C)* Accordo di libero scambio UE-Mercosur, firmato dopo 25 anni di negoziati e in applicazione provvisoria dal 1 maggio 2026: azzera i dazi sul 91% dell'export UE. Al Parlamento europeo Forza Italia vota a favore delle clausole di salvaguardia, Fratelli d'Italia si astiene (dicembre 2025). Meloni definisce l'accordo prima 'prematuro' poi si dichiara favorevole; l'Italia frena l'accelerazione voluta da Germania e Spagna. La Lega 'promette battaglia' dopo il via libera e Centinaio dichiara 'io non lo firmerei'.  
-  <https://ilmanifesto.it/mercosur-governo-diviso-sul-voto-fratelli-ditalia-si-astiene>
-- *(liv. C)* Angelo Bonelli (AVS): 'il libero scambio senza regole e' dumping ambientale e un attacco all'Europa'; il libero scambio e' accettabile solo se fondato su regole comuni e reciprocita' reale. Schlein, Conte, Fratoianni e Bonelli partecipano insieme a una manifestazione contro l'accordo.  
-  <https://agenparl.eu/2025/12/18/mercosur-bonelli-avs-libero-scambio-senza-regole-e-dumping-ambientale-e-un-attacco-alleuropa/>
-- *(liv. C)* Analisi del programma economico di Futuro Nazionale: 'economia protetta e guidata politicamente', con fondo pubblico sovrano, uso esteso del golden power, 'protezionismo, dazi e preferenze nazionali', restrizioni agli investimenti e alle acquisizioni estere. Il partito denuncia una globalizzazione 'dominata dalle multinazionali e dalla finanza internazionale che rischia di divorare il Made in Italy'. Sull'euro Vannacci chiede la capacita' sia di restarci ridefinendo i parametri sia di uscirne 'secondo condizioni, contesto e tempistiche'.  
+- *(liv. C, verificata il 2026-09-15)* Luigi Marattin, 18 marzo 2026: il settore pubblico «gestisce migliaia di società attive in settori concorrenziali»; le risorse pubbliche vanno spostate dalle attività commerciali alle funzioni essenziali dello Stato.  
+  <https://lavoce.info/archives/110752/perche-ce-spazio-per-un-partito-liberaldemocratico/>
+- *(liv. C, verificata il 2026-09-15)* Antonio Tajani, 2 agosto 2025, contro un prelievo sulle banche: «devono fare la loro parte ma non possono essere indicate come il nemico pubblico numero uno».  
+  <https://www.ansa.it/sito/notizie/economia/2025/08/02/tajani-basta-minacce-alle-banche-non-sono-il-nemico-pubblico_bd423865-c816-4a20-8cce-fc145680e37a.html>
+- *(liv. C, verificata il 2026-09-15)* Fratelli d'Italia, da opposizione, accusa il governo Conte II di non aver usato il golden power su Stellantis e chiede l'ingresso di Cdp nel capitale a tutela degli stabilimenti. Al governo, Meloni ha poi rilanciato un programma di privatizzazioni (finews.ch, «Giorgia Meloni rilancia le privatizzazioni»).  
+  <https://www.fratelli-italia.it/stellantis-governo-conte-ii-se-ne-lavo-le-mani-e-non-uso-golden-power/>
+- *(liv. C, verificata il 2026-09-15)* Matteo Salvini chiede di usare il golden power sull'offerta di UniCredit per Banco BPM, definendo UniCredit una banca straniera; il governo lo esercita con il decreto del 18 aprile 2025.  
+  <https://www.adnkronos.com/economia/unicredit-banco-bpm-salvini-usare-golden-power-decide-giorgetti-non-tajani_3MzgDMie8Oa7IXqKfUklPV>
+- *(liv. C, verificata il 2026-09-15)* Il Post, 18 agosto 2026, sul programma economico di Futuro Nazionale: un «Fondo sovrano per la crescita nazionale» come strumento di investimento pubblico, uso del golden power per limitare operazioni di mercato, intervento dello Stato contro una globalizzazione «dominata dalle multinazionali».  
   <https://www.ilpost.it/2026/08/18/vannacci-futuro-nazionale-programma-economia-euro/>
-- *(liv. D)* Codifica di Leo. Manifesto di +Europa.  
-  <https://www.piueuropa.eu/manifesto>
 
 ---
 
-## 15. Obiettivi climatici europei
+## 4. Vincoli di bilancio europei
 
-**Domanda proposta:** Dal 2035 in Europa dovrebbero poter essere vendute solo auto nuove a zero emissioni.
+*Categoria:* Economia, Fisco e Lavoro
 
-*Modifica rispetto alla versione attuale:* RISCRITTA DUE VOLTE. Prima era ancorata all'etichetta 'Green Deal', politicamente connotata. Poi al divieto del 2035, che pero' a dicembre 2025 la Commissione ha rivisto: non piu' azzeramento ma riduzione del 90%, con apertura a ibridi plug-in, biocarburanti avanzati ed e-fuels. Chiedere se cancellare un divieto gia' in parte cancellato non aveva piu' senso: ora la domanda verte sull'obiettivo di fondo, che resta in discussione.
+**Affermazione:** L'Italia dovrebbe aumentare la spesa pubblica in deficit anche superando i vincoli europei.
 
-*Direzione:* essere d'accordo corrisponde alla posizione **sinistra**.
-
+*Direzione:* accordo = sinistra. *Formulazione:* Tolto 'più flessibilità', che rendeva l'affermazione condivisibile da chiunque chieda deroghe dentro le regole.
 
 | Partito | Punteggio | Liv. | Posizione documentata |
 |---|:---:|:---:|---|
-| **AVS** | **7** | A | I Verdi votano a favore. |
-| **M5S** | **7** | A | Gli eurodeputati votano a favore. |
-| **PD** | **7** | A | Gli eurodeputati votano a favore. |
-| **+Europa** | **6** | D | Codificata da Leo. |
-| **Italia Viva** | **7** | A | Gli eurodeputati votano a favore. |
-| **Azione** | **2** | E | Codificata da Leo; livello assegnato in base al tipo di fonte perche' era rimasto in bianco. |
-| **Liberaldemocratico** | **3** | F | INFERENZA: 'si' al nucleare subito, senza se e senza ma' e approccio dichiaratamente 'pragmatico e non ideologico'; un partito di mercato tende a osteggiare un mandato tecnologico. Azione, profilo simile, sta a 2. Fiducia media. |
-| **Forza Italia** | **1** | A | La delegazione vota contro. |
-| **Fratelli d'Italia** | **1** | A | La delegazione vota contro. |
-| **Lega** | **1** | A | La delegazione vota contro. |
-| **Futuro Nazionale** | **1** | C | 'No al Green Deal, no alla transizione verso i motori elettrici prevista per il 2035'. Contrario a mantenere il divieto. |
+| **AVS** | **6** | C | Fratoianni definisce la manovra 2026 «una manovra di austerità» e chiede più investimenti per sanità e scuola. Punteggio abbassato da 7: nella fonte non c'è la richiesta esplicita di superare i vincoli. |
+| **M5S** | **6** | C | Conte: «bisogna rivedere i vincoli europei e dare vita a un nuovo Recovery con investimenti comuni». |
+| **PD** | **5** | C | Schlein non vota il Patto di stabilità riformato; chiede più spazio per gli investimenti, ma non di violare le regole. |
+| **+Europa** | **1** | B | Piani quinquennali di riduzione del debito ed equità generazionale in Costituzione: l'opposto della spesa in deficit. |
+| **Italia Viva** | **—** | — | L'unica fonte era il programma 2022 di Azione-Italia Viva, il cui PDF pubblicato non è leggibile: non è stato possibile verificarlo. |
+| **Azione** | **—** | — | L'unica fonte era il programma 2022 di Azione-Italia Viva, il cui PDF pubblicato non è leggibile: non è stato possibile verificarlo. |
+| **Liberaldemocratico** | **1** | B | Chiede riduzione della spesa e avanzi primari più consistenti per abbattere il debito. |
+| **Forza Italia** | **3** | C | Linea del governo di cui fa parte: usare la flessibilità già prevista dal Patto per difesa e sicurezza, non superarlo. Punteggio abbassato da 5. |
+| **Fratelli d'Italia** | **3** | C | Linea del governo: flessibilità dentro le regole europee. Punteggio abbassato da 5. |
+| **Lega** | **3** | C | Il ministro Giorgetti (Lega) propone di usare la flessibilità prevista dal Patto, non di superarlo. Punteggio abbassato da 5. |
+| **Futuro Nazionale** | **6** | B | Il programma chiede meno poteri all'UE e «meno vincoli assurdi». |
 
 **Fonti:**
 
-- *(liv. A)* AGGIORNAMENTO DICEMBRE 2025: la Commissione ha rivisto il divieto, che diventa una riduzione delle emissioni del 90% invece del 100%, con apertura a ibridi plug-in, biocarburanti avanzati ed e-fuels. La domanda cosi' com'e' formulata rischia di essere superata dai fatti e va riscritta. Voto originario: Parlamento europeo, pacchetto Fit for 55: la delegazione di FdI, Lega e Forza Italia vota contro lo stop alla vendita di auto a benzina e diesel dal 2035; votano a favore gli eurodeputati di PD, M5S, Verdi (AVS) e Italia Viva.  
-  <https://www.liberta.it/news/green-future/2023/02/15/stop-auto-benzina-e-diesel-dal-2035-ok-del-parlamento-ue-centrodestra-contrario/>
-- *(liv. C)* Programma energetico di Futuro Nazionale: 'no al Green Deal, no alla transizione verso i motori elettrici prevista per il 2035, apertura al gas russo e sostegno al nucleare di nuova generazione'. Vannacci definisce il Green Deal 'roba da ricchi' e il divieto dei motori a scoppio 'ambientalismo ideologico', pur riconoscendo che 'sono in corso dei cambiamenti climatici significativi d'origine antropica'.  
-  <https://www.qualenergia.it/articoli/futuro-nazionale-energia-vecchia-sovranita-vannacci-guarda-novecento/>
-- *(liv. D)* Codifica di Leo. Ricostruzione delle posizioni dei partiti italiani sui cambiamenti climatici in vista delle europee.  
-  <https://www.italiasolare.eu/is-news/cambiamenti-climatici-la-posizione-dei-partiti-italiani-in-vista-delle-elezioni-europee/>
-- *(liv. E)* Codifica di Leo. Posizione di Azione sull'auto alle europee 2024. NOTA: Leo aveva lasciato in bianco il livello di evidenza; assegnato E in base al tipo di fonte, che e' una ricostruzione giornalistica di posizioni espresse dal partito.  
+- *(liv. C, verificata il 2026-09-15)* Nicola Fratoianni, ottobre 2025: la legge di bilancio 2026 è «una manovra di austerità, piena di spese militari e poverissima di investimenti per la sanità e per l'istruzione pubblica».  
+  <https://agenparl.eu/2025/10/24/governo-fratoianni-avs-manovra-di-austerita-ricca-di-spese-militari-e-poverissima-di-investimenti-per-sanita-e-scuola-pubblica-piena-di-tagli-ai-comuni-e-al-sud-il-governo-meloni-continua-a-dis/>
+- *(liv. C, verificata il 2026-09-15)* Giuseppe Conte, 6 maggio 2026: il governo si attivi per «rivedere immediatamente il Patto di stabilità»; «bisogna rivedere i vincoli europei e dare vita a un nuovo Recovery con investimenti comuni come nel 2020».  
+  <https://askanews.it/2026/05/06/dfp-conte-governo-si-attivi-in-ue-per-rivedere-patto-di-stabilita/>
+- *(liv. C, verificata il 2026-09-15)* Marzo 2024, Elly Schlein: «Noi non voteremo a favore di questo Patto di stabilità». Secondo la ricostruzione del Foglio, perché la proposta della Commissione è stata irrigidita dal Consiglio.  
+  <https://www.ilfoglio.it/politica/2024/03/09/news/il-pd-di-elly-schlein-tra-giuseppe-conte-e-pedro-sanchez--94386>
+- *(liv. B, verificata il 2026-09-15)* Programma elettorale 2022 di +Europa 'Una Generazione Avanti': «Riduzione graduale in 5 anni del rapporto debito pubblico/Pil», piani quinquennali di riduzione del debito, principio di equità generazionale in Costituzione; «Aumentare dell'1% del Pil in 5 anni la spesa per l'istruzione».  
+  <https://www.piueuropa.eu/una_generazione_avanti_il_programma_elettorale_di_europa>
+- *(liv. B, verificata il 2026-09-15)* Proposte fiscali del PLD: «Riduzione mirata della spesa pubblica e riduzione della pressione tributaria devono procedere di pari passo»; alleggerimento dell'Irpef; l'esempio di Spagna, Portogallo e Grecia, dove «intervenendo sulla spesa il debito pubblico può scendere».  
+  <https://partitoliberaldemocratico.com/fisco/>
+- *(liv. B, verificata il 2026-09-15)* Proposte del Partito Liberaldemocratico: una spending review rigorosa «per realizzare avanzi primari più consistenti per la riduzione del debito»; «ruolo strategico del nucleare».  
+  <https://partitoliberaldemocratico.com/proposte/>
+- *(liv. C, verificata il 2026-09-15)* Giancarlo Giorgetti (Lega), ministro dell'Economia del governo di FdI, Lega e FI, 22 maggio 2026: «la nostra proposta è di interpretare gli spazi concessi per la difesa in termini di sicurezza nazionale», cioè usare la flessibilità già prevista dal Patto, non superarlo.  
+  <https://www.ansa.it/sito/notizie/economia/2026/05/22/giorgetti-flessibilita-ue-su-difesa-ci-sia-anche-per-la-sicurezza-economica_fad591b3-29f3-4514-a533-ae3879b5d291.html>
+- *(liv. B, verificata il 2026-09-15)* Programma di Futuro Nazionale per il 2027, prima parte, secondo l'analisi di Pagella Politica: uscita dal lavoro dopo 41 anni di contributi effettivi; ridurre la pressione fiscale; assistenza vincolata alla formazione, e chi rifiuta non va mantenuto con le tasse degli altri; salari affidati alla contrattazione collettiva nazionale; più centri per i rimpatri e stop ai «decreti flussi massicci»; cittadinanza dopo vent'anni di residenza regolare e livello C1; meno poteri all'UE e «meno vincoli assurdi», contro Green Deal, Fit for 55 e scadenze di decarbonizzazione; ritorno al nucleare; riaprire le relazioni economiche con la Russia; separazione delle carriere dei magistrati.  
+  <https://pagellapolitica.it/articoli/programma-futuro-nazionale-vannacci-elezioni-2027>
+
+---
+
+## 5. Età pensionabile
+
+*Categoria:* Economia, Fisco e Lavoro
+
+**Affermazione:** Si dovrebbe poter andare in pensione prima di quanto consenta la legge attuale.
+
+*Direzione:* accordo = ambigua. *Formulazione:* Tolto l'inciso 'anche a costo di aumentare il debito pubblico': nessun partito ha una posizione documentata su quello scambio, quindi l'inciso rendeva impossibile codificare le celle. L'item discrimina lo stesso: da una parte la mozione di PD, M5S e AVS, la Lega e Futuro Nazionale, dall'altra Azione e liberaldemocratici.
+
+| Partito | Punteggio | Liv. | Posizione documentata |
+|---|:---:|:---:|---|
+| **AVS** | **7** | B | Mozione unitaria di febbraio 2026: Quota 41, donne a 63 anni, blocco degli aumenti legati all'aspettativa di vita. |
+| **M5S** | **7** | B | Firmatario della mozione unitaria di febbraio 2026: Quota 41 e blocco degli aumenti d'età. |
+| **PD** | **7** | B | Firmatario della mozione unitaria di febbraio 2026: Quota 41 e blocco degli aumenti d'età. |
+| **+Europa** | **—** | — | Il programma parla di previdenza integrativa per i giovani ma non di età di uscita; la frase su Quota 100 attribuita dalla codifica precedente non è stata trovata. |
+| **Italia Viva** | **5** | E | Sostiene lo stop all'aumento automatico dell'età nel 2027: flessibilità in uscita, senza una proposta generale di anticipo. |
+| **Azione** | **2** | C | Calenda contesta Quota 41 per il costo, 65 miliardi. |
+| **Liberaldemocratico** | **2** | C | Marattin rivendica come un merito l'aver reso la Fornero «più cogente». |
+| **Forza Italia** | **5** | E | Fra i promotori dello stop all'aumento dell'età nel 2027; al governo ha però votato la manovra che elimina Quota 103 e Opzione Donna. |
+| **Fratelli d'Italia** | **4** | A | POSIZIONE INTERMEDIA DOCUMENTATA: la manovra 2026 del suo governo elimina Quota 103 e Opzione Donna, ma rende graduale l'aumento dell'età. |
+| **Lega** | **7** | C | Proposte per la manovra: Quota 41 flessibile e uscita a 64 anni; obiettivo dichiarato «Quota 41 per tutti». |
+| **Futuro Nazionale** | **7** | B | Il programma prevede l'uscita dopo 41 anni di contributi effettivi e un'età più bassa per le madri. |
+
+**Fonti:**
+
+- *(liv. B, verificata il 2026-09-15)* 3 febbraio 2026: mozione unitaria di PD, M5S e AVS contro la legge Fornero: Quota 41, pensione di vecchiaia a 63 anni per le donne con 20 anni di contributi, blocco dell'aumento dell'età legato all'aspettativa di vita, ripristino di Opzione Donna.  
+  <https://www.ilfattoquotidiano.it/2026/02/03/riforma-pensioni-opposizione-proposte-governo-notizie/8277410/>
+- *(liv. E, verificata il 2026-09-15)* Autunno 2025: emendamenti trasversali per sospendere l'aumento automatico dell'età nel 2027, sostenuti fra gli altri da Forza Italia, PD, AVS e Italia Viva; contrari Ragioneria, Banca d'Italia e governo per il costo, circa 3 miliardi l'anno.  
+  <https://www.businessonline.it/news/stop-aumenti-automatici-et-pensionabile-nel-2027-in-manovra-tutti-i-partiti-daccordo-ma-no-di-ragioneria-bankitalia-e-governo_n86934.html>
+- *(liv. C, verificata il 2026-09-15)* Carlo Calenda critica Quota 41 della Lega per il costo, «65 miliardi»; la verifica di Pagella Politica sulle stime INPS gli dà ragione.  
+  <https://pagellapolitica.it/fact-checking/costo-quota-41-pensioni>
+- *(liv. C, verificata il 2026-09-15)* Luigi Marattin, 11 luglio 2026: «Aver tenuto la barra dritta sulle pensioni, anzi aver reso la riforma Fornero più cogente, è una cosa di cui questo governo si vergogna», cioè di cui dovrebbe invece rivendicare il merito.  
+  <https://giornaleradio.fm/le-esclusive-di-giornale-radio/marattin-a-giornale-radio-meloni-e-il-suo-governo-hanno-tenuto-la-barra-dritta-sulle-pensioni-e-se-ne-vergognano/>
+- *(liv. A, verificata il 2026-09-15)* Legge di bilancio 2026, scritta e votata dalla maggioranza (Camera, 30 dicembre 2025: fiducia 219-125, voto finale 216-126): elimina Quota 103 e Opzione Donna; l'aumento dell'età legato all'aspettativa di vita scatta in modo graduale, un mese nel 2027 e altri due nel 2028.  
+  <https://www.orizzontescuola.it/la-manovra-2026-modifica-il-sistema-previdenziale-eliminati-quota-103-e-opzione-donna-dal-2027-aumenta-leta-pensionabile-allineata-allaspettativa-di-vita/>
+- *(liv. C, verificata il 2026-09-15)* Proposte della Lega per la manovra: Quota 41 flessibile (41 anni di contributi e almeno 62 anni d'età, con penalizzazione) e uscita volontaria a 64 anni; l'obiettivo dichiarato da Salvini è «Quota 41 per tutti» e il superamento della Fornero.  
+  <https://www.ilmessaggero.it/economia/schede/pensioni_64_anni_quota_41_flessibile_proposte_manovra_ultime_notizie-9706340.html>
+- *(liv. B, verificata il 2026-09-15)* Programma di Futuro Nazionale per il 2027, prima parte, secondo l'analisi di Pagella Politica: uscita dal lavoro dopo 41 anni di contributi effettivi; ridurre la pressione fiscale; assistenza vincolata alla formazione, e chi rifiuta non va mantenuto con le tasse degli altri; salari affidati alla contrattazione collettiva nazionale; più centri per i rimpatri e stop ai «decreti flussi massicci»; cittadinanza dopo vent'anni di residenza regolare e livello C1; meno poteri all'UE e «meno vincoli assurdi», contro Green Deal, Fit for 55 e scadenze di decarbonizzazione; ritorno al nucleare; riaprire le relazioni economiche con la Russia; separazione delle carriere dei magistrati.  
+  <https://pagellapolitica.it/articoli/programma-futuro-nazionale-vannacci-elezioni-2027>
+
+---
+
+## 6. Finanziamento della sanità pubblica
+
+*Categoria:* Welfare, Salute e Istruzione
+
+**Affermazione:** Il finanziamento del Servizio sanitario nazionale dovrebbe aumentare in modo consistente.
+
+*Direzione:* accordo = sinistra. *Formulazione:* Tolto il riferimento al ruolo del privato accreditato, che era una seconda affermazione.
+
+| Partito | Punteggio | Liv. | Posizione documentata |
+|---|:---:|:---:|---|
+| **AVS** | **7** | C | Sostiene la proposta di legge Schlein per portare il finanziamento al 7,5% del PIL e ne contesta la bocciatura. |
+| **M5S** | **7** | C | Sostiene la proposta di legge Schlein e ne contesta la bocciatura. |
+| **PD** | **7** | B | Prima firmataria Schlein della proposta per portare il fondo sanitario al 7,5% del PIL entro il 2028. |
+| **+Europa** | **—** | — | La frase del programma attribuita dalla codifica precedente non compare nella pagina del programma; nessuna posizione verificata sul finanziamento della sanità. |
+| **Italia Viva** | **6** | C | Renzi chiede i 37 miliardi del MES sanitario per liste d'attesa e personale: più risorse, da una fonte specifica. |
+| **Azione** | **6** | C | Contesta la bocciatura della proposta Schlein. |
+| **Liberaldemocratico** | **5** | B | «È necessario incrementare il finanziamento del fondo sanitario nazionale», ma senza deficit aggiuntivo e insieme a riforme di efficienza. |
+| **Forza Italia** | **3** | A | Vota con la maggioranza contro la proposta Schlein per «assenza di coperture». |
+| **Fratelli d'Italia** | **3** | A | Vota contro la proposta Schlein; il suo governo rivendica gli aumenti del fondo nelle manovre. |
+| **Lega** | **3** | A | Vota contro la proposta Schlein. |
+| **Futuro Nazionale** | **—** | — | La fonte citata dalla codifica precedente parla di pensioni, non di sanità; nessuna posizione verificata. |
+
+**Fonti:**
+
+- *(liv. A, verificata il 2026-09-15)* 26 giugno 2024: la Camera respinge la proposta di legge Schlein (PD), che portava il finanziamento del Servizio sanitario al 7,5% del PIL entro il 2028. La maggioranza vota contro per «assenza di coperture»; M5S, AVS e Azione contestano la bocciatura.  
+  <https://www.ansa.it/sito/notizie/politica/2024/06/26/la-camera-affossa-la-proposta-di-legge-schlein-sulla-sanita-ira-dei-dem_425451ad-9b6f-4cc0-9ea5-5887144f7b42.html>
+- *(liv. C, verificata il 2026-09-15)* Matteo Renzi propone che il campo largo si impegni per iscritto a chiedere i 37 miliardi del MES sanitario per ridurre le liste d'attesa, di fronte a una carenza di 65 mila operatori.  
+  <https://www.quotidianosanita.it/lazio/la-proposta-di-renzi-italia-viva-al-pd-il-campo-largo-chieda-il-mes-sanitario/>
+- *(liv. B, verificata il 2026-09-15)* Proposte del PLD sulla sanità: «È necessario incrementare il finanziamento del fondo sanitario nazionale, ma non senza intervenire, contestualmente, su tutti i meccanismi che ne impediscono il buon funzionamento»; «Le risorse aggiuntive non devono determinare deficit aggiuntivo».  
+  <https://partitoliberaldemocratico.com/sanita/>
+
+---
+
+## 7. Sostegni al reddito
+
+*Categoria:* Welfare, Salute e Istruzione
+
+**Affermazione:** Lo Stato dovrebbe garantire un sostegno economico a chiunque si trovi in difficoltà economica.
+
+*Direzione:* accordo = sinistra. *Formulazione:* Tolta la contrapposizione con incentivi alla natalità e bonus mirati, che era una seconda affermazione.
+
+| Partito | Punteggio | Liv. | Posizione documentata |
+|---|:---:|:---:|---|
+| **AVS** | **7** | B | Il programma chiede una direttiva per un reddito minimo europeo che garantisca in ogni paese il minimo di sussistenza. |
+| **M5S** | **7** | A | Vota contro l'abolizione del Reddito di cittadinanza, misura introdotta dal M5S. |
+| **PD** | **6** | A | Vota contro l'abolizione del Reddito di cittadinanza. |
+| **+Europa** | **—** | — | Il programma indica una «riforma del reddito di cittadinanza» senza specificarne la direzione. |
+| **Italia Viva** | **2** | B | Renzi promuove un referendum per abolire il Reddito di cittadinanza. |
+| **Azione** | **3** | B | Calenda: «Non vogliamo abolire il reddito di cittadinanza», ma va tolto al primo rifiuto di un lavoro e ridotto dopo due anni. |
+| **Liberaldemocratico** | **3** | B | Sostegno a «chi è in difficoltà», ma non «un'offerta illimitata e gratuita... indipendentemente dalle condizioni economiche». |
+| **Forza Italia** | **1** | A | Vota il decreto che abolisce il Reddito di cittadinanza e limita l'Assegno di inclusione ai nuclei con minori, disabili o over 60. |
+| **Fratelli d'Italia** | **1** | A | Vota il decreto che abolisce il Reddito di cittadinanza. |
+| **Lega** | **1** | A | Vota il decreto che abolisce il Reddito di cittadinanza. |
+| **Futuro Nazionale** | **2** | B | Assistenza vincolata alla formazione: chi può lavorare e rifiuta non va mantenuto con le tasse degli altri. |
+
+**Fonti:**
+
+- *(liv. B, verificata il 2026-09-15)* Programma di AVS per le europee 2024: «Adottare un'imposta europea sui grandi patrimoni»; «Promuovere la legalizzazione della cannabis»; «Rivedere gli accordi di libero scambio e interrompere definitivamente i negoziati con il Mercosur»; «una Strategia industriale europea»; «una direttiva quadro per un reddito minimo europeo»; «un processo costituente per un'Europa unita... una Convenzione per una riforma dei Trattati».  
+  <https://verdisinistra.it/programma-elezioni-europee-8-e-9-giugno-2024/>
+- *(liv. A, verificata il 2026-09-15)* Decreto lavoro, legge 85/2023, approvazione definitiva alla Camera a fine giugno 2023 (154 sì, 82 no): abolisce il Reddito di cittadinanza e lo sostituisce con l'Assegno di inclusione, riservato ai nuclei con minori, disabili o over 60. Favorevole la maggioranza, contrarie le opposizioni.  
+  <https://www.fanpage.it/politica/dl-lavoro-approvato-anche-alla-camera-ora-e-legge-arriva-lassegno-di-inclusione-il-nuovo-rdc/>
+- *(liv. B, verificata il 2026-09-15)* Maggio 2022: Matteo Renzi lancia la raccolta firme per un referendum sull'abolizione del Reddito di cittadinanza: non vuole «uno strumento con cui i giovani sono educati a vivere di sussidi».  
+  <https://tg24.sky.it/politica/2022/05/24/renzi-referendum-abolizione-reddito-cittadinanza-raccolta-firme>
+- *(liv. B, verificata il 2026-09-15)* Programmi 2022 sul Reddito di cittadinanza. Azione-Italia Viva: «uno strumento pensato male»; toglierlo al primo rifiuto di un'offerta congrua e ridurlo di almeno un terzo dopo due anni, affidando il collocamento alle agenzie private. Calenda: «Non vogliamo abolire il reddito di cittadinanza».  
+  <https://pagellapolitica.it/articoli/reddito-cittadinanza-modifiche-elezioni>
+- *(liv. B, verificata il 2026-09-15)* Manifesto del PLD: «Il mercato quale miglior strumento per allocare le risorse», con «un'efficace ma limitata azione pubblica»; welfare che sostiene «chi è in difficoltà» ma che non deve «tradursi necessariamente in un'offerta illimitata e gratuita di tali servizi indipendentemente dalle condizioni economiche dei beneficiari».  
+  <https://partitoliberaldemocratico.com/manifesto/>
+- *(liv. B, verificata il 2026-09-15)* Programma di Futuro Nazionale per il 2027, prima parte, secondo l'analisi di Pagella Politica: uscita dal lavoro dopo 41 anni di contributi effettivi; ridurre la pressione fiscale; assistenza vincolata alla formazione, e chi rifiuta non va mantenuto con le tasse degli altri; salari affidati alla contrattazione collettiva nazionale; più centri per i rimpatri e stop ai «decreti flussi massicci»; cittadinanza dopo vent'anni di residenza regolare e livello C1; meno poteri all'UE e «meno vincoli assurdi», contro Green Deal, Fit for 55 e scadenze di decarbonizzazione; ritorno al nucleare; riaprire le relazioni economiche con la Russia; separazione delle carriere dei magistrati.  
+  <https://pagellapolitica.it/articoli/programma-futuro-nazionale-vannacci-elezioni-2027>
+
+---
+
+## 8. Risorse alla scuola pubblica
+
+*Categoria:* Welfare, Salute e Istruzione
+
+**Affermazione:** La scuola pubblica dovrebbe ricevere più risorse di quante ne riceva oggi.
+
+*Direzione:* accordo = sinistra. *Formulazione:* Tolta la contrapposizione con merito e formazione tecnica: chiedere più risorse e chiedere più merito non si escludono.
+
+| Partito | Punteggio | Liv. | Posizione documentata |
+|---|:---:|:---:|---|
+| **AVS** | **7** | C | Fratoianni: «Vorremmo meno armi e più insegnanti». |
+| **M5S** | **7** | C | Denuncia quasi 900 milioni di tagli alla scuola statale nella manovra 2026. |
+| **PD** | **7** | C | Schlein chiede di aumentare gli stipendi degli insegnanti; il PD denuncia i tagli a cattedre e personale ATA. |
+| **+Europa** | **7** | B | Programma: «Aumentare dell'1% del Pil in 5 anni la spesa per l'istruzione». |
+| **Italia Viva** | **6** | C | Renzi: «Finché non paghiamo meglio gli insegnanti... non ci sarà mai una scuola pubblica degna di questo nome». |
+| **Azione** | **6** | B | Piano Scuola: stipendi iniziali in linea con l'Eurozona, più ispettori e personale ATA. |
+| **Liberaldemocratico** | **3** | B | Nessuna richiesta di maggiori risorse: efficienza nella spesa esistente e un ministero ridotto. Punteggio abbassato da 5. |
+| **Forza Italia** | **4** | C | POSIZIONE INTERMEDIA: linea del governo, che rivendica aumenti delle risorse contestati dalle opposizioni come tagli. |
+| **Fratelli d'Italia** | **4** | C | POSIZIONE INTERMEDIA: il governo rivendica +11% di risorse, le opposizioni denunciano tagli al personale. |
+| **Lega** | **4** | C | Il ministro Valditara è della Lega e rivendica gli aumenti; la manovra introduce anche il buono per le paritarie. |
+| **Futuro Nazionale** | **—** | — | La cella precedente era un'inferenza (F). Il programma parla di una scuola selettiva ma non delle risorse. |
+
+**Fonti:**
+
+- *(liv. C, verificata il 2026-09-15)* Nicola Fratoianni, 7 dicembre 2024, contro la manovra: «Vorremmo meno armi e più insegnanti, meno missili e più medici».  
+  <https://www.orizzontescuola.it/fratoianni-avs-meno-armi-e-piu-insegnanti-meno-missili-e-piu-medici-si-ritorni-al-ministero-della-pubblica-istruzione/>
+- *(liv. C, verificata il 2026-09-15)* Legge di bilancio 2026: il M5S denuncia quasi 900 milioni di tagli alla scuola statale nel triennio; la Lega replica con 958 milioni in più certificati dal Servizio bilancio.  
+  <https://www.orizzontescuola.it/manovra-2026-scontro-su-voucher-scuole-paritarie-e-tagli-al-sistema-pubblico-m5s-denuncia-900-milioni-in-meno-lega-replica-958-milioni-in-piu-certificati-dal-servizio-bilancio/>
+- *(liv. C, verificata il 2026-09-15)* Agosto 2026. Schlein: «Dobbiamo valorizzare tutto il personale scolastico, aumentando gli stipendi degli insegnanti — tra i più bassi d'Europa»; Irene Manzi (PD) denuncia 5.660 cattedre e 2.174 posti ATA tagliati. Il ministro Valditara (Lega): nelle ultime due leggi di bilancio le risorse alla scuola sono aumentate «di circa l'11%».  
+  <https://www.tecnicadellascuola.it/stipendi-docenti-per-schlein-sono-troppo-bassi-valditara-replica-li-abbiamo-aumentati-il-pd-in-passato-non-ha-saputo-farlo>
+- *(liv. B, verificata il 2026-09-15)* Programma elettorale 2022 di +Europa 'Una Generazione Avanti': «Riduzione graduale in 5 anni del rapporto debito pubblico/Pil», piani quinquennali di riduzione del debito, principio di equità generazionale in Costituzione; «Aumentare dell'1% del Pil in 5 anni la spesa per l'istruzione».  
+  <https://www.piueuropa.eu/una_generazione_avanti_il_programma_elettorale_di_europa>
+- *(liv. C, verificata il 2026-09-15)* Matteo Renzi, 18 gennaio 2025: «Oggi un professore con lo stipendio fa la fame»; «Finché non paghiamo meglio gli insegnanti e li valorizziamo non ci sarà mai una scuola pubblica degna di questo nome».  
+  <https://www.orizzontescuola.it/oggi-un-professore-con-lo-stipendio-fa-la-fame-matteo-renzi-finche-non-paghiamo-meglio-gli-insegnanti-non-ci-sara-mai-una-scuola-pubblica-degna-di-questo-nome/>
+- *(liv. B, verificata il 2026-09-15)* Piano Scuola di Azione: «Adeguare lo stipendio iniziale dei docenti italiani agli standard dell'Eurozona»; circa 2.800 ispettori scolastici in più; «Potenziare l'organico ATA con nuove assunzioni».  
+  <https://www.azione.it/piano-scuola/>
+- *(liv. B, verificata il 2026-09-15)* Proposte del PLD sulla scuola: nessuna richiesta di maggiori risorse complessive; «maggiore efficienza nella gestione delle risorse in essere», un ministero con attività «molto ridotta» per liberare risorse a favore dell'autonomia scolastica, carriera dei docenti «minima per anzianità, massima per merito».  
+  <https://partitoliberaldemocratico.com/scuola/>
+
+---
+
+## 9. Matrimonio e adozioni per coppie dello stesso sesso
+
+*Categoria:* Diritti Civili, Etica e Società
+
+**Affermazione:** Le coppie dello stesso sesso dovrebbero poter accedere al matrimonio e all'adozione.
+
+*Direzione:* accordo = sinistra. *Formulazione:* Tolta la legge contro l'omotransfobia, che era una seconda affermazione.
+
+| Partito | Punteggio | Liv. | Posizione documentata |
+|---|:---:|:---:|---|
+| **AVS** | **7** | E | Sinistra Italiana favorevole a matrimonio egualitario e tutela dell'omogenitorialità. |
+| **M5S** | **7** | C | Conte, 17 giugno 2025: «Sì a matrimonio egualitario e adozioni». |
+| **PD** | **7** | E | Favorevole a matrimonio egualitario e tutela dell'omogenitorialità. |
+| **+Europa** | **7** | E | Favorevole a matrimonio egualitario e tutela dell'omogenitorialità. |
+| **Italia Viva** | **6** | C | Scalfarotto (maggio 2026): «Ora il passo successivo, il matrimonio egualitario». Sull'adozione nessuna posizione esplicita. |
+| **Azione** | **7** | C | Calenda: «sì matrimonio egualitario, adozione, registrazione figli ma no a Gpa». |
+| **Liberaldemocratico** | **—** | — | La cella precedente era un'inferenza (F); nessuna posizione del partito trovata. |
+| **Forza Italia** | **2** | E | Fra i partiti contrari. La fonte precedente sulle 'aperture' di FI era un commento senza dichiarazioni né date: punteggio abbassato da 3. |
+| **Fratelli d'Italia** | **1** | C | Per il «divieto di adozioni omogenitoriali»; Meloni: «il massimo è avere un padre e una madre». |
+| **Lega** | **1** | C | Programma: «La famiglia è quella composta da una mamma e un papà». |
+| **Futuro Nazionale** | **1** | B | Il programma si oppone all'estensione del matrimonio e dell'adozione alle coppie dello stesso sesso. |
+
+**Fonti:**
+
+- *(liv. E, verificata il 2026-09-15)* Domani, 13 settembre 2022: PD, +Europa, Sinistra Italiana e M5S favorevoli al matrimonio egualitario e alla tutela dell'omogenitorialità. FdI per il «divieto di adozioni omogenitoriali» (Meloni: «Ai bambini bisogna garantire il massimo e il massimo è avere un padre e una madre»). Lega, programma: «La famiglia è quella composta da una mamma e un papà». Forza Italia fra i contrari.  
+  <https://www.editorialedomani.it/politica/italia/cosa-pensano-i-partiti-su-matrimonio-egualitario-e-omogenitorialita-m7gz1hfl>
+- *(liv. C, verificata il 2026-09-15)* Giuseppe Conte ai Pride Talks di Roma, 17 giugno 2025: «I diritti civili vanno riconosciuti, punto. Sì a matrimonio egualitario e adozioni».  
+  <https://www.gay.it/giuseppe-conte-i-diritti-civili-vanno-riconosciuti-punto-si-a-matrimonio-egualitario-e-adozioni>
+- *(liv. C, verificata il 2026-09-15)* 11 maggio 2026, dieci anni dalla legge Cirinnà: Ivan Scalfarotto (Italia Viva) «Ora il passo successivo, il matrimonio egualitario»; aveva presentato un disegno di legge al Senato. La legge del 2016 aveva escluso l'adozione congiunta.  
+  <https://lespresso.it/c/attualita/2026/5/11/unioni-civili-legge-cirinna-numeri-dieci-anni-matrimonio-egualitario/61929>
+- *(liv. C, verificata il 2026-09-15)* Carlo Calenda: «sì matrimonio egualitario, adozione, registrazione figli ma no a Gpa».  
+  <https://www.sardiniapost.it/news-adnkronos/lgbt-calenda-si-matrimonio-egualitario-adozione-registrazione-figli-ma-no-a-gpa/>
+- *(liv. B, verificata il 2026-09-15)* Programma di Futuro Nazionale, seconda parte (24 agosto 2026): «elezione diretta da parte dei cittadini del presidente della Repubblica e l'indicazione del presidente del Consiglio»; contrario all'estensione di matrimonio e adozione alle coppie dello stesso sesso; contrario alla legalizzazione di eutanasia e suicidio assistito; preferenze nella legge elettorale.  
+  <https://pagellapolitica.it/articoli/seconda-parte-programma-futuro-nazionale-elezioni-2027>
+
+---
+
+## 10. Fine vita
+
+*Categoria:* Diritti Civili, Etica e Società
+
+**Affermazione:** Dovrebbe esistere una legge che consenta il suicidio medicalmente assistito.
+
+*Direzione:* accordo = sinistra. *Formulazione:* Tolto l'aborto, che era una seconda affermazione.
+
+| Partito | Punteggio | Liv. | Posizione documentata |
+|---|:---:|:---:|---|
+| **AVS** | **7** | B | Sostiene il testo Bazoli e ha depositato una proposta propria (Zanella, 2023) che include l'eutanasia. |
+| **M5S** | **7** | A | Voto favorevole alla legge Bazoli alla Camera nel 2022. |
+| **PD** | **7** | A | Propone e vota la legge Bazoli nel 2022. |
+| **+Europa** | **7** | A | Voto favorevole alla legge Bazoli nel 2022. |
+| **Italia Viva** | **7** | C | Scalfarotto (giugno 2026) accusa la maggioranza di cercare pretesti per non votare la legge. |
+| **Azione** | **7** | B | Pagina programmatica: favorevole al suicidio medicalmente assistito, con assistenza a carico del servizio sanitario. |
+| **Liberaldemocratico** | **—** | — | La cella precedente era un'inferenza (F); nessuna posizione del partito trovata. |
+| **Forza Italia** | **4** | A | POSIZIONE INTERMEDIA DOCUMENTATA: contraria alla legge Bazoli nel 2022, con sette deputati a favore; nel 2026 la posizione è «ancora più possibilista». |
+| **Fratelli d'Italia** | **2** | A | Contraria alla legge Bazoli nel 2022; oggi sostiene un testo di maggioranza molto più restrittivo della sentenza costituzionale. |
+| **Lega** | **2** | A | Contraria alla legge Bazoli nel 2022; oggi sostiene il testo restrittivo della maggioranza. |
+| **Futuro Nazionale** | **1** | B | Il programma si oppone alla legalizzazione di eutanasia e suicidio assistito. |
+
+**Fonti:**
+
+- *(liv. B, verificata il 2026-09-15)* AVS sostiene il testo Bazoli e a marzo 2023 ha depositato alla Camera la proposta Zanella, che include anche la somministrazione diretta del farmaco da parte del medico.  
+  <https://pagellapolitica.it/articoli/italia-assenza-legge-fine-vita>
+- *(liv. A, verificata il 2026-09-15)* Camera, 10 marzo 2022: approvata la proposta Bazoli sulla morte volontaria medicalmente assistita (253 sì, 117 no, 1 astenuto). A favore PD, M5S e +Europa; contrari FdI, Lega e Forza Italia, con sette deputati FI a favore. Il testo decade con la fine della legislatura.  
+  <https://www.ilpost.it/2022/03/11/suicidio-assistito-approvazione-camera/>
+- *(liv. C, verificata il 2026-09-15)* Il Post, giugno 2026: il testo della maggioranza è «molto peggiorativo» rispetto alla sentenza della Corte costituzionale; la posizione di Forza Italia è «diventata ancora più possibilista»; Ivan Scalfarotto (Italia Viva) accusa la maggioranza di cercare «pretesti per rinviare il voto».  
+  <https://www.ilpost.it/2026/06/05/fine-vita-inerzia-immobilismo-parlamento/>
+- *(liv. B, verificata il 2026-09-15)* Pagina programmatica di Azione sul fine vita: favorevole al suicidio medicalmente assistito, con assistenza gratuita garantita dal Servizio sanitario regionale.  
+  <https://www.azione.it/fine-vita/>
+- *(liv. B, verificata il 2026-09-15)* Programma di Futuro Nazionale, seconda parte (24 agosto 2026): «elezione diretta da parte dei cittadini del presidente della Repubblica e l'indicazione del presidente del Consiglio»; contrario all'estensione di matrimonio e adozione alle coppie dello stesso sesso; contrario alla legalizzazione di eutanasia e suicidio assistito; preferenze nella legge elettorale.  
+  <https://pagellapolitica.it/articoli/seconda-parte-programma-futuro-nazionale-elezioni-2027>
+
+---
+
+## 11. Cittadinanza a chi cresce in Italia
+
+*Categoria:* Diritti Civili, Etica e Società
+
+**Affermazione:** Chi nasce o cresce in Italia da genitori stranieri e completa un ciclo di studi nel Paese dovrebbe ottenere la cittadinanza italiana.
+
+*Direzione:* accordo = sinistra. *Formulazione:* Tolta l'inversione della v2, che contrapponeva anni di residenza e percorso scolastico: era un'affermazione doppia e non corrispondeva alle posizioni documentate, tutte sullo ius scholae.
+
+| Partito | Punteggio | Liv. | Posizione documentata |
+|---|:---:|:---:|---|
+| **AVS** | **7** | A | Vota a favore dell'emendamento sullo ius scholae. |
+| **M5S** | **7** | A | Vota a favore dell'emendamento; Conte propone la cittadinanza dopo un intero ciclo di studi. |
+| **PD** | **7** | A | Vota a favore dell'emendamento; Schlein per la cittadinanza a chi nasce o cresce in Italia. |
+| **+Europa** | **7** | A | Vota a favore dell'emendamento. |
+| **Italia Viva** | **6** | C | Renzi (agosto 2024) sostiene la necessità di riformare la legge sulla cittadinanza. |
+| **Azione** | **7** | A | Presenta l'emendamento sullo ius scholae. |
+| **Liberaldemocratico** | **6** | C | Marattin vota sì al referendum 2025 sulla cittadinanza: favorevole ad ampliarne l'accesso, su una misura diversa ma affine. |
+| **Forza Italia** | **3** | A | DIVERGENZA DOCUMENTATA: Tajani si dice favorevole allo ius scholae, ma il partito vota contro l'emendamento rinviando a una propria proposta. Punteggio abbassato da 6. |
+| **Fratelli d'Italia** | **1** | A | Vota contro; Foti: la riforma «non è nella nostra agenda». |
+| **Lega** | **1** | A | Vota contro: la legge «va benissimo così». |
+| **Futuro Nazionale** | **1** | B | Cittadinanza solo dopo vent'anni di residenza regolare e livello C1. |
+
+**Fonti:**
+
+- *(liv. A, verificata il 2026-09-15)* Camera, 11 settembre 2024: respinto l'emendamento di Azione sullo ius scholae (cittadinanza ai minori dopo un ciclo scolastico decennale), 169 no, 126 sì, 3 astenuti. Contrari FdI, Lega e Forza Italia, che rinvia a una propria proposta; a favore PD, M5S, AVS e +Europa.  
+  <https://www.ilfattoquotidiano.it/2024/09/11/la-camera-ha-bocciato-lemendamento-per-lo-ius-scholae-e-anche-forza-italia-ha-votato-contro/7689412/>
+- *(liv. C, verificata il 2026-09-15)* Agosto 2024. Foti (FdI): la legge sulla cittadinanza «non è nella nostra agenda»; Lega: «va benissimo così»; Tajani favorevole allo ius scholae; Schlein per la cittadinanza a chi «nasce o cresce in Italia»; Conte per la cittadinanza dopo un «intero ciclo di studi»; Calenda, Renzi e Magi favorevoli alla riforma.  
+  <https://pagellapolitica.it/articoli/posizioni-partiti-riforma-cittadinanza-ius-scholae>
+- *(liv. C, verificata il 2026-09-15)* Luigi Marattin, 7 giugno 2025: «Il mio sì solo alla cittadinanza»; vota a favore del referendum che dimezza da dieci a cinque anni la residenza necessaria.  
+  <https://www.luigimarattin.it/2025/06/07/marattin-il-mio-si-solo-alla-cittadinanza-sul-lavoro-vedo-furore-ideologico/>
+- *(liv. B, verificata il 2026-09-15)* Programma di Futuro Nazionale per il 2027, prima parte, secondo l'analisi di Pagella Politica: uscita dal lavoro dopo 41 anni di contributi effettivi; ridurre la pressione fiscale; assistenza vincolata alla formazione, e chi rifiuta non va mantenuto con le tasse degli altri; salari affidati alla contrattazione collettiva nazionale; più centri per i rimpatri e stop ai «decreti flussi massicci»; cittadinanza dopo vent'anni di residenza regolare e livello C1; meno poteri all'UE e «meno vincoli assurdi», contro Green Deal, Fit for 55 e scadenze di decarbonizzazione; ritorno al nucleare; riaprire le relazioni economiche con la Russia; separazione delle carriere dei magistrati.  
+  <https://pagellapolitica.it/articoli/programma-futuro-nazionale-vannacci-elezioni-2027>
+
+---
+
+## 12. Cannabis
+
+*Categoria:* Diritti Civili, Etica e Società
+
+**Affermazione:** La produzione e la vendita di cannabis dovrebbero essere legali e regolate dallo Stato.
+
+**Nel quiz, invertita:** La produzione e la vendita di cannabis dovrebbero restare vietate. — i punteggi usati dal quiz sono 8 meno quelli qui sotto.
+
+*Direzione:* accordo = sinistra. *Formulazione:* Invertita nel quiz per bilanciare la direzione delle risposte: si chiede se debbano restare vietate. Qui compare in forma affermativa.
+
+| Partito | Punteggio | Liv. | Posizione documentata |
+|---|:---:|:---:|---|
+| **AVS** | **7** | B | Il programma europeo chiede la legalizzazione della cannabis. |
+| **M5S** | **5** | B | Il programma 2022 chiede di «regolamentare la coltivazione per uso personale», senza parlare della vendita. Punteggio abbassato da 7. |
+| **PD** | **5** | B | Programma 2022: legalizzare l'autoproduzione per uso personale, non la vendita. Punteggio abbassato da 7. |
+| **+Europa** | **7** | B | Programma 2022: legalizzazione e coltivazione domestica; proposta di legge Magi. |
+| **Italia Viva** | **4** | B | POSIZIONE INTERMEDIA DOCUMENTATA: ha promosso i cannabis shop, ma si è astenuta sulla coltivazione domestica. |
+| **Azione** | **5** | C | Calenda si è detto favorevole alla legalizzazione; il programma 2022 non ne parla. |
+| **Liberaldemocratico** | **—** | — | La cella precedente citava un video mai rintracciato; nessuna posizione verificabile. |
+| **Forza Italia** | **1** | A | Vota l'articolo 18 che equipara la cannabis light agli stupefacenti. |
+| **Fratelli d'Italia** | **2** | A | Vota il divieto della cannabis light; a dicembre 2025 presenta e poi ritira un emendamento per renderla di nuovo legale con una forte tassa. |
+| **Lega** | **1** | A | Vota il divieto della cannabis light. |
+| **Futuro Nazionale** | **—** | — | La cella precedente era un'inferenza (F); il programma non ne parla. |
+
+**Fonti:**
+
+- *(liv. B, verificata il 2026-09-15)* Programma di AVS per le europee 2024: «Adottare un'imposta europea sui grandi patrimoni»; «Promuovere la legalizzazione della cannabis»; «Rivedere gli accordi di libero scambio e interrompere definitivamente i negoziati con il Mercosur»; «una Strategia industriale europea»; «una direttiva quadro per un reddito minimo europeo»; «un processo costituente per un'Europa unita... una Convenzione per una riforma dei Trattati».  
+  <https://verdisinistra.it/programma-elezioni-europee-8-e-9-giugno-2024/>
+- *(liv. B, verificata il 2026-09-15)* Programmi 2022 sulla cannabis. +Europa: legalizzazione e coltivazione domestica fino a quattro piante. PD: «è il momento di legalizzare l'autoproduzione di cannabis per uso personale». Sinistra Italiana-Verdi: legalizzare la coltivazione domestica e cancellare le sanzioni. M5S: «regolamentare la coltivazione per uso personale». Centrodestra: «combattere lo spaccio con ogni mezzo». Azione-IV: nessuna menzione; Calenda si era detto favorevole alla legalizzazione; Italia Viva ha promosso i cannabis shop ma si è astenuta sulla coltivazione domestica.  
+  <https://tg24.sky.it/politica/2022/09/22/cannabis-programmi-elettorali-confronto>
+- *(liv. A, verificata il 2026-09-15)* Camera, 13 settembre 2024: approvato l'articolo 18 del ddl sicurezza che equipara le infiorescenze di canapa (cannabis light) agli stupefacenti, 162 sì, 91 no, 3 astenuti; la norma entra poi nel decreto sicurezza 2025. A dicembre 2025 FdI presenta e poi ritira un emendamento per renderla di nuovo legale con una forte tassazione.  
+  <https://en.ilsole24ore.com/art/verso-si-ddl-sicurezza-dall-alt-cannabis-light-armi-libere-gli-agenti-AFzowCzD>
+
+---
+
+## 13. Riconoscimento dello Stato di Palestina
+
+*Categoria:* Esteri
+
+**Affermazione:** L'Italia dovrebbe riconoscere formalmente lo Stato di Palestina.
+
+*Direzione:* accordo = sinistra. *Formulazione:* Invariata.
+
+| Partito | Punteggio | Liv. | Posizione documentata |
+|---|:---:|:---:|---|
+| **AVS** | **7** | A | Vota la risoluzione per il riconoscimento entro i confini del 1967. |
+| **M5S** | **7** | A | Vota la risoluzione per il riconoscimento; Conte per il riconoscimento subito. |
+| **PD** | **7** | A | Vota la risoluzione per il riconoscimento; Schlein: «riconoscerei immediatamente». |
+| **+Europa** | **7** | C | Magi: Meloni dovrebbe «annunciare che l'Italia intende riconoscere lo stato di Palestina». |
+| **Italia Viva** | **3** | C | Renzi: il riconoscimento oggi è «solo slogan», prima va disarmata Hamas. |
+| **Azione** | **5** | A | DIVERGENZA DOCUMENTATA: Calenda chiede il riconoscimento subito (luglio 2025), ma a ottobre firma con la maggioranza la risoluzione che lo condiziona. Nella codifica precedente aveva 2. |
+| **Liberaldemocratico** | **3** | C | Marattin: il riconoscimento incondizionato oggi «sarebbe un gesto simbolico e sbagliato», prima ostaggi e governance senza Hamas. Punteggio alzato da 1. |
+| **Forza Italia** | **3** | A | Vota la risoluzione che condiziona il riconoscimento a ostaggi liberati e Hamas esclusa; Tajani: prima «deve esserci lo Stato palestinese». Punteggio alzato da 2. |
+| **Fratelli d'Italia** | **3** | A | Vota la risoluzione del riconoscimento condizionato. Punteggio alzato da 2. |
+| **Lega** | **2** | C | Salvini: finché è «controllato dai terroristi» riconoscerlo è «un errore»; vota comunque la risoluzione condizionata della maggioranza. |
+| **Futuro Nazionale** | **1** | C | Vannacci: «non può esserci riconoscimento se uno Stato non ha territori, confini e sovranità». |
+
+**Fonti:**
+
+- *(liv. A, verificata il 2026-09-15)* Camera, 2 ottobre 2025: approvata la risoluzione di centrodestra e Azione sul piano per Gaza, che pone «condizioni precise per il riconoscimento dello Stato palestinese»: liberazione di tutti gli ostaggi, disarmo di Hamas e sua esclusione da ogni ruolo. Respinta quella di PD, M5S e AVS per il riconoscimento «entro i confini del 1967».  
+  <https://pagellapolitica.it/articoli/voto-partiti-piano-trump-gaza>
+- *(liv. C, verificata il 2026-09-15)* Riccardo Magi, 26 luglio 2025: «Giorgia Meloni dovrebbe seguire Macron e annunciare che l'Italia intende riconoscere lo stato di Palestina».  
+  <https://www.piueuropa.eu/m_o_magi_su_riconoscimento_stato_palestina_meloni_segua_macron>
+- *(liv. C, verificata il 2026-09-15)* Matteo Renzi: il riconoscimento della Palestina oggi è «solo slogan», prima va disarmata Hamas.  
+  <https://www.ilgiornaleditalia.it/video/politica/730782/renzi-riconoscimento-palestina-solo-slogan-prima-disarmare-hamas.html>
+- *(liv. C, verificata il 2026-09-15)* Luigi Marattin, 25 settembre 2025: «Il riconoscimento incondizionato, oggi, dello Stato di Palestina sarebbe un gesto simbolico e sbagliato»; prima vanno liberati gli ostaggi, fermate le operazioni militari e costruita una governance palestinese senza Hamas. Posizione assunta dal PLD pochi giorni prima.  
+  <https://www.luigimarattin.it/2025/09/25/palestina-la-linea-di-meloni-e-buonsenso-la-versione-di-marattin/>
+- *(liv. C, verificata il 2026-09-15)* Estate 2025. Meloni (26 luglio): riconoscere la Palestina «senza che ci sia uno Stato» sarebbe controproducente. Salvini (1 agosto): «fino a che è controllato dai terroristi» è «un errore». Tajani (4 agosto): prima «deve esserci lo Stato palestinese». Schlein: «riconoscerei immediatamente». Conte, AVS (31 luglio) e Calenda (30 luglio) per il riconoscimento subito. Italia Viva: «due popoli, due Stati», senza chiedere il riconoscimento immediato.  
+  <https://pagellapolitica.it/articoli/posizioni-partiti-riconoscimento-palestina>
+- *(liv. C, verificata il 2026-09-15)* Fine luglio 2025, Roberto Vannacci (allora eurodeputato della Lega, oggi leader di Futuro Nazionale): lo Stato palestinese non esiste e «non può esserci riconoscimento se uno Stato non ha territori, confini e sovranità».  
+  <https://www.ilgiornaleditalia.it/news/esteri/723421/il-generale-vannacci-sostiene-che-lo-stato-palestinese-non-esiste-una-posizione-degna-del-mondo-al-contrario.html>
+
+---
+
+## 14. Sostegno militare all'Ucraina
+
+*Categoria:* Esteri
+
+**Affermazione:** L'Italia dovrebbe continuare a fornire armi all'Ucraina.
+
+*Direzione:* accordo = destra. *Formulazione:* Invariata.
+
+| Partito | Punteggio | Liv. | Posizione documentata |
+|---|:---:|:---:|---|
+| **AVS** | **1** | A | Vota contro i decreti di cessione delle armi. |
+| **M5S** | **1** | A | Vota contro i decreti; Conte (settembre 2026) pone lo stop alle armi come condizione per il programma di coalizione. |
+| **PD** | **7** | A | Vota sì al decreto di febbraio 2026; Schlein (settembre 2026): «Continueremo a sostenere Kiev». Punteggio alzato da 6. |
+| **+Europa** | **7** | A | Vota sì al decreto di febbraio 2026. |
+| **Italia Viva** | **7** | A | Vota sì al decreto pur essendo all'opposizione. |
+| **Azione** | **7** | A | Vota sì al decreto pur essendo all'opposizione. |
+| **Liberaldemocratico** | **—** | — | L'unica fonte era un appello del 2023, precedente alla nascita del partito, e la pagina non è più accessibile. |
+| **Forza Italia** | **7** | A | Politica di governo, voto favorevole. |
+| **Fratelli d'Italia** | **7** | A | Politica di governo, voto favorevole. |
+| **Lega** | **6** | A | Il gruppo vota i decreti con la maggioranza, ma a gennaio 2026 due deputati votano contro: divisione interna documentata. |
+| **Futuro Nazionale** | **1** | A | I tre deputati votano contro il decreto di febbraio 2026. |
+
+**Fonti:**
+
+- *(liv. A, verificata il 2026-09-15)* Gennaio 2025, decreto di proroga delle cessioni di armi all'Ucraina: a favore FdI, Lega, FI, PD, Azione, Italia Viva e +Europa; contrari M5S e AVS.  
+  <https://www.ilfattoquotidiano.it/2025/01/22/invio-armi-ucraina-voto-pd-decreto-centrodestra-risoluzione-dem/7847380/>
+- *(liv. C, verificata il 2026-09-15)* Settembre 2026: Conte avverte che il M5S non firmerà un programma di coalizione che preveda armi a Kiev; Schlein: «Continueremo a sostenere Kiev».  
+  <https://www.today.it/politica/conte-armi-ucraina-schlein.html>
+- *(liv. A, verificata il 2026-09-15)* Camera, 11 febbraio 2026, decreto che proroga le cessioni fino al 31 dicembre 2026 (voto finale 229 sì, 40 no): PD, Italia Viva, Azione e +Europa votano no alla fiducia ma sì al decreto; i tre deputati di Futuro Nazionale votano sì alla fiducia e no al decreto.  
+  <https://www.today.it/politica/decreto-aiuti-ucraina.html>
+- *(liv. A, verificata il 2026-09-15)* 15 gennaio 2026: la Lega vota con la maggioranza sulle armi a Kiev, ma due suoi deputati votano contro.  
+  <https://www.ilfattoquotidiano.it/2026/01/15/lega-divisioni-ucraina-armi-notizie/8257850/>
+
+---
+
+## 15. Integrazione europea
+
+*Categoria:* Esteri
+
+**Affermazione:** L'Unione europea dovrebbe avere poteri comuni su difesa, fisco e politica estera.
+
+*Direzione:* accordo = sinistra. *Formulazione:* Tolto 'superando il principio dell'unanimità', che era un secondo contenuto.
+
+| Partito | Punteggio | Liv. | Posizione documentata |
+|---|:---:|:---:|---|
+| **AVS** | **6** | B | Chiede una Convenzione per riformare i Trattati verso un'Europa unita. |
+| **M5S** | **4** | C | AMBIVALENZA DOCUMENTATA: vota contro il piano di riarmo europeo, ma chiede investimenti comuni «come nel 2020». |
+| **PD** | **7** | C | Schlein: «Vogliamo un'Europa federale, serve una comune politica estera e di sicurezza»; superare l'unanimità. |
+| **+Europa** | **7** | B | Lista Stati Uniti d'Europa: politica estera, di difesa e fiscale comune. |
+| **Italia Viva** | **7** | B | Lista Stati Uniti d'Europa: politica estera, di difesa e fiscale comune. |
+| **Azione** | **6** | B | Esercito europeo entro dieci anni come primo passo verso gli Stati Uniti d'Europa; sul fisco comune nulla di esplicito. |
+| **Liberaldemocratico** | **6** | B | Forze armate europee, maggioranza qualificata in politica estera, «sempre maggiore integrazione»; sul fisco comune nulla di esplicito. |
+| **Forza Italia** | **7** | C | Tajani: superare l'unanimità, armonizzazione fiscale, difesa comune. |
+| **Fratelli d'Italia** | **4** | B | POSIZIONE INTERMEDIA DOCUMENTATA: Europa confederale unita su difesa, politica estera e immigrazione, libera sul resto; contraria a togliere il veto. |
+| **Lega** | **1** | B | Rifiuta ogni «Super-Stato» e ogni trasferimento di sovranità; difende l'unanimità. |
+| **Futuro Nazionale** | **1** | B | Ridurre i poteri dell'UE e rivedere i trattati. |
+
+**Fonti:**
+
+- *(liv. B, verificata il 2026-09-15)* Programma di AVS per le europee 2024: «Adottare un'imposta europea sui grandi patrimoni»; «Promuovere la legalizzazione della cannabis»; «Rivedere gli accordi di libero scambio e interrompere definitivamente i negoziati con il Mercosur»; «una Strategia industriale europea»; «una direttiva quadro per un reddito minimo europeo»; «un processo costituente per un'Europa unita... una Convenzione per una riforma dei Trattati».  
+  <https://verdisinistra.it/programma-elezioni-europee-8-e-9-giugno-2024/>
+- *(liv. C, verificata il 2026-09-15)* Marzo 2025: il M5S vota contro il piano di riarmo europeo; Tridico lo definisce «un folle piano da 800 miliardi».  
+  <https://www.eunews.it/en/2025/03/12/defence-eu-parliament-clears-way-for-rearmament-plan-pd-divided-m5s-and-lega-opposed/>
+- *(liv. C, verificata il 2026-09-15)* Elly Schlein, 22 maggio 2026: superare l'unanimità, difesa e investimenti comuni europei; «Vogliamo un'Europa federale, serve una comune politica estera e di sicurezza».  
+  <https://www.ansa.it/sito/notizie/politica/2026/05/22/schlein-per-lue-difesa-e-investimenti-comuni-e-superare-lunanimita_b47ac5f7-57e9-49c6-8560-1ced8d8b2681.html>
+- *(liv. B, verificata il 2026-09-15)* Programma della lista Stati Uniti d'Europa (+Europa, Italia Viva e altri) per le europee 2024: riforma dei Trattati verso gli Stati Uniti d'Europa, un governo che risponda al Parlamento europeo, politica estera, di difesa, fiscale e migratoria comune, eliminazione del voto all'unanimità, esercito comune.  
+  <https://www.fanpage.it/politica/il-programma-di-stati-uniti-deuropa-alle-elezioni-europee-2024-le-proposte-di-renzi-e-bonino/>
+- *(liv. B, verificata il 2026-09-15)* Programma di Azione-Siamo europei per le europee 2024: un esercito europeo unico entro dieci anni, «primo passo verso gli Stati Uniti d'Europa»; il voto all'unanimità è usato «come strumento di ricatto» dai singoli Stati.  
+  <https://www.fanpage.it/politica/il-programma-di-azione-per-le-europee-le-proposte-su-difesa-transizione-green-e-immigrazione/>
+- *(liv. B, verificata il 2026-09-15)* Proposte europee del PLD: «Creare gradualmente delle Forze Armate europee permanenti»; «Rimuovere il voto all'unanimità nel Consiglio dell'UE» su politica estera, sanzioni e difesa; «L'UE deve andare verso una sempre maggiore integrazione»; «Negoziare accordi di libero scambio sempre più estesi»; transizione ecologica «fondata sul principio della neutralità tecnologica».  
+  <https://partitoliberaldemocratico.com/europawewant/>
+- *(liv. C, verificata il 2026-09-15)* Antonio Tajani, novembre 2025: «in Forza Italia siamo favorevoli a superare l'unanimità»; l'armonizzazione fiscale va realizzata; serve una difesa comune.  
+  <https://www.esteri.it/en/sala_stampa/archivionotizie/interviste/2025/11/antonio-tajani-unione-europea-e-ora-di-superare-lunanimita-laltravoce-il-quotidiano-nazionale/>
+- *(liv. B, verificata il 2026-09-15)* Programma di FdI per le europee 2024: un'Europa «confederale», alleanza di nazioni sovrane unite sulle grandi questioni (difesa, politica estera, immigrazione) e libere sul resto; contraria a cambiare i trattati per togliere il diritto di veto.  
+  <https://pagellapolitica.it/articoli/programma-fratelli-italia-elezioni-europee-2024>
+- *(liv. B, verificata il 2026-09-15)* La Lega aderisce a un movimento europeo che «rifiuta qualsiasi politica volta a creare un Super-Stato» e si oppone a «qualsiasi trasferimento della sovranità nazionale»; nelle proposte per le europee 2024 difende il voto all'unanimità.  
+  <https://www.policymakermag.it/fact-checking/europee-ecco-le-proposte-della-lega-di-salvini/>
+- *(liv. B, verificata il 2026-09-15)* Programma di Futuro Nazionale per il 2027, prima parte, secondo l'analisi di Pagella Politica: uscita dal lavoro dopo 41 anni di contributi effettivi; ridurre la pressione fiscale; assistenza vincolata alla formazione, e chi rifiuta non va mantenuto con le tasse degli altri; salari affidati alla contrattazione collettiva nazionale; più centri per i rimpatri e stop ai «decreti flussi massicci»; cittadinanza dopo vent'anni di residenza regolare e livello C1; meno poteri all'UE e «meno vincoli assurdi», contro Green Deal, Fit for 55 e scadenze di decarbonizzazione; ritorno al nucleare; riaprire le relazioni economiche con la Russia; separazione delle carriere dei magistrati.  
+  <https://pagellapolitica.it/articoli/programma-futuro-nazionale-vannacci-elezioni-2027>
+
+---
+
+## 16. Libero scambio
+
+*Categoria:* Esteri
+
+**Affermazione:** L'apertura ai mercati internazionali conviene all'Italia.
+
+*Direzione:* accordo = destra. *Formulazione:* Tolta la condizione sulle regole contro il dumping, che rendeva l'affermazione condivisibile da chiunque.
+
+| Partito | Punteggio | Liv. | Posizione documentata |
+|---|:---:|:---:|---|
+| **AVS** | **2** | B | Il programma chiede di rivedere gli accordi di libero scambio e interrompere i negoziati con il Mercosur. |
+| **M5S** | **2** | A | Vota per congelare l'accordo UE-Mercosur. |
+| **PD** | **6** | A | Vota contro il congelamento dell'accordo UE-Mercosur. La divergenza con la partecipazione di Schlein a una protesta, citata dalla codifica precedente, non è stata verificata. |
+| **+Europa** | **—** | — | La cella precedente citava il manifesto senza riportarne il contenuto; nessuna posizione verificata. |
+| **Italia Viva** | **—** | — | La cella precedente citava le leggi sulla concorrenza interna, non il commercio internazionale; nessuna posizione verificata. |
+| **Azione** | **—** | — | La cella precedente citava le leggi sulla concorrenza interna, non il commercio internazionale; nessuna posizione verificata. |
+| **Liberaldemocratico** | **7** | B | «Negoziare accordi di libero scambio sempre più estesi verso l'area ASEAN, EMEA e BRIC». |
+| **Forza Italia** | **6** | A | Vota contro il congelamento dell'accordo UE-Mercosur. |
+| **Fratelli d'Italia** | **6** | A | Vota contro il congelamento dell'accordo UE-Mercosur, dopo aver ottenuto le salvaguardie agricole. |
+| **Lega** | **2** | A | Vota per congelare l'accordo UE-Mercosur. |
+| **Futuro Nazionale** | **2** | C | Programma: Stato contro una globalizzazione «dominata dalle multinazionali», golden power per limitare le operazioni di mercato. |
+
+**Fonti:**
+
+- *(liv. B, verificata il 2026-09-15)* Programma di AVS per le europee 2024: «Adottare un'imposta europea sui grandi patrimoni»; «Promuovere la legalizzazione della cannabis»; «Rivedere gli accordi di libero scambio e interrompere definitivamente i negoziati con il Mercosur»; «una Strategia industriale europea»; «una direttiva quadro per un reddito minimo europeo»; «un processo costituente per un'Europa unita... una Convenzione per una riforma dei Trattati».  
+  <https://verdisinistra.it/programma-elezioni-europee-8-e-9-giugno-2024/>
+- *(liv. A, verificata il 2026-09-15)* Parlamento europeo, 21 gennaio 2026: approvato con 334 sì e 324 no il rinvio dell'accordo UE-Mercosur alla Corte di giustizia, che lo congela. Contro il rinvio, quindi per l'accordo, FdI, PD e Forza Italia; a favore del rinvio Lega, AVS e M5S.  
+  <https://www.ilfattoquotidiano.it/2026/01/21/accordo-ue-mercosur-parlamento-europeo-corte-giustizia-notizie/8264072/>
+- *(liv. B, verificata il 2026-09-15)* Proposte europee del PLD: «Creare gradualmente delle Forze Armate europee permanenti»; «Rimuovere il voto all'unanimità nel Consiglio dell'UE» su politica estera, sanzioni e difesa; «L'UE deve andare verso una sempre maggiore integrazione»; «Negoziare accordi di libero scambio sempre più estesi»; transizione ecologica «fondata sul principio della neutralità tecnologica».  
+  <https://partitoliberaldemocratico.com/europawewant/>
+- *(liv. C, verificata il 2026-09-15)* Il Post, 18 agosto 2026, sul programma economico di Futuro Nazionale: un «Fondo sovrano per la crescita nazionale» come strumento di investimento pubblico, uso del golden power per limitare operazioni di mercato, intervento dello Stato contro una globalizzazione «dominata dalle multinazionali».  
+  <https://www.ilpost.it/2026/08/18/vannacci-futuro-nazionale-programma-economia-euro/>
+
+---
+
+## 17. Energia nucleare
+
+*Categoria:* Trans.Ecologica ed Energia
+
+**Affermazione:** L'Italia dovrebbe reintrodurre la produzione di energia nucleare.
+
+*Direzione:* accordo = destra. *Formulazione:* Tolte le motivazioni incorporate ('per raggiungere l'autonomia e ridurre le emissioni'), che spingevano verso il sì.
+
+| Partito | Punteggio | Liv. | Posizione documentata |
+|---|:---:|:---:|---|
+| **AVS** | **1** | A | Voto contrario alla legge delega. |
+| **M5S** | **1** | A | Voto contrario alla legge delega. |
+| **PD** | **1** | A | Voto contrario alla legge delega. Punteggio da 2 a 1: nessuna fonte indica aperture. |
+| **+Europa** | **4** | C | POSIZIONE INTERMEDIA DOCUMENTATA: «non pro-nucleare a prescindere», valutazione caso per caso di costi e benefici. Il voto di +Europa sulla delega non è stato trovato. |
+| **Italia Viva** | **4** | A | Astenuta sulla legge delega. |
+| **Azione** | **7** | A | Voto favorevole pur essendo all'opposizione. |
+| **Liberaldemocratico** | **7** | A | Voto favorevole; il manifesto parla di «ruolo strategico del nucleare». |
+| **Forza Italia** | **7** | A | Voto favorevole. |
+| **Fratelli d'Italia** | **7** | A | Voto favorevole; la legge è del governo. |
+| **Lega** | **7** | A | Voto favorevole. |
+| **Futuro Nazionale** | **7** | B | Il programma prevede il ritorno al nucleare. |
+
+**Fonti:**
+
+- *(liv. A, verificata il 2026-09-15)* Camera, 4 giugno 2026: approvata la legge delega sul nucleare sostenibile, 155 sì, 86 no, 8 astenuti. A favore la maggioranza, Azione e la componente PLD del Misto; contrari PD, M5S e AVS; astenuta Italia Viva.  
+  <https://www.ansa.it/sito/notizie/politica/2026/06/04/la-camera-approva-la-legge-delega-sul-nucleare-155-i-si_b9268928-3217-48a8-b1ca-f9871ff12f22.html>
+- *(liv. C, verificata il 2026-09-15)* Riccardo Magi, 21 settembre 2022: «La nostra posizione non è pro-nucleare a prescindere»; favorevoli alla ricerca su fusione e piccoli reattori, ma il tema va valutato con analisi costi-benefici.  
+  <https://www.ohga.it/magi-presidente-europa-a-ohga-la-nostra-posizione-non-e-pro-nucleare-a-prescindere-il-tema-va-discusso-con-analisi-costi-benefici/>
+- *(liv. B, verificata il 2026-09-15)* Proposte del Partito Liberaldemocratico: una spending review rigorosa «per realizzare avanzi primari più consistenti per la riduzione del debito»; «ruolo strategico del nucleare».  
+  <https://partitoliberaldemocratico.com/proposte/>
+- *(liv. B, verificata il 2026-09-15)* Programma di Futuro Nazionale per il 2027, prima parte, secondo l'analisi di Pagella Politica: uscita dal lavoro dopo 41 anni di contributi effettivi; ridurre la pressione fiscale; assistenza vincolata alla formazione, e chi rifiuta non va mantenuto con le tasse degli altri; salari affidati alla contrattazione collettiva nazionale; più centri per i rimpatri e stop ai «decreti flussi massicci»; cittadinanza dopo vent'anni di residenza regolare e livello C1; meno poteri all'UE e «meno vincoli assurdi», contro Green Deal, Fit for 55 e scadenze di decarbonizzazione; ritorno al nucleare; riaprire le relazioni economiche con la Russia; separazione delle carriere dei magistrati.  
+  <https://pagellapolitica.it/articoli/programma-futuro-nazionale-vannacci-elezioni-2027>
+
+---
+
+## 18. Auto e obiettivi climatici
+
+*Categoria:* Trans.Ecologica ed Energia
+
+**Affermazione:** Dal 2035 in Europa dovrebbero poter essere vendute solo auto nuove a zero emissioni.
+
+**Nel quiz, invertita:** Anche dopo il 2035 dovrebbero poter essere vendute in Europa auto nuove a benzina e diesel. — i punteggi usati dal quiz sono 8 meno quelli qui sotto.
+
+*Direzione:* accordo = sinistra. *Formulazione:* Invertita nel quiz per bilanciare la direzione delle risposte. Formulata così dopo la revisione del dicembre 2025, con cui la Commissione ha proposto di ammettere ancora motori a combustione.
+
+| Partito | Punteggio | Liv. | Posizione documentata |
+|---|:---:|:---:|---|
+| **AVS** | **7** | A | Gli eurodeputati Verdi votano a favore dello stop. |
+| **M5S** | **7** | A | Gli eurodeputati votano a favore dello stop. |
+| **PD** | **7** | A | Gli eurodeputati votano a favore dello stop. |
+| **+Europa** | **—** | — | La cella precedente citava una ricostruzione che non riporta la posizione di +Europa sul 2035. |
+| **Italia Viva** | **7** | A | L'eurodeputato vota a favore dello stop. |
+| **Azione** | **2** | E | Il programma europeo 2024 chiede di riconsiderare lo stop e di ammettere biocarburanti ed e-fuel. |
+| **Liberaldemocratico** | **2** | B | Transizione «fondata sul principio della neutralità tecnologica», cioè contraria a imporre una sola tecnologia. Nella codifica precedente era un'inferenza (F). |
+| **Forza Italia** | **1** | A | Tutti gli eurodeputati votano contro. |
+| **Fratelli d'Italia** | **1** | A | Tutti gli eurodeputati votano contro. |
+| **Lega** | **1** | A | Tutti gli eurodeputati votano contro. |
+| **Futuro Nazionale** | **1** | B | Contro Green Deal e scadenze di decarbonizzazione, contro l'imposizione di sostituzioni tecnologiche. |
+
+**Fonti:**
+
+- *(liv. A, verificata il 2026-09-15)* Parlamento europeo, 14 febbraio 2023: approvato lo stop alla vendita di auto nuove a benzina e diesel dal 2035 (340 sì, 279 no, 21 astenuti). A favore gli eurodeputati di M5S, PD, Verdi e Italia Viva; contrari tutti quelli di FdI, Lega e Forza Italia. A dicembre 2025 la Commissione ha proposto di portare l'obiettivo dal 100% al 90%; la revisione è ancora in discussione.  
+  <https://www.eunews.it/2023/02/14/stop-vendita-auto-benzina-e-diesel-2035/>
+- *(liv. E, verificata il 2026-09-15)* Programma di Azione per le europee 2024, come riportato dalla stampa: riconsiderare lo stop del 2035, giudicato impossibile da rispettare, ammettere motori a biocarburanti ed e-fuel, revisione ogni tre anni.  
   <https://it.motor1.com/news/722182/elezioni-europee-2024-auto-azione/>
+- *(liv. B, verificata il 2026-09-15)* Proposte europee del PLD: «Creare gradualmente delle Forze Armate europee permanenti»; «Rimuovere il voto all'unanimità nel Consiglio dell'UE» su politica estera, sanzioni e difesa; «L'UE deve andare verso una sempre maggiore integrazione»; «Negoziare accordi di libero scambio sempre più estesi»; transizione ecologica «fondata sul principio della neutralità tecnologica».  
+  <https://partitoliberaldemocratico.com/europawewant/>
+- *(liv. B, verificata il 2026-09-15)* Programma di Futuro Nazionale per il 2027, prima parte, secondo l'analisi di Pagella Politica: uscita dal lavoro dopo 41 anni di contributi effettivi; ridurre la pressione fiscale; assistenza vincolata alla formazione, e chi rifiuta non va mantenuto con le tasse degli altri; salari affidati alla contrattazione collettiva nazionale; più centri per i rimpatri e stop ai «decreti flussi massicci»; cittadinanza dopo vent'anni di residenza regolare e livello C1; meno poteri all'UE e «meno vincoli assurdi», contro Green Deal, Fit for 55 e scadenze di decarbonizzazione; ritorno al nucleare; riaprire le relazioni economiche con la Russia; separazione delle carriere dei magistrati.  
+  <https://pagellapolitica.it/articoli/programma-futuro-nazionale-vannacci-elezioni-2027>
 
 ---
 
-## 16. Grandi opere
+## 19. Ponte sullo Stretto
 
-**Domanda proposta:** L'Italia dovrebbe realizzare il Ponte sullo Stretto di Messina.
+*Categoria:* Trans.Ecologica ed Energia
 
-*Modifica rispetto alla versione attuale:* Eliminato il confronto forzato con la mobilita' sostenibile e sostituito il generico 'grandi opere' con l'opera su cui i partiti si sono effettivamente divisi.
+**Affermazione:** L'Italia dovrebbe realizzare il Ponte sullo Stretto di Messina.
 
-*Direzione:* essere d'accordo corrisponde alla posizione **destra**.
-
+*Direzione:* accordo = destra. *Formulazione:* Ridotta al Ponte: la versione precedente contrapponeva le grandi opere al trasporto locale ed era un'affermazione doppia.
 
 | Partito | Punteggio | Liv. | Posizione documentata |
 |---|:---:|:---:|---|
-| **AVS** | **1** | A | Bonelli: con lo spostamento delle risorse 'l'architettura finanziaria del Ponte cade'. |
-| **M5S** | **1** | A | Costa: il progetto e' 'fattualmente irrealizzabile'. |
-| **PD** | **2** | C | Contrario, insieme al resto dell'opposizione. |
-| **+Europa** | **2** | C | Codificata da Leo. |
-| **Italia Viva** | **6** | B | Come sopra: programma congiunto. |
-| **Azione** | **6** | B | Chiede il completamento di Torino-Lione, Terzo Valico, Brescia-Padova, Salerno-Reggio Calabria e Napoli-Bari. |
-| **Liberaldemocratico** | **6** | C | Codificata da Leo. |
-| **Forza Italia** | **7** | A | Vota la conversione in legge. |
-| **Fratelli d'Italia** | **7** | A | Opera di bandiera del governo, riaffermata con il decreto legge dell'11 marzo 2026 dopo i rilievi della Corte dei conti. |
-| **Lega** | **7** | A | Progetto del ministro proponente. |
-| **Futuro Nazionale** | **7** | C | 'Siamo favorevoli al Ponte e a tutte le infrastrutture che portano ricchezza e progresso'. |
+| **AVS** | **1** | A | Voto contrario al decreto del 2023; giudica l'opera uno spreco. |
+| **M5S** | **1** | A | Voto contrario al decreto del 2023; storicamente contrario. |
+| **PD** | **1** | A | Voto contrario al decreto del 2023; in piazza contro l'opera a dicembre 2023. |
+| **+Europa** | **1** | C | Assemblea del partito: «un enorme spreco di denaro pubblico». |
+| **Italia Viva** | **7** | A | Vota a favore del decreto del 2023 (gruppo Azione-Italia Viva). La fonte precedente era il programma su altre opere. |
+| **Azione** | **5** | A | Vota a favore del decreto del 2023, ma critica la capacità del governo di realizzarlo: «manca il progetto esecutivo» (Calenda, 2025). |
+| **Liberaldemocratico** | **7** | E | Marattin, unico leader d'opposizione «favorevole, senza se e senza ma». |
+| **Forza Italia** | **7** | A | Voto favorevole. |
+| **Fratelli d'Italia** | **7** | A | Voto favorevole; opera di bandiera del governo. |
+| **Lega** | **7** | A | Voto favorevole; progetto del ministro Salvini. |
+| **Futuro Nazionale** | **7** | C | Vannacci: «siamo a favore di qualsiasi infrastruttura e questo vale anche per il ponte sullo Stretto». |
 
 **Fonti:**
 
-- *(liv. A)* Ponte sullo Stretto: la Corte dei conti nega il visto alla delibera CIPESS n. 41/2025 il 27 novembre e il 16 dicembre 2025. Il governo risponde con il decreto legge dell'11 marzo 2026, convertito nella legge n. 71 dell'8 maggio 2026. AVS e M5S contestano la tenuta finanziaria dell'opera.  
-  <https://www.today.it/attualita/ponte-stretto-messina-cosa-succede.html>
-- *(liv. B)* Programma elettorale congiunto Azione - Italia Viva, politiche 2022, 56 pagine. Politica industriale: 'concentrare le risorse su strumenti fiscali semplici ed automatici a supporto degli investimenti'. Fisco: 'Non serve inventare nuove tasse, sognare la patrimoniale'. Concorrenza: 'approvare ogni anno leggi sulla concorrenza che rendano la nostra economia piu' libera e meno gravata da barriere all'ingresso'. Reddito di cittadinanza: 'Eliminare il Reddito di Cittadinanza dopo il primo rifiuto e ridurlo dopo 2 anni'. Europa: 'Con una svolta in senso federale delle sue Istituzioni... riaprire il cantiere delle riforme dei Trattati'. Trasporti: completamento di Torino-Lione, Terzo Valico e altre tratte ad alta velocita'. Istituzioni: modello del 'sindaco d'Italia' con riforma del sistema elettorale. Cannabis e matrimonio egualitario NON compaiono nel documento.  
-  <https://www.welforum.it/wp-content/uploads/2022/09/Programma-Azione-Italia-Viva.pdf>
-- *(liv. C)* Roberto Vannacci a Palermo, maggio 2026: 'Siamo favorevoli al Ponte e a tutte le infrastrutture che portano ricchezza e progresso'; l'opera 'attirera' capitali, investimenti e nuove opportunita''. Respinge l'idea che il Ponte sia alternativo alla manutenzione ordinaria: 'bloccare opere fondamentali per il progresso economico del Paese non mi sembra giusto'.  
-  <https://www.strettoweb.com/2026/05/roberto-vannacci-a-palermo-si-al-ponte-sullo-stretto-attirera-capitali-ed-altre-infrastrutture/2094017/>
-- *(liv. C)* Codifica di Leo. Magi sul Ponte sullo Stretto: 'da Meloni minacce inaccettabili, vuole il governo sopra la legge'.  
-  <https://www.piueuropa.eu/ponte_stretto_magi_da_meloni_minacce_inaccettabili_vuole_governo_sopra_la_legge>
-- *(liv. C)* Codifica di Leo. L'opposizione di principio del centrosinistra al Ponte come assist a Salvini.  
+- *(liv. A, verificata il 2026-09-15)* Camera, 16 maggio 2023: approvato il decreto che rilancia il Ponte sullo Stretto, 182 sì, 93 no, 1 astenuto. A favore la maggioranza e il gruppo Azione-Italia Viva (Rosato: «giusto realizzarlo»); contrarie le altre opposizioni.  
+  <https://www.ilfattoquotidiano.it/2023/05/16/ponte-sullo-stretto-la-camera-approva-il-decreto-legge-con-182-si-ora-passa-al-senato/>
+- *(liv. C, verificata il 2026-09-15)* Dicembre 2023: FdI, Lega e FI favorevoli; Italia Viva ha votato a favore del decreto; Azione ha votato a favore ma critica la capacità del governo di realizzarlo; PD in piazza contro l'opera; M5S storicamente contrario; AVS la giudica uno spreco di risorse.  
+  <https://pagellapolitica.it/articoli/posizioni-partiti-ponte-sullo-stretto>
+- *(liv. C, verificata il 2026-09-15)* Assemblea di +Europa, aprile 2023: ordine del giorno accolto dal segretario Magi che definisce il Ponte privo di copertura finanziaria e «un enorme spreco di denaro pubblico».  
+  <https://www.messinaora.it/notizia/2023/04/16/ponte-sullo-stretto-allassemblea-di-piu-europa-odg-di-palmira-mancuso-accolto-dal-segretario-riccardo-magi/164333>
+- *(liv. C, verificata il 2026-09-15)* Carlo Calenda, 7 agosto 2025: «manca il progetto esecutivo, cosa faranno gli operai a settembre?».  
+  <https://www.agenzianova.com/a/68949a06a5ccc7.85892380/6428897/2025-08-07/ponte-stretto-calenda-manca-progetto-esecutivo-cosa-faranno-operai-a-settembre>
+- *(liv. E, verificata il 2026-09-15)* Il Riformista, 11 agosto 2025: fra i leader d'opposizione «solo Luigi Marattin si è detto favorevole, senza se e senza ma».  
   <https://www.ilriformista.it/ponte-sullo-stretto-lopposizione-di-principio-del-centrosinistra-che-diventa-un-assist-per-salvini-477418/>
+- *(liv. C, verificata il 2026-09-15)* Roberto Vannacci a Palermo, maggio 2026: «siamo a favore di qualsiasi infrastruttura e questo vale anche per il ponte sullo Stretto».  
+  <https://www.strettoweb.com/2026/05/roberto-vannacci-a-palermo-si-al-ponte-sullo-stretto-attirera-capitali-ed-altre-infrastrutture/2094017/>
 
 ---
 
-## 17. Politica migratoria
+## 20. Politica migratoria
 
-**Domanda proposta:** L'Italia dovrebbe rendere piu' difficile l'ingresso di nuovi immigrati.
+*Categoria:* Sicurezza
 
-*Modifica rispetto alla versione attuale:* Tolta l'accumulazione di 'controllo rigoroso dei confini, rimpatri rapidi e riduzione degli arrivi', che sommava tre misure diverse.
+**Affermazione:** L'Italia dovrebbe rendere più difficile l'ingresso di nuovi immigrati.
 
-*Direzione:* essere d'accordo corrisponde alla posizione **destra**.
-
+*Direzione:* accordo = destra. *Formulazione:* Tolto l'elenco di strumenti (confini, rimpatri, arrivi), che rendeva l'affermazione multipla.
 
 | Partito | Punteggio | Liv. | Posizione documentata |
 |---|:---:|:---:|---|
-| **AVS** | **1** | C | Come sopra, su posizioni fra le piu' critiche. |
-| **M5S** | **2** | C | Come sopra. |
-| **PD** | **2** | C | Denuncia il fallimento e il costo dei centri in Albania. |
-| **+Europa** | **1** | C | Contrario a rendere piu' difficile l'ingresso: chiede regolarizzazione di chi lavora ed e' radicato, riforma della Bossi-Fini e stop all'accordo con l'Albania. |
-| **Italia Viva** | **3** | B | Come sopra: programma congiunto. |
-| **Azione** | **3** | B | L'immigrazione e' trattata come risposta al calo della forza lavoro previsto fra 2022 e 2030: impostazione di gestione dei flussi, non di chiusura. |
-| **Liberaldemocratico** | **4** | E | 'Patto di integrazione' lingua-lavoro-legalita' legato alla programmazione dei flussi: apertura condizionata. |
-| **Forza Italia** | **6** | C | Sostiene la linea di governo, con aperture su cittadinanza e ingressi regolari per le imprese. |
-| **Fratelli d'Italia** | **7** | C | Rilancio dei centri in Albania e attuazione immediata del Patto UE. |
-| **Lega** | **7** | C | Allineata alla linea di governo, su posizioni fra le piu' restrittive. |
-| **Futuro Nazionale** | **7** | B | L'immigrazione di massa 'sgretola la compattezza di una civilta''; esclusione dei non cittadini dai benefici sociali straordinari. |
+| **AVS** | **1** | A | Vota contro la ratifica del protocollo con l'Albania. |
+| **M5S** | **1** | A | Vota contro la ratifica del protocollo con l'Albania. |
+| **PD** | **1** | A | Vota contro la ratifica del protocollo con l'Albania. |
+| **+Europa** | **1** | A | Vota contro la ratifica; Magi chiede di interrompere i trasferimenti in Albania. |
+| **Italia Viva** | **1** | A | Vota contro la ratifica con le altre opposizioni. È l'unico dato verificato: il programma 2022 citato prima non è leggibile. |
+| **Azione** | **1** | A | Vota contro la ratifica con le altre opposizioni. È l'unico dato verificato: il programma 2022 citato prima non è leggibile. |
+| **Liberaldemocratico** | **3** | B | Programmazione dei flussi in base al fabbisogno, patto di integrazione; nessuna restrizione degli ingressi. |
+| **Forza Italia** | **7** | A | Vota la ratifica del protocollo con l'Albania. |
+| **Fratelli d'Italia** | **7** | A | Vota la ratifica; Meloni rilancia i centri in Albania con il Patto UE. |
+| **Lega** | **7** | A | Vota la ratifica del protocollo con l'Albania. |
+| **Futuro Nazionale** | **7** | B | Più centri per i rimpatri, stop ai decreti flussi «massicci», lavoratori extra-UE solo se necessari. |
 
 **Fonti:**
 
-- *(liv. C)* Politica migratoria: il centrodestra rilancia i centri in Albania e l'attuazione immediata del Patto UE su migrazione e asilo; le opposizioni ne denunciano il fallimento e il costo. Nel 2026 Tirana annuncia che l'accordo non sara' prorogato oltre il 2028.  
-  <https://pagellapolitica.it/articoli/meloni-centri-albania-funzioneranno-2026>
-- *(liv. B)* Programma di Futuro Nazionale, pubblicato l'11 agosto 2026: cittadinanza dopo almeno 20 anni di dimora regolare e livello C1, rifiuto 'categorico e senza possibilita' negoziale' di ius soli e ius scholae; abbassamento della pressione fiscale; sgravi per l'assunzione di manodopera italiana; contro il federalismo europeo, per 'un'Europa di Stati nazionali cooperanti'; l'immigrazione di massa 'sgretola la compattezza di una civilta''.  
-  <https://tg24.sky.it/politica/2026/08/11/vannacci-futuro-nazionale-programma-manifesto>
-- *(liv. B)* Programma elettorale congiunto Azione - Italia Viva, politiche 2022, 56 pagine. Politica industriale: 'concentrare le risorse su strumenti fiscali semplici ed automatici a supporto degli investimenti'. Fisco: 'Non serve inventare nuove tasse, sognare la patrimoniale'. Concorrenza: 'approvare ogni anno leggi sulla concorrenza che rendano la nostra economia piu' libera e meno gravata da barriere all'ingresso'. Reddito di cittadinanza: 'Eliminare il Reddito di Cittadinanza dopo il primo rifiuto e ridurlo dopo 2 anni'. Europa: 'Con una svolta in senso federale delle sue Istituzioni... riaprire il cantiere delle riforme dei Trattati'. Trasporti: completamento di Torino-Lione, Terzo Valico e altre tratte ad alta velocita'. Istituzioni: modello del 'sindaco d'Italia' con riforma del sistema elettorale. Cannabis e matrimonio egualitario NON compaiono nel documento.  
-  <https://www.welforum.it/wp-content/uploads/2022/09/Programma-Azione-Italia-Viva.pdf>
-- *(liv. E)* Dichiarazioni e ricostruzioni sulle posizioni del Partito Liberaldemocratico: Marattin sulla riforma della giustizia, 27 giugno 2025, 'I pm? La riforma e' ok'; sull'immigrazione un 'patto di integrazione' lingua-lavoro-legalita' legato alla programmazione dei flussi; in economia riduzione della spesa pubblica dell'1% l'anno per cinque anni per abolire l'IRAP e azzerare l'IRES, con l'obiettivo di 'ridurre la presenza dello Stato e favorire concorrenza e mercato'.  
-  <https://www.luigimarattin.it/2025/06/27/marattin-libdem-alternativi-a-destra-e-sinistra-i-pm-la-riforma-e-ok/>
-- *(liv. C)* Riccardo Magi e' relatore della proposta di legge di iniziativa popolare 'Ero Straniero', che chiede la regolarizzazione degli stranieri radicati sul territorio che lavorano o hanno legami familiari, sul modello di Spagna e Germania; chiede la riforma della legge Bossi-Fini e definisce i decreti flussi del governo segno di 'totale confusione e mancanza di strategia'; contrario all'accordo con l'Albania.  
+- *(liv. A, verificata il 2026-09-15)* Camera, 24 gennaio 2024: ratifica del protocollo Italia-Albania sui migranti, 155 sì, 115 no, 2 astenuti; a favore la maggioranza, contrarie tutte le opposizioni. Senato, 15 febbraio 2024: 93 sì, 63 no.  
+  <https://www.ilfattoquotidiano.it/2024/01/24/migranti-la-camera-approva-laccordo-con-lalbania-dove-la-corte-costituzionale-e-tornata-a-riunirsi-per-deciderne-la-legittimita/7421033/>
+- *(liv. C, verificata il 2026-09-15)* Riccardo Magi, 11 novembre 2024: il governo ha «l'obbligo di interrompere» i trasferimenti in Albania e deve ritirare l'emendamento sui paesi sicuri.  
   <https://www.piueuropa.eu/migranti_magi_dopo_pronuncia_tribunale_governo_sospenda_missioni_albania_e_ritiri_emendamento_a_dl_flussi>
+- *(liv. B, verificata il 2026-09-15)* Proposte del PLD sull'immigrazione: nessuna restrizione degli ingressi ma programmazione dei flussi, sottolineando lo scarto fra le quote autorizzate e il fabbisogno del mercato del lavoro; «Patto di integrazione lavoro-lingua-legalità»; «la sicurezza pubblica si tutela riducendo l'irregolarità, non ampliandola».  
+  <https://partitoliberaldemocratico.com/immigrazione/>
+- *(liv. C, verificata il 2026-09-15)* Giorgia Meloni, 2026: quando entrerà in vigore il Patto su immigrazione e asilo «i centri funzioneranno esattamente come avrebbero dovuto funzionare dall'inizio».  
+  <https://pagellapolitica.it/articoli/meloni-centri-albania-funzioneranno-2026>
+- *(liv. B, verificata il 2026-09-15)* Programma di Futuro Nazionale per il 2027, prima parte, secondo l'analisi di Pagella Politica: uscita dal lavoro dopo 41 anni di contributi effettivi; ridurre la pressione fiscale; assistenza vincolata alla formazione, e chi rifiuta non va mantenuto con le tasse degli altri; salari affidati alla contrattazione collettiva nazionale; più centri per i rimpatri e stop ai «decreti flussi massicci»; cittadinanza dopo vent'anni di residenza regolare e livello C1; meno poteri all'UE e «meno vincoli assurdi», contro Green Deal, Fit for 55 e scadenze di decarbonizzazione; ritorno al nucleare; riaprire le relazioni economiche con la Russia; separazione delle carriere dei magistrati.  
+  <https://pagellapolitica.it/articoli/programma-futuro-nazionale-vannacci-elezioni-2027>
 
 ---
 
-## 18. Sicurezza e ordine pubblico
+## 21. Sicurezza e ordine pubblico
 
-**Domanda proposta:** Servono pene piu' severe e piu' poteri alle forze dell'ordine.
+*Categoria:* Sicurezza
 
-*Modifica rispetto alla versione attuale:* Eliminato il confronto forzato con 'prevenzione sociale e garanzie individuali'.
+**Affermazione:** Servono pene più severe e più poteri alle forze dell'ordine.
 
-*Direzione:* essere d'accordo corrisponde alla posizione **destra**.
-
+*Direzione:* accordo = destra. *Formulazione:* Invariata.
 
 | Partito | Punteggio | Liv. | Posizione documentata |
 |---|:---:|:---:|---|
-| **AVS** | **1** | A | Voto contrario, con ostruzionismo in aula. |
-| **M5S** | **1** | A | Voto contrario, con ostruzionismo in aula. |
-| **PD** | **1** | A | Voto contrario, con ostruzionismo in aula. |
-| **+Europa** | **1** | F | INFERENZA: tradizione radicale e garantista, opposizione al decreto sicurezza con tutta l'opposizione, impegno di Magi su carceri e diritti. Fiducia alta. |
-| **Italia Viva** | **2** | C | Renzi definisce il decreto 'una minaccia senza precedenti allo Stato di diritto'. |
-| **Azione** | **2** | C | Voto contrario al decreto sicurezza: la sicurezza si ottiene con presenza e controllo del territorio, non con nuovi reati. |
-| **Liberaldemocratico** | **3** | B | Chiede piu' presenza sul territorio e certezza della pena, ma esprime riserve esplicite sull'introduzione di nuovi reati e sull'inasprimento delle pene: contrario con aperture. |
-| **Forza Italia** | **6** | A | Vota il decreto sicurezza. |
-| **Fratelli d'Italia** | **7** | A | Vota il decreto sicurezza, che introduce nuove fattispecie di reato e amplia i poteri di polizia. |
-| **Lega** | **7** | A | Vota il decreto sicurezza. |
-| **Futuro Nazionale** | **7** | C | Pacchetto 'Tolleranza zero': scudo penale per le forze dell'ordine, modifica di legittima difesa e uso delle armi, pene piu' severe. |
+| **AVS** | **1** | A | Voto contrario al decreto sicurezza. |
+| **M5S** | **1** | A | Voto contrario al decreto sicurezza. |
+| **PD** | **1** | A | Voto contrario al decreto sicurezza. |
+| **+Europa** | **1** | A | Voto contrario e referendum abrogativo. Nella codifica precedente era un'inferenza (F). |
+| **Italia Viva** | **1** | A | Vota contro con le altre opposizioni; Renzi attacca il decreto in Senato. |
+| **Azione** | **1** | A | Vota contro il decreto sicurezza. La frase di Calenda citata dalla codifica precedente non compare nella fonte. |
+| **Liberaldemocratico** | **2** | B | Riserve esplicite su nuovi reati e pene più alte, poteri di polizia «proporzionati»; favorevole al presidio del territorio. |
+| **Forza Italia** | **7** | A | Voto favorevole al decreto sicurezza. |
+| **Fratelli d'Italia** | **7** | A | Voto favorevole: nuovi reati e più poteri di polizia. |
+| **Lega** | **7** | A | Voto favorevole al decreto sicurezza. |
+| **Futuro Nazionale** | **7** | C | «Tolleranza zero»: legittima difesa più ampia, uso legittimo delle armi, nessun risarcimento ai criminali. |
 
 **Fonti:**
 
-- *(liv. A)* Decreto sicurezza: approvato dalla Camera il 29 maggio 2025 e dal Senato il 4 giugno 2025 (109 si', 69 no, 1 ast.), diventa legge n. 80 del 9 giugno 2025. PD, M5S e AVS conducono l'ostruzionismo e votano contro.  
-  <https://tg24.sky.it/politica/2025/06/04/decreto-sicurezza-senato-proteste-aula-sospesa>
-- *(liv. C)* Pacchetto sicurezza 'Tolleranza zero' presentato da Roberto Vannacci il 4 marzo 2026 e ribadito nell'agosto 2026: modifica degli articoli 52 e 53 del codice penale su legittima difesa e uso delle armi, 'scudo penale' per le forze dell'ordine, pattugliamento delle strade, pene piu' severe per chi viola le regole durante le manifestazioni. Futuro Nazionale ha depositato emendamenti al decreto sicurezza.  
-  <https://www.ansa.it/sito/notizie/politica/2026/08/10/vannacci-sulla-sicurezza-occorre-la-tolleranza-zero_1206550d-c630-4ef1-9db8-5ddc8dfee1cf.html>
-- *(liv. C)* Azione vota CONTRO il decreto sicurezza alla Camera. Calenda: 'Il problema non e' introdurre qualche nuovo reato o aumentare le pene su quelli esistenti. Il problema e' la presenza e il controllo del territorio'; contesta i 69 reati introdotti dal governo e chiede invece regolazione dei social per i minori, tempo pieno a scuola e piu' presenza delle forze dell'ordine la sera.  
-  <https://www.azione.it/la-settimana-di-azione-8/>
-- *(liv. C)* Matteo Renzi sul decreto sicurezza: rappresenta 'una minaccia senza precedenti allo Stato di diritto', contestando in particolare le norme che autorizzano i servizi segreti; per il leader di Italia Viva la misura e' 'oltre il limite'. Il decreto e' approvato il 4 giugno 2025 con 109 si', 69 no e un astenuto.  
+- *(liv. A, verificata il 2026-09-15)* Camera, 29 maggio 2025: voto finale sulla conversione del decreto sicurezza, 163 sì, 91 no, 1 astenuto. A favore la maggioranza; contrarie compatte le opposizioni (Schlein: «misure repressive»; Fratoianni: «Noi voteremo contro»; Magi: «strappo costituzionale»). Al Senato il 4 giugno il decreto passa con un unico voto di fiducia (109-69), che la codifica esclude.  
+  <https://parlamento19.openpolis.it/votazioni/vs19_487_114>
+- *(liv. A, verificata il 2026-09-15)* Riccardo Magi annuncia in aula il voto contrario di +Europa al decreto sicurezza, «una violazione costituzionale senza precedenti», e un referendum per abrogarlo.  
+  <https://www.piueuropa.eu/dl_sicurezza_magi_faremo_referendum_per_abrogarlo>
+- *(liv. C, verificata il 2026-09-15)* 4 giugno 2025: Matteo Renzi attacca il decreto sicurezza in Senato e accusa i senatori di maggioranza di essere «schiacciabottoni».  
   <https://www.unita.it/2025/06/04/decreto-sicurezza-legge-senato-proteste-opposizione/>
-- *(liv. B)* Pagina di proposte del Partito Liberaldemocratico sulla pubblica sicurezza: 'La sicurezza e' una condizione abilitante della liberta': senza tutela effettiva delle persone e delle comunita', i diritti restano formali'. Propone di rendere strutturale la 'presenza di prossimita'' con un modello 'quartiere/periferie flessibile e misurabile', personale civile in piu' per liberare gli operativi dai compiti amministrativi, e processi penali piu' rapidi per la certezza della pena. Sostiene che 'una politica penale moderna debba essere evidence-based: ridurre la recidiva e' un obiettivo di sicurezza', e mantiene riserve sull'eccessiva criminalizzazione con nuovi reati e pene piu' severe. Sul carcere chiede misure alternative, lavoro e formazione, contro un sovraffollamento al 124,8%.  
+- *(liv. A, verificata il 2026-09-15)* Newsletter di Azione: il partito vota contro il decreto sicurezza alla Camera.  
+  <https://www.azione.it/la-settimana-di-azione-8/>
+- *(liv. B, verificata il 2026-09-15)* Proposte del PLD sulla sicurezza: «riserve dei liberali sul panpenalismo con l'introduzione di nuovi reati» e sull'inasprimento delle pene; processi rapidi; presidio di prossimità nei quartieri; strumenti di polizia «proporzionati e compatibili con la legalità».  
   <https://partitoliberaldemocratico.com/pubblica-sicurezza/>
+- *(liv. C, verificata il 2026-09-15)* Roberto Vannacci, 10 agosto 2026: «tolleranza zero», pattuglie contro lo spaccio, modifica degli articoli 52 e 53 del codice penale su legittima difesa e uso legittimo delle armi, nessun risarcimento ai criminali.  
+  <https://www.ansa.it/sito/notizie/politica/2026/08/10/vannacci-sulla-sicurezza-occorre-la-tolleranza-zero_1206550d-c630-4ef1-9db8-5ddc8dfee1cf.html>
 
 ---
 
-## 19. Separazione delle carriere dei magistrati
+## 22. Separazione delle carriere dei magistrati
 
-**Domanda proposta:** Le carriere dei giudici e dei pubblici ministeri dovrebbero essere separate.
+*Categoria:* Sicurezza
 
-*Modifica rispetto alla versione attuale:* Separata dalla durata dei processi, che era accorpata nella stessa affermazione e su cui sono tutti d'accordo.
+**Affermazione:** Le carriere dei giudici e dei pubblici ministeri dovrebbero essere separate.
 
-*Direzione:* essere d'accordo corrisponde alla posizione **destra**.
-
+*Direzione:* accordo = destra. *Formulazione:* Tolta la durata dei processi, che era una seconda affermazione.
 
 | Partito | Punteggio | Liv. | Posizione documentata |
 |---|:---:|:---:|---|
 | **AVS** | **1** | A | Voto contrario e campagna per il No. |
 | **M5S** | **1** | A | Voto contrario e campagna per il No. |
-| **PD** | **2** | A | Voto contrario e campagna per il No al referendum. |
-| **+Europa** | **7** | A | VOTA A FAVORE pur essendo all'opposizione. |
-| **Italia Viva** | **4** | A | SI ASTIENE: posizione intermedia documentata, non un'incognita. |
-| **Azione** | **7** | A | VOTA A FAVORE pur essendo all'opposizione. |
-| **Liberaldemocratico** | **7** | E | Marattin, 27 giugno 2025: 'I pm? La riforma e' ok'. Coerente con il voto favorevole in aula sul nucleare come partito di opposizione riformista. |
-| **Forza Italia** | **7** | A | Battaglia storica del partito. |
-| **Fratelli d'Italia** | **7** | A | Riforma costituzionale di iniziativa governativa. |
+| **PD** | **1** | A | Voto contrario. Punteggio da 2 a 1, come M5S e AVS, che hanno la stessa evidenza. |
+| **+Europa** | **6** | A | Vota a favore in prima lettura, non partecipa al voto finale; Magi per il Sì al referendum ma con «dubbi profondi». |
+| **Italia Viva** | **4** | A | Si astiene in tutte e quattro le letture. |
+| **Azione** | **7** | A | Vota a favore pur essendo all'opposizione. |
+| **Liberaldemocratico** | **7** | C | Marattin: «L'ho già votata alla Camera e sono pronto a rifarlo». |
+| **Forza Italia** | **7** | A | Voto favorevole. |
+| **Fratelli d'Italia** | **7** | A | Riforma costituzionale del governo. |
 | **Lega** | **7** | A | Voto favorevole. |
-| **Futuro Nazionale** | **7** | C | Schierato per il Si' al referendum del marzo 2026; preferisce giudici scelti da chi ha cariche elettive. |
+| **Futuro Nazionale** | **7** | B | Il programma chiede di separare le carriere dei magistrati. |
 
 **Fonti:**
 
-- *(liv. A)* Riforma costituzionale sulla separazione delle carriere: Camera 16 gennaio 2025 in prima lettura (174 si', 92 no, 5 ast.), Senato 30 ottobre 2025 in via definitiva. Oltre alla maggioranza votano a favore Azione e +Europa; Italia Viva si astiene. Bocciata dal referendum del 23 marzo 2026 (No 53,6%, affluenza 58,9%).  
-  <https://www.youtrend.it/2026/03/23/referendum-giustizia-2026-risultati/>
-- *(liv. E)* Dichiarazioni e ricostruzioni sulle posizioni del Partito Liberaldemocratico: Marattin sulla riforma della giustizia, 27 giugno 2025, 'I pm? La riforma e' ok'; sull'immigrazione un 'patto di integrazione' lingua-lavoro-legalita' legato alla programmazione dei flussi; in economia riduzione della spesa pubblica dell'1% l'anno per cinque anni per abolire l'IRAP e azzerare l'IRES, con l'obiettivo di 'ridurre la presenza dello Stato e favorire concorrenza e mercato'.  
+- *(liv. A, verificata il 2026-09-15)* Riforma costituzionale sulla separazione delle carriere. Camera, prima lettura 16 gennaio 2025 (174 sì, 92 no, 5 astenuti): a favore maggioranza, Azione e +Europa, astenuta Italia Viva. Senato, voto definitivo 30 ottobre 2025 (112 sì, 59 no, 9 astenuti): a favore maggioranza e Azione, Italia Viva astenuta per la quarta volta, contrari PD, M5S e AVS.  
+  <https://www.ilpost.it/2025/10/30/separazione-carriere-senato-voto/>
+- *(liv. C, verificata il 2026-09-15)* Riccardo Magi sul referendum del 2026: «Io a favore ma ho dubbi profondi»; +Europa per il Sì. Magi aveva votato a favore in prima lettura e non ha partecipato al voto finale.  
+  <https://www.piueuropa.eu/referendum_magi_stop_dibattito_tra_mozzaorecchie_per_il_no_e_orbaniani_per_il_si_io_a_favore_ma_ho_dubbi_profondi>
+- *(liv. C, verificata il 2026-09-15)* Luigi Marattin, 27 giugno 2025, sulla separazione delle carriere: «L'ho già votata alla Camera e sono pronto a rifarlo».  
   <https://www.luigimarattin.it/2025/06/27/marattin-libdem-alternativi-a-destra-e-sinistra-i-pm-la-riforma-e-ok/>
-- *(liv. C)* Futuro Nazionale si schiera per il Si' al referendum del marzo 2026 sulla separazione delle carriere: Vannacci sostiene la riforma e preferisce 'un sistema in cui i giudici siano scelti da chi ha cariche elettive piuttosto che lasciarlo alle correnti della magistratura'.  
-  <https://www.quotidiano.net/politica/referendum-giustizia-2026-posizioni-partiti-df6dcacc>
+- *(liv. B, verificata il 2026-09-15)* Programma di Futuro Nazionale per il 2027, prima parte, secondo l'analisi di Pagella Politica: uscita dal lavoro dopo 41 anni di contributi effettivi; ridurre la pressione fiscale; assistenza vincolata alla formazione, e chi rifiuta non va mantenuto con le tasse degli altri; salari affidati alla contrattazione collettiva nazionale; più centri per i rimpatri e stop ai «decreti flussi massicci»; cittadinanza dopo vent'anni di residenza regolare e livello C1; meno poteri all'UE e «meno vincoli assurdi», contro Green Deal, Fit for 55 e scadenze di decarbonizzazione; ritorno al nucleare; riaprire le relazioni economiche con la Russia; separazione delle carriere dei magistrati.  
+  <https://pagellapolitica.it/articoli/programma-futuro-nazionale-vannacci-elezioni-2027>
 
 ---
 
-## 20. Elezione diretta del capo del governo
+## 23. Elezione diretta del capo del governo
 
-**Domanda proposta:** Il Presidente del Consiglio dovrebbe essere eletto direttamente dai cittadini.
+*Categoria:* Istituzioni, Democrazia e PA
 
-*Modifica rispetto alla versione attuale:* Tolto 'per garantire stabilita' e decisione al governo', che era l'argomento a favore incorporato nella domanda.
+**Affermazione:** Il Presidente del Consiglio dovrebbe essere eletto direttamente dai cittadini.
 
-*Direzione:* essere d'accordo corrisponde alla posizione **destra**.
-
+*Direzione:* accordo = destra. *Formulazione:* Tolto 'per garantire stabilità e capacità decisionale', un argomento che spingeva verso il sì.
 
 | Partito | Punteggio | Liv. | Posizione documentata |
 |---|:---:|:---:|---|
 | **AVS** | **1** | A | Voto contrario. |
 | **M5S** | **1** | A | Voto contrario. |
 | **PD** | **1** | A | Voto contrario. |
-| **+Europa** | **2** | A | Voto contrario con le altre opposizioni. |
-| **Italia Viva** | **2** | A | VOTA CONTRO. Nel data.json attuale ha 6, probabilmente per la vicinanza al 'sindaco d'Italia' di Renzi: la retorica e il voto divergono, e il voto e' su questo testo. |
-| **Azione** | **2** | A | VOTA CONTRO. Nel data.json attuale ha 5. |
-| **Liberaldemocratico** | **5** | F | INFERENZA DEBOLE: riformista sulle istituzioni e Marattin viene dall'Italia Viva del 'sindaco d'Italia', ma IV e Azione hanno poi votato contro quel testo. Fiducia bassa: il partito tira in due direzioni. |
+| **+Europa** | **1** | C | Magi: il premierato è «una svolta plebiscitaria e illiberale». |
+| **Italia Viva** | **2** | A | Vota contro questo testo, pur non considerando il premierato «un'eresia». |
+| **Azione** | **2** | A | Vota contro «per metodo e conseguenze»; aveva proposto il modello del 'sindaco d'Italia'. |
+| **Liberaldemocratico** | **—** | — | La cella precedente era un'inferenza (F); nessuna posizione del partito trovata. |
 | **Forza Italia** | **7** | A | Voto favorevole. |
-| **Fratelli d'Italia** | **7** | A | Riforma costituzionale di iniziativa governativa. |
+| **Fratelli d'Italia** | **7** | A | Riforma costituzionale del governo. |
 | **Lega** | **7** | A | Voto favorevole. |
-| **Futuro Nazionale** | **7** | E | Codificata da Leo. |
+| **Futuro Nazionale** | **5** | B | Propone l'elezione diretta del Presidente della Repubblica e la sola «indicazione» del Presidente del Consiglio: elezione diretta del vertice dello Stato, non di questa carica. |
 
 **Fonti:**
 
-- *(liv. A)* Ddl costituzionale sull'elezione diretta del Presidente del Consiglio: Senato, 18 giugno 2024, prima deliberazione (109 si', 77 no, 1 ast.). Favorevoli i partiti di maggioranza, contrarie tutte le opposizioni.  
-  <https://www.ansa.it/amp/sito/notizie/politica/2024/06/12/premierato-il-senato-approva-lart.-5-con-lelezione-diretta-del-presidente-del_5e380035-6c81-471f-a4dd-b71adca22a4d.html>
-- *(liv. E)* Codifica di Leo. Dichiarazione video di Vannacci.  
-  <https://www.youtube.com/watch?v=qlxLY9EFwDo>
-
----
-
-## 21. Autonomia delle regioni
-
-**Domanda proposta:** Le regioni dovrebbero gestire autonomamente materie oggi statali come sanita' e scuola.
-
-*Modifica rispetto alla versione attuale:* Tolto 'anche se questo potrebbe creare differenze territoriali', che incorporava l'obiezione.
-
-*Direzione:* essere d'accordo corrisponde alla posizione **destra**.
-
-
-| Partito | Punteggio | Liv. | Posizione documentata |
-|---|:---:|:---:|---|
-| **AVS** | **1** | A | Voto contrario; promotore del referendum abrogativo. |
-| **M5S** | **1** | A | Voto contrario; promotore del referendum abrogativo. |
-| **PD** | **1** | A | Voto contrario; promotore del referendum abrogativo tramite i consigli regionali. |
-| **+Europa** | **1** | C | Il segretario Magi definisce l'autonomia differenziata una 'svolta plebiscitaria e secessionista'. |
-| **Italia Viva** | **1** | A | Voto contrario al Senato insieme a PD, M5S e AVS. |
-| **Azione** | **4** | A | ASTENSIONE al Senato: critica la legge ma non ne sostiene l'abrogazione referendaria. Posizione intermedia documentata. |
-| **Liberaldemocratico** | **5** | E | Favorevole a un federalismo in cui gli enti locali abbiano 'non molte materie ma chiare, con risorse' e autonomia finanziaria effettiva. |
-| **Forza Italia** | **6** | A | Voto favorevole. |
-| **Fratelli d'Italia** | **6** | A | Voto favorevole come parte dell'accordo di maggioranza. |
-| **Lega** | **7** | A | Legge di iniziativa del ministro Calderoli. |
-| **Futuro Nazionale** | **5** | D | Codificata da Leo, che ha sciolto il caso lasciato aperto come contraddittorio. |
-
-**Fonti:**
-
-- *(liv. A)* Legge Calderoli sull'autonomia differenziata, approvata il 26 giugno 2024 con i voti della maggioranza e il voto contrario delle opposizioni. Nel 2024 la Corte costituzionale ne dichiara illegittime diverse parti; con la sentenza n. 10 del 2025 dichiara inammissibile il referendum abrogativo totale promosso da cinque consigli regionali di centrosinistra.  
-  <https://pagellapolitica.it/articoli/corte-costituzionale-sentenza-autonomia-differenziata>
-- *(liv. C)* Riccardo Magi, segretario di +Europa, in videointervista: premierato e autonomia differenziata sono 'una svolta plebiscitaria e secessionista'; non si tratta di aumentare l'autonomia regionale ma di una tendenza secessionista.  
+- *(liv. A, verificata il 2026-09-15)* Senato, 18 giugno 2024, prima deliberazione del ddl costituzionale sull'elezione diretta del Presidente del Consiglio: 109 sì, 77 no, 1 astenuto. A favore la maggioranza; contrari PD, M5S, AVS, Italia Viva (Borghi: il premierato non è un'eresia, ma questo testo è «una toppa illusoria») e Azione (Calenda: «contrari per metodo e conseguenze»).  
+  <https://www.today.it/politica/premierato-approvato-senato.html>
+- *(liv. C, verificata il 2026-09-15)* Riccardo Magi, 19 giugno 2024, in piazza con le opposizioni contro premierato e autonomia: «una svolta plebiscitaria e illiberale», «una tendenza secessionista».  
   <https://www.ilgiornale.it/video/interni/magi-europa-premierato-e-autonomia-differenziata-svolta-2336393.html>
-- *(liv. A)* Voto al Senato sulla legge Calderoli: 110 favorevoli fra maggioranza e gruppi per le autonomie, 64 contrari fra PD, M5S, AVS e Italia Viva. I senatori di Azione si astengono con 3 voti: Calenda e' critico verso la legge ma contrario al referendum abrogativo, temendo che il mancato quorum rafforzi il governo. Azione e' l'unico partito d'opposizione a non sostenere l'iniziativa referendaria.  
-  <https://www.ilpost.it/2024/07/08/autonomia-referendum-centrosinistra-opposizione-compatta/>
-- *(liv. B)* Proposte del Partito Liberaldemocratico: il principio di sussidiarieta' non si traduce 'automaticamente in monopolio pubblico o erogazione gratuita illimitata a prescindere dalle condizioni economiche dei beneficiari'; produzione di beni pubblici essenziali fra cui 'infrastrutture fisiche e digitali' e connessione dei territori, in particolare le aree interne spopolate; sull'energia 'si' al nucleare subito, senza se e senza ma'; atlantismo fra i valori fondativi.  
-  <https://partitoliberaldemocratico.com/manifesto/>
-- *(liv. E)* Codifica di Leo. Dichiarazione video di Vannacci.  
-  <https://www.youtube.com/watch?v=qlxLY9EFwDo>
+- *(liv. B, verificata il 2026-09-15)* Programma di Futuro Nazionale, seconda parte (24 agosto 2026): «elezione diretta da parte dei cittadini del presidente della Repubblica e l'indicazione del presidente del Consiglio»; contrario all'estensione di matrimonio e adozione alle coppie dello stesso sesso; contrario alla legalizzazione di eutanasia e suicidio assistito; preferenze nella legge elettorale.  
+  <https://pagellapolitica.it/articoli/seconda-parte-programma-futuro-nazionale-elezioni-2027>
 
 ---
 
-## 22. Sistema elettorale
+## 24. Autonomia delle regioni
 
-**Domanda proposta:** Chi vince le elezioni dovrebbe ricevere un premio in seggi che gli garantisca la maggioranza.
+*Categoria:* Istituzioni, Democrazia e PA
 
-*Modifica rispetto alla versione attuale:* RISCRITTA SUL TEMA VIVO: la formulazione attuale sul proporzionale e' superata dalla riforma del 2026, su cui i partiti si sono effettivamente divisi. E' anche il tema su cui avevo segnalato che l'ampiezza dei punteggi andava verificata.
+**Affermazione:** Le regioni dovrebbero gestire autonomamente materie oggi statali come sanità e scuola.
 
-*Direzione:* essere d'accordo corrisponde alla posizione **destra**.
-
+*Direzione:* accordo = destra. *Formulazione:* Invariata.
 
 | Partito | Punteggio | Liv. | Posizione documentata |
 |---|:---:|:---:|---|
-| **AVS** | **2** | A | Voto contrario. |
-| **M5S** | **2** | A | Voto contrario. |
-| **PD** | **2** | A | Voto contrario. |
-| **+Europa** | **1** | C | Contrario al premio di maggioranza: 'un premio abnorme che trasforma una minoranza nel Paese in una maggioranza parlamentare'. Chiede il ritorno al Mattarellum. |
-| **Italia Viva** | **6** | B | Come sopra: programma congiunto. Stessa avvertenza sul voto contrario del 2024. |
-| **Azione** | **6** | B | Il programma propone il modello del 'sindaco d'Italia' con la conseguente riforma del sistema elettorale. ATTENZIONE: nel 2024 Azione ha poi votato contro il premierato. |
-| **Liberaldemocratico** | **3** | F | INFERENZA DEBOLE: da riformista della governabilita' il premio di maggioranza gli converrebbe, da partito piccolo lo penalizza, e la legge lo esclude sulle firme. Fiducia bassa. |
-| **Forza Italia** | **7** | A | Voto favorevole. |
-| **Fratelli d'Italia** | **7** | A | Riforma sostenuta dal governo: premio di 70 seggi alla coalizione sopra il 42%. |
-| **Lega** | **7** | A | Voto favorevole. |
-| **Futuro Nazionale** | **2** | C | Contrario allo Stabilicum, ma con una motivazione probabilmente tattica: la legge penalizza il partito sulle firme e il premio al 42% dipende dalla sua alleanza col centrodestra. |
+| **AVS** | **1** | A | Voto contrario alla legge Calderoli; fra i promotori del referendum abrogativo. |
+| **M5S** | **1** | A | Voto contrario; fra i promotori del referendum abrogativo. |
+| **PD** | **1** | A | Voto contrario; fra i promotori del referendum abrogativo. |
+| **+Europa** | **1** | B | Fra i promotori del referendum abrogativo; Magi parla di «tendenza secessionista». |
+| **Italia Viva** | **1** | A | Voto contrario al Senato; fra i promotori del referendum abrogativo. |
+| **Azione** | **4** | A | Si astiene al Senato e non aderisce al referendum, pur criticando la legge. |
+| **Liberaldemocratico** | **5** | B | Chiede un «vero ed efficiente federalismo» con competenze regionali chiare ed esclusive e autonomia fiscale. |
+| **Forza Italia** | **7** | A | Voto favorevole alla legge Calderoli. Punteggio da 6 a 7: nessuna fonte documenta riserve. |
+| **Fratelli d'Italia** | **7** | A | Voto favorevole alla legge Calderoli. Punteggio da 6 a 7: nessuna fonte documenta riserve. |
+| **Lega** | **7** | A | Legge del ministro Calderoli. |
+| **Futuro Nazionale** | **—** | — | La cella precedente si basava su un video non trascritto; il programma non ne parla. |
 
 **Fonti:**
 
-- *(liv. A)* Nuova legge elettorale ('Stabilicum'): approvata dalla Camera nel luglio 2026 (217 si', 152 no, 2 ast.) e trasmessa al Senato. ATTENZIONE: il voto e' avvenuto a SCRUTINIO SEGRETO, con 114 votazioni segrete sugli emendamenti: per i partiti non citati esplicitamente nelle cronache l'attribuzione del voto e' impossibile, e le celle restano vuote. Sistema proporzionale con premio di maggioranza di 70 seggi alla Camera alla coalizione che superi il 42%, liste bloccate e obbligo di indicare il candidato premier.  
-  <https://www.agi.it/politica/news/2026-07-16/legge-elettorale-cosa-prevede-38066645/>
-- *(liv. B)* Programma elettorale congiunto Azione - Italia Viva, politiche 2022, 56 pagine. Politica industriale: 'concentrare le risorse su strumenti fiscali semplici ed automatici a supporto degli investimenti'. Fisco: 'Non serve inventare nuove tasse, sognare la patrimoniale'. Concorrenza: 'approvare ogni anno leggi sulla concorrenza che rendano la nostra economia piu' libera e meno gravata da barriere all'ingresso'. Reddito di cittadinanza: 'Eliminare il Reddito di Cittadinanza dopo il primo rifiuto e ridurlo dopo 2 anni'. Europa: 'Con una svolta in senso federale delle sue Istituzioni... riaprire il cantiere delle riforme dei Trattati'. Trasporti: completamento di Torino-Lione, Terzo Valico e altre tratte ad alta velocita'. Istituzioni: modello del 'sindaco d'Italia' con riforma del sistema elettorale. Cannabis e matrimonio egualitario NON compaiono nel documento.  
-  <https://www.welforum.it/wp-content/uploads/2022/09/Programma-Azione-Italia-Viva.pdf>
-- *(liv. C)* Riccardo Magi sulla nuova legge elettorale: 'uno sfregio alla Costituzione che aumentera' l'astensionismo'; 'Non si votera' piu' per il Parlamento, ma per il capo'; denuncia 'un premio di maggioranza abnorme che trasforma una minoranza nel Paese in una maggioranza parlamentare', dato che il premio scatta al 42% mentre la legge del 1953 lo legava al 50%. +Europa chiede il ritorno al Mattarellum e di vincolare il premio a un'affluenza minima del 70%.  
-  <https://www.piueuropa.eu/l_elettorale_magi_uno_sfregio_alla_costituzione_che_aumenter_l_astensionismo>
-- *(liv. C)* Vannacci attacca da giorni la nuova legge elettorale con video contro il governo sui social. Il contesto e' rilevante: senza Futuro Nazionale la maggioranza rischia di non raggiungere il 42% necessario a far scattare il premio, e la legge contiene una norma sulle firme che penalizza il partito. ATTENZIONE: l'opposizione appare tattica piu' che di principio.  
-  <https://www.ilpoliticoweb.it/legge-elettorale-anti-vannacci-melonellum/>
+- *(liv. A, verificata il 2026-09-15)* Senato, 23 gennaio 2024: approvata la legge Calderoli sull'autonomia differenziata, 110 sì, 64 no, 3 astenuti. A favore la maggioranza e il gruppo per le autonomie; contrari PD, M5S, AVS e Italia Viva; astenuti i senatori di Azione. Approvazione definitiva alla Camera a fine giugno 2024; a novembre 2024 la Corte costituzionale ne dichiara illegittime sette disposizioni.  
+  <http://www.sanita24.ilsole24ore.com/art/in-parlamento/2024-01-23/ddl-autonomia-via-libera-senato-110-si-passa-camera-calderoli-risposta-dovuta-14-regioni-statuto-ordinario-che-avevano-chiesto-190257.php?uuid=AFBFWYRC>
+- *(liv. B, verificata il 2026-09-15)* Luglio 2024: promuovono il referendum abrogativo della legge Calderoli PD, M5S, AVS, +Europa e Italia Viva; Azione non vi aderisce, pur criticando la legge.  
+  <https://www.ilpost.it/2024/07/08/autonomia-referendum-centrosinistra-opposizione-compatta/>
+- *(liv. B, verificata il 2026-09-15)* Riforme istituzionali del PLD: un «vero ed efficiente federalismo» con competenze regionali «chiare ed esclusive», «uno strumento fiscale esclusivo e manovrabile» e perequazione; per la legge elettorale solo due modelli, «un sistema maggioritario a doppio turno, sul modello di quello in vigore in Francia» oppure «un sistema interamente proporzionale con sbarramento e con preferenze».  
+  <https://partitoliberaldemocratico.com/riformeistituzionali/>
+
+---
+
+## 25. Premio di maggioranza
+
+*Categoria:* Istituzioni, Democrazia e PA
+
+**Affermazione:** Chi vince le elezioni dovrebbe ricevere un premio in seggi che gli garantisca la maggioranza.
+
+*Direzione:* accordo = destra. *Formulazione:* Riscritta. La versione precedente chiedeva un proporzionale «anche a costo di governi meno stabili», un argomento incorporato; ora la domanda riguarda la scelta votata dalla Camera nel luglio 2026.
+
+| Partito | Punteggio | Liv. | Posizione documentata |
+|---|:---:|:---:|---|
+| **AVS** | **1** | A | Voto contrario allo Stabilicum. |
+| **M5S** | **1** | A | Voto contrario allo Stabilicum. |
+| **PD** | **1** | A | Voto contrario allo Stabilicum. |
+| **+Europa** | **1** | A | Voto contrario allo Stabilicum. |
+| **Italia Viva** | **2** | A | Voto contrario, dopo aver proposto nel 2022 il modello del 'sindaco d'Italia'. Nella codifica precedente aveva 6 sulla base di quel programma. |
+| **Azione** | **2** | A | Voto contrario, dopo aver proposto nel 2022 il 'sindaco d'Italia'. Nella codifica precedente aveva 6. |
+| **Liberaldemocratico** | **3** | B | Ammette solo il doppio turno alla francese o il proporzionale con sbarramento: cerca la stabilità, ma senza premio di maggioranza. Nella codifica precedente era un'inferenza (F). |
+| **Forza Italia** | **7** | A | Voto favorevole. |
+| **Fratelli d'Italia** | **7** | A | Voto favorevole; riforma sostenuta dal governo. |
+| **Lega** | **7** | A | Voto favorevole. |
+| **Futuro Nazionale** | **2** | A | Voto contrario, probabilmente tattico: il premio dipende dall'alleanza col centrodestra. |
+
+**Fonti:**
+
+- *(liv. A, verificata il 2026-09-15)* Camera, 16 luglio 2026: approvato lo Stabilicum, proporzionale con premio di 70 seggi alla Camera e 35 al Senato per la coalizione sopra il 42%, 217 sì, 152 no, 2 astenuti. A favore la maggioranza; contrarie tutte le opposizioni, compresa Futuro Nazionale.  
+  <https://www.cronacaonline.it/index.php/2026/07/17/legge-elettorale-alla-camera-via-libera-con-217-si-e-152-no-lo-stabilicum-ora-passa-al-senato/>
+- *(liv. B, verificata il 2026-09-15)* Riforme istituzionali del PLD: un «vero ed efficiente federalismo» con competenze regionali «chiare ed esclusive», «uno strumento fiscale esclusivo e manovrabile» e perequazione; per la legge elettorale solo due modelli, «un sistema maggioritario a doppio turno, sul modello di quello in vigore in Francia» oppure «un sistema interamente proporzionale con sbarramento e con preferenze».  
+  <https://partitoliberaldemocratico.com/riformeistituzionali/>
 
 ---
