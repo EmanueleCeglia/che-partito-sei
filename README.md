@@ -21,14 +21,15 @@ All 275 cells — 11 parties × 25 questions — are recorded in
 
 | Level | Meaning | Cells |
 |:---:|---|---:|
-| **A** | Recorded parliamentary vote on that specific measure | 131 |
-| **B** | Party programme, statute, bill or official document | 53 |
-| **C** | Dated statement by the party leadership | 60 |
-| **E** | Position reported by the press, no party act or document | 8 |
+| **A** | Recorded parliamentary vote on that specific measure | 130 |
+| **B** | Party programme, statute, bill or official document | 56 |
+| **C** | Dated statement by the party leadership | 59 |
+| **E** | Position reported by the press, no party act or document | 7 |
 | — | **No documented position**: excluded from the calculation | 23 |
 
-Every source cited was re-read on 2026-09-15 (version 3.0), and each description reports only what the
-source actually says. A source that turned out not to contain what was attributed to it was replaced,
+Every source cited was re-read when the cell was coded — 2026-09-15 for version 3.0, 2026-09-16 for the
+question on EU climate targets added in 3.1 — and each description reports only what the source
+actually says. A source that turned out not to contain what was attributed to it was replaced,
 or the cell was left empty. There are no inferences left: the level D reconstructions and level F
 guesses of earlier versions were either backed by evidence or removed. An empty cell is not a 4 — the
 party is simply compared on fewer questions.
@@ -51,9 +52,9 @@ The questions were rewritten to remove three defects common to this kind of quiz
 - **Embedded arguments.** "The Prime Minister should be directly elected *to guarantee stability and
   decisiveness*" pushes toward yes. The rationale was removed.
 - **Directional imbalance.** People agree more readily than they disagree. If most statements are
-  phrased so that agreeing means "left", results drift left. Two questions (cannabis and the 2035
-  combustion-engine rule) are therefore deliberately inverted, bringing the balance to 12 / 12 with one
-  genuinely ambiguous item (retirement age).
+  phrased so that agreeing means "left", results drift left. Three questions (cannabis, the 2035
+  combustion-engine rule and the EU emission targets) are therefore deliberately inverted, bringing the
+  balance to 12 / 12 with one genuinely ambiguous item (retirement age).
 
 Each question in `POSIZIONI_E_FONTI.md` records what was changed and why.
 

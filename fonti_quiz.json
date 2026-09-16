@@ -1,8 +1,8 @@
 {
   "_meta": {
-    "versione": "v3.0",
-    "data_codifica": "2026-09-15",
-    "nota": "Codifica verificata cella per cella: ogni fonte citata è stata riletta o confermata il 2026-09-15 e la descrizione riporta solo ciò che contiene. Dove non esiste una posizione documentata la cella è null ed è esclusa dal calcolo. Le inferenze senza fonte (livello F) e le ricostruzioni indirette (livello D) della codifica precedente sono state sostituite da evidenza oppure portate a null.",
+    "versione": "v3.1",
+    "data_codifica": "2026-09-16",
+    "nota": "Codifica verificata cella per cella: ogni fonte citata è stata riletta o confermata alla data indicata nel campo verificata e la descrizione riporta solo ciò che contiene. Dove non esiste una posizione documentata la cella è null ed è esclusa dal calcolo. Le inferenze senza fonte (livello F) e le ricostruzioni indirette (livello D) della codifica precedente sono state sostituite da evidenza oppure portate a null.",
     "scala": {
       "7": "favorevole in modo netto e attivo (voto favorevole, proposta propria)",
       "6": "favorevole con riserve o in versione attenuata",
@@ -186,12 +186,6 @@
       "descrizione": "Carlo Calenda, 15 febbraio 2025: «Che i grandi patrimoni debbano pagare più tasse è una cosa corretta. Il problema, come per molte cose proposte dalla sinistra, è l'applicazione». In un'intervista a ItaliaOggi: «le tasse vanno tagliate. No a patrimoniale e tasse di successione».",
       "verificata": "2026-09-15"
     },
-    "calenda_ponte_2025": {
-      "livello": "C",
-      "url": "https://www.agenzianova.com/a/68949a06a5ccc7.85892380/6428897/2025-08-07/ponte-stretto-calenda-manca-progetto-esecutivo-cosa-faranno-operai-a-settembre",
-      "descrizione": "Carlo Calenda, 7 agosto 2025: «manca il progetto esecutivo, cosa faranno gli operai a settembre?».",
-      "verificata": "2026-09-15"
-    },
     "calenda_quota41": {
       "livello": "C",
       "url": "https://pagellapolitica.it/fact-checking/costo-quota-41-pensioni",
@@ -221,6 +215,18 @@
       "url": "https://tg24.sky.it/politica/2022/09/22/cannabis-programmi-elettorali-confronto",
       "descrizione": "Programmi 2022 sulla cannabis. +Europa: legalizzazione e coltivazione domestica fino a quattro piante. PD: «è il momento di legalizzare l'autoproduzione di cannabis per uso personale». Sinistra Italiana-Verdi: legalizzare la coltivazione domestica e cancellare le sanzioni. M5S: «regolamentare la coltivazione per uso personale». Centrodestra: «combattere lo spaccio con ogni mezzo». Azione-IV: nessuna menzione; Calenda si era detto favorevole alla legalizzazione; Italia Viva ha promosso i cannabis shop ma si è astenuta sulla coltivazione domestica.",
       "verificata": "2026-09-15"
+    },
+    "clima_2040_greenreport": {
+      "livello": "E",
+      "url": "https://www.greenreport.it/news/crisi-climatica-e-adattamento/60079-approvata-la-nuova-legge-ue-sul-clima-90-emissioni-al-2040-ma-in-italia-stanno-crescendo",
+      "descrizione": "Greenreport sul voto del 10 febbraio 2026: «in Italia i soli voti contrari sono stati quelli della Lega salviniana e di Vannacci». La legge fissa «un taglio pari almeno al 90% delle emissioni di gas serra rispetto al 1990» al 2040, con fino al 5% di crediti internazionali dal 2036 e il rinvio dell'ETS2 al 2028.",
+      "verificata": "2026-09-16"
+    },
+    "clima_2040_voto_2026": {
+      "livello": "A",
+      "url": "https://howtheyvote.eu/votes/184178",
+      "descrizione": "Parlamento europeo, 10 febbraio 2026: approvata la modifica della legge europea sul clima con l'obiettivo vincolante di ridurre le emissioni nette del 90% entro il 2040 (413 sì, 226 no, 12 astenuti). Gli eurodeputati italiani votano 57 a favore e 7 contrari, nessun astenuto. Per gruppo: Patriots for Europe, dove siede la Lega, 71 contrari su 71; ECR, dove siede Fratelli d'Italia, 23 favorevoli e 50 contrari; PPE (Forza Italia) 107 favorevoli; S&D (PD), Verdi (AVS) e The Left (M5S) compatti a favore.",
+      "verificata": "2026-09-16"
     },
     "conte_ilva": {
       "livello": "C",
@@ -282,12 +288,6 @@
       "descrizione": "Il Post, 18 agosto 2026, sul programma economico di Futuro Nazionale: un «Fondo sovrano per la crescita nazionale» come strumento di investimento pubblico, uso del golden power per limitare operazioni di mercato, intervento dello Stato contro una globalizzazione «dominata dalle multinazionali».",
       "verificata": "2026-09-15"
     },
-    "fn_ponte": {
-      "livello": "C",
-      "url": "https://www.strettoweb.com/2026/05/roberto-vannacci-a-palermo-si-al-ponte-sullo-stretto-attirera-capitali-ed-altre-infrastrutture/2094017/",
-      "descrizione": "Roberto Vannacci a Palermo, maggio 2026: «siamo a favore di qualsiasi infrastruttura e questo vale anche per il ponte sullo Stretto».",
-      "verificata": "2026-09-15"
-    },
     "fn_salario_minimo": {
       "livello": "C",
       "url": "https://pagellapolitica.it/articoli/futuro-nazionale-vannacci-salario-minimo",
@@ -317,6 +317,12 @@
       "url": "https://www.ilpost.it/2025/10/30/separazione-carriere-senato-voto/",
       "descrizione": "Riforma costituzionale sulla separazione delle carriere. Camera, prima lettura 16 gennaio 2025 (174 sì, 92 no, 5 astenuti): a favore maggioranza, Azione e +Europa, astenuta Italia Viva. Senato, voto definitivo 30 ottobre 2025 (112 sì, 59 no, 9 astenuti): a favore maggioranza e Azione, Italia Viva astenuta per la quarta volta, contrari PD, M5S e AVS.",
       "verificata": "2026-09-15"
+    },
+    "green_deal_leader_2025": {
+      "livello": "C",
+      "url": "https://quifinanza.it/green/ambiente/green-deal-posizione-partiti-italiani/866629/",
+      "descrizione": "Posizioni dei leader sul Green Deal. Meloni: «inseguire la decarbonizzazione al prezzo della deindustrializzazione è semplicemente un suicidio». Salvini definisce il Green Deal un «suicidio commerciale, industriale e ambientale». Tajani propone un «Green Deal realistico» e la neutralità tecnologica. Schlein: «il Green Deal deve proseguire».",
+      "verificata": "2026-09-16"
     },
     "ius_scholae_voto_2024": {
       "livello": "A",
@@ -468,12 +474,6 @@
       "descrizione": "Luigi Marattin, 11 luglio 2026: «Aver tenuto la barra dritta sulle pensioni, anzi aver reso la riforma Fornero più cogente, è una cosa di cui questo governo si vergogna», cioè di cui dovrebbe invece rivendicare il merito.",
       "verificata": "2026-09-15"
     },
-    "marattin_ponte": {
-      "livello": "E",
-      "url": "https://www.ilriformista.it/ponte-sullo-stretto-lopposizione-di-principio-del-centrosinistra-che-diventa-un-assist-per-salvini-477418/",
-      "descrizione": "Il Riformista, 11 agosto 2025: fra i leader d'opposizione «solo Luigi Marattin si è detto favorevole, senza se e senza ma».",
-      "verificata": "2026-09-15"
-    },
     "meloni_albania": {
       "livello": "C",
       "url": "https://pagellapolitica.it/articoli/meloni-centri-albania-funzioneranno-2026",
@@ -502,12 +502,6 @@
       "livello": "C",
       "url": "https://pagellapolitica.it/articoli/posizioni-partiti-riconoscimento-palestina",
       "descrizione": "Estate 2025. Meloni (26 luglio): riconoscere la Palestina «senza che ci sia uno Stato» sarebbe controproducente. Salvini (1 agosto): «fino a che è controllato dai terroristi» è «un errore». Tajani (4 agosto): prima «deve esserci lo Stato palestinese». Schlein: «riconoscerei immediatamente». Conte, AVS (31 luglio) e Calenda (30 luglio) per il riconoscimento subito. Italia Viva: «due popoli, due Stati», senza chiedere il riconoscimento immediato.",
-      "verificata": "2026-09-15"
-    },
-    "pagella_ponte_2023": {
-      "livello": "C",
-      "url": "https://pagellapolitica.it/articoli/posizioni-partiti-ponte-sullo-stretto",
-      "descrizione": "Dicembre 2023: FdI, Lega e FI favorevoli; Italia Viva ha votato a favore del decreto; Azione ha votato a favore ma critica la capacità del governo di realizzarlo; PD in piazza contro l'opera; M5S storicamente contrario; AVS la giudica uno spreco di risorse.",
       "verificata": "2026-09-15"
     },
     "patrimoniale_feb2025": {
@@ -546,17 +540,17 @@
       "descrizione": "Riccardo Magi annuncia in aula il voto contrario di +Europa al decreto sicurezza, «una violazione costituzionale senza precedenti», e un referendum per abrogarlo.",
       "verificata": "2026-09-15"
     },
-    "piueuropa_ponte_2023": {
-      "livello": "C",
-      "url": "https://www.messinaora.it/notizia/2023/04/16/ponte-sullo-stretto-allassemblea-di-piu-europa-odg-di-palmira-mancuso-accolto-dal-segretario-riccardo-magi/164333",
-      "descrizione": "Assemblea di +Europa, aprile 2023: ordine del giorno accolto dal segretario Magi che definisce il Ponte privo di copertura finanziaria e «un enorme spreco di denaro pubblico».",
-      "verificata": "2026-09-15"
-    },
     "piueuropa_programma": {
       "livello": "B",
       "url": "https://www.piueuropa.eu/una_generazione_avanti_il_programma_elettorale_di_europa",
       "descrizione": "Programma elettorale 2022 di +Europa 'Una Generazione Avanti': «Riduzione graduale in 5 anni del rapporto debito pubblico/Pil», piani quinquennali di riduzione del debito, principio di equità generazionale in Costituzione; «Aumentare dell'1% del Pil in 5 anni la spesa per l'istruzione».",
       "verificata": "2026-09-15"
+    },
+    "pld_clima": {
+      "livello": "C",
+      "url": "https://energiaoltre.it/la-ricetta-del-partito-liberaldemocratico-per-energia-autonoma-pulita-e-a-buon-prezzo-serve-un-mix-di-rinnovabili-e-nucleare/",
+      "descrizione": "Ricetta energetica del Partito Liberaldemocratico: un mix di rinnovabili e nucleare per un'energia autonoma, pulita e a buon prezzo; gli eventi di questi decenni mostrano che bisogna procedere «riducendo al massimo le emissioni di anidride carbonica».",
+      "verificata": "2026-09-16"
     },
     "pld_europa": {
       "livello": "B",
@@ -606,12 +600,6 @@
       "descrizione": "Proposte del PLD sulla sicurezza: «riserve dei liberali sul panpenalismo con l'introduzione di nuovi reati» e sull'inasprimento delle pene; processi rapidi; presidio di prossimità nei quartieri; strumenti di polizia «proporzionati e compatibili con la legalità».",
       "verificata": "2026-09-15"
     },
-    "ponte_decreto_2023": {
-      "livello": "A",
-      "url": "https://www.ilfattoquotidiano.it/2023/05/16/ponte-sullo-stretto-la-camera-approva-il-decreto-legge-con-182-si-ora-passa-al-senato/",
-      "descrizione": "Camera, 16 maggio 2023: approvato il decreto che rilancia il Ponte sullo Stretto, 182 sì, 93 no, 1 astenuto. A favore la maggioranza e il gruppo Azione-Italia Viva (Rosato: «giusto realizzarlo»); contrarie le altre opposizioni.",
-      "verificata": "2026-09-15"
-    },
     "premierato": {
       "livello": "A",
       "url": "https://www.today.it/politica/premierato-approvato-senato.html",
@@ -629,6 +617,12 @@
       "url": "https://pagellapolitica.it/articoli/seconda-parte-programma-futuro-nazionale-elezioni-2027",
       "descrizione": "Programma di Futuro Nazionale, seconda parte (24 agosto 2026): «elezione diretta da parte dei cittadini del presidente della Repubblica e l'indicazione del presidente del Consiglio»; contrario all'estensione di matrimonio e adozione alle coppie dello stesso sesso; contrario alla legalizzazione di eutanasia e suicidio assistito; preferenze nella legge elettorale.",
       "verificata": "2026-09-15"
+    },
+    "programmi_clima_2024": {
+      "livello": "B",
+      "url": "https://pagellapolitica.it/articoli/cambiamenti-climatici-confronto-tra-programmi-elezioni-europee-2024",
+      "descrizione": "Programmi per le europee 2024 sul clima. AVS: «difendere e rafforzare il Green deal», 100% rinnovabili entro il 2040. M5S: rafforzare il Green Deal con quattordici proposte. PD: difendere e consolidare la leadership climatica europea. Forza Italia: passare «da un Green Deal ideologico a un Green Deal realistico». Fratelli d'Italia: cambiare le «eco-follie del Green Deal». Lega: rivedere il Green Deal «da cima a fondo». Azione: riformare il Green Deal, rinviare gli obiettivi 2030 «almeno al 2035» e «rifiutare ulteriori innalzamenti dei target di decarbonizzazione». Stati Uniti d'Europa (Italia Viva e +Europa): proseguire la lotta climatica ispirandosi «a un principio di ragionevolezza e gradualità», tutelando industria e occupazione.",
+      "verificata": "2026-09-16"
     },
     "proposta_unitaria_salario_2023": {
       "livello": "B",
@@ -2126,86 +2120,110 @@
       }
     },
     {
-      "id": "ponte",
+      "id": "clima_2040",
       "categoria": "Trans.Ecologica ed Energia",
-      "tema": "Ponte sullo Stretto",
-      "testo": "L'Italia dovrebbe realizzare il Ponte sullo Stretto di Messina.",
-      "direzione_accordo": "accordo = destra",
-      "nota_formulazione": "Ridotta al Ponte: la versione precedente contrapponeva le grandi opere al trasporto locale ed era un'affermazione doppia.",
-      "invertita": false,
+      "tema": "Obiettivi climatici europei",
+      "testo": "L'Unione europea dovrebbe mantenere i propri obiettivi di riduzione delle emissioni.",
+      "direzione_accordo": "accordo = sinistra",
+      "nota_formulazione": "Sostituisce la domanda sul Ponte sullo Stretto, giudicata troppo legata a una singola opera. Il tema è generale e ha un voto registrato recente, quello del 10 febbraio 2026 sull'obiettivo 2040. Invertita nel quiz per mantenere il bilanciamento 12/12 dopo l'uscita del Ponte.",
+      "invertita": true,
+      "testo_quiz": "L'Unione europea dovrebbe rivedere al ribasso i propri obiettivi di riduzione delle emissioni.",
       "posizioni": {
         "AVS": {
-          "punteggio": 1,
+          "punteggio": 7,
           "livello": "A",
-          "fonte": "ponte_decreto_2023",
-          "evidenza": "Voto contrario al decreto del 2023; giudica l'opera uno spreco."
+          "fonte": "clima_2040_voto_2026",
+          "evidenza": "Gli eurodeputati votano a favore dell'obiettivo 2040; il programma chiede di «difendere e rafforzare il Green deal» e il 100% di rinnovabili entro il 2040.",
+          "altre_fonti": [
+            "programmi_clima_2024"
+          ]
         },
         "M5S": {
-          "punteggio": 1,
+          "punteggio": 7,
           "livello": "A",
-          "fonte": "ponte_decreto_2023",
-          "evidenza": "Voto contrario al decreto del 2023; storicamente contrario."
+          "fonte": "clima_2040_voto_2026",
+          "evidenza": "Gli eurodeputati votano a favore dell'obiettivo 2040; il programma chiede di rafforzare il Green Deal.",
+          "altre_fonti": [
+            "programmi_clima_2024"
+          ]
         },
         "PD": {
-          "punteggio": 1,
+          "punteggio": 7,
           "livello": "A",
-          "fonte": "ponte_decreto_2023",
-          "evidenza": "Voto contrario al decreto del 2023; in piazza contro l'opera a dicembre 2023.",
+          "fonte": "clima_2040_voto_2026",
+          "evidenza": "Gli eurodeputati votano a favore dell'obiettivo 2040; Schlein: «il Green Deal deve proseguire».",
           "altre_fonti": [
-            "pagella_ponte_2023"
+            "programmi_clima_2024",
+            "green_deal_leader_2025"
           ]
         },
         "+Europa": {
-          "punteggio": 1,
-          "livello": "C",
-          "fonte": "piueuropa_ponte_2023",
-          "evidenza": "Assemblea del partito: «un enorme spreco di denaro pubblico»."
+          "punteggio": 5,
+          "livello": "B",
+          "fonte": "programmi_clima_2024",
+          "evidenza": "Programma della lista Stati Uniti d'Europa: proseguire «con ragionevolezza e gradualità», tutelando industria e occupazione. Nessun eurodeputato dalla legislatura 2024."
         },
         "Italia Viva": {
-          "punteggio": 7,
-          "livello": "A",
-          "fonte": "ponte_decreto_2023",
-          "evidenza": "Vota a favore del decreto del 2023 (gruppo Azione-Italia Viva). La fonte precedente era il programma su altre opere."
+          "punteggio": 5,
+          "livello": "B",
+          "fonte": "programmi_clima_2024",
+          "evidenza": "Programma della lista Stati Uniti d'Europa: proseguire «con ragionevolezza e gradualità», tutelando industria e occupazione. Nessun eurodeputato dalla legislatura 2024."
         },
         "Azione": {
-          "punteggio": 5,
-          "livello": "A",
-          "fonte": "ponte_decreto_2023",
-          "evidenza": "Vota a favore del decreto del 2023, ma critica la capacità del governo di realizzarlo: «manca il progetto esecutivo» (Calenda, 2025).",
-          "altre_fonti": [
-            "pagella_ponte_2023",
-            "calenda_ponte_2025"
-          ]
+          "punteggio": 2,
+          "livello": "B",
+          "fonte": "programmi_clima_2024",
+          "evidenza": "Chiede di rinviare gli obiettivi 2030 «almeno al 2035» e di «rifiutare ulteriori innalzamenti dei target di decarbonizzazione». Nessun eurodeputato dalla legislatura 2024."
         },
         "Liberaldemocratico": {
-          "punteggio": 7,
-          "livello": "E",
-          "fonte": "marattin_ponte",
-          "evidenza": "Marattin, unico leader d'opposizione «favorevole, senza se e senza ma»."
+          "punteggio": 5,
+          "livello": "C",
+          "fonte": "pld_clima",
+          "evidenza": "Sostiene un'energia pulita «riducendo al massimo le emissioni», ma con neutralità tecnologica e nucleare nel mix: favorevole con condizioni sui mezzi. Non si pronuncia sui singoli obiettivi.",
+          "altre_fonti": [
+            "pld_europa"
+          ]
         },
         "Forza Italia": {
-          "punteggio": 7,
+          "punteggio": 5,
           "livello": "A",
-          "fonte": "ponte_decreto_2023",
-          "evidenza": "Voto favorevole."
+          "fonte": "clima_2040_voto_2026",
+          "evidenza": "Gli eurodeputati del PPE, compresa Forza Italia, votano a favore dell'obiettivo 2040 nella versione con le flessibilità; il programma chiede però di passare «da un Green Deal ideologico a un Green Deal realistico».",
+          "altre_fonti": [
+            "programmi_clima_2024"
+          ]
         },
         "Fratelli d'Italia": {
-          "punteggio": 7,
+          "punteggio": 4,
           "livello": "A",
-          "fonte": "ponte_decreto_2023",
-          "evidenza": "Voto favorevole; opera di bandiera del governo."
+          "fonte": "clima_2040_voto_2026",
+          "evidenza": "DIVERGENZA DOCUMENTATA: la delegazione non è fra i sette contrari italiani e l'obiettivo 2040 passa con i voti favorevoli della maggior parte dell'ECR, ma il programma parla di «eco-follie del Green Deal» e Meloni definisce «un suicidio» la decarbonizzazione a scapito dell'industria.",
+          "altre_fonti": [
+            "programmi_clima_2024",
+            "green_deal_leader_2025",
+            "clima_2040_greenreport"
+          ]
         },
         "Lega": {
-          "punteggio": 7,
+          "punteggio": 1,
           "livello": "A",
-          "fonte": "ponte_decreto_2023",
-          "evidenza": "Voto favorevole; progetto del ministro Salvini."
+          "fonte": "clima_2040_voto_2026",
+          "evidenza": "Gli eurodeputati votano contro l'obiettivo 2040; Salvini definisce il Green Deal un «suicidio commerciale, industriale e ambientale» e il programma chiede di rivederlo «da cima a fondo».",
+          "altre_fonti": [
+            "clima_2040_greenreport",
+            "programmi_clima_2024",
+            "green_deal_leader_2025"
+          ]
         },
         "Futuro Nazionale": {
-          "punteggio": 7,
-          "livello": "C",
-          "fonte": "fn_ponte",
-          "evidenza": "Vannacci: «siamo a favore di qualsiasi infrastruttura e questo vale anche per il ponte sullo Stretto»."
+          "punteggio": 1,
+          "livello": "A",
+          "fonte": "clima_2040_greenreport",
+          "evidenza": "Vannacci vota contro l'obiettivo 2040; il programma è contro il Green Deal, il pacchetto Fit for 55 e le scadenze di decarbonizzazione.",
+          "altre_fonti": [
+            "clima_2040_voto_2026",
+            "programma_fn_2026"
+          ]
         }
       }
     },

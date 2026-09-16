@@ -1,18 +1,19 @@
 {
   "_meta": {
-    "versione": "v3.0",
-    "aggiornato": "2026-09-15",
+    "versione": "v3.1",
+    "aggiornato": "2026-09-16",
     "generato_da": "build_data.py a partire da fonti_quiz.json: non modificare a mano",
     "nota": "I punteggi null indicano una posizione non documentata e sono esclusi dal calcolo. Nelle domande invertite il punteggio e' specchiato (8 meno il valore documentato).",
     "domande_invertite": [
       "Cannabis",
-      "Auto e obiettivi climatici"
+      "Auto e obiettivi climatici",
+      "Obiettivi climatici europei"
     ],
     "celle_per_livello": {
-      "A": 131,
-      "B": 53,
-      "C": 60,
-      "E": 8,
+      "A": 130,
+      "B": 56,
+      "C": 59,
+      "E": 7,
       "null": 23
     }
   },
@@ -409,22 +410,23 @@
         },
         {
           "id": "q19",
-          "key": "ponte",
-          "theme": "Ponte sullo Stretto",
-          "text": "L'Italia dovrebbe realizzare il Ponte sullo Stretto di Messina.",
+          "key": "clima_2040",
+          "theme": "Obiettivi climatici europei",
+          "text": "L'Unione europea dovrebbe rivedere al ribasso i propri obiettivi di riduzione delle emissioni.",
           "scores": {
             "AVS": 1,
             "M5S": 1,
             "PD": 1,
-            "+Europa": 1,
-            "Italia Viva": 7,
-            "Azione": 5,
-            "Liberaldemocratico": 7,
-            "Forza Italia": 7,
-            "Fratelli d'Italia": 7,
+            "+Europa": 3,
+            "Italia Viva": 3,
+            "Azione": 6,
+            "Liberaldemocratico": 3,
+            "Forza Italia": 3,
+            "Fratelli d'Italia": 4,
             "Lega": 7,
             "Futuro Nazionale": 7
-          }
+          },
+          "invertita": true
         }
       ]
     },

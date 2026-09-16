@@ -1,8 +1,8 @@
 # Posizioni dei partiti e fonti
 
-Codifica v3.0 del 2026-09-15. File generato da `build_data.py` a partire da `fonti_quiz.json`: le modifiche vanno fatte li'.
+Codifica v3.1 del 2026-09-16. File generato da `build_data.py` a partire da `fonti_quiz.json`: le modifiche vanno fatte li'.
 
-> Codifica verificata cella per cella: ogni fonte citata è stata riletta o confermata il 2026-09-15 e la descrizione riporta solo ciò che contiene. Dove non esiste una posizione documentata la cella è null ed è esclusa dal calcolo. Le inferenze senza fonte (livello F) e le ricostruzioni indirette (livello D) della codifica precedente sono state sostituite da evidenza oppure portate a null.
+> Codifica verificata cella per cella: ogni fonte citata è stata riletta o confermata alla data indicata nel campo verificata e la descrizione riporta solo ciò che contiene. Dove non esiste una posizione documentata la cella è null ed è esclusa dal calcolo. Le inferenze senza fonte (livello F) e le ricostruzioni indirette (livello D) della codifica precedente sono state sostituite da evidenza oppure portate a null.
 
 ## Come leggere questo documento
 
@@ -21,10 +21,10 @@ Codifica v3.0 del 2026-09-15. File generato da `build_data.py` a partire da `fon
 
 | Livello | Celle |
 |:---:|---:|
-| A | 131 |
-| B | 53 |
-| C | 60 |
-| E | 8 |
+| A | 130 |
+| B | 56 |
+| C | 59 |
+| E | 7 |
 | null | 23 |
 
 ---
@@ -719,42 +719,46 @@ Codifica v3.0 del 2026-09-15. File generato da `build_data.py` a partire da `fon
 
 ---
 
-## 19. Ponte sullo Stretto
+## 19. Obiettivi climatici europei
 
 *Categoria:* Trans.Ecologica ed Energia
 
-**Affermazione:** L'Italia dovrebbe realizzare il Ponte sullo Stretto di Messina.
+**Affermazione:** L'Unione europea dovrebbe mantenere i propri obiettivi di riduzione delle emissioni.
 
-*Direzione:* accordo = destra. *Formulazione:* Ridotta al Ponte: la versione precedente contrapponeva le grandi opere al trasporto locale ed era un'affermazione doppia.
+**Nel quiz, invertita:** L'Unione europea dovrebbe rivedere al ribasso i propri obiettivi di riduzione delle emissioni. — i punteggi usati dal quiz sono 8 meno quelli qui sotto.
+
+*Direzione:* accordo = sinistra. *Formulazione:* Sostituisce la domanda sul Ponte sullo Stretto, giudicata troppo legata a una singola opera. Il tema è generale e ha un voto registrato recente, quello del 10 febbraio 2026 sull'obiettivo 2040. Invertita nel quiz per mantenere il bilanciamento 12/12 dopo l'uscita del Ponte.
 
 | Partito | Punteggio | Liv. | Posizione documentata |
 |---|:---:|:---:|---|
-| **AVS** | **1** | A | Voto contrario al decreto del 2023; giudica l'opera uno spreco. |
-| **M5S** | **1** | A | Voto contrario al decreto del 2023; storicamente contrario. |
-| **PD** | **1** | A | Voto contrario al decreto del 2023; in piazza contro l'opera a dicembre 2023. |
-| **+Europa** | **1** | C | Assemblea del partito: «un enorme spreco di denaro pubblico». |
-| **Italia Viva** | **7** | A | Vota a favore del decreto del 2023 (gruppo Azione-Italia Viva). La fonte precedente era il programma su altre opere. |
-| **Azione** | **5** | A | Vota a favore del decreto del 2023, ma critica la capacità del governo di realizzarlo: «manca il progetto esecutivo» (Calenda, 2025). |
-| **Liberaldemocratico** | **7** | E | Marattin, unico leader d'opposizione «favorevole, senza se e senza ma». |
-| **Forza Italia** | **7** | A | Voto favorevole. |
-| **Fratelli d'Italia** | **7** | A | Voto favorevole; opera di bandiera del governo. |
-| **Lega** | **7** | A | Voto favorevole; progetto del ministro Salvini. |
-| **Futuro Nazionale** | **7** | C | Vannacci: «siamo a favore di qualsiasi infrastruttura e questo vale anche per il ponte sullo Stretto». |
+| **AVS** | **7** | A | Gli eurodeputati votano a favore dell'obiettivo 2040; il programma chiede di «difendere e rafforzare il Green deal» e il 100% di rinnovabili entro il 2040. |
+| **M5S** | **7** | A | Gli eurodeputati votano a favore dell'obiettivo 2040; il programma chiede di rafforzare il Green Deal. |
+| **PD** | **7** | A | Gli eurodeputati votano a favore dell'obiettivo 2040; Schlein: «il Green Deal deve proseguire». |
+| **+Europa** | **5** | B | Programma della lista Stati Uniti d'Europa: proseguire «con ragionevolezza e gradualità», tutelando industria e occupazione. Nessun eurodeputato dalla legislatura 2024. |
+| **Italia Viva** | **5** | B | Programma della lista Stati Uniti d'Europa: proseguire «con ragionevolezza e gradualità», tutelando industria e occupazione. Nessun eurodeputato dalla legislatura 2024. |
+| **Azione** | **2** | B | Chiede di rinviare gli obiettivi 2030 «almeno al 2035» e di «rifiutare ulteriori innalzamenti dei target di decarbonizzazione». Nessun eurodeputato dalla legislatura 2024. |
+| **Liberaldemocratico** | **5** | C | Sostiene un'energia pulita «riducendo al massimo le emissioni», ma con neutralità tecnologica e nucleare nel mix: favorevole con condizioni sui mezzi. Non si pronuncia sui singoli obiettivi. |
+| **Forza Italia** | **5** | A | Gli eurodeputati del PPE, compresa Forza Italia, votano a favore dell'obiettivo 2040 nella versione con le flessibilità; il programma chiede però di passare «da un Green Deal ideologico a un Green Deal realistico». |
+| **Fratelli d'Italia** | **4** | A | DIVERGENZA DOCUMENTATA: la delegazione non è fra i sette contrari italiani e l'obiettivo 2040 passa con i voti favorevoli della maggior parte dell'ECR, ma il programma parla di «eco-follie del Green Deal» e Meloni definisce «un suicidio» la decarbonizzazione a scapito dell'industria. |
+| **Lega** | **1** | A | Gli eurodeputati votano contro l'obiettivo 2040; Salvini definisce il Green Deal un «suicidio commerciale, industriale e ambientale» e il programma chiede di rivederlo «da cima a fondo». |
+| **Futuro Nazionale** | **1** | A | Vannacci vota contro l'obiettivo 2040; il programma è contro il Green Deal, il pacchetto Fit for 55 e le scadenze di decarbonizzazione. |
 
 **Fonti:**
 
-- *(liv. A, verificata il 2026-09-15)* Camera, 16 maggio 2023: approvato il decreto che rilancia il Ponte sullo Stretto, 182 sì, 93 no, 1 astenuto. A favore la maggioranza e il gruppo Azione-Italia Viva (Rosato: «giusto realizzarlo»); contrarie le altre opposizioni.  
-  <https://www.ilfattoquotidiano.it/2023/05/16/ponte-sullo-stretto-la-camera-approva-il-decreto-legge-con-182-si-ora-passa-al-senato/>
-- *(liv. C, verificata il 2026-09-15)* Dicembre 2023: FdI, Lega e FI favorevoli; Italia Viva ha votato a favore del decreto; Azione ha votato a favore ma critica la capacità del governo di realizzarlo; PD in piazza contro l'opera; M5S storicamente contrario; AVS la giudica uno spreco di risorse.  
-  <https://pagellapolitica.it/articoli/posizioni-partiti-ponte-sullo-stretto>
-- *(liv. C, verificata il 2026-09-15)* Assemblea di +Europa, aprile 2023: ordine del giorno accolto dal segretario Magi che definisce il Ponte privo di copertura finanziaria e «un enorme spreco di denaro pubblico».  
-  <https://www.messinaora.it/notizia/2023/04/16/ponte-sullo-stretto-allassemblea-di-piu-europa-odg-di-palmira-mancuso-accolto-dal-segretario-riccardo-magi/164333>
-- *(liv. C, verificata il 2026-09-15)* Carlo Calenda, 7 agosto 2025: «manca il progetto esecutivo, cosa faranno gli operai a settembre?».  
-  <https://www.agenzianova.com/a/68949a06a5ccc7.85892380/6428897/2025-08-07/ponte-stretto-calenda-manca-progetto-esecutivo-cosa-faranno-operai-a-settembre>
-- *(liv. E, verificata il 2026-09-15)* Il Riformista, 11 agosto 2025: fra i leader d'opposizione «solo Luigi Marattin si è detto favorevole, senza se e senza ma».  
-  <https://www.ilriformista.it/ponte-sullo-stretto-lopposizione-di-principio-del-centrosinistra-che-diventa-un-assist-per-salvini-477418/>
-- *(liv. C, verificata il 2026-09-15)* Roberto Vannacci a Palermo, maggio 2026: «siamo a favore di qualsiasi infrastruttura e questo vale anche per il ponte sullo Stretto».  
-  <https://www.strettoweb.com/2026/05/roberto-vannacci-a-palermo-si-al-ponte-sullo-stretto-attirera-capitali-ed-altre-infrastrutture/2094017/>
+- *(liv. A, verificata il 2026-09-16)* Parlamento europeo, 10 febbraio 2026: approvata la modifica della legge europea sul clima con l'obiettivo vincolante di ridurre le emissioni nette del 90% entro il 2040 (413 sì, 226 no, 12 astenuti). Gli eurodeputati italiani votano 57 a favore e 7 contrari, nessun astenuto. Per gruppo: Patriots for Europe, dove siede la Lega, 71 contrari su 71; ECR, dove siede Fratelli d'Italia, 23 favorevoli e 50 contrari; PPE (Forza Italia) 107 favorevoli; S&D (PD), Verdi (AVS) e The Left (M5S) compatti a favore.  
+  <https://howtheyvote.eu/votes/184178>
+- *(liv. B, verificata il 2026-09-16)* Programmi per le europee 2024 sul clima. AVS: «difendere e rafforzare il Green deal», 100% rinnovabili entro il 2040. M5S: rafforzare il Green Deal con quattordici proposte. PD: difendere e consolidare la leadership climatica europea. Forza Italia: passare «da un Green Deal ideologico a un Green Deal realistico». Fratelli d'Italia: cambiare le «eco-follie del Green Deal». Lega: rivedere il Green Deal «da cima a fondo». Azione: riformare il Green Deal, rinviare gli obiettivi 2030 «almeno al 2035» e «rifiutare ulteriori innalzamenti dei target di decarbonizzazione». Stati Uniti d'Europa (Italia Viva e +Europa): proseguire la lotta climatica ispirandosi «a un principio di ragionevolezza e gradualità», tutelando industria e occupazione.  
+  <https://pagellapolitica.it/articoli/cambiamenti-climatici-confronto-tra-programmi-elezioni-europee-2024>
+- *(liv. C, verificata il 2026-09-16)* Posizioni dei leader sul Green Deal. Meloni: «inseguire la decarbonizzazione al prezzo della deindustrializzazione è semplicemente un suicidio». Salvini definisce il Green Deal un «suicidio commerciale, industriale e ambientale». Tajani propone un «Green Deal realistico» e la neutralità tecnologica. Schlein: «il Green Deal deve proseguire».  
+  <https://quifinanza.it/green/ambiente/green-deal-posizione-partiti-italiani/866629/>
+- *(liv. C, verificata il 2026-09-16)* Ricetta energetica del Partito Liberaldemocratico: un mix di rinnovabili e nucleare per un'energia autonoma, pulita e a buon prezzo; gli eventi di questi decenni mostrano che bisogna procedere «riducendo al massimo le emissioni di anidride carbonica».  
+  <https://energiaoltre.it/la-ricetta-del-partito-liberaldemocratico-per-energia-autonoma-pulita-e-a-buon-prezzo-serve-un-mix-di-rinnovabili-e-nucleare/>
+- *(liv. B, verificata il 2026-09-15)* Proposte europee del PLD: «Creare gradualmente delle Forze Armate europee permanenti»; «Rimuovere il voto all'unanimità nel Consiglio dell'UE» su politica estera, sanzioni e difesa; «L'UE deve andare verso una sempre maggiore integrazione»; «Negoziare accordi di libero scambio sempre più estesi»; transizione ecologica «fondata sul principio della neutralità tecnologica».  
+  <https://partitoliberaldemocratico.com/europawewant/>
+- *(liv. E, verificata il 2026-09-16)* Greenreport sul voto del 10 febbraio 2026: «in Italia i soli voti contrari sono stati quelli della Lega salviniana e di Vannacci». La legge fissa «un taglio pari almeno al 90% delle emissioni di gas serra rispetto al 1990» al 2040, con fino al 5% di crediti internazionali dal 2036 e il rinvio dell'ETS2 al 2028.  
+  <https://www.greenreport.it/news/crisi-climatica-e-adattamento/60079-approvata-la-nuova-legge-ue-sul-clima-90-emissioni-al-2040-ma-in-italia-stanno-crescendo>
+- *(liv. B, verificata il 2026-09-15)* Programma di Futuro Nazionale per il 2027, prima parte, secondo l'analisi di Pagella Politica: uscita dal lavoro dopo 41 anni di contributi effettivi; ridurre la pressione fiscale; assistenza vincolata alla formazione, e chi rifiuta non va mantenuto con le tasse degli altri; salari affidati alla contrattazione collettiva nazionale; più centri per i rimpatri e stop ai «decreti flussi massicci»; cittadinanza dopo vent'anni di residenza regolare e livello C1; meno poteri all'UE e «meno vincoli assurdi», contro Green Deal, Fit for 55 e scadenze di decarbonizzazione; ritorno al nucleare; riaprire le relazioni economiche con la Russia; separazione delle carriere dei magistrati.  
+  <https://pagellapolitica.it/articoli/programma-futuro-nazionale-vannacci-elezioni-2027>
 
 ---
 
